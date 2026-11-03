@@ -1,0 +1,892 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+<meta name="color-scheme" content="light"/>
+<link rel="icon" href="data:,"/>
+<title>Bờ Biển Vững Mạnh — Hàng xóm cùng bảo vệ bờ biển quê mình</title>
+<meta name="description" content="Người dân cùng chăm sóc vùng duyên hải Mississippi. Tìm cách góp sức, học cùng gia đình, báo cáo đổ rác an toàn hoặc hỏi về tài trợ cho Bờ Biển Vững Mạnh.">
+<meta name="coast-strong-build" content="001-ALPHA-R3-APPROVED-APPEARANCE-20261027">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&amp;family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Barlow+Semi+Condensed:wght@600&amp;family=Zilla+Slab:wght@600;700&amp;display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fbf8f1; --surface:#ffffff; --surface2:#e9f1f4; --ink:#12242e; --muted:#5a6a70; --line:#d3dee2;
+  --green:#0b5a7a; --green-dark:#07425c; --green-deep:#052e40; --amber:#a85f14; --amber-bg:#fdeeda; --red:#a6192e;
+  --crimson:#a6192e; --gold:#ef8f4c; --on-gold:#231a02;
+  --on-dark:#e2f0f5; --on-dark-2:#cfe3ec; --on-dark-muted:#a8c8d4;
+  --dark-grad:linear-gradient(155deg,#0b5a7a 0%,#07425c 55%,#052e40 100%);
+  --radius:14px; --shadow:0 10px 30px rgba(8,38,54,.14);
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} *{transition:none!important; animation:none!important} }
+body{margin:0;font-family:"Barlow",system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55;font-size:17px}
+a{color:var(--green);text-underline-offset:3px}
+img{max-width:100%;height:auto;display:block}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+/* NAV */
+nav.top{position:sticky;top:0;z-index:50;background:color-mix(in srgb, var(--bg) 92%, transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav.top .wrap{display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding-top:10px;padding-bottom:10px}
+.brand{font-family:"Zilla Slab",Georgia,serif;font-weight:700;letter-spacing:.03em;font-size:22px;color:var(--ink);text-decoration:none}
+.brand span{color:var(--green)}
+.navlinks{display:flex;gap:4px;flex-wrap:wrap;margin-left:auto}
+.navlinks a{font-size:14.5px;font-weight:600;color:var(--muted);text-decoration:none;padding:7px 10px;border-radius:8px}
+.navlinks a:hover{background:var(--surface2);color:var(--ink)}
+.navcta{background:var(--green)!important;color:#fff!important}
+
+/* HERO */
+.hero{position:relative;color:#fff;overflow:hidden;background:var(--green-deep)}
+.hero img.bg{position:absolute;inset:-6% 0;width:100%;height:112%;object-fit:cover;object-position:center 62%;opacity:.82;will-change:translate}
+.hero .veil{position:absolute;inset:0;background:linear-gradient(180deg, rgba(5,42,31,.16) 0%, rgba(5,42,31,.30) 34%, rgba(5,42,31,.66) 62%, rgba(5,42,31,.93) 90%)}
+.hero .wrap{position:relative;z-index:4;padding:36px 20px 56px}
+.kicker{display:inline-block;font-family:"Barlow Semi Condensed",sans-serif;font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:13px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.35);padding:6px 12px;border-radius:999px}
+.hero h1{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(76px,15vw,172px);line-height:.92;letter-spacing:.015em;margin:18px 0 10px}
+.hero .tag{font-size:clamp(20px,3.4vw,30px);font-weight:500;max-width:640px;margin:0 0 8px}
+.hero .sub{max-width:620px;color:var(--on-dark-2);font-size:17px;margin:0 0 26px}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;font-weight:700;font-size:16px;padding:13px 22px;border-radius:10px;text-decoration:none;border:1.5px solid transparent;cursor:pointer;font-family:inherit}
+.btn-solid{background:var(--gold);color:var(--on-gold)}
+.btn-ghost{background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.55)}
+/* FLAG PHOTO BAND */
+.flagband{position:relative}
+.flagband img{width:100%;height:clamp(220px,44vh,440px);object-fit:cover;object-position:center 45%}
+.flagband figcaption{position:absolute;right:14px;bottom:12px;font-size:12.5px;line-height:1.4;color:var(--on-dark);background:rgba(5,42,31,.6);padding:5px 11px;border-radius:999px;margin:0}
+.flagband figcaption a{color:var(--gold)}
+/* SECTIONS */
+section{padding:64px 0}
+section.alt{background:var(--surface2)}
+h2{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(36px,5.6vw,56px);line-height:1.06;margin:0 0 12px;letter-spacing:.01em}
+section h2{position:relative;padding-bottom:16px}
+section h2::after{content:"";position:absolute;left:2px;bottom:0;width:76px;height:4px;border-radius:2px;background:linear-gradient(90deg,var(--crimson),var(--gold))}
+h2 .accent{color:var(--green)}
+h3{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:20px;line-height:1.25}
+.lede{font-size:19px;max-width:760px;color:var(--ink)}
+.muted{color:var(--muted)}
+.eyebrow{font-family:"Barlow Semi Condensed",sans-serif;font-weight:600;letter-spacing:.13em;text-transform:uppercase;font-size:13px;color:var(--amber);margin:0 0 8px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media(max-width:820px){.grid2,.grid3{grid-template-columns:1fr}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
+.card h3{margin:0 0 8px;font-size:20px}
+blockquote.pull{margin:26px 0;padding:6px 0 6px 22px;border-left:5px solid var(--amber);font-size:clamp(21px,3vw,27px);line-height:1.4;font-weight:500}
+figure{margin:0}
+figure img{border-radius:var(--radius)}
+figcaption{font-size:13.5px;color:var(--muted);margin-top:8px}
+.factrow{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:26px}
+@media(max-width:700px){.factrow{grid-template-columns:1fr}}
+.fact{background:var(--dark-grad);color:var(--on-dark);border-radius:var(--radius);padding:18px}
+.fact b{display:block;font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:36px;line-height:1.05;color:var(--gold)}
+.fact span{font-size:14.5px}
+/* FORM */
+.formnote{font-size:14.5px;color:var(--muted)}
+.signup-cta{display:flex;flex-direction:column;justify-content:center;gap:14px}
+.signup-cta .gform-btn{background:var(--green);color:#fff;font-size:19px;text-align:center;padding:16px 22px}
+
+pre.template{white-space:pre-wrap;word-break:break-word;background:var(--surface2);border:1px solid var(--line);border-radius:10px;padding:16px;font-size:14.5px;font-family:ui-monospace,Menlo,monospace;line-height:1.5}
+.copybtn{background:var(--surface);border:1.5px solid var(--green);color:var(--green);font-weight:700;padding:9px 16px;border-radius:9px;cursor:pointer;font:inherit;font-size:15px}
+.copybtn:hover{background:var(--green-light)}
+.copied{color:var(--green);font-weight:700;font-size:14px;margin-left:8px}
+/* CHANNELS */
+.channel-list{display:grid;grid-template-columns:1fr;gap:14px;margin-top:12px}
+.channel{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.channel b{display:block;font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:18px}
+.channel .num{font-family:"Zilla Slab",Georgia,serif;font-size:20px;color:var(--green);text-decoration:none;font-weight:700}
+.channel p{margin:4px 0 0;font-size:14.5px;color:var(--muted)}
+.safety{background:color-mix(in srgb, var(--crimson) 6%, var(--surface));border:1.5px solid color-mix(in srgb, var(--crimson) 42%, var(--surface));border-radius:var(--radius);padding:18px 20px;margin-top:22px}
+
+.safety strong{color:var(--red)}
+
+.ladder{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:20px}
+@media(max-width:520px){.ladder{grid-template-columns:1fr}}
+.step{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:18px}
+.step .n{font-family:"Zilla Slab",Georgia,serif;font-size:30px;color:var(--amber);font-weight:700;line-height:1}
+.step h3{margin:6px 0 6px}
+.step p{font-size:14.5px;color:var(--muted);margin:0}
+/* LISTS */
+ul.tight{margin:8px 0;padding-left:22px}
+ul.tight li{margin-bottom:7px}
+.gear{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+@media(max-width:760px){.gear{grid-template-columns:1fr}}
+/* HERITAGE STRIP */
+.heritage{background:var(--surface2);border-top:3px solid var(--gold);border-bottom:1px solid var(--line);padding:26px 0}
+.heritage .wrap{display:flex;flex-wrap:wrap;gap:10px 34px;align-items:baseline}
+.heritage .item{font-size:15.5px;color:var(--ink)}
+.heritage .item b{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:17px;color:var(--green)}
+
+/* FOOTER */
+footer{background:var(--dark-grad);color:var(--on-dark);padding:64px 0 48px;margin-top:0}
+footer h2{color:#fff}
+footer .ded{font-size:19px;max-width:720px}
+footer .creed{margin:26px 0 6px}
+footer .creed p{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(19px,3.4vw,24px);color:#fff;margin:0 0 4px;letter-spacing:.02em}
+footer .hash{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(32px,9vw,46px);color:var(--gold);letter-spacing:.03em;margin:18px 0 6px}
+footer .fine{font-size:13.5px;color:var(--on-dark-muted);max-width:760px}
+/* MOTION & POLISH */
+::selection{background:var(--gold);color:var(--on-gold)}
+#progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--crimson);z-index:100}
+nav.top{transition:box-shadow .3s ease}
+nav.top.scrolled{box-shadow:0 6px 24px rgba(8,38,54,.18)}
+.hero img.bg{animation:heroZoom 28s ease-in-out infinite alternate}
+@keyframes heroZoom{from{transform:scale(1.04)}to{transform:scale(1.15)}}
+.hero h1{text-shadow:0 4px 30px rgba(5,42,31,.5)}
+.hero .wrap>*{animation:heroIn .9s cubic-bezier(.2,.7,.2,1) both}
+.hero .wrap>*:nth-child(2){animation-delay:.08s}
+.hero .wrap>*:nth-child(3){animation-delay:.16s}
+.hero .wrap>*:nth-child(4){animation-delay:.24s}
+.hero .wrap>*:nth-child(5){animation-delay:.32s}
+@keyframes heroIn{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+.hero .wave{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:54px;display:block}
+.hero .wave path{fill:var(--bg)}
+.ticker{background:var(--crimson);color:var(--on-dark);overflow:hidden;padding:10px 0}
+.ticker-track{display:flex;width:max-content;animation:tick 32s linear infinite;font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:19px;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap}
+.ticker-track span{padding:0 10px}
+@keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.btn{transition:transform .2s ease,box-shadow .2s ease,background .2s ease}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 22px rgba(8,38,54,.25)}
+.card,.step,.channel{transition:transform .25s ease,box-shadow .25s ease}
+.card:hover,.step:hover,.channel:hover{transform:translateY(-3px);box-shadow:0 14px 34px rgba(8,38,54,.16)}
+section[id]{scroll-margin-top:84px}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+footer .hash{text-shadow:0 0 26px rgba(233,180,76,.35)}
+/* STAT BAND */
+.statband{background:var(--dark-grad);color:var(--on-dark);border-top:3px solid var(--gold)}
+.statband .wrap{display:grid;grid-template-columns:repeat(4,1fr);padding-top:0;padding-bottom:0}
+.stat{padding:28px 18px;text-align:center;border-left:1px solid rgba(233,180,76,.25)}
+.stat:first-child{border-left:none}
+.stat b{display:block;font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(34px,4.6vw,52px);color:var(--gold);line-height:1.02}
+.stat span{display:block;margin-top:7px;font-size:14px;line-height:1.45;color:var(--on-dark-muted)}
+@media(max-width:760px){.statband .wrap{grid-template-columns:1fr 1fr}.stat{border-left:none;border-top:1px solid rgba(233,180,76,.18)}.stat:nth-child(-n+2){border-top:none}}
+
+/* 001 ALPHA: participation, sponsorship and family learning */
+.hero h1{font-size:clamp(42px,7.5vw,94px);line-height:1.04;max-width:960px;margin:14px 0 22px;letter-spacing:-.025em}
+.hero h1 span{display:block;color:var(--gold)}
+.hero-brand{font-family:"Zilla Slab",Georgia,serif;font-size:26px;font-weight:700;letter-spacing:.08em;margin:24px 0 0}
+.hero .wrap{padding-bottom:70px}
+.participation{margin-top:28px}
+.participation .card{height:100%;display:flex;flex-direction:column;gap:12px}
+.participation .card p{margin:0}
+.participation .btn{margin-top:auto;text-align:center;background:var(--green);color:#fff}
+.route-note{max-width:760px;font-size:15px;color:var(--muted);margin-top:20px}
+.sponsor-name{font-family:"Zilla Slab",Georgia,serif;font-size:clamp(32px,6vw,54px);line-height:1.1;font-weight:700;margin:10px 0}.sponsor-badge{display:inline-block;background:var(--gold);color:#052e40;font-weight:700;font-size:12px;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:999px}.sponsor-card{border-top:4px solid var(--gold)}.sponsor-poster{margin:0 auto 30px;max-width:760px}.sponsor-photo{width:100%;height:auto;display:block;border-radius:12px;border:3px solid var(--gold);margin:0 0 14px}.sponsor-poster img{width:100%;height:auto;display:block;border-radius:14px;border:3px solid var(--gold);box-shadow:0 10px 30px rgba(5,42,31,.25)}
+.support-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.support-actions .btn{background:var(--green);color:#fff}
+.activity{border:2px solid var(--green);border-radius:var(--radius);padding:26px;background:var(--surface)}
+.activity-item{font-family:"Zilla Slab",Georgia,serif;font-size:clamp(26px,4vw,38px);font-weight:700;line-height:1.2;margin:14px 0 22px}
+.activity-actions{display:flex;flex-wrap:wrap;gap:12px}
+.activity button{min-height:48px;background:var(--green);color:#fff;border:2px solid transparent}
+.activity button.secondary{background:var(--surface2);color:var(--ink);border-color:var(--line)}
+.activity-feedback{min-height:4.5em;margin:18px 0;font-weight:600}
+.activity-next{margin-top:4px}
+.learning-note{font-size:14.5px;color:var(--muted)}
+.law-steps{margin-top:26px;padding:20px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.law-steps summary{cursor:pointer;font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:23px;padding:8px 0}
+.law-steps li{margin:10px 0}
+.skip-link{position:absolute;top:-100px;left:15px;z-index:200;background:var(--surface);padding:12px}
+.skip-link:focus{top:8px}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--gold);outline-offset:4px}
+.menu-toggle{font:inherit;font-weight:700;border:1px solid var(--line);border-radius:8px;padding:8px 14px;background:var(--surface);color:var(--ink);margin-left:auto}
+
+@media(max-width:740px){
+ .brand{font-size:17px}.hero .wrap{padding-top:28px}.hero h1{font-size:clamp(40px,10vw,62px)}
+ nav.top .wrap{gap:8px}.menu-ready .menu-toggle{display:block}.menu-ready .navlinks{display:none;width:100%;margin:6px 0 0;gap:5px}
+ .menu-ready .navlinks.open{display:flex}.navlinks a{font-size:15px;padding:10px}.activity{padding:20px}
+ .activity-actions{display:grid;grid-template-columns:1fr}.support-actions .btn{width:100%;text-align:center}
+}
+@media(min-width:741px){.menu-toggle{display:none!important}}
+@media print{nav.top,.flagband,.ticker,.hero,.statband,footer,#report,#receipts,#watches,#water,#story,#signup,#sponsors,.heritage,.activity-actions,.activity-next{display:none!important}section{padding:14px 0}.activity{border:1px solid #333}.learning-note{color:#222}}
+
+
+/* Revision 2: responsive language navigation and iPhone layout */
+html{-webkit-text-size-adjust:100%;scroll-padding-top:150px}
+body{overflow-wrap:break-word}
+.wrap{width:100%;padding-left:max(20px,env(safe-area-inset-left));padding-right:max(20px,env(safe-area-inset-right))}
+.grid2>*,.grid3>*,.factrow>*,.statband .wrap>*,.gear>*,.ladder>*{min-width:0}
+.card,.channel,.step{overflow-wrap:anywhere}
+h1,h2,h3{overflow-wrap:break-word;text-wrap:balance}
+.language-switch{display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:6px;width:100%;border-top:1px solid var(--line);padding-top:6px}
+.language-switch a{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:8px 12px;border-radius:8px;font-size:14px;font-weight:600;text-decoration:none;color:var(--ink);border:1px solid transparent}
+.language-switch a[aria-current=page]{background:var(--green);color:#fff}
+.language-switch a:hover{border-color:var(--green)}
+.menu-toggle,.copybtn,.navlinks a{min-height:44px}
+.navlinks a{display:inline-flex;align-items:center}
+.channel .num{display:inline-flex;align-items:center;min-height:44px;max-width:100%;overflow-wrap:anywhere}
+.channel a,.route-note a,footer a{overflow-wrap:anywhere}
+.flagband figcaption{max-width:calc(100% - 28px);border-radius:10px}
+.quick-start{padding:28px 0 36px;border-bottom:1px solid var(--line);background:var(--surface)}
+.start-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.start-card{display:block;border:1px solid var(--line);border-radius:12px;padding:20px;text-decoration:none;color:var(--ink);background:var(--surface2)}
+.start-card .start-number{font-size:13px;font-weight:700;letter-spacing:.12em;color:var(--amber)}
+.start-card strong{display:block;font-family:'Zilla Slab',Georgia,serif;font-size:24px;line-height:1.2;margin:5px 0 8px}
+.start-card span:last-child{display:block;color:var(--muted);font-size:16px;line-height:1.5}
+.start-card:hover{border-color:var(--green);box-shadow:var(--shadow)}
+pre.template{max-width:100%;overflow-wrap:anywhere;word-break:normal;tab-size:2}
+.kicker{max-width:100%;line-height:1.6;letter-spacing:.08em;border-radius:14px}
+.hero-btns{margin-bottom:22px}
+html[lang=vi] body{font-family:'Noto Sans',Arial,sans-serif}
+html[lang=vi] h1,html[lang=vi] h2,html[lang=vi] h3,html[lang=vi] .brand,html[lang=vi] .sponsor-name,html[lang=vi] .start-card strong{font-family:'Noto Serif',Georgia,serif}
+
+@media(max-width:740px){
+ nav.top .wrap{gap:6px 12px;padding-top:max(8px,env(safe-area-inset-top));padding-bottom:6px}
+ .brand{flex:1;min-width:0;font-size:16px;line-height:1.35;letter-spacing:0}
+ .menu-toggle{flex-shrink:0;font-size:15px;max-width:45%;padding:8px 12px}
+ .language-switch{justify-content:flex-start;gap:2px;padding-top:2px}
+ .language-switch a{padding:7px 12px;font-size:14px}
+ .navlinks{order:4;margin-left:0;max-height:58vh;max-height:58svh;overflow-y:auto;overscroll-behavior:contain}
+ .navlinks a{flex:1 1 45%;padding:10px 12px;line-height:1.4}
+ .hero .wrap{padding-top:28px;padding-bottom:48px}
+ .hero-brand{margin:16px 0 0;font-size:20px}
+ .hero h1{font-size:clamp(35px,9.2vw,52px);line-height:1.13;letter-spacing:-.02em;margin:16px 0 20px}
+ html[lang=vi] .hero h1{font-size:clamp(32px,8.4vw,48px);text-wrap:wrap}
+ html[lang=es] .hero h1{text-wrap:wrap}
+ .hero .tag{font-size:21px;line-height:1.45}
+ .hero .sub{font-size:16px;line-height:1.65;margin:14px 0 24px}
+ .hero-btns{display:grid;grid-template-columns:minmax(0,1fr);gap:10px}
+ .hero-btns .btn{width:100%;text-align:center;white-space:normal;min-height:48px}
+ .start-grid{grid-template-columns:minmax(0,1fr);gap:10px}
+ .start-card{padding:16px 18px}.start-card strong{font-size:23px}
+ section{padding:42px 0}h2{font-size:clamp(30px,8vw,40px);line-height:1.18}
+ .card{padding:20px}.lede{font-size:18px;line-height:1.65}
+ .stat{padding:20px 12px}.stat b{font-size:clamp(27px,7vw,38px)}
+ .stat span{font-size:14px}.flagband img{height:250px}
+ .ticker-track{animation:none;display:block;width:auto;white-space:normal;font-size:14px;letter-spacing:.045em;line-height:1.6;padding:0 14px}
+ .ticker-track span{padding:0}.ticker-track span+span{display:none}
+ .activity-actions button{width:100%;white-space:normal;min-height:48px}
+ .hero img.bg,.hero .wrap>*{animation:none!important}
+ .reveal{opacity:1;transform:none}
+ footer{padding-bottom:max(36px,env(safe-area-inset-bottom))}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1!important;transform:none!important}}
+@media print{.language-switch,.quick-start{display:none!important}}
+
+/* Shared traction panel: calm motion, existing marsh palette. */
+.traction{padding:30px 0 36px;background:var(--surface2);border-bottom:1px solid var(--line)}
+.traction h2{font-size:clamp(28px,4vw,40px)}
+.traction .factrow{margin-top:18px}.traction .fact b{font-variant-numeric:tabular-nums;font-size:clamp(32px,5vw,44px)}
+.traction details{font-size:14px}.traction summary{cursor:pointer;font-weight:600;min-height:44px;display:flex;align-items:center}
+.traction[data-state=unavailable] .fact b{opacity:.65}
+.btn,.start-card,.language-switch a{transition:background-color .16s ease,border-color .16s ease,box-shadow .16s ease}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+@media(prefers-reduced-motion:reduce){.btn,.start-card,.language-switch a{transition:none}}
+
+/* Journal, useful answers and simple sharing in the existing marsh palette. */
+main{display:block}
+main:focus{outline:none}
+.journal-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:26px}
+.journal-card{display:flex;flex-direction:column;align-items:flex-start;border-top:3px solid var(--gold)}
+.journal-card h3{font-size:25px;line-height:1.25}
+.journal-card h3 a{color:var(--ink)}
+.journal-card p{color:var(--muted);margin:8px 0 16px}
+.journal-card .read-guide{margin-top:auto;display:inline-flex;align-items:center;min-height:44px;font-weight:700}
+.journal-actions{display:flex;align-items:center;flex-wrap:wrap;gap:8px 24px;margin-top:18px}
+.journal-actions a{display:inline-flex;align-items:center;min-height:44px;font-weight:600}
+.faq-grid{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:28px;align-items:start;margin-top:26px}
+.faq-list{display:grid;gap:12px}
+.faq-list details{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:0 18px}
+summary{min-height:44px}
+.faq-list summary{cursor:pointer;padding:13px 0;font-weight:700;line-height:1.5}
+.faq-list details[open]{border-color:var(--green)}
+.faq-list details p{margin:0 0 18px;color:var(--muted)}
+.share-panel{border-top:3px solid var(--gold)}
+.share-panel h3{font-size:27px}
+.share-panel .btn{background:var(--gold);color:var(--on-gold);min-height:48px;text-align:center;max-width:100%}
+.share-site[hidden]{display:none}
+.share-site:disabled{cursor:wait;opacity:.75;transform:none}
+.share-status{font-size:15px;font-weight:600;min-height:3em;margin:14px 0 4px}
+.site-link{display:inline-flex;align-items:center;min-height:44px;max-width:100%;font-weight:600;overflow-wrap:anywhere}
+.back-top{display:inline-flex;align-items:center;min-height:44px;color:var(--gold);font-weight:700}
+@media(max-width:740px){.journal-grid,.faq-grid{grid-template-columns:minmax(0,1fr)}.faq-grid{gap:20px}.share-panel .btn{width:100%}.journal-card h3{font-size:23px}}
+@media print{#journal,#faq,.back-top{display:none!important}}
+
+.footer-map{margin:26px 0;text-align:left;border-top:1px solid rgba(255,255,255,.25);padding-top:18px}.footer-map h3{color:var(--gold);font-size:20px}.footer-map>div{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px 16px}.footer-map a{display:flex;align-items:center;min-height:44px;color:var(--on-dark);font-size:15px;text-decoration:none;overflow-wrap:anywhere}.footer-map a:hover{text-decoration:underline;color:var(--gold)}@media(max-width:740px){.footer-map>div{grid-template-columns:repeat(2,minmax(0,1fr))}}@media print{.footer-map{display:none}}
+
+.footer-map .footer-column{display:flex;flex-direction:column;gap:2px}.footer-map h4{color:var(--gold);font-size:15px;margin:0 0 10px}.footer-support{font-size:13px;color:var(--on-dark-muted);text-align:left;border-top:1px solid rgba(255,255,255,.25);padding-top:18px}.footer-support a{color:var(--on-dark);font-weight:600}#sponsors{scroll-margin-top:190px}
+</style>
+<link rel="alternate" hreflang="en" href="https://228coaststrong.com/">
+<link rel="alternate" hreflang="es" href="https://228coaststrong.com/es/">
+<link rel="alternate" hreflang="vi" href="https://228coaststrong.com/vi/">
+<link rel="alternate" hreflang="fr" href="https://228coaststrong.com/fr/">
+<link rel="alternate" hreflang="x-default" href="https://228coaststrong.com/">
+<link rel="canonical" href="https://228coaststrong.com/vi/">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&amp;family=Noto+Serif:wght@600;700&amp;display=swap">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Bờ Biển Vững Mạnh">
+<meta property="og:locale" content="vi_VN">
+<meta property="og:title" content="Bờ Biển Vững Mạnh — Hàng xóm cùng bảo vệ bờ biển quê mình">
+<meta property="og:description" content="Người dân cùng chăm sóc vùng duyên hải Mississippi. Tìm cách góp sức, học cùng gia đình, báo cáo đổ rác an toàn hoặc hỏi về tài trợ cho Bờ Biển Vững Mạnh.">
+<meta property="og:url" content="https://228coaststrong.com/vi/">
+<meta property="og:image" content="https://228coaststrong.com/assets/bayou-marsh.webp">
+<meta property="og:image:width" content="1920">
+<meta property="og:image:height" content="1280">
+<meta property="og:image:alt" content="Đầm lầy ven biển Mississippi trong ánh nắng vàng, với cỏ đầm lầy, những dòng nước yên, cây bách phủ rêu Tây Ban Nha và một con diệc xanh đứng ở vùng nước nông">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Bờ Biển Vững Mạnh — Hàng xóm cùng bảo vệ bờ biển quê mình">
+<meta name="twitter:description" content="Người dân cùng chăm sóc vùng duyên hải Mississippi. Tìm cách góp sức, học cùng gia đình, báo cáo đổ rác an toàn hoặc hỏi về tài trợ cho Bờ Biển Vững Mạnh.">
+<meta name="twitter:image" content="https://228coaststrong.com/assets/bayou-marsh.webp">
+<meta name="twitter:image:alt" content="Đầm lầy ven biển Mississippi trong ánh nắng vàng, với cỏ đầm lầy, những dòng nước yên, cây bách phủ rêu Tây Ban Nha và một con diệc xanh đứng ở vùng nước nông">
+<link rel="alternate" type="application/rss+xml" title="Bờ Biển Vững Mạnh — Góc chia sẻ" href="/vi/journal/feed.xml">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Bờ Biển Vững Mạnh","url":"https://228coaststrong.com/vi/","inLanguage":"vi"}</script>
+<link rel="stylesheet" href="/coastal.css">
+<link rel="stylesheet" href="/flags.css">
+<link rel="alternate" hreflang="de" href="https://228coaststrong.com/de/">
+<link rel="alternate" hreflang="pl" href="https://228coaststrong.com/pl/">
+<style id="coast-approved-appearance-20261027">
+/* Approved screenshot appearance: fixed coastal-blue hero in every color mode. */
+:root{--gold:#fa6b12;--on-gold:#102b3a}
+nav.top{background:#fbfaf7}
+.hero{background:#082e40}
+.hero .veil{background:linear-gradient(180deg,rgba(5,39,55,.86) 0%,rgba(5,39,55,.90) 62%,rgba(5,39,55,.95) 100%)}
+.hero-brand{color:#fa6b12;letter-spacing:.02em}
+.hero h1 span{color:#fa6b12}
+.hero .btn-solid{background:#fa6b12;color:#102b3a}
+.hero .btn-ghost{background:transparent;border-color:rgba(255,255,255,.66);color:#fff}
+.hero .tag{color:#fff}
+.hero .sub{color:#cfe3ec}
+.language-switch a{gap:10px}
+@media(max-width:740px){
+ .language-switch{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px 8px;justify-content:stretch;padding:4px 0 8px}
+ .language-switch a{min-width:0;min-height:44px;padding:10px 4px;font-size:14px;gap:10px;white-space:nowrap}
+ .hero .wrap{padding-top:34px}
+ .hero-brand{font-size:25px;margin-top:20px}
+}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Chuyển đến nội dung chính</a>
+
+<nav class="top">
+  <div class="wrap">
+    <a class="brand" href="#top"><span class="brand-name">Bờ Biển Vững Mạnh</span><span class="brand-watch">Nhóm Giám Sát Vịnh</span></a>
+    <button class="menu-toggle" id="menuToggle" aria-controls="primaryLinks" aria-expanded="false" type="button" hidden>Trình đơn</button>
+    <div class="navlinks" id="primaryLinks">
+      <a href="#story">Phát hiện đầu tiên</a>
+      <a href="#report">Báo tin đổ rác trái phép</a>
+      <a href="#receipts">Nhật ký cộng đồng</a>
+      <a href="#network">Mạng lưới liên hệ</a><a href="#watches">Các nhóm giám sát</a>
+      <a href="#kids">Thiếu nhi ven biển</a>
+      <a href="#journal">Góc chia sẻ</a>
+      <a href="#faq">Câu hỏi thường gặp</a>
+      <a class="navcta" href="#signup">Tham gia Nhóm Giám Sát Vịnh</a>
+    </div>
+<nav class="language-switch" aria-label="Chọn ngôn ngữ"><a href="/" lang="en" hreflang="en"><span class="language-flag" aria-hidden="true">🇺🇸</span><span class="language-label" lang="vi">Tiếng Anh</span></a><a href="/es/" lang="es" hreflang="es"><span class="language-flag" aria-hidden="true">🇪🇸</span><span class="language-label" lang="vi">Tiếng Tây Ban Nha</span></a><a href="/vi/" lang="vi" hreflang="vi" aria-current="page"><span class="language-flag" aria-hidden="true">🇻🇳</span><span class="language-label" lang="vi">Tiếng Việt</span></a><a href="/fr/" lang="fr" hreflang="fr"><span class="language-flag" aria-hidden="true">🇫🇷</span><span class="language-label" lang="vi">Tiếng Pháp</span></a><a href="/de/" lang="de" hreflang="de"><span class="language-flag" aria-hidden="true">🇩🇪</span><span class="language-label" lang="vi">Tiếng Đức</span></a><a href="/pl/" lang="pl" hreflang="pl"><span class="language-flag" aria-hidden="true">🇵🇱</span><span class="language-label" lang="vi">Tiếng Ba Lan</span></a></nav>
+  </div>
+</nav>
+
+<main id="main-content" tabindex="-1">
+<header class="hero" id="top">
+  <img class="bg" src="../assets/bayou-marsh.webp" alt="Đầm lầy ven biển Mississippi trong ánh nắng vàng, với cỏ đầm lầy, những dòng nước yên, cây bách phủ rêu Tây Ban Nha và một con diệc xanh đứng ở vùng nước nông" width="1920" height="1280" decoding="async" loading="eager" fetchpriority="high"/>
+  <div class="veil"></div>
+  <svg class="wave" viewbox="0 0 1440 60" preserveaspectratio="none" aria-hidden="true"><path d="M0,32 C240,60 480,0 720,24 C960,48 1200,8 1440,28 L1440,60 L0,60 Z"/></svg>
+  <div class="wrap">
+    <span class="kicker">Sứ mệnh vì Mẹ Trái Đất · Gulfport · Biloxi · Ocean Springs · Pascagoula, Mississippi</span>
+    <p class="hero-brand">Bờ Biển Vững Mạnh</p>
+    <h1>Mẹ Trái Đất không có người vận động hành lang. <span>Mẹ có chúng ta.</span></h1>
+    <div class="hero-btns">
+      <a class="btn btn-solid" href="#signup">Tìm cách góp sức phù hợp với bạn</a>
+      <a class="btn btn-ghost" href="#report">Báo tin đổ rác trái phép an toàn</a>
+    </div>
+    <p class="tag">Đây là cộng đồng của chúng ta. Đây là niềm tự hào của chúng ta. Đây là bờ biển quê mình.</p>
+    <p class="sub">Hàng xóm cùng bảo vệ nguồn nước, hải sản và bờ biển mà con cháu chúng ta sẽ thừa hưởng. Mọi vinh quang thuộc về Chúa, mọi công lao thuộc về cộng đồng.</p>
+    
+  </div>
+</header>
+<section class="traction" id="traction" aria-labelledby="tractionTitle" data-state="connecting"><div class="wrap"><p class="eyebrow">Bờ Biển Vững Mạnh trực tiếp</p><h2 id="tractionTitle">Cùng xem cộng đồng lớn mạnh.</h2><p class="formnote">Mỗi lượt ghé thăm là một cơ hội để chăm sóc Mẹ Trái Đất.</p><div class="factrow"><div class="fact"><b data-activity="totalViews">—</b><span>Lượt xem kể từ khi bắt đầu đếm</span></div><div class="fact"><b data-activity="todayViews">—</b><span>Lượt xem hôm nay · giờ miền Trung Hoa Kỳ</span></div><div class="fact"><b data-activity="activeSessions">—</b><span>Phiên hoạt động · 2 phút qua</span></div></div><p class="formnote" data-activity-status role="status">Đang kết nối dữ liệu hoạt động…</p><p class="formnote" data-activity-since>Bắt đầu đếm từ lượt xem trang đầu tiên được ghi nhận.</p><details><summary>Cách chúng tôi đếm</summary><p class="formnote">Số liệu phản ánh lượt tải trang được ghi nhận, không phải từng người. Tải lại hoặc đổi ngôn ngữ sẽ thêm một lượt xem; các thẻ riêng có thể được tính là các phiên riêng. Truy cập tự động và việc chặn theo dõi có thể ảnh hưởng đến tổng số. Cập nhật mỗi 30 giây khi trang này đang hiển thị.</p></details></div></section>
+
+<section class="quick-start" id="start"><div class="wrap"><p class="eyebrow">Bắt đầu tại đây</p><p class="formnote">Nhiều bàn tay. Một bờ biển. Cùng nhau vững mạnh hơn.</p><div class="start-grid"><a class="start-card" href="#signup"><span class="start-number">01</span><strong>Tìm cách góp sức</strong><span>Học sinh, giáo viên, gia đình và hàng xóm: chọn cách bạn muốn giúp.</span></a><a class="start-card" href="#kids"><span class="start-number">02</span><strong>Cùng nhau tìm hiểu</strong><span>Thử hoạt động bảo vệ bờ biển cùng cha mẹ hoặc giáo viên.</span></a><a class="start-card" href="#journal"><span class="start-number">03</span><strong>Theo dõi hoạt động</strong><span>Đọc hướng dẫn thực tế, chia sẻ ý tưởng và xem những bước tiếp theo.</span></a></div></div></section>
+
+<section class="coast-flags" aria-labelledby="coast-flags-heading">
+  <div class="coast-flags__heading">
+    <p class="coast-flags__eyebrow">Bờ Biển Vững Mạnh</p>
+    <h2 id="coast-flags-heading">Quê hương chúng ta. Đất nước chúng ta.</h2>
+    <span class="coast-flags__rule" aria-hidden="true"></span>
+  </div>
+  <div class="coast-flags__pair">
+    <figure class="coast-flags__card">
+      <div class="coast-flags__display">
+        <img class="coast-flags__flag coast-flags__flag--us" src="/assets/flags-us.svg" width="1900" height="1000" loading="lazy" decoding="async" alt="Quốc kỳ Hoa Kỳ với năm mươi ngôi sao và mười ba sọc">
+      </div>
+      <figcaption>Hoa Kỳ</figcaption>
+    </figure>
+    <figure class="coast-flags__card">
+      <div class="coast-flags__display">
+        <img class="coast-flags__flag coast-flags__flag--ms" src="/assets/flags-ms.png" width="1050" height="630" loading="lazy" decoding="async" alt="Cờ Mississippi với hoa mộc lan, các ngôi sao và dòng chữ In God We Trust">
+      </div>
+      <figcaption>Mississippi</figcaption>
+    </figure>
+  </div>
+</section>
+
+
+<div class="ticker" aria-hidden="true"><div class="ticker-track"><span>Quan sát · Chụp ảnh · Báo tin · Ghi nhật ký · Ba nhóm giám sát · Một bờ biển · Hàng xóm giúp đỡ hàng xóm · #CoastStrong · </span><span>Quan sát · Chụp ảnh · Báo tin · Ghi nhật ký · Ba nhóm giám sát · Một bờ biển · Hàng xóm giúp đỡ hàng xóm · #CoastStrong · </span></div></div>
+
+<!-- STAT BAND -->
+<div class="statband" role="region" aria-label="Bờ Biển Vững Mạnh qua các con số">
+  <div class="wrap">
+    <div class="stat"><b>9.75 tấn</b><span>rác thải đã được các đội Renew Our Rivers trước đây vớt khỏi hệ thống lạch này và ghi nhận — lịch sử dọn dẹp của địa phương, có hồ sơ rõ ràng</span></div>
+    <div class="stat"><b>3 nhóm giám sát</b><span>Nhóm Giám Sát Vịnh · Nhóm Giám Sát Biloxi · Nhóm Giám Sát Pascagoula — cùng trông nom một bờ biển</span></div>
+    <div class="stat"><b>1699</b><span>năm Biloxi đặt nền móng tại Fort Maurepas, ngay trên bờ biển này</span></div>
+    <div class="stat"><b>Hồ sơ #001</b><span>vụ phát hiện tại Bayou Bernard Park ngày 15 tháng 10 năm 2026 đã khởi đầu Bờ Biển Vững Mạnh</span></div>
+  </div>
+</div>
+
+<!-- STORY -->
+<section id="story">
+  <div class="wrap">
+    <p class="eyebrow">Câu chuyện bắt đầu · Ngày 15 tháng 10 năm 2026</p>
+    <h2>Một chiếc tivi bị vứt trong đầm lầy. <span class="accent">Hàng xóm đã có mặt.</span></h2>
+    <div class="grid2">
+      <div>
+        <p class="lede">Ngày 15 tháng 10 năm 2026, một chiếc tivi và những mảnh nhựa dày bị vứt bỏ được phát hiện nằm trong đầm lầy tại <strong>Bayou Bernard Park (James Hill Park), 1890 Switzer Rd, Gulfport</strong> — trong dòng nước chảy ra Mississippi Sound, vùng nước mà con em chúng ta sẽ lớn lên cùng.</p>
+        <p>Không ai làm ngơ. Mọi người chụp ảnh, báo tin, đưa rác ra ngoài và ghi lại — thứ gì, ở đâu, khi nào. Mục ghi chép ấy trở thành <strong>Hồ sơ #001</strong>, và Bờ Biển Vững Mạnh ra đời: một mạng lưới hàng xóm trông nom các lạch nước, để việc đổ rác trái phép được phát hiện, ghi nhận và xử lý thay vì để rác nằm trong đầm lầy hàng tháng trời.</p>
+        <blockquote class="pull">
+          “Đây là mái nhà của chúng ta. Hành tinh không tình cờ bị hủy hoại — nó bị hủy hoại vì sự thờ ơ, mà thờ ơ là một lựa chọn. Chúng ta chọn cách khác. Mẹ Trái Đất không có người vận động hành lang. Mẹ có chúng ta.”
+        </blockquote>
+      </div>
+      <figure>
+        <img src="../assets/volunteers.webp" alt="Tình nguyện viên cộng đồng dùng găng tay, kẹp gắp rác và túi rác để dọn dẹp dọc bờ nhánh sông" width="1920" height="1280" decoding="async" loading="lazy"/>
+        <figcaption>Lời giải nằm ở con người: những người hàng xóm đeo găng, cầm túi và ghi lại mọi thứ họ đưa ra khỏi nước.</figcaption>
+      </figure>
+    </div>
+    <div class="factrow">
+      <div class="fact"><b>9.75 tấn</b><span>Rác thải được vớt khỏi Gulfport Lake / Industrial Seaway và Bayou Bernard trong các đợt dọn dẹp Renew Our Rivers trước đây (4.5 + 5.25 tấn) — hệ thống này là nơi từng bị đổ rác, có hồ sơ ghi nhận rõ ràng.</span></div>
+      <div class="fact"><b>9 địa điểm</b><span>Trong danh sách chính thức của chương trình Coastal Cleanup năm 2026 — tất cả đều là bãi biển, bến cảng, cầu tàu hoặc mặt tiền công viên.</span></div>
+      <div class="fact"><b>0</b><span>Địa điểm lạch nước có trong danh sách ấy tính đến nay. Các lạch nước là nơi đội tình nguyện trong khu phố có thể giúp được nhiều nhất — và đó chính là nơi Bờ Biển Vững Mạnh góp sức.</span></div>
+    </div>
+  </div>
+</section>
+    <figure class="sponsor-poster" style="max-width:1080px;margin:36px auto"><img src="../assets/bayou-crew-art.jpg" alt="Minh họa: các tình nguyện viên mang túi rác qua cầu gỗ trong vịnh lúc bình minh, một con cò trắng đang bay và ngọn hải đăng ở phía xa." loading="lazy"><figcaption class="formnote" style="text-align:center;margin-top:10px">Đội bayou — những người hàng xóm cùng nhau làm việc.</figcaption></figure>
+
+<!-- REPORT -->
+<section class="alt" id="report">
+  <div class="wrap">
+    <p class="eyebrow">Nhóm Giám Sát Vịnh · Báo tin đổ rác trái phép</p>
+    <h2>Thấy đổ rác trái phép? <span class="accent">Hãy báo tin theo cách này.</span></h2>
+    <p class="lede">Trước tiên, chụp ảnh từ khoảng cách an toàn. Sau đó gửi thông báo để hàng xóm biết ngay. Tiếp đến gọi cơ quan chức năng. Một lần phát hiện, hai nơi nhận tin: hàng xóm và kênh báo tin chính thức.</p>
+    <div class="grid2" style="margin-top:24px">
+      <div>
+        <pre class="template" id="alertTemplate">🚨 THÔNG BÁO ĐỔ RÁC TRÁI PHÉP / RÁC THẢI — BỜ BIỂN VỮNG MẠNH
+SỰ VIỆC: [đã thấy gì — đang đổ rác / rác mới bị đổ, loại rác gì]
+ĐỊA ĐIỂM: [ghim vị trí hoặc đường / mốc địa điểm gần nhất]
+THỜI GIAN: [ngày + giờ phát hiện]
+ẢNH: [đính kèm]
+TÌNH TRẠNG: [đã báo cho CƠ QUAN qua KÊNH vào THỜI GIAN — bổ sung sau khi gửi báo tin]</pre>
+        <p><button class="copybtn" data-copy="alertTemplate">Sao chép mẫu thông báo</button><span class="copied" id="alertCopied"></span></p>
+        <p class="muted" style="font-size:15px">Đăng thông báo đã điền vào nơi hàng xóm của bạn thường đọc — nhóm tin nhắn, nhóm Facebook, Nextdoor — và lưu một bản bằng mẫu nhật ký bên dưới. Trang này không tiếp nhận hay đăng tải các báo cáo sự việc. Hãy gửi thông tin có thể xác định danh tính qua các kênh báo tin chính thức.</p>
+        <div class="safety">
+          <p style="margin:0"><strong>An toàn — bắt buộc tuân thủ:</strong> Chỉ quan sát và báo tin. <strong>Tuyệt đối không đối đầu với người đổ rác.</strong> Không chặn xe, không tranh cãi, không đi theo bất kỳ ai. Chụp ảnh từ khoảng cách an toàn rồi để cơ quan tiếp nhận xử lý. Nếu có người gặp nguy hiểm, hãy gọi 911 — không gửi qua chuỗi thông báo cộng đồng.</p>
+        </div>
+      </div>
+      <div>
+        <h3 style="margin-top:0">Các kênh chính thức — cũng hãy gọi những nơi này</h3>
+        <div class="channel-list">
+          <div class="channel"><b>Thành phố Gulfport — 311</b><a class="num" href="tel:311">Gọi 311</a><p>Tiếp nhận mọi phản ánh không khẩn cấp thuộc thành phố, bao gồm đổ rác trái phép. Nếu không liên lạc được, gọi: <a href="tel:+12288685700">228-868-5700</a> · <a href="/cdn-cgi/l/email-protection#7c4f4d4d3c1b09101a0c130e0851110f521b130a"><span class="__cf_email__" data-cfemail="2a191b1b6a4d5f464c5a45585e074759044d455c">[email&#160;protected]</span></a>. Quan sát từ nơi an toàn và gửi thông tin liên quan trực tiếp cho cơ quan chức năng.</p></div>
+          <div class="channel"><b>Bộ phận thực thi quy định đô thị Gulfport</b><a class="num" href="tel:+12288685718">228-868-5718</a><p>Việc dọn các điểm đổ rác trong địa giới thành phố thuộc trách nhiệm của bộ phận thực thi quy định đô thị và bộ phận công trình công cộng.</p></div>
+          <div class="channel"><b>Bộ phận thoát nước mưa Gulfport — Mark Kraninger</b><a class="num" href="tel:+12288685740">228-868-5740 máy lẻ 6619</a><p>Các trường hợp xả thải trái phép vào cống thoát nước mưa và đường thủy. <a href="/cdn-cgi/l/email-protection#9ff2f4edfef1f6f1f8faeddff8eaf3f9eff0edebb2f2ecb1f8f0e9"><span class="__cf_email__" data-cfemail="bed3d5ccdfd0d7d0d9dbccfed9cbd2d8ced1ccca93d3cd90d9d1c8">[email&#160;protected]</span></a></p></div>
+          <div class="channel"><b>Trung tâm Ứng phó Quốc gia (24/7)</b><a class="num" href="tel:+18004248802">1-800-424-8802</a><p>Đầu mối liên bang tiếp nhận tin về các vụ tràn chất và mối đe dọa đột xuất — do Tuần duyên Hoa Kỳ trực, chuyển tin đến điều phối viên tại hiện trường của EPA / Tuần duyên.</p></div>
+          <div class="channel"><b>MDEQ — Sở Chất lượng Môi trường Mississippi</b><a class="num" href="tel:+18887860661">1-888-786-0661</a><p>Cơ quan chủ trì của tiểu bang về chất lượng nước và đổ rác trái phép. Trường hợp khẩn cấp: MEMA trực 24/7 tại số <a href="tel:+18002226362">1-800-222-6362</a> sẽ thông báo cho đội ứng phó của MDEQ.</p></div>
+          <div class="channel"><b>MS DMR — Sở Tài nguyên Biển Mississippi</b><a class="num" href="tel:+12283745000">(228) 374-5000</a><p>Phụ trách tài nguyên biển và ven biển, tại Biloxi. <a href="/cdn-cgi/l/email-protection#5b32353d341b3f3629753628753c342d"><span class="__cf_email__" data-cfemail="87eee9e1e8c7e3eaf5a9eaf4a9e0e8f1">[email&#160;protected]</span></a> · Đơn vị đồng tổ chức chương trình Mississippi Coastal Cleanup.</p></div>
+          <div class="channel"><b>EPA — Báo tin vi phạm</b><a class="num" href="https://www.epa.gov/tips" target="_blank" rel="noopener">epa.gov/tips</a><p>Biểu mẫu báo tin vi phạm cấp liên bang. Bộ phận hỗ trợ của EPA Khu vực 4: <a href="tel:+18002411754">800-241-1754</a>.</p></div>
+          <div class="channel"><b>Công binh Lục quân Hoa Kỳ — Địa hạt Mobile</b><a class="num" href="tel:+12516902658">(251) 690-2658</a><p>Rác thải trong vùng nước có thể lưu thông tàu thuyền và san lấp đất ngập nước không được phép — thuộc phạm vi Điều 404 của Đạo luật Nước sạch.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <details class="law-steps">
+      <summary>Báo tin và pháp luật: ba điều cần biết</summary>
+      <ol>
+        <li><strong>Thế nào là vi phạm:</strong> MDEQ mô tả đổ rác trái phép là việc thải bỏ chất thải rắn trên đất công hoặc đất tư mà không có sự cho phép hợp lệ hoặc mục đích chính đáng.</li>
+        <li><strong>Báo tin ở đâu:</strong> liên hệ bộ phận thực thi quy định đô thị tại địa phương hoặc MDEQ qua số <a href="tel:+16019615171">601-961-5171</a>. MDEQ tiếp nhận phản ánh ẩn danh về đổ rác trái phép.</li>
+        <li><strong>Thông tin hữu ích:</strong> địa điểm, ngày tháng, mô tả rác thải và ảnh chụp được một cách an toàn. Giữ mã số báo tin để tiện hỏi lại. Cơ quan chức năng sẽ xác định cách áp dụng pháp luật.</li>
+      </ol>
+      <p class="learning-note">Nguồn: <a href="https://www.mdeq.ms.gov/land/waste-division/solid-waste-management-programs/illegal-dumping/" target="_blank" rel="noopener">hướng dẫn của MDEQ về đổ rác trái phép</a>, kiểm tra ngày 25 tháng 10 năm 2026. Không đối đầu, đi theo hoặc công khai danh tính người khác.</p>
+    </details>
+  </div>
+
+
+<p class="intake-link" style="margin-top:14px"><a class="btn btn-solid" href="/vi/intake/?type=report">Dùng mẫu đơn để báo tin một địa điểm</a></p>
+</section>
+
+<!-- RECEIPTS -->
+<section id="receipts">
+  <div class="wrap">
+    <p class="eyebrow">Nhật ký cộng đồng · Cùng lưu hồ sơ đầy đủ</p>
+    <h2>Ghi chép rõ ràng giúp ích cho mọi người. <span class="accent">Ghi lại mọi lần báo tin.</span></h2>
+    <p class="lede">Báo tin được ghi lại sẽ dễ theo dõi tiến độ, và người hàng xóm tiếp theo cũng dễ tiếp nối công việc. Sao chép mẫu, bắt đầu ghi ngay trong ngày gửi báo tin và lưu ở nơi cả nhóm có thể xem. <strong>Trang này không gửi hay lưu báo cáo của bạn</strong> — bạn tự giữ và chia sẻ nhật ký.</p>
+    <div class="grid2" style="margin-top:24px">
+      <div>
+        <pre class="template" id="receiptTemplate">BỜ BIỂN VỮNG MẠNH — MỤC NHẬT KÝ CỘNG ĐỒNG
+NGÀY/GIỜ:          [thời điểm gửi báo tin]
+CƠ QUAN:           [nơi nhận báo tin]
+KÊNH:              [điện thoại / thư điện tử / biểu mẫu trực tuyến]
+NỘI DUNG BÁO TIN:  [đã báo việc gì — đổ rác trái phép, rác thải, điểm phát sinh]
+NGƯỜI TIẾP NHẬN:   [tên, mã phiếu/hồ sơ, hoặc "đang chờ xác nhận"]
+PHẢN HỒI:          [cơ quan đã trả lời hoặc làm gì — cập nhật khi nhận phản hồi]
+ĐÃ GỬI HỎI TIẾN ĐỘ: [ngày + kênh, hoặc "chưa gửi"]</pre>
+        <p><button class="copybtn" data-copy="receiptTemplate">Sao chép mẫu nhật ký</button><span class="copied" id="receiptCopied"></span></p>
+        <p class="muted" style="font-size:15px">Mục đầu tiên đã được ghi: vụ phát hiện tại Bayou Bernard Park, được chụp ảnh và báo tin ngày 15 tháng 10 — Hồ sơ #001. Mọi cuộc gọi và thư điện tử tiếp theo về vụ này đều được ghi vào cùng mục đó.</p>
+      </div>
+      <div>
+        <h3 style="margin-top:0">Theo dõi tiến độ — cách thúc đẩy việc xử lý báo tin</h3>
+        <p style="margin:0 0 6px">Nhân viên các cơ quan này phải xử lý rất nhiều cuộc gọi. Nếu một tuần trôi qua mà chưa có tin, hãy thực hiện bước tiếp theo — kèm lời cảm ơn vì sự hỗ trợ của họ đến thời điểm đó — và ghi vào cùng mục nhật ký.</p>
+        <div class="ladder">
+          <div class="step"><div class="n">1</div><h3>Hỏi tiến độ</h3><p>Gửi thư điện tử cho đúng đầu mối đã liên hệ, nhắc lại ngày báo tin ban đầu và mã phiếu, đề nghị thông báo tình trạng xử lý bằng văn bản.</p></div>
+          <div class="step"><div class="n">2</div><h3>Yêu cầu cung cấp hồ sơ công khai</h3><p>Đề nghị cơ quan cung cấp hồ sơ về địa điểm đã báo tin để cả nhóm biết việc gì đã được thực hiện và nơi nào vẫn cần hỗ trợ.</p></div>
+          <div class="step"><div class="n">3</div><h3>Các đại diện dân cử</h3><p>Hội đồng thành phố, ủy viên giám sát quận, đại biểu tiểu bang — chia sẻ các mục nhật ký để họ thấy nhu cầu và có thể hỗ trợ.</p></div>
+          <div class="step"><div class="n">4</div><h3>Cung cấp tin cho báo chí địa phương</h3><p>Nhật ký, hình ảnh và hàng xóm cùng chung tay — một hoạt động dọn dẹp cộng đồng được ghi nhận đầy đủ là câu chuyện đáng chia sẻ.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    <figure class="sponsor-poster" style="max-width:1080px;margin:36px auto"><img src="../assets/community-art.jpg" alt="Minh họa: buổi dọn dẹp cộng đồng ven biển vào giờ vàng — một người ông dạy cháu gái trồng cỏ đầm lầy trong khi hàng xóm khuân những túi đầy, phía sau là thuyền tôm và ngọn hải đăng." loading="lazy"><figcaption class="formnote" style="text-align:center;margin-top:10px">Các thế hệ bên bờ biển — đây là những người chúng ta làm vì họ.</figcaption></figure>
+
+<section class="alt" id="network"><div class="wrap">
+<p class="eyebrow">Kết nối cộng đồng · Danh bạ liên hệ</p>
+<h2>Mỗi nhóm đều kết nối <span class="accent">với những nhóm khác</span></h2>
+<p class="lede">Bờ Biển Vững Mạnh kết nối với các đội, chương trình và đối tác đang chăm sóc nguồn nước này, từ bàn tiếp nhận Gulfport 311 đến Ocean Trash Index toàn cầu. Chúng tôi trân trọng mọi đóng góp. Lọc theo cấp, mở mục thông tin và chọn bước đầu được đề xuất. Nếu bước phù hợp là gửi thư, đó mới là bản nháp: <strong>chỉ gửi sau khi một người thực sự xem lại đúng nội dung thư.</strong></p>
+<div class="filters" role="group" aria-label="Lọc tổ chức theo cấp"><label><input type="checkbox" class="orgfilter" value="federal"/> Liên bang</label><label><input type="checkbox" class="orgfilter" value="state"/> Tiểu bang</label><label><input type="checkbox" class="orgfilter" value="local"/> Địa phương</label><label><input type="checkbox" class="orgfilter" value="global"/> Toàn cầu</label><label><input type="checkbox" class="orgfilter" value="regional"/> Vùng Vịnh</label><label><input type="checkbox" class="orgfilter" value="media"/> Truyền thông</label></div><p class="muted" style="font-size:14.5px;margin-top:-8px">Không chọn ô nào sẽ hiển thị tất cả. Chọn một hoặc nhiều cấp để thu hẹp danh sách.</p><details class="org" data-cat="local" open><summary>Mississippi Coastal Cleanup — chương trình chính thức <span class="tagchip">Địa phương</span></summary><div class="body"><p>Chương trình thường trực của MSU Extension và Mississippi Marine Debris Task Force, thuộc hoạt động dọn dẹp bờ biển quốc tế của Ocean Conservancy. Mỗi vật được ghi nhận đều góp vào dữ liệu toàn cầu. Cả 9 địa điểm năm 2026 đều nằm dọc bãi biển hoặc bến cảng. Chương trình tổ chức sự kiện theo lịch riêng; Bờ Biển Vững Mạnh không điều phối các địa điểm đó.</p><div class="routebox">Đăng ký: <a href="http://coastalcleanup.extension.msstate.edu/events/annual-mississippi-coastal-cleanup-event" target="_blank" rel="noopener">Trang sự kiện chính thức</a> · Điều phối viên: <a href="/cdn-cgi/l/email-protection#721704171e0b1c5c1f11030717171c321f0101061306175c171607"><span class="__cf_email__" data-cfemail="0c697a6960756222616f7d796969624c617f7f786d786922696879">[email&#160;protected]</span></a></div><p><strong>Bước đầu phù hợp:</strong> Nếu tham gia chương trình chính thức, hãy đăng ký và lấy thông tin địa điểm trực tiếp từ trang sự kiện của chương trình. Trang này không đăng ký thay bạn và không kêu gọi bạn đến một địa điểm của chương trình.</p></div></details><details class="org" data-cat="federal"><summary>National Response Center — đầu mối liên bang <span class="tagchip">Liên bang</span></summary><div class="body"><p>Đầu mối liên bang duy nhất về tràn đổ và các mối đe dọa đột ngột đối với nguồn nước, do Tuần duyên Hoa Kỳ trực 24/7. Báo cáo được chuyển đến điều phối viên hiện trường đã được chỉ định: EPA phụ trách nội địa, Tuần duyên phụ trách vùng ven biển. Đây là cách huy động sự hỗ trợ phối hợp nhanh khi có sự cố lớn.</p><div class="routebox">Gọi: <a href="tel:+18004248802">1-800-424-8802</a> · Trực tuyến: nrc.uscg.mil</div><p><strong>Bước đầu phù hợp:</strong> Dùng kênh này khi đang có xả thải, váng trên mặt nước, mùi hóa chất hoặc nguy hiểm tức thời; sau đó ghi cuộc gọi vào Nhật ký cộng đồng.</p></div></details><details class="org" data-cat="federal"><summary>EPA Khu vực 4 — vi phạm và vùng đất ngập nước <span class="tagchip">Liên bang</span></summary><div class="body"><p>Cơ quan môi trường liên bang phụ trách Mississippi: ô nhiễm nước, đổ rác trái phép và bảo vệ vùng đất ngập nước theo Điều 404 của Đạo luật Nước sạch.</p><div class="routebox">Báo vi phạm: <a href="https://www.epa.gov/tips" target="_blank" rel="noopener">epa.gov/tips</a> · Hỗ trợ người dân: <a href="tel:+18002411754">800-241-1754</a> · Vùng đất ngập nước: Rosemary Calli, <a href="/cdn-cgi/l/email-protection#f1b2909d9d98dfa39e82949c908388b1948190df969e87"><span class="__cf_email__" data-cfemail="4f0c2e232326611d203c2a222e3d360f2a3f2e61282039">[email&#160;protected]</span></a>, <a href="tel:+14045629846">(404) 562-9846</a></div><p><strong>Bước đầu phù hợp:</strong> Gửi mẫu báo cáo vi phạm song song với báo cáo cho thành phố, rồi ghi vào Nhật ký cộng đồng để mọi người cùng theo dõi.</p></div></details><details class="org" data-cat="federal"><summary>Chương trình rác thải biển của NOAA <span class="tagchip">Liên bang</span></summary><div class="body"><p>Chương trình liên bang theo dõi rác thải biển. Ứng dụng Marine Debris Tracker ghi rác thải kèm tọa độ GPS và ảnh trực tiếp vào bộ dữ liệu quốc gia của NOAA — nguồn dữ liệu liên bang tương ứng với Ocean Trash Index toàn cầu.</p><div class="routebox">Thư điện tử: <a href="/cdn-cgi/l/email-protection#b9d4d8cbd0d7dcdddcdbcbd0ca97cedcdbf9d7d6d8d897ded6cf"><span class="__cf_email__" data-cfemail="99f4f8ebf0f7fcfdfcfbebf0eab7eefcfbd9f7f6f8f8b7fef6ef">[email&#160;protected]</span></a> · Ứng dụng: Marine Debris Tracker (NOAA MDP + Đại học Georgia)</div><p><strong>Bước đầu phù hợp:</strong> Ghi nhận vụ phát hiện ở Bayou Bernard trong ứng dụng Marine Debris Tracker, kèm ảnh và tọa độ GPS, để sự việc có mặt trong bộ dữ liệu liên bang.</p></div></details><details class="org" data-cat="federal"><summary>FEMA Khu vực 4 — hiểu đúng phạm vi hỗ trợ <span class="tagchip">Liên bang</span></summary><div class="body"><p>Cần nói rõ: <strong>FEMA không trực tiếp dọn các lạch nước.</strong> Kinh phí FEMA gắn với tuyên bố thảm họa của tổng thống theo đề nghị của thống đốc, cùng các khoản hỗ trợ giảm nhẹ rủi ro mà chính quyền đăng ký. Đổ rác thông thường không thuộc nhiệm vụ của cơ quan này; chuỗi xử lý ô nhiễm là NRC → điều phối viên EPA/Tuần duyên → MEMA. Nếu bão làm rác thải phát tán khắp bờ biển, FEMA tham gia qua MEMA.</p><div class="routebox">Khu vực 4 (Atlanta, phụ trách Mississippi): <a href="tel:+17702205200">770-220-5200</a> · <a href="/cdn-cgi/l/email-protection#c583808884e897f1e88caba3aa85a3a0a8a4eba1adb6eba2aab3"><span class="__cf_email__" data-cfemail="4503000804681771680c2b232a05232028246b212d366b222a33">[email&#160;protected]</span></a> · Bàn tin: <a href="tel:+17702205292">770-220-5292</a></div><p><strong>Bước đầu phù hợp:</strong> Với một điểm đổ rác, hãy báo NRC, EPA hoặc MDEQ. Giữ thông tin này để chuyển từng báo cáo đúng nơi có thể xử lý.</p></div></details><details class="org" data-cat="state"><summary>MDEQ — Cơ quan Chất lượng Môi trường Mississippi <span class="tagchip">Tiểu bang</span></summary><div class="body"><p>Đầu mối cấp tiểu bang về chất lượng nước, kiểm soát ô nhiễm và đổ rác trái phép xuống nguồn nước của tiểu bang. Theo dõi công khai của cơ quan tập trung vào vi khuẩn ở bãi biển; vì vậy, việc người dân ghi nhận những điều thấy ở lạch nước giúp bổ sung thông tin hữu ích.</p><div class="routebox">Số chính: <a href="tel:+18887860661">1-888-786-0661</a> · Văn phòng Kiểm soát Ô nhiễm: <a href="tel:+16019615171">(601) 961-5171</a> · Kênh khẩn cấp: MEMA 24/7 <a href="tel:+18002226362">1-800-222-6362</a></div><p><strong>Bước đầu phù hợp:</strong> Gọi điện báo tin, xin tên người tiếp nhận hoặc mã hồ sơ, rồi ghi nhật ký ngay trong ngày.</p></div></details><details class="org" data-cat="state"><summary>MS DMR — Cơ quan Tài nguyên Biển <span class="tagchip">Tiểu bang</span></summary><div class="body"><p>Đối tác cấp tiểu bang phụ trách Mississippi Sound và các lạch nước, đặt tại Biloxi; đồng tổ chức Mississippi Coastal Cleanup với Marine Debris Task Force. Bộ phận Công nghệ Hải sản phụ trách hoạt động kiểm tra nước — sinh vật sống trong nguồn nước này cũng trở thành hải sản của Mississippi.</p><div class="routebox">Gọi: <a href="tel:+12283745000">(228) 374-5000</a> · <a href="/cdn-cgi/l/email-protection#94fdfaf2fbd4f0f9e6baf9e7baf3fbe2"><span class="__cf_email__" data-cfemail="167f78707956727b64387b6538717960">[email&#160;protected]</span></a> · 1141 Bayview Ave, Biloxi, MS 39530</div><p><strong>Bước đầu phù hợp:</strong> Báo rác thải và đề nghị DMR ghi nhận địa điểm lạch nước vào hồ sơ. <span class="draft">Đã soạn thư liên hệ — chưa gửi</span></p></div></details><details class="org" data-cat="state"><summary>MEMA — Cơ quan Quản lý Khẩn cấp Mississippi <span class="tagchip">Tiểu bang</span></summary><div class="body"><p>Điều phối cấp tiểu bang: vận hành Trung tâm Điều hành Khẩn cấp và kết nối cơ quan quản lý khẩn cấp cấp quận với hỗ trợ của tiểu bang và liên bang. MEMA điều phối, không thực thi quy định môi trường; đường dây 24/7 là tuyến liên hệ nhanh với nhóm ứng phó khẩn cấp của MDEQ.</p><div class="routebox">24/7: <a href="tel:+18002226362">1-800-222-6362</a> · Số chính: <a href="tel:+16019336362">601-933-MEMA (6362)</a> · <a href="/cdn-cgi/l/email-protection#85e8e0e8e4ecebe3eac5e8e0e8e4abe8f6abe2eaf3"><span class="__cf_email__" data-cfemail="b8d5ddd5d9d1d6ded7f8d5ddd5d996d5cb96dfd7ce">[email&#160;protected]</span></a></div><p><strong>Bước đầu phù hợp:</strong> Dùng cho sự cố ở quy mô vật liệu nguy hại; với các trường hợp khác, trước hết hãy gọi MDEQ và 311.</p></div></details><details class="org" data-cat="local"><summary>Thành phố Gulfport — 311, thực thi quy định và thoát nước mưa <span class="tagchip">Địa phương</span></summary><div class="body"><p>Cuộc gọi đầu tiên nhanh nhất cho một điểm đổ rác cụ thể trong ranh giới thành phố. Hướng dẫn của thành phố là báo người đổ rác qua 311 và chụp ảnh phương tiện cùng biển số.</p><div class="routebox">311: <a href="tel:311">gọi 311</a> · <a href="tel:+12288685700">228-868-5700</a> · <a href="/cdn-cgi/l/email-protection#94a7a5a5d4f3e1f8f2e4fbe6e0b9f9e7baf3fbe2"><span class="__cf_email__" data-cfemail="b1828080f1d6c4ddd7c1dec3c59cdcc29fd6dec7">[email&#160;protected]</span></a> · Thực thi quy định: <a href="tel:+12288685718">228-868-5718</a> · Nước mưa (Mark Kraninger): <a href="tel:+12288685740">228-868-5740 máy lẻ 6619</a>, <a href="/cdn-cgi/l/email-protection#513c3a23303f383f3634231136243d37213e23257c3c227f363e27"><span class="__cf_email__" data-cfemail="64090f16050a0d0a0301162403110802140b16104909174a030b12">[email&#160;protected]</span></a></div><p><strong>Bước đầu phù hợp:</strong> Báo 311 ngay ngày phát hiện. Các báo cáo gửi thành phố, quận, tiểu bang và liên bang có thể tiến hành song song; hãy ghi lại tất cả. <span class="draft">Đã soạn thư đề nghị thành phố hỗ trợ — chưa gửi</span></p></div></details><details class="org" data-cat="local"><summary>Quận Harrison — quản lý quy định và quy hoạch <span class="tagchip">Địa phương</span></summary><div class="body"><p>Tiếp nhận phản ánh về rác và phế thải ở khu vực thuộc quận nhưng ngoài ranh giới thành phố.</p><div class="routebox">Quản lý quy định: <a href="tel:+12288321622">(228) 832-1622</a>, 15309 Community Rd, Gulfport · Quy hoạch: <a href="tel:+12288313367">(228) 831-3367</a> · Phản ánh quy hoạch (gồm mục rác và phế thải): Rose Keller, <a href="/cdn-cgi/l/email-protection#8bf9e6e0eee7e7eef9cbe8e4a5e3eaf9f9e2f8e4e5a5e6f8a5fef8"><span class="__cf_email__" data-cfemail="8bf9e6e0eee7e7eef9cbe8e4a5e3eaf9f9e2f8e4e5a5e6f8a5fef8">[email&#160;protected]</span></a></div><p><strong>Bước đầu phù hợp:</strong> Dùng kênh phản ánh của quận cho đất thuộc thẩm quyền quận. Mẫu quy hoạch có mục riêng về rác và phế thải.</p></div></details><details class="org" data-cat="global"><summary>Ocean Conservancy — hoạt động dọn dẹp bờ biển quốc tế <span class="tagchip">Toàn cầu</span></summary><div class="body"><p>Mississippi Coastal Cleanup thuộc chương trình dọn dẹp bờ biển quốc tế hoạt động từ năm 1986. Dữ liệu nhập qua ứng dụng Clean Swell được tải ngay lên Ocean Trash Index, cơ sở dữ liệu rác thải biển lớn nhất thế giới.</p><div class="routebox">Nhóm dọn dẹp: <a href="/cdn-cgi/l/email-protection#1a79767f7b746f6a5a75797f7b74797574697f686c7b7479633475687d"><span class="__cf_email__" data-cfemail="8be8e7eeeae5fefbcbe4e8eeeae5e8e4e5f8eef9fdeae5e8f2a5e4f9ec">[email&#160;protected]</span></a> · Truyền thông: <a href="/cdn-cgi/l/email-protection#4a272f2e232b0a25292f2b24292524392f383c2b2429336425382d"><span class="__cf_email__" data-cfemail="c9a4acada0a889a6aaaca8a7aaa6a7baacbbbfa8a7aab0e7a6bbae">[email&#160;protected]</span></a></div><p><strong>Bước đầu phù hợp:</strong> Chia sẻ hồ sơ vụ phát hiện ở Bayou Bernard với nhóm dọn dẹp để rác trong lạch nước được ghi nhận cùng hệ dữ liệu với rác ở bãi biển. <span class="draft">Đã soạn — chưa gửi</span></p></div></details><details class="org" data-cat="global"><summary>The Ocean Cleanup <span class="tagchip">Toàn cầu</span></summary><div class="body"><p>Tổ chức được biết đến với hoạt động chặn nhựa trong sông trước khi ra đại dương. Bayou Bernard chảy vào Mississippi Sound; cộng đồng đang trực tiếp xử lý dòng rác thải còn tiếp diễn trong các lạch nước.</p><div class="routebox">Báo chí: <a href="/cdn-cgi/l/email-protection#aadad8cfd9d9eadec2cfc5c9cfcbc4c9c6cfcbc4dfda84c9c5c7"><span class="__cf_email__" data-cfemail="acdcdec9dfdfecd8c4c9c3cfc9cdc2cfc0c9cdc2d9dc82cfc3c1">[email&#160;protected]</span></a></div><p><strong>Bước đầu phù hợp:</strong> Dùng bản thư liên hệ dành cho tổ chức quốc tế, đính kèm hồ sơ vụ phát hiện tại Bayou Bernard. <span class="draft">Đã soạn — chưa gửi</span></p></div></details><details class="org" data-cat="global"><summary>Surfrider Foundation <span class="tagchip">Toàn cầu</span></summary><div class="body"><p>Mạng lưới các chi hội cộng đồng hoạt động vì nguồn nước địa phương, người dân địa phương, kiểm tra nước sạch và vận động bảo vệ môi trường.</p><div class="routebox">Truyền thông: <a href="/cdn-cgi/l/email-protection#234e46474a426350565145514a4746510d4c5144"><span class="__cf_email__" data-cfemail="1a777f7e737b5a696f687c68737e7f683475687d">[email&#160;protected]</span></a></div><p><strong>Bước đầu phù hợp:</strong> Hỏi xem có chi hội hoặc đầu mối vùng duyên hải Mississippi hay không, và cách một nhóm ở Gulfport có thể tham gia mạng lưới. <span class="draft">Đã soạn — chưa gửi</span></p></div></details><details class="org" data-cat="global"><summary>EARTHDAY.ORG — chiến dịch dọn dẹp toàn cầu <span class="tagchip">Toàn cầu</span></summary><div class="body"><p>Điều hành chiến dịch Great Global Cleanup. Hồ sơ dọn dẹp tại địa phương với ảnh và số cân rác là thông tin phù hợp để chia sẻ với chương trình.</p><div class="routebox">Liên hệ chung: <a href="/cdn-cgi/l/email-protection#a2cbccc4cde2c7c3d0d6cac6c3db8ccdd0c5"><span class="__cf_email__" data-cfemail="bdd4d3dbd2fdd8dccfc9d5d9dcc493d2cfda">[email&#160;protected]</span></a> · Truyền thông: <a href="/cdn-cgi/l/email-protection#355154435c504675505447415d51544c1b5a4752"><span class="__cf_email__" data-cfemail="a8ccc9dec1cddbe8cdc9dadcc0ccc9d186c7dacf">[email&#160;protected]</span></a> · Hợp tác: <a href="/cdn-cgi/l/email-protection#3b58535a494954557b5e5a494f535f5a421554495c"><span class="__cf_email__" data-cfemail="dfbcb7beadadb0b19fbabeadabb7bbbea6f1b0adb8">[email&#160;protected]</span></a></div><p><strong>Bước đầu phù hợp:</strong> Giới thiệu nhóm giám sát thường trực ở Bayou Bernard với mạng lưới Great Global Cleanup, kèm hồ sơ phát hiện và những báo cáo tiếp theo. <span class="draft">Đã soạn — chưa gửi</span></p></div></details><details class="org" data-cat="global"><summary>4ocean <span class="tagchip">Toàn cầu</span></summary><div class="body"><p>Doanh nghiệp dọn dẹp có lượng người theo dõi đông đảo; kênh hợp tác là đầu mối liên hệ phù hợp. Đề nghị ở đây là giúp lan tỏa hoạt động, không phải xin tiền.</p><div class="routebox">Hợp tác: <a href="/cdn-cgi/l/email-protection#6818091a1c060d1a1b0001181b285c070b0d0906460b0705"><span class="__cf_email__" data-cfemail="8afaebf8fee4eff8f9e2e3faf9cabee5e9efebe4a4e9e5e7">[email&#160;protected]</span></a> · Truyền thông và quan hệ công chúng: <a href="/cdn-cgi/l/email-protection#345e5b5a55405c555a1a595546475c55585874005b5751555a1a575b59"><span class="__cf_email__" data-cfemail="b1dbdedfd0c5d9d0df9fdcd0c3c2d9d0ddddf185ded2d4d0df9fd2dedc">[email&#160;protected]</span></a></div><p><strong>Bước đầu phù hợp:</strong> Gửi thư đến bộ phận hợp tác: giới thiệu nhóm đang hoạt động tại Gulfport, có số liệu thực tế và mong được lan tỏa. <span class="draft">Đã soạn — chưa gửi</span></p></div></details><details class="org" data-cat="global"><summary>Plastic Pollution Coalition <span class="tagchip">Toàn cầu</span></summary><div class="body"><p>Liên minh toàn cầu gồm hơn 1.300 tổ chức. Các nhóm có thể đăng ký tham gia để đưa hoạt động của Gulfport vào mạng lưới toàn cầu.</p><div class="routebox">Báo chí: <a href="/cdn-cgi/l/email-protection#26565443555566564a4755524f4556494a4a53524f49484549474a4f524f494808495441"><span class="__cf_email__" data-cfemail="17676572646457677b7664637e7467787b7b62637e78797478767b7e637e787939786570">[email&#160;protected]</span></a> · Hợp tác: <a href="/cdn-cgi/l/email-protection#f888998a8c969d8a8b9091888bb88894998b8c919b889794948d8c9197969b979994918c919796d6978a9f"><span class="__cf_email__" data-cfemail="12627360667c7760617a7b626152627e7361667b71627d7e7e67667b7d7c717d737e7b667b7d7c3c7d6075">[email&#160;protected]</span></a> · Liên hệ chung: <a href="/cdn-cgi/l/email-protection#99f0f7fff6d9e9f5f8eaedf0fae9f6f5f5ecedf0f6f7faf6f8f5f0edf0f6f7b7f6ebfe"><span class="__cf_email__" data-cfemail="3c55525a537c4c505d4f48555f4c53505049485553525f535d50554855535212534e5b">[email&#160;protected]</span></a></div><p><strong>Bước đầu phù hợp:</strong> Nộp đơn tham gia liên minh và gửi một lời giới thiệu ngắn đến đầu mối báo chí, kèm tuyên bố công khai. <span class="draft">Đã soạn — chưa gửi</span></p></div></details><details class="org" data-cat="global"><summary>UNEP Clean Seas — #CleanSeas <span class="tagchip">Toàn cầu</span></summary><div class="body"><p>Chiến dịch chống ô nhiễm nhựa toàn cầu của Liên Hợp Quốc. Lưu vực sông Mississippi đã tham gia Clean Seas, nên vùng Vịnh đã có liên hệ với chiến dịch. Clean Seas nhận cam kết từ chính phủ, doanh nghiệp và tổ chức; đây không phải hộp thư nhận tin báo của cá nhân.</p><div class="routebox">Trang chiến dịch: <a href="https://cleanseas.org" target="_blank" rel="noopener">cleanseas.org</a></div><p><strong>Bước đầu phù hợp:</strong> Thể hiện sự đồng hành công khai: chia sẻ thông tin thực tế ở Gulfport với thẻ <strong>#CleanSeas</strong>, để các tổ chức trong mạng lưới tiếp tục đưa thông tin đến cấp phù hợp.</p></div></details><details class="org" data-cat="regional"><summary>Healthy Gulf — mạng lưới phục hồi vùng Vịnh <span class="tagchip">Vùng Vịnh</span></summary><div class="body"><p>Liên minh nước sạch của vùng Vịnh, đặt tại New Orleans và có lịch sử tổ chức cộng đồng lâu năm ở Mississippi. Nước sạch và đầm lầy khỏe mạnh là trọng tâm hoạt động của họ.</p><div class="routebox">Trang web: <a href="https://healthygulf.org" target="_blank" rel="noopener">healthygulf.org</a> · Điện thoại: <a href="tel:+15045251528">(504) 525-1528</a> · (Chưa xác minh được địa chỉ thư điện tử công khai cho câu hỏi chung; trước hết hãy dùng kênh liên hệ trên trang web hoặc gọi điện.)</div><p><strong>Bước đầu phù hợp:</strong> Gọi điện trước. Giới thiệu Bayou Bernard, hỏi đầu mối hiện phụ trách Mississippi, chia sẻ Nhật ký cộng đồng và hỏi Bờ Biển Vững Mạnh có thể hỗ trợ hoạt động của họ như thế nào. <span class="draft">Đã soạn — chưa gửi</span></p></div></details><details class="org" data-cat="regional"><summary>Lower Mississippi Riverkeeper <span class="tagchip">Vùng Vịnh</span></summary><div class="body"><p>Có kênh công khai để người dân báo sự cố ô nhiễm và tải ảnh. Địa bàn tuần tra là hạ lưu sông Mississippi ở Louisiana. Bayou Bernard nằm ngoài địa bàn đó, nhưng đây là đầu mối Waterkeeper gần nhất có thể giới thiệu nơi phù hợp.</p><div class="routebox">Báo sự cố: <a href="https://lmrk.org/contact-us" target="_blank" rel="noopener">lmrk.org/contact-us</a> · Điện thoại: <a href="tel:+12259281315">225-928-1315</a></div><p><strong>Bước đầu phù hợp:</strong> Gửi vụ phát hiện ở Bayou Bernard qua mẫu báo sự cố, kèm ảnh, và hỏi nhóm Waterkeeper nào phụ trách Mississippi Sound. <span class="draft">Đã soạn — chưa gửi</span></p></div></details><details class="org" data-cat="regional"><summary>The Nature Conservancy tại Mississippi <span class="tagchip">Vùng Vịnh</span></summary><div class="body"><p>Bảo vệ đầm lầy ven biển Mississippi, gồm hệ thống Pascagoula, với văn phòng ven biển ở Ocean Springs, cách địa bàn lạch nước một quận.</p><div class="routebox">Chi nhánh Mississippi: <a href="https://www.nature.org/en-us/about-us/where-we-work/united-states/mississippi/contact-us" target="_blank" rel="noopener">nature.org — liên hệ tại Mississippi</a> · Văn phòng ven biển (Ocean Springs): <a href="tel:+12282194580">228-219-4580</a></div><p><strong>Bước đầu phù hợp:</strong> Gửi thư ngắn đến chi nhánh Mississippi: giới thiệu những người hàng xóm đang dọn đầm lầy và xin được kết nối với nhóm ven biển. <span class="draft">Đã soạn — chưa gửi</span></p></div></details><details class="org" data-cat="regional"><summary>Audubon Mississippi — Audubon Delta <span class="tagchip">Vùng Vịnh</span></summary><div class="body"><p>Bờ biển Mississippi là nơi sinh sản và nuôi chim non. Rác trong đầm lầy làm tổn hại sinh cảnh; nhân viên Audubon Delta đã làm việc tại các địa điểm quanh Gulfport.</p><div class="routebox">Người phụ trách chính sách: <a href="/cdn-cgi/l/email-protection#b7fddedbdb99fad6c4c3c5d8c3d8c3d6c5d8f7d6c2d3c2d5d8d999d8c5d0"><span class="__cf_email__" data-cfemail="da90b3b6b6f497bba9aea8b5aeb5aebba8b59abbafbeafb8b5b4f4b5a8bd">[email&#160;protected]</span></a> · Chim ven biển: <a href="/cdn-cgi/l/email-protection#aac7d9c9c5cbd9decbc6c8c3d8ced9eacbdfcedfc8c5c484c5d8cd"><span class="__cf_email__" data-cfemail="1f726c7c707e6c6b7e737d766d7b6c5f7e6a7b6a7d707131706d78">[email&#160;protected]</span></a></div><p><strong>Bước đầu phù hợp:</strong> Gửi một trang thông tin đến người phụ trách chính sách: nêu vụ phát hiện và hỏi ai trong nhóm ven biển nên nhận các cập nhật từ Nhóm Giám Sát Vịnh. <span class="draft">Đã soạn — chưa gửi</span></p></div></details><details class="org" data-cat="regional"><summary>Turkey Creek Community Initiatives và Land Trust for the MS Coastal Plain <span class="tagchip">Vùng Vịnh</span></summary><div class="body"><p>Cộng đồng đã tổ chức hoạt động ngay trên lưu vực quê nhà: người dân Turkey Creek bảo vệ tài nguyên thiên nhiên và văn hóa của dòng lạch, với sự hỗ trợ của Land Trust, đơn vị cũng quản lý Turkey Creek Greenway. Bernard Bayou hiện chưa có một nhóm chuyên trách tương tự; Bờ Biển Vững Mạnh có thể từng bước góp vào khoảng trống đó, đồng hành với những người hàng xóm có kinh nghiệm lâu năm.</p><div class="routebox">Land Trust for the Mississippi Coastal Plain: P.O. Box 245, Biloxi, MS 39533 · <a href="tel:+12284359191">228-435-9191</a> · <a href="https://www.ltmcp.org" target="_blank" rel="noopener">ltmcp.org</a></div><p><strong>Bước đầu phù hợp:</strong> Giới thiệu nhóm như một người hàng xóm sẵn lòng hợp tác, đề nghị hỗ trợ quan sát nguồn nước và hỏi những người đi trước điều họ ước được biết ngay từ đầu.</p></div></details><details class="org" data-cat="media"><summary>WLOX — tin tức địa phương Biloxi và Gulfport <span class="tagchip">Truyền thông</span></summary><div class="body"><p>Tòa soạn của vùng duyên hải. Một hoạt động dọn dẹp do người dân thực hiện, có ảnh và kết quả được ghi nhận, là câu chuyện đáng chia sẻ.</p><div class="routebox">Bàn tin: <a href="tel:+12288962563">(228) 896-2563</a> · Gửi tin: <a href="/cdn-cgi/l/email-protection#a8d8dac7ccddcbcddadbe8dfc4c7d086cbc7c5"><span class="__cf_email__" data-cfemail="5121233e35243234232211263d3e297f323e3c">[email&#160;protected]</span></a> · Số chính: <a href="tel:+12288961313">(228) 896-1313</a></div><p><strong>Bước đầu phù hợp:</strong> Gọi bàn tin với hồ sơ vụ phát hiện đã chuẩn bị sẵn.</p></div></details><details class="org" data-cat="media"><summary>Associated Press — Jackson và mạng tin toàn quốc <span class="tagchip">Truyền thông</span></summary><div class="body"><p>Tin do AP ở Jackson thực hiện được cung cấp cho báo chí trên khắp Mississippi. Bản tin giới thiệu đã được soạn để người dùng xem lại và sử dụng: ai, việc gì, khi nào, vì sao quan trọng và ảnh hồ sơ có thể cung cấp.</p><div class="routebox">Tòa soạn: <a href="https://ap.org/contact-us/contact-the-newsroom" target="_blank" rel="noopener">ap.org/contact-us/contact-the-newsroom</a> · Gửi tin bảo mật: <a href="https://ap.org/tips" target="_blank" rel="noopener">ap.org/tips</a> (AP không công bố địa chỉ thư điện tử để nhận tin; hãy dùng trang liên hệ tòa soạn.)</div><p><strong>Bước đầu phù hợp:</strong> Chia sẻ vụ phát hiện có hồ sơ cùng các báo cáo đang được Nhóm Giám Sát Vịnh bổ sung. <span class="draft">Đã soạn — chưa gửi</span></p></div></details></div></section>
+
+<!-- WATCHES -->
+<section class="alt" id="watches">
+  <div class="wrap">
+    <p class="eyebrow">Khắp vùng duyên hải · Ba nhóm giám sát, một bờ biển</p>
+    <h2>Không chỉ một lạch nước. <span class="accent">Mà cả bờ biển.</span></h2>
+    <p class="lede">Mạng lưới giám sát có mặt tại ba nơi, từ tây sang đông dọc vùng duyên hải Vịnh Mexico của Mississippi. Mỗi điểm đều làm theo cùng một quy trình: quan sát, chụp ảnh từ khoảng cách an toàn, báo tin, ghi nhật ký. Một điểm giám sát không có nghĩa là đã xảy ra sự việc — mà có nghĩa là có người đang quan tâm theo dõi.</p>
+    <div class="grid3" style="margin-top:24px">
+      <div class="card">
+        <h3>🌊 Nhóm Giám Sát Vịnh — Gulfport</h3>
+        <p><strong>Bayou Bernard · Quận Harrison</strong></p>
+        <p>Nơi Bờ Biển Vững Mạnh khởi đầu. Bayou Bernard và các nhánh Turkey Creek, Flat Branch được chính những người hàng xóm sống bên dòng nước trông nom. Vụ phát hiện ngày 15 tháng 10 tại Bayou Bernard Park là Hồ sơ #001.</p>
+      </div>
+      <div class="card">
+        <h3>⚓ Nhóm Giám Sát Biloxi — Biloxi</h3>
+        <p><strong>Sông Tchoutacabouffa · Vịnh Back Bay của Biloxi</strong></p>
+        <p>Dòng sông của Biloxi uốn lượn qua thành phố rồi đổ vào Back Bay — vùng nước phục vụ đội tàu hải sản Biloxi. Đây là một điểm giám sát thường trực: chưa có sự việc nào được báo tại đây, và đó chính là ý nghĩa của việc giám sát.</p>
+      </div>
+      <div class="card">
+        <h3>🌲 Nhóm Giám Sát Pascagoula — Pascagoula</h3>
+        <p><strong>Sông Pascagoula · Quận Jackson</strong></p>
+        <p>Một trong những dòng sông lớn cuối cùng ở Mỹ còn chảy tự do, đi qua Quận Jackson rồi đổ ra Mississippi Sound. Cùng một cách trông nom ở đầu phía đông bờ biển: chụp ảnh trước, báo tin, ghi nhật ký.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WATER -->
+<section id="water">
+  <div class="wrap">
+    <p class="eyebrow">Thông tin về nguồn nước địa phương</p>
+    <h2>Hiểu nguồn nước quê mình: <span class="accent">hệ thống Bernard Bayou</span></h2>
+    <p class="lede">Một hệ thống nối liền — lạch, suối, hồ và tuyến đường thủy cùng thoát nước ra Mississippi Sound. Nếu bạn sống gần Lemoyne Blvd, Dedeaux Rd, Canal Rd hoặc Orange Grove, đây cũng là nguồn nước của bạn.</p>
+    <div class="grid3" style="margin-top:24px">
+      <div class="card"><h3>Bernard Bayou</h3><p>Dòng chính — được quan trắc từ Quốc lộ 49 đến Industrial Seaway, với các trạm MDEQ tại Orange Grove và gần Canal Rd. Chiếc tivi và nhựa ngày 15 tháng 10 được tìm thấy trong vùng đầm lầy của dòng nước này tại Bayou Bernard Park.</p></div>
+      <div class="card"><h3>Turkey Creek</h3><p>Dài khoảng 12.9 dặm, nhập vào Bernard Bayou ngay phía bắc sân bay. Năm 2021, dòng nước này được xếp vào danh sách 10 dòng sông bị đe dọa nghiêm trọng nhất ở Mỹ. Cộng đồng lâu đời nơi đây đã bảo vệ lưu vực này suốt nhiều năm.</p></div>
+      <div class="card"><h3>Flat Branch</h3><p>Nhánh nhỏ có trạm quan trắc MDEQ tại chỗ giao với Dedeaux Road — dòng nước có tên và được quan trắc gần khu phố Lemoyne Blvd nhất.</p></div>
+      <div class="card"><h3>Gulfport Lake và Industrial Seaway</h3><p>Nơi hệ thống đổ ra Mississippi Sound. Các đội Renew Our Rivers trước đây đã vớt 4.5 tấn rác tại Gulfport Lake / Industrial Seaway và 5.25 tấn tại Industrial Seaway và Bayou Bernard.</p></div>
+      <div class="card"><h3>Sông Little Biloxi</h3><p>Lưu vực kế bên về phía đông bắc, gần Lyman — thuộc cùng đồng bằng ven biển, được những người hàng xóm ấy trông nom.</p></div>
+      <div class="card"><h3>Một câu về việc giám sát</h3><p>Chương trình quan trắc của tiểu bang cung cấp cảnh báo về vi khuẩn tại bãi biển (nhắn “MDEQbeach” đến 95577). Số liệu dọn rác được tổng hợp sau hoạt động. <strong>Các lạch nước có thêm người để mắt nhờ chính những hàng xóm sống bên dòng nước.</strong></p></div>
+    </div>
+
+    <h2 style="margin-top:64px">Sông quê mình. Hải sản quê mình. <span class="accent">Niềm tự hào của chúng ta.</span></h2>
+    <div class="grid2">
+      <div class="card">
+        <h3>🌊 Vùng nước gắn liền với cuộc sống</h3>
+        <p>Các gia đình trên bờ biển này sống gắn bó với vùng nước — chúng ta nuôi con bên nước, đưa các em ra sông, câu cá, bơi lội và lớn lên cùng nước. Bởi vậy, những chiếc lốp bị vứt xuống sông khiến chúng ta đau lòng đến thế. Vùng nước này không phải của ai xa lạ. Đó là của chúng ta.</p>
+      </div>
+      <div class="card">
+        <h3>🦐 Hải sản là niềm tự hào</h3>
+        <p>Cua, tôm, hàu và những người mưu sinh trên vùng nước ấy. Thứ bị đổ xuống đầm lầy rồi cũng đi vào vùng nước cung cấp hải sản cho chúng ta. Bảo vệ lạch nước là bảo vệ bữa ăn, ngành nghề và danh tiếng của vùng duyên hải.</p>
+      </div>
+    </div>
+
+    <h2 style="margin-top:64px">An toàn và trang bị</h2>
+    <div class="gear" style="margin-top:20px">
+      <div class="card">
+        <h3>🎒 Mang theo</h3>
+        <ul class="tight">
+          <li>Giày bảo hộ lao động (không đi dép xăng đan) và găng tay lao động — mang dư cho người quên</li>
+          <li>Kem chống nắng, mũ, kính râm</li>
+          <li>Bình nước có thể châm thêm, cùng nước đóng chai dự phòng cho cả nhóm</li>
+          <li>Kẹp / gắp rác nếu có — đỡ phải cúi lưng, tránh để tay chạm vật sắc nhọn</li>
+          <li>Xô đựng rác sắc nhọn hoặc nặng; túi chịu lực cho những thứ túi tại điểm dọn dẹp không đựng được</li>
+          <li>Bộ sơ cứu để trên xe tải</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>⚠️ Làm việc an toàn</h3>
+        <ul class="tight">
+          <li>Luôn đeo găng tay. Không bao giờ đưa tay lấy thứ bạn không nhìn thấy.</li>
+          <li>Vật sắc nhọn — kim tiêm, kính vỡ, kim loại: không dùng tay nhặt cho vào túi. Chụp ảnh và báo cùng những thứ khác được phát hiện.</li>
+          <li>Ở trên nền đất khô, chắc chắn. Không xuống nước hoặc vào đầm lầy. Để rác nguy hiểm, nặng hoặc sắc nhọn cho người có chuyên môn phù hợp xử lý.</li>
+          <li>Đề phòng rắn, kiến lửa và ong vò vẽ dọc bờ.</li>
+          <li>Uống nước trước khi thấy khát. Cứ 30 phút nghỉ trong bóng râm một lần — tháng 10 ở Mississippi vẫn còn nóng.</li>
+          <li>Trẻ em phải ở cùng cha mẹ, trên bờ và cách xa mép nước.</li>
+          <li>Có sét thì dừng việc. Bắt buộc tuân thủ.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card" style="margin-top:18px">
+      <h3>📸 Ghi nhận đầy đủ</h3>
+      <p style="margin:0">Chụp ảnh TRƯỚC khi dọn điểm đổ rác từ khoảng cách an toàn · Chụp ảnh SAU khi dọn xong từ cùng góc chụp · ghi ngày, địa điểm, những thứ tìm thấy và cơ quan đã nhận báo tin · lưu nhật ký và ảnh ngay trong ngày · công khai kết quả có bằng chứng — mọi người tin vào những gì họ nhìn thấy.</p>
+    </div>
+  </div>
+</section>
+
+<!-- HERITAGE STRIP -->
+<div class="heritage" role="region" aria-label="Di sản Mississippi">
+  <div class="wrap">
+    <span class="item"><b>“Virtute et Armis”</b> — khẩu hiệu của Mississippi: “Bằng lòng dũng cảm và vũ khí”</span>
+    <span class="item"><b>Chim nhại</b> — loài chim biểu tượng của tiểu bang từ năm 1944, cất tiếng hót trên đầm lầy</span>
+    <span class="item"><b>Hoa mộc lan</b> — loài hoa và cây biểu tượng của tiểu bang, nở bên những bờ nước này</span>
+    <span class="item"><b>Ngọn hải đăng Biloxi</b> — đứng vững từ năm 1848, ánh đèn cuối cùng trên bờ biển này</span>
+  </div>
+</div>
+
+
+<!-- SIGNUP -->
+<section id="signup">
+  <div class="wrap">
+    <p class="eyebrow">Bờ biển của bạn. Phần góp sức của bạn.</p>
+    <h2>Ở đây luôn có chỗ <span class="accent">cho bạn.</span></h2>
+    <p class="lede">Bạn quan tâm đến vùng nước này? Hãy bắt đầu bằng một việc bạn có thể làm. Chọn cách tham gia và gửi cho nhóm một thư điện tử ngắn về cách bạn muốn góp sức.</p>
+    <p><a class="btn" href="/cdn-cgi/l/email-protection#c3f1f1fba0aca2b0b7b0b7b1acada483a4aea2aaafeda0acae">Tôi muốn tham gia</a></p><p class="formnote">Mở thư nháp trong ứng dụng email của bạn. Hãy kiểm tra và gửi cho nhóm; không có nội dung nào được gửi tự động.</p>
+    <div class="grid3 participation">
+      <div class="card"><h3>Chung tay giúp đỡ</h3><p>Hỗ trợ dọn dẹp có người giám sát, ghi chép, cung cấp vật dụng hoặc vận động cộng đồng. Cho chúng tôi biết thành phố bạn sống và cách bạn có thể hỗ trợ.</p><a class="btn" href="/cdn-cgi/l/email-protection#cefcfcf6ada1afbdbabdbabca1a0a98ea9a3afa7a2e0ada1a3" aria-label="Tình nguyện viên">Tình nguyện viên</a></div>
+      <div class="card"><h3>Góp ý tưởng của bạn</h3><p>Học sinh, sinh viên có thể giúp ghi số liệu dọn dẹp, thiết kế tờ rơi được duyệt hoặc tham gia các hoạt động có người giám sát. Bạn dưới 18 tuổi? Hãy nhờ cha mẹ, người giám hộ hoặc giáo viên phối hợp với chúng tôi.</p><a class="btn" href="/cdn-cgi/l/email-protection#6654545e050907151215121409080126010b070f0a4805090b" aria-label="Học sinh">Học sinh, sinh viên</a></div>
+      <div class="card"><h3>Mời lớp học hoặc nhóm của bạn tham gia</h3><p>Giáo viên, gia đình và các nhóm: hãy hỏi về hoạt động phù hợp với độ tuổi, sở thích và mức giám sát của người lớn mà nhóm có thể bố trí.</p><a class="btn" href="/cdn-cgi/l/email-protection#5c6e6e643f333d2f282f282e33323b1c3b313d3530723f3331" aria-label="Giáo viên hoặc nhóm">Giáo viên hoặc nhóm</a></div>
+    </div>
+    <p class="route-note">Các liên kết này mở ứng dụng thư điện tử của bạn. Hãy xem lại và gửi thư trong ứng dụng đó; trang này không gửi hay lưu thông tin của bạn. Bạn cũng có thể viết trực tiếp đến <a href="/cdn-cgi/l/email-protection#093b3b316a66687a7d7a7d7b66676e496e64686065276a6664"><span class="__cf_email__" data-cfemail="3200000a515d5341464146405d5c5572555f535b5e1c515d5f">[email&#160;protected]</span></a>. Vui lòng không gửi thông tin riêng tư hoặc thông tin y tế của trẻ em.</p>
+    <details class="law-steps"><summary>Tôi có thể bắt đầu bằng việc gì?</summary><p>Chia sẻ một ý tưởng với cha mẹ, giáo viên hoặc bạn bè: tìm hiểu về lạch nước, thiết kế tờ rơi và xin phép trước khi đăng, hoặc nhờ người lớn điều phối một buổi dọn dẹp. Người lớn có thể dùng <a href="https://coastalcleanup.extension.msstate.edu/contact-us/request-bin" target="_blank" rel="noopener">mẫu đề nghị cấp thùng vật dụng của Mississippi Coastal Cleanup</a>; việc có sẵn vật dụng và phê duyệt do chương trình đó quyết định.</p><p><strong>Hiện chưa có buổi dọn dẹp nào của Bờ Biển Vững Mạnh được xác nhận.</strong> Tham gia trao đổi chỉ thể hiện sự quan tâm, không phải đăng ký sự kiện. Trước khi mời mọi người tham dự, các hoạt động được xác nhận sẽ có ngày, giờ, địa điểm, người lớn làm đầu mối liên hệ và phương án ứng phó thời tiết.</p></details>
+  </div>
+
+<p class="intake-link" style="margin-top:14px"><a class="btn btn-solid" href="/vi/intake/?type=volunteer">Dùng mẫu đơn để đăng ký tình nguyện</a></p>
+</section>
+<section class="alt" id="kids">
+  <div class="wrap">
+    <p class="eyebrow">Thiếu nhi ven biển · Cùng người lớn học hỏi</p>
+    <h2>Những lựa chọn nhỏ. <span class="accent">Một bờ biển đáng được chăm sóc.</span></h2>
+    <p class="lede">Cùng nhau thử một thử thách nhỏ để chăm sóc bờ biển. Hoạt động dọn dẹp thực tế cần có người lớn, nền đất an toàn và vật dụng phù hợp.</p>
+    <div class="grid2 participation">
+      <div class="activity" id="coastActivity">
+        <p class="eyebrow">Em sẽ làm gì?</p>
+        <p class="activity-item" id="activityItem">Một vỏ kẹo trên lối đi khô ráo</p>
+        <div class="activity-actions"><button class="btn" data-choice="ordinary" type="button">Rác thông thường, nhặt cùng người lớn</button><button class="btn secondary" data-choice="adult" type="button">Để nguyên và báo người lớn</button></div>
+        <p class="activity-feedback" id="activityFeedback" role="status" aria-live="polite">Chọn câu trả lời để biết vì sao cách đó hữu ích.</p>
+        <button class="btn secondary activity-next" id="activityNext" type="button">Vật tiếp theo</button>
+        <noscript><p>Có thể bỏ vỏ kẹo vào túi rác với sự giúp đỡ của người lớn. Tuyệt đối không chạm vào kim tiêm, hóa chất không rõ loại hoặc vật sắc nhọn. Hãy để nguyên và báo người lớn.</p></noscript>
+      </div>
+      <div class="card"><h3>Nhiệm vụ chăm sóc bờ biển của em</h3><ol><li>Vẽ một loài cá, chim hoặc cây đầm lầy sống gần nhà em.</li><li>Hỏi người lớn xem rác có thể đi vào vùng nước nơi loài ấy sống bằng cách nào.</li><li>Cùng chọn một thói quen: giữ rác chắc chắn để không bay mất, mang bình nước dùng lại được hoặc bỏ dây câu vào thùng thu gom phù hợp.</li></ol><p class="learning-note">Hoạt động này diễn ra ngay trên trang. Hoạt động không thu thập tài khoản, tên, ảnh hay điểm số. Bạn có thể in phần này bằng lệnh In của trình duyệt.</p><h3>Gợi mở một cuộc trò chuyện</h3><p>Hỏi giáo viên hoặc cha mẹ: “Điều gì sẽ giúp bờ biển của chúng ta khỏe mạnh hơn, và chúng ta có thể cùng làm gì một cách an toàn?”</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="journal" aria-labelledby="journalTitle">
+  <div class="wrap">
+    <p class="eyebrow">Từ ý tưởng đến hành động</p>
+    <h2 id="journalTitle">Một bờ biển. <span class="accent">Một điểm khởi đầu.</span></h2>
+    <p class="lede">Hướng dẫn thiết thực để hàng xóm, học sinh, giáo viên và gia đình cùng bắt đầu một việc có ích.</p>
+    <div class="journal-grid">
+      <article class="card journal-card"><h3><a href="/vi/journal/first-step/">Bước đầu tiên để chăm sóc bờ biển</a></h3><p>Tìm cách bắt đầu: tình nguyện, ý tưởng cho lớp học, vật dụng hữu ích hoặc góp kỹ năng của bạn.</p><a class="read-guide" href="/vi/journal/first-step/">Đọc hướng dẫn →</a></article>
+      <article class="card journal-card"><h3><a href="/vi/journal/clear-notes/">Ghi chép rõ ràng để phản ánh hiệu quả</a></h3><p>Ghi lại sự việc, địa điểm, thời gian và chụp ảnh an toàn, rồi dùng kênh tiếp nhận phản ánh chính thức.</p><a class="read-guide" href="/vi/journal/clear-notes/">Đọc hướng dẫn →</a></article>
+    </div>
+    <div class="journal-actions"><a href="/vi/journal/">Xem góc chia sẻ →</a><a href="/vi/journal/feed.xml">Nguồn cấp RSS</a></div>
+  </div>
+</section>
+
+<section class="alt" id="faq" aria-labelledby="faqTitle">
+  <div class="wrap">
+    <p class="eyebrow">Câu hỏi thường gặp</p>
+    <h2 id="faqTitle">Một vài câu hỏi. <span class="accent">Câu trả lời rõ ràng.</span></h2>
+    <div class="faq-grid">
+      <div class="faq-list">
+        <details><summary>Khi nào có buổi dọn rác tiếp theo của Bờ Biển Vững Mạnh?</summary><p>Hiện chưa có ngày dọn rác nào của Bờ Biển Vững Mạnh được xác nhận. Trước khi mời mọi người tham dự, hoạt động đã xác nhận sẽ nêu rõ ngày, giờ, địa điểm, người lớn phụ trách và phương án khi thời tiết xấu.</p></details>
+        <details><summary>Học sinh dưới 18 tuổi có thể góp sức không?</summary><p>Có, hãy chia sẻ ý tưởng của bạn. Cha mẹ, người giám hộ hoặc giáo viên phải phối hợp với chúng tôi và sắp xếp người lớn giám sát phù hợp.</p></details>
+        <details><summary>Nhấp vào liên kết email có phải là đăng ký không?</summary><p>Không. Liên kết mở bản nháp trong ứng dụng email của bạn. Hãy xem lại và gửi tại đó. Email thể hiện sự quan tâm; trang này không đăng ký bạn vào sự kiện hay lưu thông tin đăng ký.</p></details>
+        <details><summary>Tôi có thể gửi phản ánh sự việc qua trang này không?</summary><p>Trang này không nhận hoặc gửi phản ánh sự việc. Hãy dùng <a href="#report">các kênh chính thức</a> và gửi thông tin nhận dạng trực tiếp cho cơ quan phụ trách. Quan sát từ nơi an toàn và không đối đầu với bất kỳ ai.</p></details>
+      </div>
+      <aside class="card share-panel" aria-labelledby="shareTitle">
+        <h3 id="shareTitle">Mời thêm một người hàng xóm chung tay.</h3>
+        <p>Chăm sóc bờ biển bắt đầu từ mỗi người. Chia sẻ Bờ Biển Vững Mạnh với người muốn góp sức.</p>
+        <button class="btn share-site" type="button" data-share-site aria-describedby="shareNote" hidden>Chia sẻ Bờ Biển Vững Mạnh</button>
+        <p class="formnote" id="shareNote">Nút này dùng tùy chọn chia sẻ của thiết bị hoặc sao chép liên kết trang web.</p>
+        <p class="share-status" id="shareStatus" role="status" aria-live="polite" aria-atomic="true"></p>
+        <noscript><p>Bạn có thể chia sẻ liên kết trang web bên dưới.</p></noscript>
+        <a class="site-link" data-site-link href="https://228coaststrong.com/vi/">228coaststrong.com/vi/</a>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="feedback">
+  <div class="wrap">
+    <div class="card">
+      <h2>Được xây dựng bằng tâm huyết. Cùng nhau vững mạnh hơn.</h2>
+      <p>Chúng tôi chăm chút cho trang web này, và góc nhìn của bạn giúp đội ngũ chúng tôi hoàn thiện trang web hơn. Hãy chia sẻ một đề xuất mang tính xây dựng, một góc nhìn khác hoặc điều chúng tôi có thể làm tốt hơn.</p>
+      <p><a href="/cdn-cgi/l/email-protection#ac9e9e94cfc3cddfd8dfd8dec3c2cbeccbc1cdc5c082cfc3c1">Gửi ý kiến</a></p>
+      <p class="formnote">Xem lại và gửi thư trong ứng dụng email của bạn.</p>
+    </div>
+  </div>
+</section>
+
+  <section id="sponsors">
+  <div class="wrap">
+    <p class="eyebrow">Các nhà tài trợ</p>
+    <h2>Doanh nghiệp địa phương. <span class="accent">Đồng hành cùng bờ biển này.</span></h2>
+    <p class="lede">Chương trình tài trợ Bờ Biển Vững Mạnh là cách các doanh nghiệp địa phương chung tay vì nguồn nước sạch và cộng đồng vững mạnh hơn. Đây là những doanh nghiệp đang đồng hành cùng chúng ta — xin hãy ủng hộ họ.</p>
+    <figure class="localized-campaign localized-campaign--sponsor"><div class="campaign-canvas"><img class="campaign-image" src="/assets/campaign-sponsor-neutral.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="Tranh những người hàng xóm nhặt rác ven biển, với cây cầu và mặt trời trên mặt nước."><div class="campaign-lettering"><p class="campaign-brand">Bờ Biển Vững Mạnh</p><p class="campaign-motto">Không lấy gì đi. Không để gì lại.<span>Tận hưởng hôm nay. Gìn giữ ngày mai.</span></p></div></div><figcaption class="campaign-values"><span>Tận hưởng bờ biển quê mình</span><span>Mang rác của bạn đi</span><span>Giữ mãi vẻ đẹp</span><span>Cùng nhau vững mạnh hơn</span></figcaption><p class="campaign-good">Con người tốt. Nơi chốn đẹp. Thói quen tốt.</p></figure>
+    <div class="sponsor-grid">
+      <div class="card sponsor-card"><span class="sponsor-badge">Nhà tài trợ đầu tiên</span><p class="sponsor-name">Moore Electric</p><p>Dịch vụ điện cho gia đình và doanh nghiệp khắp vùng duyên hải Mississippi.</p><p><a href="tel:+12282249150">(228) 224-9150</a></p><p><a class="btn secondary" href="https://228mooreelectric.com" target="_blank" rel="noopener">Ghé thăm Moore Electric</a></p><p class="sponsor-contact"><a href="/cdn-cgi/l/email-protection#82b0b0baefededf0e7e7eee7e1f6f0ebe1c2e5efe3ebeeace1edef"><span class="__cf_email__" data-cfemail="f0c2c2c89d9f9f8295959c959384829993b0979d91999cde939f9d">[email&#160;protected]</span></a></p></div>
+      <div class="card sponsor-card"><span class="sponsor-badge">Nhà tài trợ</span><img class="sponsor-photo" src="../assets/kcc-jonathen.jpg" alt="Đại diện Kingdom Connections Consulting trong văn phòng, bên dưới huy hiệu công ty" loading="lazy"><p class="sponsor-name">Kingdom Connections Consulting, LLC</p><p><em>&ldquo;Định hướng rõ ràng cho bước kinh doanh tiếp theo.&rdquo;</em></p><p>Tư vấn vay vốn cho doanh nghiệp nhỏ — hướng dẫn tài chính giúp doanh nghiệp mới khởi đầu, phát triển và vay vốn theo kế hoạch.</p><p><a href="tel:+12282571948">(228) 257-1948</a></p><p><a class="btn secondary" href="https://kingdomconnectionsconsulting.com/" target="_blank" rel="noopener">Ghé thăm Kingdom Connections Consulting</a></p><p class="sponsor-contact"><a href="/cdn-cgi/l/email-protection#b8f2dbd7cacaddd1d9f8d3d1d6dfdcd7d5dbd7d6d6dddbccd1d7d6cbdbd7d6cbcdd4ccd1d6df96dbd7d5"><span class="__cf_email__" data-cfemail="400a232f3232252921002b292e27242f2d232f2e2e252334292f2e33232f2e33352c34292e276e232f2d">[email&#160;protected]</span></a></p></div>
+    </div>
+    <p class="route-note">Bạn muốn doanh nghiệp của mình xuất hiện tại đây? <a class="btn" href="/cdn-cgi/l/email-protection#a89a9a90cbc7c9dbdcdbdcdac7c6cfe8cfc5c9c1c486cbc7c5">Trở thành nhà tài trợ</a></p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <h2>Vì mọi gia đình<br/>trên bờ biển này.</h2>
+    <p class="ded">Sứ mệnh này dành cho mọi gia đình câu cá trên vùng nước này, dùng thực phẩm từ vùng nước này và sẽ tiếp nhận vùng nước này mai sau. Vì cộng đồng — và vì cùng nhau khắc phục những điều chưa tốt.</p>
+    <p class="ded" style="font-style:italic">“Chừng nào nước của chúng ta còn rác nhựa, chừng đó vẫn có những người hàng xóm đứng trong nước, cùng nhau vớt rác lên.”</p>
+    <div class="creed">
+      <p>Không việc nào quá lớn</p>
+      <p>Không chân trời nào quá xa</p>
+      <p>Chúng ta là người Mỹ</p>
+      <p>Chúng ta tự hào.</p>
+    </div>
+    <div class="hash">#BờBiểnVữngMạnh</div><nav id="footerMap" class="footer-map" aria-label="Khám phá Bờ Biển Vững Mạnh"><h3>Khám phá Bờ Biển Vững Mạnh</h3><div class="footer-columns"><div class="footer-column"><h4>Cùng tham gia</h4><a href="#signup">Cách góp sức</a><a href="#kids">Thiếu nhi ven biển</a><a href="#report">Báo cáo đổ rác</a><a href="#feedback">Ý tưởng và góp ý</a></div><div class="footer-column"><h4>Khám phá bờ biển</h4><a href="#receipts">Nhật ký cộng đồng</a><a href="#network">Mạng lưới liên hệ</a><a href="#watches">Các nhóm quan sát</a><a href="#water">Nguồn nước quê mình</a><a href="#journal">Nhật ký và hướng dẫn</a></div><div class="footer-column"><h4>Về Bờ Biển Vững Mạnh</h4><a href="#top">Về đầu trang</a><a href="#start">Bắt đầu tại đây</a><a href="#traction">Hoạt động trực tiếp</a><a href="#faq">Câu hỏi và trả lời</a><a href="#sponsors">Các nhà tài trợ</a></div></div></nav><p class="footer-support">Bảo trì trang web: <a href="https://228mooreelectric.com/">Moore Electric</a> · <a href="tel:+12282249150">(228) 224-9150</a><br>Moore Electric bảo trì trang web này và chi trả việc đăng ký tên miền.</p>
+    <p style="margin:0 0 14px"><a href="#signup" style="color:#ef8f4c;font-weight:700">Tham gia Nhóm Giám Sát Vịnh →</a>  ·  <a href="#report" style="color:#ef8f4c;font-weight:700">Báo tin đổ rác trái phép →</a>  ·  <a href="#receipts" style="color:#ef8f4c;font-weight:700">Nhật ký cộng đồng →</a></p>
+    <p style="margin:0 0 14px">Gửi thư cho nhóm: <a href="/cdn-cgi/l/email-protection#291b1b114a46485a5d5a5d5b46474e694e44484045074a4644" style="color:#ef8f4c;font-weight:700"><span class="__cf_email__" data-cfemail="596b6b613a36382a2d2a2d2b36373e193e34383035773a3634">[email&#160;protected]</span></a></p>
+    <p class="fine">Bờ Biển Vững Mạnh — Trung tâm Nhóm Giám Sát Vịnh là trang cộng đồng dành cho vùng duyên hải Vịnh Mexico của Mississippi. Thông tin liên hệ của các cơ quan và tổ chức được chép từ các trang công khai chính thức, tra cứu ngày 15 tháng 10 năm 2026. Trang này không gửi hay lưu báo cáo, và không có nội dung nào được gửi nhân danh bạn từ trang này. Để hỏi về việc tham gia và tài trợ, hãy dùng các liên kết thư điện tử ở trên. Xem lại rồi gửi bằng ứng dụng thư điện tử của chính bạn; trang này không có cơ sở dữ liệu đăng ký. Với sự kiện do các chương trình chính thức tổ chức, hãy xác minh thông tin trên trang chính thức của chính chương trình đó.</p>
+    <p class="fine" style="margin-top:18px;border-top:1px solid rgba(255,255,255,.25);padding-top:14px"><em>Đôi lời về khởi đầu: Bờ Biển Vững Mạnh bắt đầu từ một người hàng xóm ở Biloxi, Devin Moore, người đã tìm thấy chiếc tivi bị vứt trong đầm lầy tại Bayou Bernard Park ngày 15 tháng 10 năm 2026 và đưa nó ra ngoài. Anh khởi xướng việc này vì gia đình — vì Hazel Moore, vì Albert Rhett Moore, vì Jamie Jarvis Gilbert, vì Michelle Gilbert, vì Brett Moore và vì Sharon Moore — và đó là toàn bộ câu chuyện về anh trên trang này. Việc này chưa bao giờ nhằm nói về anh. Điều chúng ta hướng đến là cộng đồng và cùng nhau khắc phục những điều chưa tốt.</em></p>
+    <p><a class="back-top" href="#top">Về đầu trang ↑</a></p>
+  </div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+(function(){
+
+  // Compact navigation; the links stay visible when JavaScript is disabled.
+  var menu=document.getElementById('menuToggle');
+  var links=document.getElementById('primaryLinks');
+  document.documentElement.classList.add('menu-ready');menu.hidden=false;
+  menu.addEventListener('click',function(){var open=menu.getAttribute('aria-expanded')!=='true';menu.setAttribute('aria-expanded',String(open));links.classList.toggle('open',open);});
+  links.addEventListener('click',function(e){if(e.target.closest('a')){menu.setAttribute('aria-expanded','false');links.classList.remove('open');}});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&menu.getAttribute('aria-expanded')==='true'){menu.setAttribute('aria-expanded','false');links.classList.remove('open');menu.focus();}});
+
+  // Family learning activity. No storage, analytics, network calls or identifiers.
+  var items=[{"label": "Một vỏ kẹo trên lối đi khô ráo", "answer": "ordinary", "why": "Vỏ kẹo là rác thông thường. Có người lớn hỗ trợ và dùng găng tay phù hợp hoặc kẹp gắp rác, bạn có thể bỏ nó vào túi rác. Để nguyên bất cứ thứ gì bạn không thể nhận biết một cách an toàn."}, {"label": "Một kim tiêm sắc nhọn gần bờ", "answer": "adult", "why": "Để nguyên tại chỗ và báo cho người lớn. Không chạm vào hoặc bỏ vào túi rác thông thường. Người lớn có thể liên hệ đơn vị có trách nhiệm."}, {"label": "Một bình chứa hóa chất không rõ loại", "answer": "adult", "why": "Để nguyên và báo cho người lớn. Không chạm vào, mở hoặc ngửi. Bình chứa không rõ loại cần đơn vị có trách nhiệm xử lý."}];
+  var itemIndex=0;var itemLabel=document.getElementById('activityItem');var feedback=document.getElementById('activityFeedback');
+  document.querySelectorAll('[data-choice]').forEach(function(button){button.addEventListener('click',function(){var item=items[itemIndex];var correct=button.dataset.choice===item.answer;feedback.textContent=(correct?"Đúng rồi. ":"Hãy thử lựa chọn khác. ")+item.why;});});
+  document.getElementById('activityNext').addEventListener('click',function(){itemIndex=(itemIndex+1)%items.length;itemLabel.textContent=items[itemIndex].label;feedback.textContent="Chọn câu trả lời để biết vì sao cách đó hữu ích.";});
+
+  // --- Copy buttons (clipboard with fallback) ---
+  function wireCopy(btn){
+    btn.addEventListener('click', function(){
+      var targetId = btn.getAttribute('data-copy');
+      var el = document.getElementById(targetId);
+      var msgId = targetId === 'alertTemplate' ? 'alertCopied' : 'receiptCopied';
+      var msg = document.getElementById(msgId);
+      function done(){ if(msg){ msg.textContent = "Đã sao chép ✓"; setTimeout(function(){ msg.textContent=''; }, 2500); } }
+      function failed(){ if(msg){ msg.textContent="Không thể sao chép. Hãy chọn và sao chép mẫu."; } }
+      var text = el.textContent;
+      if (navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(text).then(done, function(){ fallback(); });
+      } else { fallback(); }
+      function fallback(){
+        var ta = document.createElement('textarea');
+        ta.value = text; ta.style.position='fixed'; ta.style.opacity='0';
+        document.body.appendChild(ta); ta.select();
+        try { if(document.execCommand('copy')){done();}else{failed();} } catch(err){failed();}
+        document.body.removeChild(ta);
+      }
+    });
+  }
+  var btns = document.querySelectorAll('.copybtn');
+  for (var j=0;j<btns.length;j++) wireCopy(btns[j]);
+
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce), (max-width: 740px)').matches;
+
+  // --- Hero parallax: the marsh drifts gently as you scroll ---
+  var heroEl = document.querySelector('.hero');
+  var heroBg = document.querySelector('.hero img.bg');
+
+  // --- Scroll progress bar + nav shadow ---
+  var progress = document.createElement('div');
+  progress.id = 'progress';
+  document.body.appendChild(progress);
+  var topnav = document.querySelector('nav.top');
+  function onScroll(){
+    var h = document.documentElement;
+    var max = h.scrollHeight - h.clientHeight;
+    progress.style.width = (max > 0 ? (h.scrollTop / max) * 100 : 0) + '%';
+    if (topnav) topnav.classList.toggle('scrolled', h.scrollTop > 10);
+    if (heroBg && heroEl && !reduceMotion){
+      var y = h.scrollTop;
+      if (y < heroEl.offsetHeight){ heroBg.style.translate = '0 ' + (y * 0.22).toFixed(1) + 'px'; }
+    }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  // --- Reveal on scroll ---
+  if (!reduceMotion && 'IntersectionObserver' in window){
+    var revealEls = document.querySelectorAll('.card, .step, .fact, blockquote.pull, figure, .channel, .stat');
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, {threshold:.12});
+    for (var r=0;r<revealEls.length;r++){ revealEls[r].classList.add('reveal'); io.observe(revealEls[r]); }
+  }
+
+  // --- Fact count-up ---
+  var factNums = document.querySelectorAll('.fact b');
+  function countUp(el){
+    var m = el.textContent.match(/^([\d.]+)(.*)$/);
+    if (!m) return;
+    var target = parseFloat(m[1]);
+    var suffix = m[2];
+    var dec = (m[1].split('.')[1] || '').length;
+    var start = null;
+    function frame(ts){
+      if (!start) start = ts;
+      var p = Math.min((ts - start) / 1300, 1);
+      var eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = (target * eased).toFixed(dec) + suffix;
+      if (p < 1) requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
+  }
+  if (!reduceMotion && 'IntersectionObserver' in window && factNums.length){
+    var fio = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting){ countUp(e.target); fio.unobserve(e.target); }
+      });
+    }, {threshold:.4});
+    for (var fi=0; fi<factNums.length; fi++) fio.observe(factNums[fi]);
+  }
+})();
+</script>
+<script src="../activity.js" defer></script>
+<script src="../share.js" defer></script>
+<script data-local-network>
+(() => {
+ const filters = document.querySelectorAll('.orgfilter');
+ const cards = document.querySelectorAll('details.org');
+ function applyFilter() {
+  const active = Array.from(filters).filter(input => input.checked).map(input => input.value);
+  cards.forEach(card => card.classList.toggle('hidden-card', active.length > 0 && !active.includes(card.dataset.cat)));
+ }
+ filters.forEach(input => input.addEventListener('change', applyFilter));
+})();
+</script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" data-cf-beacon='{"version":"2024.11.0","token":"42e259363e0948a784881d13c9f0abe3","r":1,"spa":2}' crossorigin="anonymous"></script>
+</body>
+</html>

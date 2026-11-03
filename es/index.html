@@ -1,0 +1,1031 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+<meta name="color-scheme" content="light"/>
+<link rel="icon" href="data:,"/>
+<title>Costa Fuerte — Vecinos que protegen nuestra costa</title>
+<meta name="description" content="Vecinos que cuidan la costa de Mississippi. Encuentra cómo ayudar, aprende en familia, denuncia vertidos de forma segura o pregunta cómo patrocinar a Costa Fuerte.">
+<meta name="coast-strong-build" content="001-ALPHA-R3-APPROVED-APPEARANCE-20261027">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&amp;family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Barlow+Semi+Condensed:wght@600&amp;family=Zilla+Slab:wght@600;700&amp;display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fbf8f1; --surface:#ffffff; --surface2:#e9f1f4; --ink:#12242e; --muted:#5a6a70; --line:#d3dee2;
+  --green:#0b5a7a; --green-dark:#07425c; --green-deep:#052e40; --amber:#a85f14; --amber-bg:#fdeeda; --red:#a6192e;
+  --crimson:#a6192e; --gold:#ef8f4c; --on-gold:#231a02;
+  --on-dark:#e2f0f5; --on-dark-2:#cfe3ec; --on-dark-muted:#a8c8d4;
+  --dark-grad:linear-gradient(155deg,#0b5a7a 0%,#07425c 55%,#052e40 100%);
+  --radius:14px; --shadow:0 10px 30px rgba(8,38,54,.14);
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} *{transition:none!important; animation:none!important} }
+body{margin:0;font-family:"Barlow",system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55;font-size:17px}
+a{color:var(--green);text-underline-offset:3px}
+img{max-width:100%;height:auto;display:block}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+/* NAV */
+nav.top{position:sticky;top:0;z-index:50;background:color-mix(in srgb, var(--bg) 92%, transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav.top .wrap{display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding-top:10px;padding-bottom:10px}
+.brand{font-family:"Zilla Slab",Georgia,serif;font-weight:700;letter-spacing:.03em;font-size:22px;color:var(--ink);text-decoration:none}
+.brand span{color:var(--green)}
+.navlinks{display:flex;gap:4px;flex-wrap:wrap;margin-left:auto}
+.navlinks a{font-size:14.5px;font-weight:600;color:var(--muted);text-decoration:none;padding:7px 10px;border-radius:8px}
+.navlinks a:hover{background:var(--surface2);color:var(--ink)}
+.navcta{background:var(--green)!important;color:#fff!important}
+
+/* HERO */
+.hero{position:relative;color:#fff;overflow:hidden;background:var(--green-deep)}
+.hero img.bg{position:absolute;inset:-6% 0;width:100%;height:112%;object-fit:cover;object-position:center 62%;opacity:.82;will-change:translate}
+.hero .veil{position:absolute;inset:0;background:linear-gradient(180deg, rgba(5,42,31,.16) 0%, rgba(5,42,31,.30) 34%, rgba(5,42,31,.66) 62%, rgba(5,42,31,.93) 90%)}
+.hero .wrap{position:relative;z-index:4;padding:36px 20px 56px}
+.kicker{display:inline-block;font-family:"Barlow Semi Condensed",sans-serif;font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:13px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.35);padding:6px 12px;border-radius:999px}
+.hero h1{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(76px,15vw,172px);line-height:.92;letter-spacing:.015em;margin:18px 0 10px}
+.hero .tag{font-size:clamp(20px,3.4vw,30px);font-weight:500;max-width:640px;margin:0 0 8px}
+.hero .sub{max-width:620px;color:var(--on-dark-2);font-size:17px;margin:0 0 26px}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;font-weight:700;font-size:16px;padding:13px 22px;border-radius:10px;text-decoration:none;border:1.5px solid transparent;cursor:pointer;font-family:inherit}
+.btn-solid{background:var(--gold);color:var(--on-gold)}
+.btn-ghost{background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.55)}
+/* FLAG PHOTO BAND */
+.flagband{position:relative}
+.flagband img{width:100%;height:clamp(220px,44vh,440px);object-fit:cover;object-position:center 45%}
+.flagband figcaption{position:absolute;right:14px;bottom:12px;font-size:12.5px;line-height:1.4;color:var(--on-dark);background:rgba(5,42,31,.6);padding:5px 11px;border-radius:999px;margin:0}
+.flagband figcaption a{color:var(--gold)}
+/* SECTIONS */
+section{padding:64px 0}
+section.alt{background:var(--surface2)}
+h2{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(36px,5.6vw,56px);line-height:1.06;margin:0 0 12px;letter-spacing:.01em}
+section h2{position:relative;padding-bottom:16px}
+section h2::after{content:"";position:absolute;left:2px;bottom:0;width:76px;height:4px;border-radius:2px;background:linear-gradient(90deg,var(--crimson),var(--gold))}
+h2 .accent{color:var(--green)}
+h3{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:20px;line-height:1.25}
+.lede{font-size:19px;max-width:760px;color:var(--ink)}
+.muted{color:var(--muted)}
+.eyebrow{font-family:"Barlow Semi Condensed",sans-serif;font-weight:600;letter-spacing:.13em;text-transform:uppercase;font-size:13px;color:var(--amber);margin:0 0 8px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media(max-width:820px){.grid2,.grid3{grid-template-columns:1fr}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
+.card h3{margin:0 0 8px;font-size:20px}
+blockquote.pull{margin:26px 0;padding:6px 0 6px 22px;border-left:5px solid var(--amber);font-size:clamp(21px,3vw,27px);line-height:1.4;font-weight:500}
+figure{margin:0}
+figure img{border-radius:var(--radius)}
+figcaption{font-size:13.5px;color:var(--muted);margin-top:8px}
+.factrow{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:26px}
+@media(max-width:700px){.factrow{grid-template-columns:1fr}}
+.fact{background:var(--dark-grad);color:var(--on-dark);border-radius:var(--radius);padding:18px}
+.fact b{display:block;font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:36px;line-height:1.05;color:var(--gold)}
+.fact span{font-size:14.5px}
+/* FORM */
+.formnote{font-size:14.5px;color:var(--muted)}
+.signup-cta{display:flex;flex-direction:column;justify-content:center;gap:14px}
+.signup-cta .gform-btn{background:var(--green);color:#fff;font-size:19px;text-align:center;padding:16px 22px}
+
+pre.template{white-space:pre-wrap;word-break:break-word;background:var(--surface2);border:1px solid var(--line);border-radius:10px;padding:16px;font-size:14.5px;font-family:ui-monospace,Menlo,monospace;line-height:1.5}
+.copybtn{background:var(--surface);border:1.5px solid var(--green);color:var(--green);font-weight:700;padding:9px 16px;border-radius:9px;cursor:pointer;font:inherit;font-size:15px}
+.copybtn:hover{background:var(--green-light)}
+.copied{color:var(--green);font-weight:700;font-size:14px;margin-left:8px}
+/* CHANNELS */
+.channel-list{display:grid;grid-template-columns:1fr;gap:14px;margin-top:12px}
+.channel{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.channel b{display:block;font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:18px}
+.channel .num{font-family:"Zilla Slab",Georgia,serif;font-size:20px;color:var(--green);text-decoration:none;font-weight:700}
+.channel p{margin:4px 0 0;font-size:14.5px;color:var(--muted)}
+.safety{background:color-mix(in srgb, var(--crimson) 6%, var(--surface));border:1.5px solid color-mix(in srgb, var(--crimson) 42%, var(--surface));border-radius:var(--radius);padding:18px 20px;margin-top:22px}
+
+.safety strong{color:var(--red)}
+
+.ladder{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:20px}
+@media(max-width:520px){.ladder{grid-template-columns:1fr}}
+.step{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:18px}
+.step .n{font-family:"Zilla Slab",Georgia,serif;font-size:30px;color:var(--amber);font-weight:700;line-height:1}
+.step h3{margin:6px 0 6px}
+.step p{font-size:14.5px;color:var(--muted);margin:0}
+/* LISTS */
+ul.tight{margin:8px 0;padding-left:22px}
+ul.tight li{margin-bottom:7px}
+.gear{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+@media(max-width:760px){.gear{grid-template-columns:1fr}}
+/* HERITAGE STRIP */
+.heritage{background:var(--surface2);border-top:3px solid var(--gold);border-bottom:1px solid var(--line);padding:26px 0}
+.heritage .wrap{display:flex;flex-wrap:wrap;gap:10px 34px;align-items:baseline}
+.heritage .item{font-size:15.5px;color:var(--ink)}
+.heritage .item b{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:17px;color:var(--green)}
+
+/* FOOTER */
+footer{background:var(--dark-grad);color:var(--on-dark);padding:64px 0 48px;margin-top:0}
+footer h2{color:#fff}
+footer .ded{font-size:19px;max-width:720px}
+footer .creed{margin:26px 0 6px}
+footer .creed p{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(19px,3.4vw,24px);color:#fff;margin:0 0 4px;letter-spacing:.02em}
+footer .hash{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(32px,9vw,46px);color:var(--gold);letter-spacing:.03em;margin:18px 0 6px}
+footer .fine{font-size:13.5px;color:var(--on-dark-muted);max-width:760px}
+/* MOTION & POLISH */
+::selection{background:var(--gold);color:var(--on-gold)}
+#progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--crimson);z-index:100}
+nav.top{transition:box-shadow .3s ease}
+nav.top.scrolled{box-shadow:0 6px 24px rgba(8,38,54,.18)}
+.hero img.bg{animation:heroZoom 28s ease-in-out infinite alternate}
+@keyframes heroZoom{from{transform:scale(1.04)}to{transform:scale(1.15)}}
+.hero h1{text-shadow:0 4px 30px rgba(5,42,31,.5)}
+.hero .wrap>*{animation:heroIn .9s cubic-bezier(.2,.7,.2,1) both}
+.hero .wrap>*:nth-child(2){animation-delay:.08s}
+.hero .wrap>*:nth-child(3){animation-delay:.16s}
+.hero .wrap>*:nth-child(4){animation-delay:.24s}
+.hero .wrap>*:nth-child(5){animation-delay:.32s}
+@keyframes heroIn{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+.hero .wave{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:54px;display:block}
+.hero .wave path{fill:var(--bg)}
+.ticker{background:var(--crimson);color:var(--on-dark);overflow:hidden;padding:10px 0}
+.ticker-track{display:flex;width:max-content;animation:tick 32s linear infinite;font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:19px;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap}
+.ticker-track span{padding:0 10px}
+@keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.btn{transition:transform .2s ease,box-shadow .2s ease,background .2s ease}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 22px rgba(8,38,54,.25)}
+.card,.step,.channel{transition:transform .25s ease,box-shadow .25s ease}
+.card:hover,.step:hover,.channel:hover{transform:translateY(-3px);box-shadow:0 14px 34px rgba(8,38,54,.16)}
+section[id]{scroll-margin-top:84px}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+footer .hash{text-shadow:0 0 26px rgba(233,180,76,.35)}
+/* STAT BAND */
+.statband{background:var(--dark-grad);color:var(--on-dark);border-top:3px solid var(--gold)}
+.statband .wrap{display:grid;grid-template-columns:repeat(4,1fr);padding-top:0;padding-bottom:0}
+.stat{padding:28px 18px;text-align:center;border-left:1px solid rgba(233,180,76,.25)}
+.stat:first-child{border-left:none}
+.stat b{display:block;font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(34px,4.6vw,52px);color:var(--gold);line-height:1.02}
+.stat span{display:block;margin-top:7px;font-size:14px;line-height:1.45;color:var(--on-dark-muted)}
+@media(max-width:760px){.statband .wrap{grid-template-columns:1fr 1fr}.stat{border-left:none;border-top:1px solid rgba(233,180,76,.18)}.stat:nth-child(-n+2){border-top:none}}
+
+/* 001 ALPHA: participation, sponsorship and family learning */
+.hero h1{font-size:clamp(42px,7.5vw,94px);line-height:1.04;max-width:960px;margin:14px 0 22px;letter-spacing:-.025em}
+.hero h1 span{display:block;color:var(--gold)}
+.hero-brand{font-family:"Zilla Slab",Georgia,serif;font-size:26px;font-weight:700;letter-spacing:.08em;margin:24px 0 0}
+.hero .wrap{padding-bottom:70px}
+.participation{margin-top:28px}
+.participation .card{height:100%;display:flex;flex-direction:column;gap:12px}
+.participation .card p{margin:0}
+.participation .btn{margin-top:auto;text-align:center;background:var(--green);color:#fff}
+.route-note{max-width:760px;font-size:15px;color:var(--muted);margin-top:20px}
+.sponsor-name{font-family:"Zilla Slab",Georgia,serif;font-size:clamp(32px,6vw,54px);line-height:1.1;font-weight:700;margin:10px 0}.sponsor-badge{display:inline-block;background:var(--gold);color:#052e40;font-weight:700;font-size:12px;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:999px}.sponsor-card{border-top:4px solid var(--gold)}.sponsor-poster{margin:0 auto 30px;max-width:760px}.sponsor-photo{width:100%;height:auto;display:block;border-radius:12px;border:3px solid var(--gold);margin:0 0 14px}.sponsor-poster img{width:100%;height:auto;display:block;border-radius:14px;border:3px solid var(--gold);box-shadow:0 10px 30px rgba(5,42,31,.25)}
+.support-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.support-actions .btn{background:var(--green);color:#fff}
+.activity{border:2px solid var(--green);border-radius:var(--radius);padding:26px;background:var(--surface)}
+.activity-item{font-family:"Zilla Slab",Georgia,serif;font-size:clamp(26px,4vw,38px);font-weight:700;line-height:1.2;margin:14px 0 22px}
+.activity-actions{display:flex;flex-wrap:wrap;gap:12px}
+.activity button{min-height:48px;background:var(--green);color:#fff;border:2px solid transparent}
+.activity button.secondary{background:var(--surface2);color:var(--ink);border-color:var(--line)}
+.activity-feedback{min-height:4.5em;margin:18px 0;font-weight:600}
+.activity-next{margin-top:4px}
+.learning-note{font-size:14.5px;color:var(--muted)}
+.law-steps{margin-top:26px;padding:20px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.law-steps summary{cursor:pointer;font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:23px;padding:8px 0}
+.law-steps li{margin:10px 0}
+.skip-link{position:absolute;top:-100px;left:15px;z-index:200;background:var(--surface);padding:12px}
+.skip-link:focus{top:8px}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--gold);outline-offset:4px}
+.menu-toggle{font:inherit;font-weight:700;border:1px solid var(--line);border-radius:8px;padding:8px 14px;background:var(--surface);color:var(--ink);margin-left:auto}
+
+@media(max-width:740px){
+ .brand{font-size:17px}.hero .wrap{padding-top:28px}.hero h1{font-size:clamp(40px,10vw,62px)}
+ nav.top .wrap{gap:8px}.menu-ready .menu-toggle{display:block}.menu-ready .navlinks{display:none;width:100%;margin:6px 0 0;gap:5px}
+ .menu-ready .navlinks.open{display:flex}.navlinks a{font-size:15px;padding:10px}.activity{padding:20px}
+ .activity-actions{display:grid;grid-template-columns:1fr}.support-actions .btn{width:100%;text-align:center}
+}
+@media(min-width:741px){.menu-toggle{display:none!important}}
+@media print{nav.top,.flagband,.ticker,.hero,.statband,footer,#report,#receipts,#watches,#water,#story,#signup,#sponsors,.heritage,.activity-actions,.activity-next{display:none!important}section{padding:14px 0}.activity{border:1px solid #333}.learning-note{color:#222}}
+
+
+/* Revision 2: responsive language navigation and iPhone layout */
+html{-webkit-text-size-adjust:100%;scroll-padding-top:150px}
+body{overflow-wrap:break-word}
+.wrap{width:100%;padding-left:max(20px,env(safe-area-inset-left));padding-right:max(20px,env(safe-area-inset-right))}
+.grid2>*,.grid3>*,.factrow>*,.statband .wrap>*,.gear>*,.ladder>*{min-width:0}
+.card,.channel,.step{overflow-wrap:anywhere}
+h1,h2,h3{overflow-wrap:break-word;text-wrap:balance}
+.language-switch{display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:6px;width:100%;border-top:1px solid var(--line);padding-top:6px}
+.language-switch a{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:8px 12px;border-radius:8px;font-size:14px;font-weight:600;text-decoration:none;color:var(--ink);border:1px solid transparent}
+.language-switch a[aria-current=page]{background:var(--green);color:#fff}
+.language-switch a:hover{border-color:var(--green)}
+.menu-toggle,.copybtn,.navlinks a{min-height:44px}
+.navlinks a{display:inline-flex;align-items:center}
+.channel .num{display:inline-flex;align-items:center;min-height:44px;max-width:100%;overflow-wrap:anywhere}
+.channel a,.route-note a,footer a{overflow-wrap:anywhere}
+.flagband figcaption{max-width:calc(100% - 28px);border-radius:10px}
+.quick-start{padding:28px 0 36px;border-bottom:1px solid var(--line);background:var(--surface)}
+.start-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.start-card{display:block;border:1px solid var(--line);border-radius:12px;padding:20px;text-decoration:none;color:var(--ink);background:var(--surface2)}
+.start-card .start-number{font-size:13px;font-weight:700;letter-spacing:.12em;color:var(--amber)}
+.start-card strong{display:block;font-family:'Zilla Slab',Georgia,serif;font-size:24px;line-height:1.2;margin:5px 0 8px}
+.start-card span:last-child{display:block;color:var(--muted);font-size:16px;line-height:1.5}
+.start-card:hover{border-color:var(--green);box-shadow:var(--shadow)}
+pre.template{max-width:100%;overflow-wrap:anywhere;word-break:normal;tab-size:2}
+.kicker{max-width:100%;line-height:1.6;letter-spacing:.08em;border-radius:14px}
+.hero-btns{margin-bottom:22px}
+html[lang=vi] body{font-family:'Noto Sans',Arial,sans-serif}
+html[lang=vi] h1,html[lang=vi] h2,html[lang=vi] h3,html[lang=vi] .brand,html[lang=vi] .sponsor-name,html[lang=vi] .start-card strong{font-family:'Noto Serif',Georgia,serif}
+
+@media(max-width:740px){
+ nav.top .wrap{gap:6px 12px;padding-top:max(8px,env(safe-area-inset-top));padding-bottom:6px}
+ .brand{flex:1;min-width:0;font-size:16px;line-height:1.35;letter-spacing:0}
+ .menu-toggle{flex-shrink:0;font-size:15px;max-width:45%;padding:8px 12px}
+ .language-switch{justify-content:flex-start;gap:2px;padding-top:2px}
+ .language-switch a{padding:7px 12px;font-size:14px}
+ .navlinks{order:4;margin-left:0;max-height:58vh;max-height:58svh;overflow-y:auto;overscroll-behavior:contain}
+ .navlinks a{flex:1 1 45%;padding:10px 12px;line-height:1.4}
+ .hero .wrap{padding-top:28px;padding-bottom:48px}
+ .hero-brand{margin:16px 0 0;font-size:20px}
+ .hero h1{font-size:clamp(35px,9.2vw,52px);line-height:1.13;letter-spacing:-.02em;margin:16px 0 20px}
+ html[lang=vi] .hero h1{font-size:clamp(32px,8.4vw,48px);text-wrap:wrap}
+ html[lang=es] .hero h1{text-wrap:wrap}
+ .hero .tag{font-size:21px;line-height:1.45}
+ .hero .sub{font-size:16px;line-height:1.65;margin:14px 0 24px}
+ .hero-btns{display:grid;grid-template-columns:minmax(0,1fr);gap:10px}
+ .hero-btns .btn{width:100%;text-align:center;white-space:normal;min-height:48px}
+ .start-grid{grid-template-columns:minmax(0,1fr);gap:10px}
+ .start-card{padding:16px 18px}.start-card strong{font-size:23px}
+ section{padding:42px 0}h2{font-size:clamp(30px,8vw,40px);line-height:1.18}
+ .card{padding:20px}.lede{font-size:18px;line-height:1.65}
+ .stat{padding:20px 12px}.stat b{font-size:clamp(27px,7vw,38px)}
+ .stat span{font-size:14px}.flagband img{height:250px}
+ .ticker-track{animation:none;display:block;width:auto;white-space:normal;font-size:14px;letter-spacing:.045em;line-height:1.6;padding:0 14px}
+ .ticker-track span{padding:0}.ticker-track span+span{display:none}
+ .activity-actions button{width:100%;white-space:normal;min-height:48px}
+ .hero img.bg,.hero .wrap>*{animation:none!important}
+ .reveal{opacity:1;transform:none}
+ footer{padding-bottom:max(36px,env(safe-area-inset-bottom))}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1!important;transform:none!important}}
+@media print{.language-switch,.quick-start{display:none!important}}
+
+/* Shared traction panel: calm motion, existing marsh palette. */
+.traction{padding:30px 0 36px;background:var(--surface2);border-bottom:1px solid var(--line)}
+.traction h2{font-size:clamp(28px,4vw,40px)}
+.traction .factrow{margin-top:18px}.traction .fact b{font-variant-numeric:tabular-nums;font-size:clamp(32px,5vw,44px)}
+.traction details{font-size:14px}.traction summary{cursor:pointer;font-weight:600;min-height:44px;display:flex;align-items:center}
+.traction[data-state=unavailable] .fact b{opacity:.65}
+.btn,.start-card,.language-switch a{transition:background-color .16s ease,border-color .16s ease,box-shadow .16s ease}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+@media(prefers-reduced-motion:reduce){.btn,.start-card,.language-switch a{transition:none}}
+
+/* Journal, useful answers and simple sharing in the existing marsh palette. */
+main{display:block}
+main:focus{outline:none}
+.journal-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:26px}
+.journal-card{display:flex;flex-direction:column;align-items:flex-start;border-top:3px solid var(--gold)}
+.journal-card h3{font-size:25px;line-height:1.25}
+.journal-card h3 a{color:var(--ink)}
+.journal-card p{color:var(--muted);margin:8px 0 16px}
+.journal-card .read-guide{margin-top:auto;display:inline-flex;align-items:center;min-height:44px;font-weight:700}
+.journal-actions{display:flex;align-items:center;flex-wrap:wrap;gap:8px 24px;margin-top:18px}
+.journal-actions a{display:inline-flex;align-items:center;min-height:44px;font-weight:600}
+.faq-grid{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:28px;align-items:start;margin-top:26px}
+.faq-list{display:grid;gap:12px}
+.faq-list details{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:0 18px}
+summary{min-height:44px}
+.faq-list summary{cursor:pointer;padding:13px 0;font-weight:700;line-height:1.5}
+.faq-list details[open]{border-color:var(--green)}
+.faq-list details p{margin:0 0 18px;color:var(--muted)}
+.share-panel{border-top:3px solid var(--gold)}
+.share-panel h3{font-size:27px}
+.share-panel .btn{background:var(--gold);color:var(--on-gold);min-height:48px;text-align:center;max-width:100%}
+.share-site[hidden]{display:none}
+.share-site:disabled{cursor:wait;opacity:.75;transform:none}
+.share-status{font-size:15px;font-weight:600;min-height:3em;margin:14px 0 4px}
+.site-link{display:inline-flex;align-items:center;min-height:44px;max-width:100%;font-weight:600;overflow-wrap:anywhere}
+.back-top{display:inline-flex;align-items:center;min-height:44px;color:var(--gold);font-weight:700}
+@media(max-width:740px){.journal-grid,.faq-grid{grid-template-columns:minmax(0,1fr)}.faq-grid{gap:20px}.share-panel .btn{width:100%}.journal-card h3{font-size:23px}}
+@media print{#journal,#faq,.back-top{display:none!important}}
+
+.footer-map{margin:26px 0;text-align:left;border-top:1px solid rgba(255,255,255,.25);padding-top:18px}.footer-map h3{color:var(--gold);font-size:20px}.footer-map>div{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px 16px}.footer-map a{display:flex;align-items:center;min-height:44px;color:var(--on-dark);font-size:15px;text-decoration:none;overflow-wrap:anywhere}.footer-map a:hover{text-decoration:underline;color:var(--gold)}@media(max-width:740px){.footer-map>div{grid-template-columns:repeat(2,minmax(0,1fr))}}@media print{.footer-map{display:none}}
+
+.footer-map .footer-column{display:flex;flex-direction:column;gap:2px}.footer-map h4{color:var(--gold);font-size:15px;margin:0 0 10px}.footer-support{font-size:13px;color:var(--on-dark-muted);text-align:left;border-top:1px solid rgba(255,255,255,.25);padding-top:18px}.footer-support a{color:var(--on-dark);font-weight:600}#sponsors{scroll-margin-top:190px}
+</style>
+<link rel="alternate" hreflang="en" href="https://228coaststrong.com/">
+<link rel="alternate" hreflang="es" href="https://228coaststrong.com/es/">
+<link rel="alternate" hreflang="vi" href="https://228coaststrong.com/vi/">
+<link rel="alternate" hreflang="fr" href="https://228coaststrong.com/fr/">
+<link rel="alternate" hreflang="x-default" href="https://228coaststrong.com/">
+<link rel="canonical" href="https://228coaststrong.com/es/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Costa Fuerte">
+<meta property="og:locale" content="es_ES">
+<meta property="og:title" content="Costa Fuerte — Vecinos que protegen nuestra costa">
+<meta property="og:description" content="Vecinos que cuidan la costa de Mississippi. Encuentra cómo ayudar, aprende en familia, denuncia vertidos de forma segura o pregunta cómo patrocinar a Costa Fuerte.">
+<meta property="og:url" content="https://228coaststrong.com/es/">
+<meta property="og:image" content="https://228coaststrong.com/assets/bayou-marsh.webp">
+<meta property="og:image:width" content="1920">
+<meta property="og:image:height" content="1280">
+<meta property="og:image:alt" content="Marisma de la costa de Mississippi bajo una luz dorada, con pastos, canales de agua tranquila, cipreses con musgo español y una garza azul en aguas poco profundas">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Costa Fuerte — Vecinos que protegen nuestra costa">
+<meta name="twitter:description" content="Vecinos que cuidan la costa de Mississippi. Encuentra cómo ayudar, aprende en familia, denuncia vertidos de forma segura o pregunta cómo patrocinar a Costa Fuerte.">
+<meta name="twitter:image" content="https://228coaststrong.com/assets/bayou-marsh.webp">
+<meta name="twitter:image:alt" content="Marisma de la costa de Mississippi bajo una luz dorada, con pastos, canales de agua tranquila, cipreses con musgo español y una garza azul en aguas poco profundas">
+<link rel="alternate" type="application/rss+xml" title="Costa Fuerte — Diario" href="/es/journal/feed.xml">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Costa Fuerte","url":"https://228coaststrong.com/es/","inLanguage":"es"}</script>
+<link rel="stylesheet" href="/coastal.css">
+<link rel="stylesheet" href="/flags.css">
+<link rel="alternate" hreflang="de" href="https://228coaststrong.com/de/">
+<link rel="alternate" hreflang="pl" href="https://228coaststrong.com/pl/">
+<style id="coast-approved-appearance-20261027">
+/* Approved screenshot appearance: fixed coastal-blue hero in every color mode. */
+:root{--gold:#fa6b12;--on-gold:#102b3a}
+nav.top{background:#fbfaf7}
+.hero{background:#082e40}
+.hero .veil{background:linear-gradient(180deg,rgba(5,39,55,.86) 0%,rgba(5,39,55,.90) 62%,rgba(5,39,55,.95) 100%)}
+.hero-brand{color:#fa6b12;letter-spacing:.02em}
+.hero h1 span{color:#fa6b12}
+.hero .btn-solid{background:#fa6b12;color:#102b3a}
+.hero .btn-ghost{background:transparent;border-color:rgba(255,255,255,.66);color:#fff}
+.hero .tag{color:#fff}
+.hero .sub{color:#cfe3ec}
+.language-switch a{gap:10px}
+@media(max-width:740px){
+ .language-switch{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px 8px;justify-content:stretch;padding:4px 0 8px}
+ .language-switch a{min-width:0;min-height:44px;padding:10px 4px;font-size:14px;gap:10px;white-space:nowrap}
+ .hero .wrap{padding-top:34px}
+ .hero-brand{font-size:25px;margin-top:20px}
+}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Ir al contenido principal</a>
+
+<nav class="top">
+  <div class="wrap">
+    <a class="brand" href="#top"><span class="brand-name">Costa Fuerte</span><span class="brand-watch">Vigilancia del Bayou</span></a>
+    <button class="menu-toggle" id="menuToggle" aria-controls="primaryLinks" aria-expanded="false" type="button" hidden>Menú</button>
+    <div class="navlinks" id="primaryLinks">
+      <a href="#story">El hallazgo</a>
+      <a href="#report">Denunciar vertidos de basura</a>
+      <a href="#receipts">Registro comunitario</a>
+      <a href="#network">Red de contactos</a><a href="#watches">Los grupos de vigilancia</a>
+      <a href="#kids">Niños de la costa</a>
+      <a href="#journal">Diario</a>
+      <a href="#faq">Preguntas frecuentes</a>
+      <a class="navcta" href="#signup">Únete a Vigilancia del Bayou</a>
+    </div>
+<nav class="language-switch" aria-label="Elegir idioma"><a href="/" lang="en" hreflang="en"><span class="language-flag" aria-hidden="true">🇺🇸</span><span class="language-label" lang="es">Inglés</span></a><a href="/es/" lang="es" hreflang="es" aria-current="page"><span class="language-flag" aria-hidden="true">🇪🇸</span><span class="language-label" lang="es">Español</span></a><a href="/vi/" lang="vi" hreflang="vi"><span class="language-flag" aria-hidden="true">🇻🇳</span><span class="language-label" lang="es">Vietnamita</span></a><a href="/fr/" lang="fr" hreflang="fr"><span class="language-flag" aria-hidden="true">🇫🇷</span><span class="language-label" lang="es">Francés</span></a><a href="/de/" lang="de" hreflang="de"><span class="language-flag" aria-hidden="true">🇩🇪</span><span class="language-label" lang="es">Alemán</span></a><a href="/pl/" lang="pl" hreflang="pl"><span class="language-flag" aria-hidden="true">🇵🇱</span><span class="language-label" lang="es">Polaco</span></a></nav>
+  </div>
+</nav>
+
+<main id="main-content" tabindex="-1">
+<header class="hero" id="top">
+  <img class="bg" src="../assets/bayou-marsh.webp" alt="Marisma de la costa de Mississippi bajo una luz dorada, con pastos, canales de agua tranquila, cipreses con musgo español y una garza azul en aguas poco profundas" width="1920" height="1280" decoding="async" loading="eager" fetchpriority="high"/>
+  <div class="veil"></div>
+  <svg class="wave" viewbox="0 0 1440 60" preserveaspectratio="none" aria-hidden="true"><path d="M0,32 C240,60 480,0 720,24 C960,48 1200,8 1440,28 L1440,60 L0,60 Z"/></svg>
+  <div class="wrap">
+    <span class="kicker">Misión Madre Tierra · Gulfport · Biloxi · Ocean Springs · Pascagoula, Mississippi</span>
+    <p class="hero-brand">Costa Fuerte</p>
+    <h1>La Madre Tierra no tiene quien defienda sus intereses ante el gobierno. <span>Nos tiene a nosotros.</span></h1>
+    <div class="hero-btns">
+      <a class="btn btn-solid" href="#signup">Encuentra tu forma de ayudar</a>
+      <a class="btn btn-ghost" href="#report">Denuncia los vertidos de basura sin correr riesgos</a>
+    </div>
+    <p class="tag">Esta es nuestra comunidad. Este es nuestro orgullo. Esta es nuestra costa.</p>
+    <p class="sub">Vecinos que protegen nuestras aguas, nuestros mariscos y la costa que heredarán nuestros hijos. Toda la gloria para Dios y todo el mérito para la comunidad.</p>
+    
+  </div>
+</header>
+<section class="traction" id="traction" aria-labelledby="tractionTitle" data-state="connecting"><div class="wrap"><p class="eyebrow">Costa Fuerte en directo</p><h2 id="tractionTitle">Mira crecer a nuestra comunidad.</h2><p class="formnote">Cada visita es otra oportunidad de cuidar a la Madre Tierra.</p><div class="factrow"><div class="fact"><b data-activity="totalViews">—</b><span>Vistas desde el inicio del recuento</span></div><div class="fact"><b data-activity="todayViews">—</b><span>Vistas de hoy · hora Central</span></div><div class="fact"><b data-activity="activeSessions">—</b><span>Sesiones activas · últimos 2 minutos</span></div></div><p class="formnote" data-activity-status role="status">Conectando con la actividad en directo…</p><p class="formnote" data-activity-since>El recuento comienza con la primera vista registrada.</p><details><summary>Cómo contamos</summary><p class="formnote">Los números reflejan cargas de página registradas, no personas individuales. Recargar o cambiar de idioma añade una vista; las pestañas separadas pueden contar como sesiones distintas. El tráfico automatizado y el bloqueo del seguimiento pueden afectar al recuento. Se actualiza cada 30 segundos mientras esta página está visible.</p></details></div></section>
+
+<section class="quick-start" id="start"><div class="wrap"><p class="eyebrow">Empieza aquí</p><p class="formnote">Muchas manos. Una sola costa. Más fuertes juntos.</p><div class="start-grid"><a class="start-card" href="#signup"><span class="start-number">01</span><strong>Encuentra tu lugar</strong><span>Estudiantes, docentes, familias y vecinos: elige cómo ayudar.</span></a><a class="start-card" href="#kids"><span class="start-number">02</span><strong>Aprendamos juntos</strong><span>Prueba una actividad para cuidar la costa con un familiar o docente.</span></a><a class="start-card" href="#journal"><span class="start-number">03</span><strong>Sigue el trabajo</strong><span>Lee guías prácticas, comparte ideas y descubre los próximos pasos.</span></a></div></div></section>
+
+<section class="coast-flags" aria-labelledby="coast-flags-heading">
+  <div class="coast-flags__heading">
+    <p class="coast-flags__eyebrow">Costa Fuerte</p>
+    <h2 id="coast-flags-heading">Nuestra tierra. Nuestro país.</h2>
+    <span class="coast-flags__rule" aria-hidden="true"></span>
+  </div>
+  <div class="coast-flags__pair">
+    <figure class="coast-flags__card">
+      <div class="coast-flags__display">
+        <img class="coast-flags__flag coast-flags__flag--us" src="/assets/flags-us.svg" width="1900" height="1000" loading="lazy" decoding="async" alt="Bandera de Estados Unidos con cincuenta estrellas y trece franjas">
+      </div>
+      <figcaption>Estados Unidos</figcaption>
+    </figure>
+    <figure class="coast-flags__card">
+      <div class="coast-flags__display">
+        <img class="coast-flags__flag coast-flags__flag--ms" src="/assets/flags-ms.png" width="1050" height="630" loading="lazy" decoding="async" alt="Bandera de Misisipi con magnolia, estrellas y el lema «En Dios confiamos»">
+      </div>
+      <figcaption>Mississippi</figcaption>
+    </figure>
+  </div>
+</section>
+
+
+<div class="ticker" aria-hidden="true"><div class="ticker-track"><span>Observa · Fotografía · Denuncia · Registra · Tres grupos de vigilancia · Una costa · Vecinos que ayudan a sus vecinos · #CoastStrong · </span><span>Observa · Fotografía · Denuncia · Registra · Tres grupos de vigilancia · Una costa · Vecinos que ayudan a sus vecinos · #CoastStrong · </span></div></div>
+
+<!-- STAT BAND -->
+<div class="statband" role="region" aria-label="Costa Fuerte en cifras">
+  <div class="wrap">
+    <div class="stat"><b>9.75 toneladas</b><span>de desechos cuya extracción de este sistema de bayous quedó documentada en jornadas anteriores de Renew Our Rivers: un antecedente de limpieza regional que consta en los registros</span></div>
+    <div class="stat"><b>3 grupos de vigilancia</b><span>Vigilancia del Bayou · Biloxi Watch · Pascagoula Watch: una costa, vigilada entre todos</span></div>
+    <div class="stat"><b>1699</b><span>el año en que Biloxi echó raíces en Fort Maurepas, en esta misma costa</span></div>
+    <div class="stat"><b>Constancia #001</b><span>el hallazgo del 15 de octubre de 2026 en Bayou Bernard Park que dio origen a Costa Fuerte</span></div>
+  </div>
+</div>
+
+<!-- STORY -->
+<section id="story">
+  <div class="wrap">
+    <p class="eyebrow">Cómo empezó todo · 15 de octubre de 2026</p>
+    <h2>Un televisor arrojado a la marisma. <span class="accent">Los vecinos acudieron.</span></h2>
+    <div class="grid2">
+      <div>
+        <p class="lede">El 15 de octubre de 2026 se encontraron un televisor abandonado y plástico grueso en la marisma de <strong>Bayou Bernard Park (James Hill Park), 1890 Switzer Rd, Gulfport</strong> : en aguas que desembocan en Mississippi Sound, las mismas junto a las que crecerán nuestros hijos.</p>
+        <p>Nadie miró hacia otro lado. Se fotografió, se denunció, se retiró y se anotó qué se encontró, dónde y cuándo. Esa entrada se convirtió en la <strong>Constancia #001</strong>, y así nació Costa Fuerte: una vigilancia vecinal para los bayous, para que los vertidos de basura se detecten, se documenten y se atiendan, en vez de permanecer meses en la marisma.</p>
+        <blockquote class="pull">
+          «Este es nuestro hogar. El planeta no se deteriora por accidente: se deteriora por el abandono, y el abandono es una elección. Nosotros elegimos otro camino. La Madre Tierra no tiene quien defienda sus intereses ante el gobierno. Nos tiene a nosotros».
+        </blockquote>
+      </div>
+      <figure>
+        <img src="../assets/volunteers.webp" alt="Voluntarios de la comunidad con guantes, pinzas recogedoras y bolsas de basura limpiando la orilla de un brazo de río" width="1920" height="1280" decoding="async" loading="lazy"/>
+        <figcaption>La respuesta está en las personas: vecinos con guantes puestos y bolsas en mano, documentando todo lo que retiran.</figcaption>
+      </figure>
+    </div>
+    <div class="factrow">
+      <div class="fact"><b>9.75 toneladas</b><span>Desechos retirados de Gulfport Lake / Industrial Seaway y Bayou Bernard en jornadas anteriores de Renew Our Rivers (4.5 + 5.25 toneladas): este sistema es un lugar de vertidos conocido y documentado.</span></div>
+      <div class="fact"><b>9 lugares</b><span>En la lista oficial de Coastal Cleanup de 2026: todos son playas, puertos, muelles o zonas de parques junto al agua.</span></div>
+      <div class="fact"><b>0</b><span>Lugares de los bayous incluidos hasta ahora en esa lista. Los bayous son donde más puede ayudar un equipo vecinal, y ahí es precisamente donde Costa Fuerte colabora.</span></div>
+    </div>
+  </div>
+</section>
+    <figure class="sponsor-poster" style="max-width:1080px;margin:36px auto"><img src="../assets/bayou-crew-art.jpg" alt="Ilustración: voluntarios llevan bolsas de limpieza por un muelle de la bahía al amanecer, una garceta en vuelo y un faro a lo lejos." loading="lazy"><figcaption class="formnote" style="text-align:center;margin-top:10px">El equipo de la bahía — vecinos haciendo el trabajo.</figcaption></figure>
+
+<!-- REPORT -->
+<section class="alt" id="report">
+  <div class="wrap">
+    <p class="eyebrow">Vigilancia del Bayou · Denunciar vertidos de basura</p>
+    <h2>¿Ves un vertido de basura? <span class="accent">Denúncialo así.</span></h2>
+    <p class="lede">Primero, una foto desde una distancia segura. Después, la alerta, para que los vecinos se enteren de inmediato. Luego, la llamada oficial. Un avistamiento, dos destinatarios: los vecinos y el canal oficial.</p>
+    <div class="grid2" style="margin-top:24px">
+      <div>
+        <pre class="template" id="alertTemplate">🚨 ALERTA DE VERTIDO DE BASURA / DESECHOS — COSTA FUERTE
+QUÉ: [qué se vio: vertido en curso / desechos recientes, de qué tipo]
+DÓNDE: [ubicación en el mapa o calle / punto de referencia más cercano]
+CUÁNDO: [fecha + hora del avistamiento]
+FOTO: [adjunta]
+ESTADO: [denunciado ante ORGANISMO por CANAL a las HORA: completar una vez presentada la denuncia]</pre>
+        <p><button class="copybtn" data-copy="alertTemplate">Copiar la plantilla de alerta</button><span class="copied" id="alertCopied"></span></p>
+        <p class="muted" style="font-size:15px">Publica la alerta completa donde tus vecinos realmente lean los mensajes: chat grupal, grupo de Facebook o Nextdoor. Guarda una copia con la plantilla de registro que aparece más abajo. Esta página no recibe ni publica denuncias de incidentes. Envía los datos que permitan identificar a las personas por los canales oficiales de denuncia.</p>
+        <div class="safety">
+          <p style="margin:0"><strong>La seguridad no se negocia:</strong> Limítate a observar y denunciar. <strong>Nunca te enfrentes a quien esté arrojando basura.</strong> No bloquees vehículos, no discutas ni sigas a nadie. Toma la foto desde una distancia segura y deja que la denuncia haga su trabajo. Si alguien está en peligro, llama al 911 en vez de recurrir a la cadena de alertas.</p>
+        </div>
+      </div>
+      <div>
+        <h3 style="margin-top:0">Canales oficiales: llama también aquí</h3>
+        <div class="channel-list">
+          <div class="channel"><b>Ciudad de Gulfport — 311</b><a class="num" href="tel:311">Marca 311</a><p>Cualquier aviso municipal que no sea una emergencia, incluidos los vertidos de basura. Número alternativo: <a href="tel:+12288685700">228-868-5700</a> · <a href="/cdn-cgi/l/email-protection#88bbb9b9c8effde4eef8e7fafca5e5fba6efe7fe"><span class="__cf_email__" data-cfemail="c8fbf9f988afbda4aeb8a7babce5a5bbe6afa7be">[email&#160;protected]</span></a>. Observa desde un lugar seguro y envía los datos pertinentes directamente al organismo oficial.</p></div>
+          <div class="channel"><b>Cumplimiento del Código Municipal de Gulfport</b><a class="num" href="tel:+12288685718">228-868-5718</a><p>La limpieza de los lugares de vertido dentro de los límites de la ciudad corresponde a Cumplimiento del Código Municipal y Obras Públicas.</p></div>
+          <div class="channel"><b>Aguas pluviales de Gulfport — Mark Kraninger</b><a class="num" href="tel:+12288685740">228-868-5740 ext. 6619</a><p>Descargas ilícitas en desagües pluviales y cursos de agua. <a href="/cdn-cgi/l/email-protection#127f7960737c7b7c7577605275677e74627d60663f7f613c757d64"><span class="__cf_email__" data-cfemail="b5d8dec7d4dbdcdbd2d0c7f5d2c0d9d3c5dac7c198d8c69bd2dac3">[email&#160;protected]</span></a></p></div>
+          <div class="channel"><b>Centro Nacional de Respuesta (24/7)</b><a class="num" href="tel:+18004248802">1-800-424-8802</a><p>El punto de contacto federal para derrames y amenazas repentinas: lo atiende la Guardia Costera de Estados Unidos y transmite los avisos al coordinador de la EPA / Guardia Costera en el lugar de los hechos.</p></div>
+          <div class="channel"><b>MDEQ — Departamento de Calidad Ambiental de Mississippi</b><a class="num" href="tel:+18887860661">1-888-786-0661</a><p>Organismo estatal responsable de la calidad del agua y los vertidos ilegales. Emergencias: MEMA, disponible 24/7 en el <a href="tel:+18002226362">1-800-222-6362</a> avisa al equipo de respuesta del MDEQ.</p></div>
+          <div class="channel"><b>MS DMR — Departamento de Recursos Marinos</b><a class="num" href="tel:+12283745000">(228) 374-5000</a><p>Recursos costeros y marinos, Biloxi. <a href="/cdn-cgi/l/email-protection#234a4d454c63474e510d4e500d444c55"><span class="__cf_email__" data-cfemail="96fff8f0f9d6f2fbe4b8fbe5b8f1f9e0">[email&#160;protected]</span></a> · Coorganizador de Mississippi Coastal Cleanup.</p></div>
+          <div class="channel"><b>EPA — Denunciar una infracción</b><a class="num" href="https://www.epa.gov/tips" target="_blank" rel="noopener">epa.gov/tips</a><p>Formulario federal de denuncia de infracciones. Atención al público de la Región 4 de la EPA: <a href="tel:+18002411754">800-241-1754</a>.</p></div>
+          <div class="channel"><b>Cuerpo de Ingenieros del Ejército de Estados Unidos — Distrito de Mobile</b><a class="num" href="tel:+12516902658">(251) 690-2658</a><p>Desechos en aguas navegables y relleno de humedales sin autorización: ámbito de la sección §404 de la Ley de Agua Limpia.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <details class="law-steps">
+      <summary>Las denuncias y la ley: tres cosas que debes saber</summary>
+      <ol>
+        <li><strong>Qué se considera un vertido ilegal:</strong> El MDEQ describe el vertido ilegal como la eliminación de residuos sólidos en una propiedad pública o privada sin la debida autorización ni un propósito legítimo.</li>
+        <li><strong>Dónde denunciar:</strong> comunícate con la oficina local de cumplimiento del código municipal o con el MDEQ al <a href="tel:+16019615171">601-961-5171</a>. El MDEQ acepta denuncias anónimas de vertidos de basura.</li>
+        <li><strong>Qué información ayuda:</strong> la ubicación, la fecha, una descripción de los desechos y fotos obtenidas sin correr riesgos. Conserva tu número de denuncia para darle seguimiento. Las autoridades determinan cómo se aplica la ley.</li>
+      </ol>
+      <p class="learning-note">Fuente: <a href="https://www.mdeq.ms.gov/land/waste-division/solid-waste-management-programs/illegal-dumping/" target="_blank" rel="noopener">guía del MDEQ sobre vertidos ilegales</a>, consultada el 25 de octubre de 2026. No te enfrentes a las personas, no las sigas ni las identifiques públicamente.</p>
+    </details>
+  </div>
+
+
+<p class="intake-link" style="margin-top:14px"><a class="btn btn-solid" href="/es/intake/?type=report">Usa el formulario para denunciar un sitio</a></p>
+</section>
+
+<!-- RECEIPTS -->
+<section id="receipts">
+  <div class="wrap">
+    <p class="eyebrow">Registro comunitario · Documentemos bien, entre todos</p>
+    <h2>Las buenas anotaciones ayudan a todos. <span class="accent">Registra cada denuncia.</span></h2>
+    <p class="lede">Una denuncia por escrito es fácil de seguir y permite que el siguiente vecino continúe el trabajo. Copia el formato, inicia la entrada el día que presentes la denuncia y guárdala donde el equipo pueda verla. <strong>Esta página no presenta ni almacena tu denuncia</strong> : el registro es tuyo para conservarlo y compartirlo.</p>
+    <div class="grid2" style="margin-top:24px">
+      <div>
+        <pre class="template" id="receiptTemplate">COSTA FUERTE — ENTRADA DEL REGISTRO COMUNITARIO
+FECHA/HORA:          [cuándo se presentó la denuncia]
+ORGANISMO:           [a quién se envió]
+CANAL:               [teléfono / correo electrónico / formulario en línea]
+HECHOS DENUNCIADOS:  [qué se denunció: vertido de basura, desechos, punto de origen]
+RECIBIDA POR:        [nombre, número de trámite/caso o "pendiente de confirmación"]
+RESPUESTA:           [qué dijo o hizo el organismo: actualizar al recibir respuestas]
+SEGUIMIENTO ENVIADO: [fecha + canal, o "aún no se ha enviado"]</pre>
+        <p><button class="copybtn" data-copy="receiptTemplate">Copiar la plantilla de registro</button><span class="copied" id="receiptCopied"></span></p>
+        <p class="muted" style="font-size:15px">La primera entrada ya está escrita: el hallazgo de Bayou Bernard Park, fotografiado y denunciado el 15 de octubre, la Constancia #001. Cada llamada y correo posterior se anota en esa misma entrada.</p>
+      </div>
+      <div>
+        <h3 style="margin-top:0">Seguimiento: cómo lograr que una denuncia avance</h3>
+        <p style="margin:0 0 6px">El personal de estos organismos atiende muchas llamadas. Si pasa una semana sin noticias, da el siguiente paso, agradeciendo la ayuda recibida hasta ese momento, y anótalo en la misma entrada.</p>
+        <div class="ladder">
+          <div class="step"><div class="n">1</div><h3>Seguimiento</h3><p>Envía un correo al mismo contacto del organismo, con la fecha original y el número de trámite, y solicita por escrito el estado de la denuncia.</p></div>
+          <div class="step"><div class="n">2</div><h3>Solicitud de documentos públicos</h3><p>Solicita al organismo los documentos relacionados con el lugar denunciado, para que el equipo pueda ver qué se ha hecho y dónde aún hace falta ayuda.</p></div>
+          <div class="step"><div class="n">3</div><h3>Representantes electos</h3><p>Concejo municipal, supervisor del condado, representantes estatales: comparte las entradas del registro para que conozcan la necesidad y puedan brindar su apoyo.</p></div>
+          <div class="step"><div class="n">4</div><h3>Aviso a los medios locales</h3><p>El registro, las fotos y los vecinos colaborando: una limpieza comunitaria bien documentada es una historia que merece compartirse.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    <figure class="sponsor-poster" style="max-width:1080px;margin:36px auto"><img src="../assets/community-art.jpg" alt="Ilustración: una limpieza comunitaria costera a la hora dorada — un abuelo enseña a una niña a plantar hierba de marisma mientras los vecinos cargan bolsas llenas, con barcos camaroneros y un faro detrás." loading="lazy"><figcaption class="formnote" style="text-align:center;margin-top:10px">Generaciones en la orilla — es por ellos.</figcaption></figure>
+
+<section class="alt" id="network"><div class="wrap">
+<p class="eyebrow">La red que nos conecta · Directorio de contactos</p>
+<h2>Cada grupo se conecta <span class="accent">con otro grupo</span></h2>
+<p class="lede">Costa Fuerte se une a los equipos, programas y organizaciones que ya cuidan estas aguas, desde el servicio 311 de Gulfport hasta el Ocean Trash Index mundial. Agradecemos a cada uno. Filtra por ámbito, abre una ficha y consulta el primer paso recomendado. Cuando se propone una carta, se trata de un borrador: <strong>nada se envía sin que una persona revise el texto exacto.</strong></p>
+<div class="filters" role="group" aria-label="Filtrar organizaciones por ámbito">
+<label><input type="checkbox" class="orgfilter" value="federal"> Federal</label><label><input type="checkbox" class="orgfilter" value="state"> Estatal</label><label><input type="checkbox" class="orgfilter" value="local"> Local</label><label><input type="checkbox" class="orgfilter" value="global"> Mundial</label><label><input type="checkbox" class="orgfilter" value="regional"> Región del Golfo</label><label><input type="checkbox" class="orgfilter" value="media"> Medios</label></div><p class="muted" style="font-size:14.5px;margin-top:-8px">Sin casillas marcadas se muestran todas las organizaciones. Marca un ámbito para acotar la lista.</p>
+<details class="org" data-cat="local" open>
+<summary>Mississippi Coastal Cleanup — el programa oficial <span class="tagchip">Local</span></summary>
+<div class="body"><p>Un programa permanente de MSU Extension y Mississippi Marine Debris Task Force, que forma parte de International Coastal Cleanup de Ocean Conservancy. Cada elemento registrado se incorpora a datos mundiales. Sus nueve lugares de 2026 son playas o zonas portuarias. Organiza sus propios eventos y horarios; Costa Fuerte no convoca actividades en sus lugares.</p>
+<div class="routebox">Inscripción: <a href="http://coastalcleanup.extension.msstate.edu/events/annual-mississippi-coastal-cleanup-event" target="_blank" rel="noopener">Página oficial del evento</a> · Coordinación: <a href="/cdn-cgi/l/email-protection#5b3e2d3e3722357536382a2e3e3e351b3628282f3a2f3e753e3f2e"><span class="__cf_email__" data-cfemail="e78291828b9e89c98a849692828289a78a949493869382c9828392">[email&#160;protected]</span></a></div>
+<p><strong>Primer paso recomendado:</strong> Si participas en el programa oficial, inscríbete y consulta los detalles de tu lugar directamente en su página del evento. Esta página no te inscribe ni te convoca a ninguno de esos lugares.</p></div>
+</details>
+<details class="org" data-cat="federal">
+<summary>National Response Center — la puerta de entrada federal <span class="tagchip">Federal</span></summary>
+<div class="body"><p>Atendido por la Guardia Costera de EE. UU. las 24 horas: el punto de contacto federal para derrames y amenazas repentinas al agua. El aviso se remite al coordinador designado para el lugar: la EPA en zonas interiores y la Guardia Costera en la zona costera. Así se coordina la ayuda para un incidente importante.</p>
+<div class="routebox">Llama: <a href="tel:+18004248802">1-800-424-8802</a> · En línea: nrc.uscg.mil</div>
+<p><strong>Primer paso recomendado:</strong> Úsalo si hay un vertido activo, una película aceitosa, olor químico o peligro inmediato. Anota la llamada en el registro comunitario.</p></div>
+</details>
+<details class="org" data-cat="federal">
+<summary>EPA Region 4 — infracciones y humedales <span class="tagchip">Federal</span></summary>
+<div class="body"><p>La agencia ambiental federal para Mississippi: contaminación del agua, vertidos ilegales y protección de humedales conforme a la sección 404 de la Ley de Agua Limpia.</p>
+<div class="routebox">Infracciones: <a href="https://www.epa.gov/tips" target="_blank" rel="noopener">epa.gov/tips</a> · Atención al público: <a href="tel:+18002411754">800-241-1754</a> · Humedales: Rosemary Calli, <a href="/cdn-cgi/l/email-protection#6b280a070702453904180e060a19122b0e1b0a450c041d"><span class="__cf_email__" data-cfemail="3b785a575752156954485e565a49427b5e4b5a155c544d">[email&#160;protected]</span></a>, <a href="tel:+14045629846">(404) 562-9846</a></div>
+<p><strong>Primer paso recomendado:</strong> Presenta el formulario de infracción junto con tu aviso municipal y anótalo en el registro comunitario para que el equipo pueda seguir el caso.</p></div>
+</details>
+<details class="org" data-cat="federal">
+<summary>NOAA Marine Debris Program <span class="tagchip">Federal</span></summary>
+<div class="body"><p>El programa federal de seguimiento de residuos marinos. La aplicación Marine Debris Tracker registra residuos con GPS y fotos directamente en el conjunto de datos nacional de NOAA: el equivalente federal del Ocean Trash Index mundial.</p>
+<div class="routebox">Correo: <a href="/cdn-cgi/l/email-protection#e08d8192898e85848582928993ce978582a08e8f8181ce878f96"><span class="__cf_email__" data-cfemail="7914180b10171c1d1c1b0b100a570e1c1b3917161818571e160f">[email&#160;protected]</span></a> · Aplicación: Marine Debris Tracker (NOAA MDP y University of Georgia)</div>
+<p><strong>Primer paso recomendado:</strong> Registra el hallazgo de Bayou Bernard en la aplicación, con fotos y GPS, para que figure en los datos federales y no solo en nuestro registro.</p></div>
+</details>
+<details class="org" data-cat="federal">
+<summary>FEMA Region 4 — conoce sus funciones y límites <span class="tagchip">Federal</span></summary>
+<div class="body"><p>Conviene decirlo claramente: <strong>FEMA no limpia los bayous.</strong> Sus fondos se movilizan tras una declaración presidencial de desastre solicitada por el gobernador, además de las subvenciones de mitigación que solicitan las administraciones. Los vertidos habituales no son su misión: la cadena de contaminación pasa del NRC al coordinador de la EPA o la Guardia Costera y a MEMA. Si una tormenta esparce escombros por toda la costa, FEMA interviene a través de MEMA.</p>
+<div class="routebox">Región 4 (Atlanta; cubre Mississippi): <a href="tel:+17702205200">770-220-5200</a> · <a href="/cdn-cgi/l/email-protection#b1f7f4fcf09ce3859cf8dfd7def1d7d4dcd09fd5d9c29fd6dec7"><span class="__cf_email__" data-cfemail="9ed8dbd3dfb3ccaab3d7f0f8f1def8fbf3ffb0faf6edb0f9f1e8">[email&#160;protected]</span></a> · Redacción: <a href="tel:+17702205292">770-220-5292</a></div>
+<p><strong>Primer paso recomendado:</strong> Para un vertedero no corresponde acudir a FEMA: presenta el aviso al NRC, la EPA o MDEQ. Conserva esta ficha para dirigir cada aviso a quien pueda actuar.</p></div>
+</details>
+<details class="org" data-cat="state">
+<summary>MDEQ — Mississippi Dept. of Environmental Quality <span class="tagchip">Estatal</span></summary>
+<div class="body"><p>El organismo estatal encargado de la calidad del agua, el control de la contaminación y los vertidos ilegales en aguas del estado. Su seguimiento público se centra en las bacterias de las playas; por eso resulta tan útil que los vecinos registren lo que observan en los bayous.</p>
+<div class="routebox">Central: <a href="tel:+18887860661">1-888-786-0661</a> · Oficina de Control de la Contaminación: <a href="tel:+16019615171">(601) 961-5171</a> · Emergencias: MEMA, las 24 horas, <a href="tel:+18002226362">1-800-222-6362</a></div>
+<p><strong>Primer paso recomendado:</strong> Llama para comunicar el aviso, pide un nombre o número de expediente y anótalo ese mismo día.</p></div>
+</details>
+<details class="org" data-cat="state">
+<summary>MS DMR — Dept. of Marine Resources <span class="tagchip">Estatal</span></summary>
+<div class="body"><p>El socio estatal para el Mississippi Sound y los bayous, con sede en Biloxi, y coorganizador de Mississippi Coastal Cleanup junto con Marine Debris Task Force. Su Seafood Technology Bureau se ocupa del análisis del agua: lo que vive en ella acaba formando parte de los productos del mar de Mississippi.</p>
+<div class="routebox">Llama: <a href="tel:+12283745000">(228) 374-5000</a> · <a href="/cdn-cgi/l/email-protection#553c3b333a153138277b38267b323a23"><span class="__cf_email__" data-cfemail="2841464e47684c455a06455b064f475e">[email&#160;protected]</span></a> · 1141 Bayview Ave, Biloxi, MS 39530</div>
+<p><strong>Primer paso recomendado:</strong> Comunica los residuos y pide a DMR que registre el lugar del bayou para que quede constancia. <span class="draft">Carta de contacto redactada; no enviada</span></p></div>
+</details>
+<details class="org" data-cat="state">
+<summary>MEMA — Mississippi Emergency Management Agency <span class="tagchip">Estatal</span></summary>
+<div class="body"><p>Coordina la respuesta estatal, dirige el Centro Estatal de Operaciones de Emergencia y conecta a los organismos de emergencia de los condados con la ayuda estatal y federal. MEMA coordina; no se encarga de aplicar la normativa ambiental. Su línea de 24 horas permite contactar con el equipo de emergencia de MDEQ.</p>
+<div class="routebox">24/7: <a href="tel:+18002226362">1-800-222-6362</a> · Central: <a href="tel:+16019336362">601-933-MEMA (6362)</a> · <a href="/cdn-cgi/l/email-protection#9bf6fef6faf2f5fdf4dbf6fef6fab5f6e8b5fcf4ed"><span class="__cf_email__" data-cfemail="a8c5cdc5c9c1c6cec7e8c5cdc5c986c5db86cfc7de">[email&#160;protected]</span></a></div>
+<p><strong>Primer paso recomendado:</strong> Solo para un incidente de la magnitud de una emergencia con materiales peligrosos. En los demás casos, llama primero a MDEQ y al 311.</p></div>
+</details>
+<details class="org" data-cat="local">
+<summary>City of Gulfport — 311, cumplimiento normativo y aguas pluviales <span class="tagchip">Local</span></summary>
+<div class="body"><p>La primera llamada para un vertedero concreto dentro de los límites de la ciudad. La propia orientación municipal indica comunicar a los responsables de vertidos mediante el 311 y fotografiar el vehículo y la matrícula.</p>
+<div class="routebox">311: <a href="tel:311">marca 311</a> · <a href="tel:+12288685700">228-868-5700</a> · <a href="/cdn-cgi/l/email-protection#4a797b7b0a2d3f262c3a25383e672739642d253c"><span class="__cf_email__" data-cfemail="1b282a2a5b7c6e777d6b74696f367668357c746d">[email&#160;protected]</span></a> · Cumplimiento normativo: <a href="tel:+12288685718">228-868-5718</a> · Aguas pluviales (Mark Kraninger): <a href="tel:+12288685740">228-868-5740 ext. 6619</a>, <a href="/cdn-cgi/l/email-protection#83eee8f1e2edeaede4e6f1c3e4f6efe5f3ecf1f7aeeef0ade4ecf5"><span class="__cf_email__" data-cfemail="e5888e97848b8c8b828097a582908983958a9791c88896cb828a93">[email&#160;protected]</span></a></div>
+<p><strong>Primer paso recomendado:</strong> Presenta el aviso al 311 el mismo día que observes el problema. Los avisos municipales, del condado, estatales y federales se tramitan en paralelo y se registran todos. <span class="draft">Carta de apoyo municipal redactada; no enviada</span></p></div>
+</details>
+<details class="org" data-cat="local">
+<summary>Harrison County — administración normativa y zonificación <span class="tagchip">Local</span></summary>
+<div class="body"><p>Para quejas sobre basura y residuos en zonas no incorporadas del condado: es la vía del condado cuando el vertedero queda fuera de los límites municipales.</p>
+<div class="routebox">Administración normativa: <a href="tel:+12288321622">(228) 832-1622</a>, 15309 Community Rd, Gulfport · Zonificación: <a href="tel:+12288313367">(228) 831-3367</a> · Quejas de zonificación (incluida basura y residuos): Rose Keller, <a href="/cdn-cgi/l/email-protection#80f2edebe5ecece5f2c0e3efaee8e1f2f2e9f3efeeaeedf3aef5f3"><span class="__cf_email__" data-cfemail="d3a1beb8b6bfbfb6a193b0bcfdbbb2a1a1baa0bcbdfdbea0fda6a0">[email&#160;protected]</span></a></div>
+<p><strong>Primer paso recomendado:</strong> Usa la vía de quejas del condado para sus zonas; el formulario de zonificación incluye una categoría específica de basura y residuos.</p></div>
+</details>
+<details class="org" data-cat="global">
+<summary>Ocean Conservancy — International Coastal Cleanup <span class="tagchip">Mundial</span></summary>
+<div class="body"><p>Mississippi Coastal Cleanup forma parte de International Coastal Cleanup, que funciona desde 1986. Los datos registrados con la aplicación Clean Swell se cargan de inmediato en Ocean Trash Index, la mayor base de datos mundial de residuos marinos.</p>
+<div class="routebox">Equipo de limpieza: <a href="/cdn-cgi/l/email-protection#dcbfb0b9bdb2a9ac9cb3bfb9bdb2bfb3b2afb9aeaabdb2bfa5f2b3aebb"><span class="__cf_email__" data-cfemail="accfc0c9cdc2d9dcecc3cfc9cdc2cfc3c2dfc9dedacdc2cfd582c3decb">[email&#160;protected]</span></a> · Prensa: <a href="/cdn-cgi/l/email-protection#a7cac2c3cec6e7c8c4c2c6c9c4c8c9d4c2d5d1c6c9c4de89c8d5c0"><span class="__cf_email__" data-cfemail="caa7afaea3ab8aa5a9afaba4a9a5a4b9afb8bcaba4a9b3e4a5b8ad">[email&#160;protected]</span></a></div>
+<p><strong>Primer paso recomendado:</strong> Comparte el hallazgo documentado de Bayou Bernard con el equipo de limpieza para que sus residuos se cuenten junto con los de las playas. <span class="draft">Borrador redactado; no enviado</span></p></div>
+</details>
+<details class="org" data-cat="global">
+<summary>The Ocean Cleanup <span class="tagchip">Mundial</span></summary>
+<div class="body"><p>Se ha dado a conocer por detener el plástico en los ríos antes de que llegue al océano. Bayou Bernard desemboca en Mississippi Sound: el problema sigue activo en los bayous de Estados Unidos, y aquí una comunidad trabaja para frenarlo con sus propias manos.</p>
+<div class="routebox">Prensa: <a href="/cdn-cgi/l/email-protection#aededccbddddeedac6cbc1cdcbcfc0cdc2cbcfc0dbde80cdc1c3"><span class="__cf_email__" data-cfemail="69191b0c1a1a291d010c060a0c08070a050c08071c19470a0604">[email&#160;protected]</span></a></div>
+<p><strong>Primer paso recomendado:</strong> Usa la versión internacional de la carta principal de contacto y adjunta el hallazgo documentado de Bayou Bernard. <span class="draft">Borrador redactado; no enviado</span></p></div>
+</details>
+<details class="org" data-cat="global">
+<summary>Surfrider Foundation <span class="tagchip">Mundial</span></summary>
+<div class="body"><p>Una red de agrupaciones comunitarias creada precisamente para esto: aguas locales, vecinos, análisis de agua limpia y defensa de su protección.</p>
+<div class="routebox">Prensa: <a href="/cdn-cgi/l/email-protection#543931303d351427212632263d3031267a3b2633"><span class="__cf_email__" data-cfemail="cba6aeafa2aa8bb8beb9adb9a2afaeb9e5a4b9ac">[email&#160;protected]</span></a></div>
+<p><strong>Primer paso recomendado:</strong> Pregunta si existe una agrupación de la costa del Golfo de Mississippi o un contacto regional y cómo puede un equipo de Gulfport integrarse en su red. <span class="draft">Borrador redactado; no enviado</span></p></div>
+</details>
+<details class="org" data-cat="global">
+<summary>EARTHDAY.ORG — Great Global Cleanup <span class="tagchip">Mundial</span></summary>
+<div class="body"><p>Organiza Great Global Cleanup. Una limpieza local documentada, con fotos y cantidades pesadas, aporta la información concreta con la que trabaja su red.</p>
+<div class="routebox">Información general: <a href="/cdn-cgi/l/email-protection#ea83848c85aa8f8b989e828e8b93c485988d"><span class="__cf_email__" data-cfemail="bdd4d3dbd2fdd8dccfc9d5d9dcc493d2cfda">[email&#160;protected]</span></a> · Prensa: <a href="/cdn-cgi/l/email-protection#4e2a2f38272b3d0e2b2f3c3a262a2f3760213c29"><span class="__cf_email__" data-cfemail="701411061915033015110204181411095e1f0217">[email&#160;protected]</span></a> · Alianzas: <a href="/cdn-cgi/l/email-protection#24474c4556564b4a64414556504c40455d0a4b5643"><span class="__cf_email__" data-cfemail="94f7fcf5e6e6fbfad4f1f5e6e0fcf0f5edbafbe6f3">[email&#160;protected]</span></a></div>
+<p><strong>Primer paso recomendado:</strong> Comparte la vigilancia permanente de Bayou Bernard con la red de Great Global Cleanup, junto con el hallazgo documentado y los avisos que se vayan registrando. <span class="draft">Borrador redactado; no enviado</span></p></div>
+</details>
+<details class="org" data-cat="global">
+<summary>4ocean <span class="tagchip">Mundial</span></summary>
+<div class="body"><p>Una empresa de limpieza con una amplia audiencia pública; la vía de entrada son sus alianzas. La petición es dar difusión al trabajo, no solicitar dinero.</p>
+<div class="routebox">Alianzas: <a href="/cdn-cgi/l/email-protection#42322330362c2730312a2b323102762d2127232c6c212d2f"><span class="__cf_email__" data-cfemail="fb8b9a898f959e898893928b88bbcf94989e9a95d5989496">[email&#160;protected]</span></a> · Prensa y relaciones públicas: <a href="/cdn-cgi/l/email-protection#ff9590919e8b979e91d1929e8d8c979e9393bfcb909c9a9e91d19c9092"><span class="__cf_email__" data-cfemail="4a2025242b3e222b2464272b3839222b26260a7e25292f2b2464292527">[email&#160;protected]</span></a></div>
+<p><strong>Primer paso recomendado:</strong> Escribe al correo de alianzas: un equipo activo de Gulfport con cifras reales que solicita difusión. <span class="draft">Borrador redactado; no enviado</span></p></div>
+</details>
+<details class="org" data-cat="global">
+<summary>Plastic Pollution Coalition <span class="tagchip">Mundial</span></summary>
+<div class="body"><p>Una alianza mundial de más de 1.300 organizaciones. Los grupos pueden solicitar su incorporación, lo que permite incluir a Gulfport en una red internacional.</p>
+<div class="routebox">Prensa: <a href="/cdn-cgi/l/email-protection#7404061107073404181507001d17041b181801001d1b1a171b15181d001d1b1a5a1b0613"><span class="__cf_email__" data-cfemail="87f7f5e2f4f4c7f7ebe6f4f3eee4f7e8ebebf2f3eee8e9e4e8e6ebeef3eee8e9a9e8f5e0">[email&#160;protected]</span></a> · Alianzas: <a href="/cdn-cgi/l/email-protection#6d1d0c1f1903081f1e05041d1e2d1d010c1e19040e1d02010118190402030e020c01041904020343021f0a"><span class="__cf_email__" data-cfemail="aadacbd8dec4cfd8d9c2c3dad9eadac6cbd9dec3c9dac5c6c6dfdec3c5c4c9c5cbc6c3dec3c5c484c5d8cd">[email&#160;protected]</span></a> · Información general: <a href="/cdn-cgi/l/email-protection#ee87808881ae9e828f9d9a878d9e8182829b9a8781808d818f82879a878180c0819c89"><span class="__cf_email__" data-cfemail="7d14131b123d0d111c0e09141e0d12111108091412131e121c11140914121353120f1a">[email&#160;protected]</span></a></div>
+<p><strong>Primer paso recomendado:</strong> Presenta la solicitud a la coalición y una nota breve al correo de prensa con la declaración pública adjunta. <span class="draft">Borrador redactado; no enviado</span></p></div>
+</details>
+<details class="org" data-cat="global">
+<summary>UNEP Clean Seas — #CleanSeas <span class="tagchip">Mundial</span></summary>
+<div class="body"><p>La campaña mundial de las Naciones Unidas contra el plástico. La cuenca del río Mississippi también se ha unido a Clean Seas, de modo que la costa del Golfo ya forma parte de esta labor. Una aclaración: Clean Seas recibe compromisos de administraciones, empresas y organizaciones; no dispone de un buzón ciudadano para avisos.</p>
+<div class="routebox">Plataforma de la campaña: <a href="https://cleanseas.org" target="_blank" rel="noopener">cleanseas.org</a></div>
+<p><strong>Primer paso recomendado:</strong> Muestra apoyo públicamente: comparte los hechos de Gulfport con <strong>#CleanSeas</strong> y permite que las organizaciones anteriores los lleven a sus redes.</p></div>
+</details>
+<details class="org" data-cat="regional">
+<summary>Healthy Gulf (Gulf Restoration Network) <span class="tagchip">Región del Golfo</span></summary>
+<div class="body"><p>La coalición del Golfo por el agua limpia, con sede en Nueva Orleans y una larga trayectoria de organización en Mississippi. El agua limpia y las marismas sanas son su ámbito de trabajo, y agradecemos su presencia en estas aguas.</p>
+<div class="routebox">Sitio: <a href="https://healthygulf.org" target="_blank" rel="noopener">healthygulf.org</a> · Teléfono: <a href="tel:+15045251528">(504) 525-1528</a> · (No se ha confirmado un correo público de consultas generales; usa primero el contacto del sitio o el teléfono.)</div>
+<p><strong>Primer paso recomendado:</strong> Llama en lugar de enviar un correo. Explica lo ocurrido en Bayou Bernard, pregunta por su contacto actual en Mississippi, ofrece el registro comunitario que se está construyendo y consulta cómo puede Costa Fuerte apoyar su trabajo. <span class="draft">Borrador redactado; no enviado</span></p></div>
+</details>
+<details class="org" data-cat="regional">
+<summary>Lower Mississippi Riverkeeper <span class="tagchip">Región del Golfo</span></summary>
+<div class="body"><p>Dispone de un canal público para comunicar incidentes, con carga de fotos, pensado para ciudadanos que encuentran contaminación. Su zona de vigilancia es el bajo río Mississippi en Luisiana. Bayou Bernard queda fuera de ella, pero es el Waterkeeper más cercano y puede orientar hacia el contacto adecuado.</p>
+<div class="routebox">Comunicar un incidente: <a href="https://lmrk.org/contact-us" target="_blank" rel="noopener">lmrk.org/contact-us</a> · Teléfono: <a href="tel:+12259281315">225-928-1315</a></div>
+<p><strong>Primer paso recomendado:</strong> Comunica el hallazgo de Bayou Bernard mediante el formulario de incidentes con fotos y pregunta qué Waterkeeper cubre Mississippi Sound. <span class="draft">Borrador redactado; no enviado</span></p></div>
+</details>
+<details class="org" data-cat="regional">
+<summary>The Nature Conservancy in Mississippi <span class="tagchip">Región del Golfo</span></summary>
+<div class="body"><p>Protege las marismas costeras de Mississippi, incluido el sistema de Pascagoula, y dispone de una oficina costera en Ocean Springs, a un condado de distancia del bayou.</p>
+<div class="routebox">Delegación de Mississippi: <a href="https://www.nature.org/en-us/about-us/where-we-work/united-states/mississippi/contact-us" target="_blank" rel="noopener">nature.org — contacto en Mississippi</a> · Oficina costera (Ocean Springs): <a href="tel:+12282194580">228-219-4580</a></div>
+<p><strong>Primer paso recomendado:</strong> Envía una carta breve a la delegación de Mississippi: vecinos que limpian la marisma y piden ponerse en contacto con su equipo costero. <span class="draft">Borrador redactado; no enviado</span></p></div>
+</details>
+<details class="org" data-cat="regional">
+<summary>Audubon Mississippi (Audubon Delta) <span class="tagchip">Región del Golfo</span></summary>
+<div class="body"><p>La costa de Mississippi es una zona de cría de aves. Los residuos en la marisma dañan su hábitat, y el personal de Audubon Delta ya trabaja en lugares de la zona de Gulfport.</p>
+<div class="routebox">Responsable de políticas: <a href="/cdn-cgi/l/email-protection#4f0526232361022e3c3b3d203b203b2e3d200f2e3a2b3a2d202161203d28"><span class="__cf_email__" data-cfemail="4e0427222260032f3d3a3c213a213a2f3c210e2f3b2a3b2c212060213c29">[email&#160;protected]</span></a> · Aves costeras: <a href="/cdn-cgi/l/email-protection#563b253539372522373a343f243225163723322334393878392431"><span class="__cf_email__" data-cfemail="dcb1afbfb3bdafa8bdb0beb5aeb8af9cbda9b8a9beb3b2f2b3aebb">[email&#160;protected]</span></a></div>
+<p><strong>Primer paso recomendado:</strong> Dirige una página a la persona responsable de políticas con el hallazgo y una pregunta: ¿qué integrante del equipo costero debería recibir las novedades de Vigilancia del Bayou? <span class="draft">Borrador redactado; no enviado</span></p></div>
+</details>
+<details class="org" data-cat="regional">
+<summary>Turkey Creek Community Initiatives &amp; Land Trust for the MS Coastal Plain <span class="tagchip">Región del Golfo</span></summary>
+<div class="body"><p>La presencia comunitaria organizada que ya trabaja en nuestra cuenca: vecinos de Turkey Creek que protegen los recursos naturales y culturales de su arroyo con ayuda de Land Trust, que también conserva Turkey Creek Greenway. Bernard Bayou aún no tiene un grupo dedicado de amigos del bayou. Costa Fuerte puede crecer en ese papel, junto a quienes llevan más tiempo cuidándolo.</p>
+<div class="routebox">Land Trust for the Mississippi Coastal Plain: apartado postal 245, Biloxi, MS 39533 · <a href="tel:+12284359191">228-435-9191</a> · <a href="https://www.ltmcp.org" target="_blank" rel="noopener">ltmcp.org</a></div>
+<p><strong>Primer paso recomendado:</strong> Presenta Costa Fuerte como un vecino y ofrece ayuda para vigilar el agua. Pregunta a quienes conocen la cuenca qué les habría gustado saber cuando empezaron.</p></div>
+</details>
+<details class="org" data-cat="media">
+<summary>WLOX — noticias locales de Biloxi y Gulfport <span class="tagchip">Medios</span></summary>
+<div class="body"><p>La redacción de nuestra costa. Una limpieza ciudadana documentada, con vecinos que ayudan, fotos y resultados que compartir, es una historia que merece contarse.</p>
+<div class="routebox">Redacción: <a href="tel:+12288962563">(228) 896-2563</a> · Avisos: <a href="/cdn-cgi/l/email-protection#7b0b09141f0e181e09083b0c17140355181416"><span class="__cf_email__" data-cfemail="b9c9cbd6ddccdadccbcaf9ced5d6c197dad6d4">[email&#160;protected]</span></a> · Central: <a href="tel:+12288961313">(228) 896-1313</a></div>
+<p><strong>Primer paso recomendado:</strong> Llama a la redacción con la documentación del hallazgo a mano.</p></div>
+</details>
+<details class="org" data-cat="media">
+<summary>Associated Press — Jackson y servicio nacional de noticias <span class="tagchip">Medios</span></summary>
+<div class="body"><p>La información de AP en Jackson llega a periódicos de todo Mississippi. El aviso para los medios está redactado y listo para copiar: quién, qué, cuándo, por qué importa y disponibilidad de fotos del hallazgo documentado.</p>
+<div class="routebox">Redacción: <a href="https://ap.org/contact-us/contact-the-newsroom" target="_blank" rel="noopener">ap.org/contact-us/contact-the-newsroom</a> · Avisos seguros: <a href="https://ap.org/tips" target="_blank" rel="noopener">ap.org/tips</a> (AP no publica un correo para avisos; usa la página de la redacción.)</div>
+<p><strong>Primer paso recomendado:</strong> Comparte el hallazgo documentado y los avisos de Vigilancia del Bayou conforme se registren. <span class="draft">Borrador redactado; no enviado</span></p></div>
+</details>
+</div></section>
+
+<!-- WATCHES -->
+<section class="alt" id="watches">
+  <div class="wrap">
+    <p class="eyebrow">En toda la costa · Tres grupos de vigilancia, una costa</p>
+    <h2>Más que un solo bayou. <span class="accent">Toda la costa.</span></h2>
+    <p class="lede">La vigilancia está presente en tres lugares, de oeste a este por la costa del golfo de Mississippi. La misma rutina en cada puesto: observar, fotografiar desde una distancia segura, denunciar y registrar. Un puesto de vigilancia no indica un incidente: significa que alguien está atento.</p>
+    <div class="grid3" style="margin-top:24px">
+      <div class="card">
+        <h3>🌊 Vigilancia del Bayou — Gulfport</h3>
+        <p><strong>Bayou Bernard · Condado de Harrison</strong></p>
+        <p>Donde comenzó Costa Fuerte. Bayou Bernard y sus arroyos, Turkey Creek y Flat Branch, vigilados por los vecinos que viven a sus orillas. El hallazgo del 15 de octubre en Bayou Bernard Park es la Constancia #001.</p>
+      </div>
+      <div class="card">
+        <h3>⚓ Biloxi Watch — Biloxi</h3>
+        <p><strong>Tchoutacabouffa River · Back Bay of Biloxi</strong></p>
+        <p>El río de Biloxi, que serpentea por la ciudad hasta Back Bay: las aguas de trabajo que sostienen a la flota pesquera de Biloxi. Un puesto de vigilancia permanente: todavía no se ha denunciado nada aquí, y para eso existe la vigilancia.</p>
+      </div>
+      <div class="card">
+        <h3>🌲 Pascagoula Watch — Pascagoula</h3>
+        <p><strong>Pascagoula River · Condado de Jackson</strong></p>
+        <p>Uno de los últimos grandes ríos de Estados Unidos que fluyen libremente, atravesando el condado de Jackson hasta Mississippi Sound. La misma vigilancia en el extremo oriental de la costa: primero la foto, después la denuncia y el registro.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WATER -->
+<section id="water">
+  <div class="wrap">
+    <p class="eyebrow">Información sobre las aguas locales</p>
+    <h2>Conoce tus aguas: <span class="accent">el sistema de Bernard Bayou</span></h2>
+    <p class="lede">Un solo sistema conectado: bayou, arroyos, lago y canal navegable que desembocan en Mississippi Sound. Si vives cerca de Lemoyne Blvd, Dedeaux Rd, Canal Rd u Orange Grove, estas aguas también son tuyas.</p>
+    <div class="grid3" style="margin-top:24px">
+      <div class="card"><h3>Bernard Bayou</h3><p>El cauce principal, monitoreado desde Highway 49 hasta Industrial Seaway, con estaciones del MDEQ en Orange Grove y junto a Canal Rd. El televisor y el plástico del 15 de octubre se encontraron en su marisma, en Bayou Bernard Park.</p></div>
+      <div class="card"><h3>Turkey Creek</h3><p>Recorre unas 12.9 millas y se une a Bernard Bayou justo al norte del aeropuerto. Fue nombrado uno de los 10 ríos más amenazados de Estados Unidos en 2021. Su comunidad histórica lleva años defendiendo esta cuenca.</p></div>
+      <div class="card"><h3>Flat Branch</h3><p>El pequeño afluente con una estación de monitoreo del MDEQ en el cruce de Dedeaux Road: el arroyo con nombre y monitoreo más cercano al vecindario de Lemoyne Blvd.</p></div>
+      <div class="card"><h3>Gulfport Lake e Industrial Seaway</h3><p>Donde el sistema se encuentra con Mississippi Sound. En jornadas anteriores, los equipos de Renew Our Rivers retiraron 4.5 toneladas en Gulfport Lake / Industrial Seaway y 5.25 toneladas en Seaway y Bayou Bernard.</p></div>
+      <div class="card"><h3>Little Biloxi River</h3><p>La siguiente cuenca hacia el noreste, cerca de Lyman: parte de la misma llanura costera, vigilada por los mismos vecinos.</p></div>
+      <div class="card"><h3>La vigilancia, en una frase</h3><p>El monitoreo estatal incluye avisos sobre bacterias en las playas (envía «MDEQbeach» por mensaje de texto al 95577). Los recuentos de limpieza llegan después de los hechos. <strong>Los vecinos que viven a orillas de los bayous son quienes aportan ojos adicionales para cuidarlos.</strong></p></div>
+    </div>
+
+    <h2 style="margin-top:64px">Nuestros ríos. Nuestros productos del mar. <span class="accent">Nuestro orgullo.</span></h2>
+    <div class="grid2">
+      <div class="card">
+        <h3>🌊 Las aguas que sostienen nuestra vida</h3>
+        <p>Las familias de esta costa viven junto a estas aguas y de ellas: criamos a nuestros hijos aquí, los llevamos a los ríos, pescamos, nadamos y crecemos en ellas. Por eso duelen tanto los neumáticos arrojados a esos ríos. Estas aguas no son de alguien más. Son nuestras.</p>
+      </div>
+      <div class="card">
+        <h3>🦐 Los productos del mar son nuestro orgullo</h3>
+        <p>Los cangrejos, los camarones, las ostras y las personas que se ganan la vida trabajando en estas aguas. Lo que se arroja a la marisma termina en las mismas aguas de donde salen nuestros productos del mar. Proteger el bayou es proteger la mesa, la industria y el buen nombre de la costa.</p>
+      </div>
+    </div>
+
+    <h2 style="margin-top:64px">Seguridad y equipo</h2>
+    <div class="gear" style="margin-top:20px">
+      <div class="card">
+        <h3>🎒 Qué llevar</h3>
+        <ul class="tight">
+          <li>Botas de trabajo (no sandalias) y guantes de trabajo; también pares extra para quien los olvide</li>
+          <li>Protector solar, sombrero y gafas de sol</li>
+          <li>Una botella de agua recargable y agua embotellada adicional para el equipo</li>
+          <li>Pinzas para recoger basura, si tienes: evitan agacharse tanto y mantienen las manos lejos de los objetos cortantes</li>
+          <li>Cubetas para desechos cortantes o pesados; bolsas resistentes para lo que no soporten las bolsas del lugar</li>
+          <li>Botiquín de primeros auxilios en la camioneta</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>⚠️ Trabaja con seguridad</h3>
+        <ul class="tight">
+          <li>Siempre con los guantes puestos. Nunca agarres algo que no puedas ver.</li>
+          <li>Objetos punzantes o cortantes, como agujas, vidrios rotos o metal: no los metas en bolsas con las manos. Fotografíalos y denúncialos junto con el resto del hallazgo.</li>
+          <li>Permanece en terreno seco y firme. No entres al agua ni a la marisma. Deja los desechos peligrosos, pesados o cortantes en manos de los profesionales correspondientes.</li>
+          <li>Ten cuidado con las serpientes, las hormigas de fuego y las avispas en las orillas.</li>
+          <li>Hidrátate antes de tener sed. Descansa a la sombra cada 30 minutos: en Mississippi todavía hace calor en octubre.</li>
+          <li>Los niños deben permanecer con su madre o padre, en la orilla y alejados del borde del agua.</li>
+          <li>Suspende el trabajo si hay rayos. Sin discusión.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card" style="margin-top:18px">
+      <h3>📸 Documéntalo</h3>
+      <p style="margin:0">Fotos del lugar de vertido ANTES, desde una distancia segura · Fotos DESPUÉS desde los mismos ángulos, una vez retirados los desechos · Anota la fecha, el lugar, lo encontrado y a quién se denunció · Archiva el registro y las fotos ese mismo día · Comparte públicamente los resultados documentados: la gente confía en lo que puede ver.</p>
+    </div>
+  </div>
+</section>
+
+<!-- HERITAGE STRIP -->
+<div class="heritage" role="region" aria-label="Patrimonio de Mississippi">
+  <div class="wrap">
+    <span class="item"><b>«Virtute et Armis»</b> — lema de Mississippi: «Por el valor y las armas»</span>
+    <span class="item"><b>El sinsonte</b> — ave estatal desde 1944, que canta sobre la marisma</span>
+    <span class="item"><b>La magnolia</b> — flor y árbol estatales, que florecen en estas orillas</span>
+    <span class="item"><b>El faro de Biloxi</b> — en pie desde 1848, la última luz de esta costa</span>
+  </div>
+</div>
+
+
+<!-- SIGNUP -->
+<section id="signup">
+  <div class="wrap">
+    <p class="eyebrow">Tu costa. Tu aporte.</p>
+    <h2>Aquí hay un lugar <span class="accent">para ti.</span></h2>
+    <p class="lede">¿Te importan estas aguas? Empieza por una cosa que puedas hacer. Elige cómo participar y envía al equipo un correo breve sobre cómo te gustaría ayudar.</p>
+    <p><a class="btn" href="/cdn-cgi/l/email-protection#85b7b7bde6eae4f6f1f6f1f7eaebe2c5e2e8e4ece9abe6eae8">Quiero participar</a></p><p class="formnote">Abre un borrador en tu aplicación de correo. Revísalo y envíalo al equipo; no se envía nada automáticamente.</p>
+    <div class="grid3 participation">
+      <div class="card"><h3>Echa una mano</h3><p>Ayuda en una limpieza supervisada, en la documentación, con suministros o con la difusión. Cuéntanos en qué ciudad estás y qué tipo de ayuda puedes ofrecer.</p><a class="btn" href="/cdn-cgi/l/email-protection#2e1c1c164d414f5d5a5d5a5c4140496e49434f4742004d4143" aria-label="Voluntariado">Voluntariado</a></div>
+      <div class="card"><h3>Trae tus ideas</h3><p>Los estudiantes pueden ayudar a registrar datos de limpieza, crear volantes aprobados o participar en actividades supervisadas. ¿Eres menor de 18 años? Pide a tu madre, padre, tutor o docente que coordine con nosotros.</p><a class="btn" href="/cdn-cgi/l/email-protection#0d3f3f356e626c7e797e797f62636a4d6a606c6461236e6260" aria-label="Estudiante">Estudiante</a></div>
+      <div class="card"><h3>Trae a tu clase o a tu grupo</h3><p>Docentes, familias y grupos: consulten sobre una actividad acorde con sus edades, intereses y la supervisión adulta disponible.</p><a class="btn" href="/cdn-cgi/l/email-protection#fac8c8c299959b898e898e8895949dba9d979b9396d4999597" aria-label="Docente o grupo">Docente o grupo</a></div>
+    </div>
+    <p class="route-note">Estos enlaces abren tu aplicación de correo. Revisa y envía el mensaje desde allí; esta página no envía ni almacena tus datos. También puedes escribir directamente a <a href="/cdn-cgi/l/email-protection#0e3c3c366d616f7d7a7d7a7c6160694e69636f6762206d6163"><span class="__cf_email__" data-cfemail="5567676d363a3426212621273a3b32153238343c397b363a38">[email&#160;protected]</span></a>. No envíes datos privados de menores ni información médica.</p>
+    <details class="law-steps"><summary>¿Por dónde puedo empezar?</summary><p>Propón una idea a tu madre, padre, docente o a un amigo: aprender sobre el bayou, diseñar un volante y pedir permiso antes de publicarlo, o pedir a un adulto que coordine una limpieza. Los adultos pueden usar la <a href="https://coastalcleanup.extension.msstate.edu/contact-us/request-bin" target="_blank" rel="noopener">solicitud de contenedores de suministros de Mississippi Coastal Cleanup</a>; la disponibilidad y la aprobación dependen de ese programa.</p><p><strong>Por el momento no hay ninguna limpieza de Costa Fuerte confirmada.</strong> Sumarte a la conversación expresa tu interés; no es una inscripción a un evento. Antes de invitar a alguien a asistir, las actividades confirmadas incluirán fecha, hora, lugar, contacto de un adulto y un plan ante las condiciones meteorológicas.</p></details>
+  </div>
+
+<p class="intake-link" style="margin-top:14px"><a class="btn btn-solid" href="/es/intake/?type=volunteer">Usa el formulario para ser voluntario</a></p>
+</section>
+<section class="alt" id="kids">
+  <div class="wrap">
+    <p class="eyebrow">Niños de la costa · Aprende con una persona adulta</p>
+    <h2>Pequeñas decisiones. <span class="accent">Una costa que merece cuidados.</span></h2>
+    <p class="lede">Prueben juntos un pequeño reto para cuidar la costa. Las actividades de limpieza reales requieren una persona adulta, terreno seguro y los suministros adecuados.</p>
+    <div class="grid2 participation">
+      <div class="activity" id="coastActivity">
+        <p class="eyebrow">¿Qué harías?</p>
+        <p class="activity-item" id="activityItem">Una envoltura de dulce en un sendero seco</p>
+        <div class="activity-actions"><button class="btn" data-choice="ordinary" type="button">Basura común, con ayuda de un adulto</button><button class="btn secondary" data-choice="adult" type="button">Dejarla y avisar a un adulto</button></div>
+        <p class="activity-feedback" id="activityFeedback" role="status" aria-live="polite">Elige una respuesta para ver por qué ayuda.</p>
+        <button class="btn secondary activity-next" id="activityNext" type="button">Siguiente objeto</button>
+        <noscript><p>Una envoltura puede ir en una bolsa de basura con ayuda de un adulto. Nunca toques agujas, sustancias químicas desconocidas ni objetos cortantes. Déjalos donde están y avisa a un adulto.</p></noscript>
+      </div>
+      <div class="card"><h3>Tu misión para cuidar la costa</h3><ol><li>Dibuja un pez, un ave o una planta de la marisma que viva cerca de tu casa.</li><li>Pregunta a una persona adulta cómo puede llegar la basura al agua donde vive.</li><li>Elijan juntos un hábito: evita que tu basura se disperse, lleva una botella reutilizable o deposita el hilo de pescar en un contenedor de recolección adecuado.</li></ol><p class="learning-note">Esta actividad funciona en esta página. No recopila cuentas, nombres, fotos ni puntuaciones. Puedes imprimir esta sección con la opción Imprimir de tu navegador.</p><h3>Un punto de partida para conversar</h3><p>Pregunta a tu docente, madre o padre: «¿Qué haría que nuestra costa estuviera más sana y qué podemos hacer juntos sin correr riesgos?»</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="journal" aria-labelledby="journalTitle">
+  <div class="wrap">
+    <p class="eyebrow">De las ideas a la acción</p>
+    <h2 id="journalTitle">Una sola costa. <span class="accent">Un punto de partida.</span></h2>
+    <p class="lede">Guías prácticas para vecinos, estudiantes, docentes y familias que quieren dar juntos un paso útil.</p>
+    <div class="journal-grid">
+      <article class="card journal-card"><h3><a href="/es/journal/first-step/">Tu primer paso por la costa</a></h3><p>Encuentra cómo empezar: voluntariado, ideas para tu clase, materiales útiles o tus habilidades.</p><a class="read-guide" href="/es/journal/first-step/">Leer la guía →</a></article>
+      <article class="card journal-card"><h3><a href="/es/journal/clear-notes/">Un aviso útil empieza con notas claras</a></h3><p>Anota qué viste, dónde y cuándo, toma fotos sin riesgo y usa los canales oficiales para dar aviso.</p><a class="read-guide" href="/es/journal/clear-notes/">Leer la guía →</a></article>
+    </div>
+    <div class="journal-actions"><a href="/es/journal/">Ver el diario →</a><a href="/es/journal/feed.xml">Fuente RSS</a></div>
+  </div>
+</section>
+
+<section class="alt" id="faq" aria-labelledby="faqTitle">
+  <div class="wrap">
+    <p class="eyebrow">Preguntas frecuentes</p>
+    <h2 id="faqTitle">Algunas preguntas. <span class="accent">Respuestas claras.</span></h2>
+    <div class="faq-grid">
+      <div class="faq-list">
+        <details><summary>¿Cuándo será la próxima limpieza de Costa Fuerte?</summary><p>Por el momento no hay una fecha de limpieza de Costa Fuerte confirmada. Antes de invitar a alguien a asistir, las actividades confirmadas incluirán fecha, hora, lugar, contacto de una persona adulta y un plan ante las condiciones meteorológicas.</p></details>
+        <details><summary>¿Pueden ayudar los estudiantes menores de 18 años?</summary><p>Sí, pueden aportar sus ideas. Una madre, un padre, un tutor o un docente debe coordinar la participación con nosotros y organizar la supervisión adulta adecuada.</p></details>
+        <details><summary>¿Un enlace de correo me inscribe?</summary><p>No. Los enlaces abren un borrador en tu propia aplicación de correo. Revísalo y envíalo allí. Un correo expresa interés; este sitio no te inscribe en un evento ni almacena registros de inscripción.</p></details>
+        <details><summary>¿Puedo denunciar un incidente a través de este sitio?</summary><p>Este sitio no recibe ni envía denuncias de incidentes. Usa los <a href="#report">canales oficiales</a> y envía los datos que identifiquen a personas directamente al organismo responsable. Observa desde un lugar seguro y nunca te enfrentes a nadie.</p></details>
+      </div>
+      <aside class="card share-panel" aria-labelledby="shareTitle">
+        <h3 id="shareTitle">Invita a otro vecino a sumarse.</h3>
+        <p>Cuidar nuestra costa empieza por las personas. Comparte Costa Fuerte con alguien que quiera echar una mano.</p>
+        <button class="btn share-site" type="button" data-share-site aria-describedby="shareNote" hidden>Compartir Costa Fuerte</button>
+        <p class="formnote" id="shareNote">El botón usa las opciones de compartir de tu dispositivo o copia el enlace del sitio.</p>
+        <p class="share-status" id="shareStatus" role="status" aria-live="polite" aria-atomic="true"></p>
+        <noscript><p>Puedes compartir el enlace del sitio que aparece abajo.</p></noscript>
+        <a class="site-link" data-site-link href="https://228coaststrong.com/es/">228coaststrong.com/es/</a>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="feedback">
+  <div class="wrap">
+    <div class="card">
+      <h2>Creado con cuidado. Más fuertes juntos.</h2>
+      <p>Ponemos cuidado en este sitio, y tu punto de vista ayuda a nuestro equipo a hacerlo más sólido. Comparte una sugerencia constructiva, otra perspectiva o algo que podríamos hacer mejor.</p>
+      <p><a href="/cdn-cgi/l/email-protection#390b0b015a56584a4d4a4d4b56575e795e54585055175a5654">Comparte tus comentarios</a></p>
+      <p class="formnote">Revisa y envía el mensaje desde tu aplicación de correo.</p>
+    </div>
+  </div>
+</section>
+
+  <section id="sponsors">
+  <div class="wrap">
+    <p class="eyebrow">Nuestros patrocinadores</p>
+    <h2>Negocios locales. <span class="accent">Junto a esta costa.</span></h2>
+    <p class="lede">El programa de patrocinadores de Costa Fuerte es la forma en que los negocios locales respaldan el agua limpia y comunidades más fuertes. Estos son los negocios que están con nosotros: apóyelos usted también.</p>
+    <figure class="localized-campaign localized-campaign--sponsor"><div class="campaign-canvas"><img class="campaign-image" src="/assets/campaign-sponsor-neutral.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="Ilustración de vecinos que recogen basura junto a la costa, con un puente y el sol sobre el agua."><div class="campaign-lettering"><p class="campaign-brand">Costa Fuerte</p><p class="campaign-motto">No te lleves nada. No dejes nada.<span>Disfruta hoy. Respeta mañana.</span></p></div></div><figcaption class="campaign-values"><span>Disfruta de nuestra costa</span><span>Llévate tus residuos</span><span>Conserva su belleza</span><span>Juntos somos más fuertes</span></figcaption><p class="campaign-good">Buena gente. Buenos lugares. Buenos hábitos.</p></figure>
+    <div class="sponsor-grid">
+      <div class="card sponsor-card"><span class="sponsor-badge">Primer patrocinador</span><p class="sponsor-name">Moore Electric</p><p>Servicios eléctricos para hogares y negocios en toda la costa del golfo de Mississippi.</p><p><a href="tel:+12282249150">(228) 224-9150</a></p><p><a class="btn secondary" href="https://228mooreelectric.com" target="_blank" rel="noopener">Visitar Moore Electric</a></p><p class="sponsor-contact"><a href="/cdn-cgi/l/email-protection#fbc9c9c3969494899e9e979e988f899298bb9c969a9297d5989496"><span class="__cf_email__" data-cfemail="b684848edbd9d9c4d3d3dad3d5c2c4dfd5f6d1dbd7dfda98d5d9db">[email&#160;protected]</span></a></p></div>
+      <div class="card sponsor-card"><span class="sponsor-badge">Patrocinador</span><img class="sponsor-photo" src="../assets/kcc-jonathen.jpg" alt="Representante de Kingdom Connections Consulting en su oficina, bajo el emblema de la empresa" loading="lazy"><p class="sponsor-name">Kingdom Connections Consulting, LLC</p><p><em>&ldquo;Claridad para tu próximo paso empresarial.&rdquo;</em></p><p>Consultoría de préstamos para pequeñas empresas: orientación de financiamiento que ayuda a los negocios nuevos a empezar, crecer y pedir préstamos con un plan.</p><p><a href="tel:+12282571948">(228) 257-1948</a></p><p><a class="btn secondary" href="https://kingdomconnectionsconsulting.com/" target="_blank" rel="noopener">Visitar Kingdom Connections Consulting</a></p><p class="sponsor-contact"><a href="/cdn-cgi/l/email-protection#450f262a3737202c24052e2c2b22212a28262a2b2b2026312c2a2b36262a2b363029312c2b226b262a28"><span class="__cf_email__" data-cfemail="1a50797568687f737b5a7173747d7e7577797574747f796e73757469797574696f766e73747d34797577">[email&#160;protected]</span></a></p></div>
+    </div>
+    <p class="route-note">¿Quiere que su negocio esté aquí? <a class="btn" href="/cdn-cgi/l/email-protection#e5d7d7dd868a8496919691978a8b82a58288848c89cb868a88">Conviértase en patrocinador</a></p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <h2>Para cada familia<br/>de esta costa.</h2>
+    <p class="ded">Esta misión es para cada familia que pesca en estas aguas, se alimenta de ellas y las heredará. Es para la comunidad y para resolver los problemas, juntos.</p>
+    <p class="ded" style="font-style:italic">«Mientras haya plástico en nuestras aguas, habrá vecinos metidos en ellas para sacarlo, juntos».</p>
+    <div class="creed">
+      <p>Ningún trabajo es demasiado grande</p>
+      <p>Ninguna frontera está demasiado lejos</p>
+      <p>Somos estadounidenses</p>
+      <p>Y estamos orgullosos.</p>
+    </div>
+    <div class="hash">#COSTAFUERTE</div><nav id="footerMap" class="footer-map" aria-label="Explora Costa Fuerte"><h3>Explora Costa Fuerte</h3><div class="footer-columns"><div class="footer-column"><h4>Participa</h4><a href="#signup">Formas de ayudar</a><a href="#kids">Pequeños de la Costa</a><a href="#report">Denunciar vertidos</a><a href="#feedback">Ideas y comentarios</a></div><div class="footer-column"><h4>Explora la costa</h4><a href="#receipts">Registro comunitario</a><a href="#network">Red de contactos</a><a href="#watches">Las redes de vigilancia</a><a href="#water">Nuestras aguas</a><a href="#journal">Diario y guías</a></div><div class="footer-column"><h4>Acerca de Costa Fuerte</h4><a href="#top">Volver arriba</a><a href="#start">Empieza aquí</a><a href="#traction">Actividad en directo</a><a href="#faq">Preguntas y respuestas</a><a href="#sponsors">Nuestros patrocinadores</a></div></div></nav><p class="footer-support">Mantenimiento del sitio: <a href="https://228mooreelectric.com/">Moore Electric</a> · <a href="tel:+12282249150">(228) 224-9150</a><br>Moore Electric mantiene este sitio y cubre el registro de su dominio.</p>
+    <p style="margin:0 0 14px"><a href="#signup" style="color:#ef8f4c;font-weight:700">Únete a Vigilancia del Bayou →</a>  ·  <a href="#report" style="color:#ef8f4c;font-weight:700">Denunciar vertidos de basura →</a>  ·  <a href="#receipts" style="color:#ef8f4c;font-weight:700">Registro comunitario →</a></p>
+    <p style="margin:0 0 14px">Escribe al equipo: <a href="/cdn-cgi/l/email-protection#4371717b202c2230373037312c2d2403242e222a2f6d202c2e" style="color:#ef8f4c;font-weight:700"><span class="__cf_email__" data-cfemail="695b5b510a06081a1d1a1d1b06070e290e04080005470a0604">[email&#160;protected]</span></a></p>
+    <p class="fine">Costa Fuerte — Centro de Vigilancia del Bayou es una página comunitaria para la costa del golfo de Mississippi. Los datos de contacto de los organismos y organizaciones se copiaron de páginas públicas oficiales consultadas el 15 de octubre de 2026. Esta página no presenta ni almacena denuncias, y no envía nada en tu nombre. Las consultas sobre participación y patrocinio se hacen mediante los enlaces de correo anteriores. Revisa y envía los mensajes desde tu propia aplicación de correo; esta página no tiene una base de datos de inscripciones. Para eventos organizados por programas oficiales, verifica los detalles en sus propias páginas oficiales.</p>
+    <p class="fine" style="margin-top:18px;border-top:1px solid rgba(255,255,255,.25);padding-top:14px"><em>Una breve nota sobre cómo empezó todo: Costa Fuerte comenzó con un vecino de Biloxi, Devin Moore, que encontró aquel televisor arrojado a la marisma de Bayou Bernard Park el 15 de octubre de 2026 y lo retiró. Inició esto por su familia: por Hazel Moore, por Albert Rhett Moore, por Jamie Jarvis Gilbert, por Michelle Gilbert, por Brett Moore y por Sharon Moore. Y esa es toda su historia en esta página. Esto nunca se trató de él. Se trata de la comunidad y de resolver los problemas.</em></p>
+    <p><a class="back-top" href="#top">Volver arriba ↑</a></p>
+  </div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+(function(){
+
+  // Compact navigation; the links stay visible when JavaScript is disabled.
+  var menu=document.getElementById('menuToggle');
+  var links=document.getElementById('primaryLinks');
+  document.documentElement.classList.add('menu-ready');menu.hidden=false;
+  menu.addEventListener('click',function(){var open=menu.getAttribute('aria-expanded')!=='true';menu.setAttribute('aria-expanded',String(open));links.classList.toggle('open',open);});
+  links.addEventListener('click',function(e){if(e.target.closest('a')){menu.setAttribute('aria-expanded','false');links.classList.remove('open');}});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&menu.getAttribute('aria-expanded')==='true'){menu.setAttribute('aria-expanded','false');links.classList.remove('open');menu.focus();}});
+
+  // Filter the local directory without leaving the selected language.
+  var orgFilters=document.querySelectorAll('.orgfilter');
+  function applyOrgFilters(){var active=Array.from(orgFilters).filter(function(input){return input.checked;}).map(function(input){return input.value;});document.querySelectorAll('details.org').forEach(function(card){card.hidden=active.length>0&&active.indexOf(card.dataset.cat)===-1;});}
+  orgFilters.forEach(function(input){input.addEventListener('change',applyOrgFilters);});
+
+  // Family learning activity. No storage, analytics, network calls or identifiers.
+  var items=[{"label": "Una envoltura de dulce en un sendero seco", "answer": "ordinary", "why": "Un envoltorio es basura común. Con un adulto y guantes adecuados o una pinza recogedora, puede ir en una bolsa de basura. No recojas nada que no puedas identificar con seguridad."}, {"label": "Una aguja afilada cerca de la orilla", "answer": "adult", "why": "Déjala donde está y avisa a un adulto. No la toques ni la pongas en una bolsa de basura común. Un adulto puede contactar al servicio correspondiente."}, {"label": "Un recipiente con una sustancia química desconocida", "answer": "adult", "why": "Déjalo y avisa a un adulto. No lo toques, abras ni huelas. Los recipientes desconocidos requieren ayuda del servicio correspondiente."}];
+  var itemIndex=0;var itemLabel=document.getElementById('activityItem');var feedback=document.getElementById('activityFeedback');
+  document.querySelectorAll('[data-choice]').forEach(function(button){button.addEventListener('click',function(){var item=items[itemIndex];var correct=button.dataset.choice===item.answer;feedback.textContent=(correct?"Correcto. ":"Prueba otra opción. ")+item.why;});});
+  document.getElementById('activityNext').addEventListener('click',function(){itemIndex=(itemIndex+1)%items.length;itemLabel.textContent=items[itemIndex].label;feedback.textContent="Elige una respuesta para ver por qué ayuda.";});
+
+  // --- Copy buttons (clipboard with fallback) ---
+  function wireCopy(btn){
+    btn.addEventListener('click', function(){
+      var targetId = btn.getAttribute('data-copy');
+      var el = document.getElementById(targetId);
+      var msgId = targetId === 'alertTemplate' ? 'alertCopied' : 'receiptCopied';
+      var msg = document.getElementById(msgId);
+      function done(){ if(msg){ msg.textContent = "Copiado ✓"; setTimeout(function(){ msg.textContent=''; }, 2500); } }
+      function failed(){ if(msg){ msg.textContent="No se pudo copiar. Selecciona y copia la plantilla."; } }
+      var text = el.textContent;
+      if (navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(text).then(done, function(){ fallback(); });
+      } else { fallback(); }
+      function fallback(){
+        var ta = document.createElement('textarea');
+        ta.value = text; ta.style.position='fixed'; ta.style.opacity='0';
+        document.body.appendChild(ta); ta.select();
+        try { if(document.execCommand('copy')){done();}else{failed();} } catch(err){failed();}
+        document.body.removeChild(ta);
+      }
+    });
+  }
+  var btns = document.querySelectorAll('.copybtn');
+  for (var j=0;j<btns.length;j++) wireCopy(btns[j]);
+
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce), (max-width: 740px)').matches;
+
+  // --- Hero parallax: the marsh drifts gently as you scroll ---
+  var heroEl = document.querySelector('.hero');
+  var heroBg = document.querySelector('.hero img.bg');
+
+  // --- Scroll progress bar + nav shadow ---
+  var progress = document.createElement('div');
+  progress.id = 'progress';
+  document.body.appendChild(progress);
+  var topnav = document.querySelector('nav.top');
+  function onScroll(){
+    var h = document.documentElement;
+    var max = h.scrollHeight - h.clientHeight;
+    progress.style.width = (max > 0 ? (h.scrollTop / max) * 100 : 0) + '%';
+    if (topnav) topnav.classList.toggle('scrolled', h.scrollTop > 10);
+    if (heroBg && heroEl && !reduceMotion){
+      var y = h.scrollTop;
+      if (y < heroEl.offsetHeight){ heroBg.style.translate = '0 ' + (y * 0.22).toFixed(1) + 'px'; }
+    }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  // --- Reveal on scroll ---
+  if (!reduceMotion && 'IntersectionObserver' in window){
+    var revealEls = document.querySelectorAll('.card, .step, .fact, blockquote.pull, figure, .channel, .stat');
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, {threshold:.12});
+    for (var r=0;r<revealEls.length;r++){ revealEls[r].classList.add('reveal'); io.observe(revealEls[r]); }
+  }
+
+  // --- Fact count-up ---
+  var factNums = document.querySelectorAll('.fact b');
+  function countUp(el){
+    var m = el.textContent.match(/^([\d.]+)(.*)$/);
+    if (!m) return;
+    var target = parseFloat(m[1]);
+    var suffix = m[2];
+    var dec = (m[1].split('.')[1] || '').length;
+    var start = null;
+    function frame(ts){
+      if (!start) start = ts;
+      var p = Math.min((ts - start) / 1300, 1);
+      var eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = (target * eased).toFixed(dec) + suffix;
+      if (p < 1) requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
+  }
+  if (!reduceMotion && 'IntersectionObserver' in window && factNums.length){
+    var fio = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting){ countUp(e.target); fio.unobserve(e.target); }
+      });
+    }, {threshold:.4});
+    for (var fi=0; fi<factNums.length; fi++) fio.observe(factNums[fi]);
+  }
+})();
+</script>
+<script src="../activity.js" defer></script>
+<script src="../share.js" defer></script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" data-cf-beacon='{"version":"2024.11.0","token":"42e259363e0948a784881d13c9f0abe3","r":1,"spa":2}' crossorigin="anonymous"></script>
+</body>
+</html>

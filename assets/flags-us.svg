@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1900" height="1000" viewBox="0 0 1900 1000" role="img" aria-labelledby="us-flag-title us-flag-desc">
+  <title id="us-flag-title">Flag of the United States</title>
+  <desc id="us-flag-desc">Thirteen alternating red and white stripes with fifty white stars in nine staggered rows on a blue canton.</desc>
+  <defs><polygon id="us-star" points="0.000000,-30.800000 6.915031,-9.517723 29.292541,-9.517723 11.188755,3.635447 18.103786,24.917723 0.000000,11.764553 -18.103786,24.917723 -11.188755,3.635447 -29.292541,-9.517723 -6.915031,-9.517723" fill="#ffffff"/></defs>
+  <rect x="0" y="0.000000000" width="1900" height="76.923077923" fill="#b22234"/>
+  <rect x="0" y="76.923076923" width="1900" height="76.923077923" fill="#ffffff"/>
+  <rect x="0" y="153.846153846" width="1900" height="76.923077923" fill="#b22234"/>
+  <rect x="0" y="230.769230769" width="1900" height="76.923077923" fill="#ffffff"/>
+  <rect x="0" y="307.692307692" width="1900" height="76.923077923" fill="#b22234"/>
+  <rect x="0" y="384.615384615" width="1900" height="76.923077923" fill="#ffffff"/>
+  <rect x="0" y="461.538461538" width="1900" height="76.923077923" fill="#b22234"/>
+  <rect x="0" y="538.461538462" width="1900" height="76.923077923" fill="#ffffff"/>
+  <rect x="0" y="615.384615385" width="1900" height="76.923077923" fill="#b22234"/>
+  <rect x="0" y="692.307692308" width="1900" height="76.923077923" fill="#ffffff"/>
+  <rect x="0" y="769.230769231" width="1900" height="76.923077923" fill="#b22234"/>
+  <rect x="0" y="846.153846154" width="1900" height="76.923077923" fill="#ffffff"/>
+  <rect x="0" y="923.076923077" width="1900" height="76.923077923" fill="#b22234"/>
+  <rect x="0" y="0" width="760" height="538.461538462" fill="#3c3b6e"/>
+  <use href="#us-star" x="63.333333333" y="53.846153846"/>
+  <use href="#us-star" x="190.000000000" y="53.846153846"/>
+  <use href="#us-star" x="316.666666667" y="53.846153846"/>
+  <use href="#us-star" x="443.333333333" y="53.846153846"/>
+  <use href="#us-star" x="570.000000000" y="53.846153846"/>
+  <use href="#us-star" x="696.666666667" y="53.846153846"/>
+  <use href="#us-star" x="126.666666667" y="107.692307692"/>
+  <use href="#us-star" x="253.333333333" y="107.692307692"/>
+  <use href="#us-star" x="380.000000000" y="107.692307692"/>
+  <use href="#us-star" x="506.666666667" y="107.692307692"/>
+  <use href="#us-star" x="633.333333333" y="107.692307692"/>
+  <use href="#us-star" x="63.333333333" y="161.538461538"/>
+  <use href="#us-star" x="190.000000000" y="161.538461538"/>
+  <use href="#us-star" x="316.666666667" y="161.538461538"/>
+  <use href="#us-star" x="443.333333333" y="161.538461538"/>
+  <use href="#us-star" x="570.000000000" y="161.538461538"/>
+  <use href="#us-star" x="696.666666667" y="161.538461538"/>
+  <use href="#us-star" x="126.666666667" y="215.384615385"/>
+  <use href="#us-star" x="253.333333333" y="215.384615385"/>
+  <use href="#us-star" x="380.000000000" y="215.384615385"/>
+  <use href="#us-star" x="506.666666667" y="215.384615385"/>
+  <use href="#us-star" x="633.333333333" y="215.384615385"/>
+  <use href="#us-star" x="63.333333333" y="269.230769231"/>
+  <use href="#us-star" x="190.000000000" y="269.230769231"/>
+  <use href="#us-star" x="316.666666667" y="269.230769231"/>
+  <use href="#us-star" x="443.333333333" y="269.230769231"/>
+  <use href="#us-star" x="570.000000000" y="269.230769231"/>
+  <use href="#us-star" x="696.666666667" y="269.230769231"/>
+  <use href="#us-star" x="126.666666667" y="323.076923077"/>
+  <use href="#us-star" x="253.333333333" y="323.076923077"/>
+  <use href="#us-star" x="380.000000000" y="323.076923077"/>
+  <use href="#us-star" x="506.666666667" y="323.076923077"/>
+  <use href="#us-star" x="633.333333333" y="323.076923077"/>
+  <use href="#us-star" x="63.333333333" y="376.923076923"/>
+  <use href="#us-star" x="190.000000000" y="376.923076923"/>
+  <use href="#us-star" x="316.666666667" y="376.923076923"/>
+  <use href="#us-star" x="443.333333333" y="376.923076923"/>
+  <use href="#us-star" x="570.000000000" y="376.923076923"/>
+  <use href="#us-star" x="696.666666667" y="376.923076923"/>
+  <use href="#us-star" x="126.666666667" y="430.769230769"/>
+  <use href="#us-star" x="253.333333333" y="430.769230769"/>
+  <use href="#us-star" x="380.000000000" y="430.769230769"/>
+  <use href="#us-star" x="506.666666667" y="430.769230769"/>
+  <use href="#us-star" x="633.333333333" y="430.769230769"/>
+  <use href="#us-star" x="63.333333333" y="484.615384615"/>
+  <use href="#us-star" x="190.000000000" y="484.615384615"/>
+  <use href="#us-star" x="316.666666667" y="484.615384615"/>
+  <use href="#us-star" x="443.333333333" y="484.615384615"/>
+  <use href="#us-star" x="570.000000000" y="484.615384615"/>
+  <use href="#us-star" x="696.666666667" y="484.615384615"/>
+</svg>
+

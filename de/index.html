@@ -1,0 +1,1266 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+<meta name="color-scheme" content="light"/>
+<link rel="icon" href="data:,"/>
+<title>Starke Küste — Gemeinsam schützen wir unsere Küste</title>
+<meta name="description" content="Nachbarn engagieren sich für die Golfküste Mississippis. Hilf mit, lerne mit deiner Familie, melde illegale Müllablagerungen sicher oder informiere dich über eine Unterstützung von Starke Küste.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&amp;family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Barlow+Semi+Condensed:wght@600&amp;family=Zilla+Slab:wght@600;700&amp;display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fbf8f1; --surface:#ffffff; --surface2:#e9f1f4; --ink:#12242e; --muted:#5a6a70; --line:#d3dee2;
+  --green:#0b5a7a; --green-dark:#07425c; --green-deep:#052e40; --amber:#a85f14; --amber-bg:#fdeeda; --red:#a6192e;
+  --crimson:#a6192e; --gold:#ef8f4c; --on-gold:#231a02;
+  --on-dark:#e2f0f5; --on-dark-2:#cfe3ec; --on-dark-muted:#a8c8d4;
+  --dark-grad:linear-gradient(155deg,#0b5a7a 0%,#07425c 55%,#052e40 100%);
+  --radius:14px; --shadow:0 10px 30px rgba(8,38,54,.14);
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} *{transition:none!important; animation:none!important} }
+body{margin:0;font-family:"Barlow",system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55;font-size:17px}
+a{color:var(--green);text-underline-offset:3px}
+img{max-width:100%;height:auto;display:block}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+/* NAV */
+nav.top{position:sticky;top:0;z-index:50;background:color-mix(in srgb, var(--bg) 92%, transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav.top .wrap{display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding-top:10px;padding-bottom:10px}
+.brand{font-family:"Zilla Slab",Georgia,serif;font-weight:700;letter-spacing:.03em;font-size:22px;color:var(--ink);text-decoration:none}
+.brand span{color:var(--green)}
+.navlinks{display:flex;gap:4px;flex-wrap:wrap;margin-left:auto}
+.navlinks a{font-size:14.5px;font-weight:600;color:var(--muted);text-decoration:none;padding:7px 10px;border-radius:8px}
+.navlinks a:hover{background:var(--surface2);color:var(--ink)}
+.navcta{background:var(--green)!important;color:#fff!important}
+
+/* HERO */
+.hero{position:relative;color:#fff;overflow:hidden;background:var(--green-deep)}
+.hero img.bg{position:absolute;inset:-6% 0;width:100%;height:112%;object-fit:cover;object-position:center 62%;opacity:.82;will-change:translate}
+.hero .veil{position:absolute;inset:0;background:linear-gradient(180deg, rgba(5,42,31,.16) 0%, rgba(5,42,31,.30) 34%, rgba(5,42,31,.66) 62%, rgba(5,42,31,.93) 90%)}
+.hero .wrap{position:relative;z-index:4;padding:36px 20px 56px}
+.kicker{display:inline-block;font-family:"Barlow Semi Condensed",sans-serif;font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:13px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.35);padding:6px 12px;border-radius:999px}
+.hero h1{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(76px,15vw,172px);line-height:.92;letter-spacing:.015em;margin:18px 0 10px}
+.hero .tag{font-size:clamp(20px,3.4vw,30px);font-weight:500;max-width:640px;margin:0 0 8px}
+.hero .sub{max-width:620px;color:var(--on-dark-2);font-size:17px;margin:0 0 26px}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;font-weight:700;font-size:16px;padding:13px 22px;border-radius:10px;text-decoration:none;border:1.5px solid transparent;cursor:pointer;font-family:inherit}
+.btn-solid{background:var(--gold);color:var(--on-gold)}
+.btn-ghost{background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.55)}
+/* FLAG PHOTO BAND */
+.flagband{position:relative}
+.flagband img{width:100%;height:clamp(220px,44vh,440px);object-fit:cover;object-position:center 45%}
+.flagband figcaption{position:absolute;right:14px;bottom:12px;font-size:12.5px;line-height:1.4;color:var(--on-dark);background:rgba(5,42,31,.6);padding:5px 11px;border-radius:999px;margin:0}
+.flagband figcaption a{color:var(--gold)}
+/* SECTIONS */
+section{padding:64px 0}
+section.alt{background:var(--surface2)}
+h2{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(36px,5.6vw,56px);line-height:1.06;margin:0 0 12px;letter-spacing:.01em}
+section h2{position:relative;padding-bottom:16px}
+section h2::after{content:"";position:absolute;left:2px;bottom:0;width:76px;height:4px;border-radius:2px;background:linear-gradient(90deg,var(--crimson),var(--gold))}
+h2 .accent{color:var(--green)}
+h3{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:20px;line-height:1.25}
+.lede{font-size:19px;max-width:760px;color:var(--ink)}
+.muted{color:var(--muted)}
+.eyebrow{font-family:"Barlow Semi Condensed",sans-serif;font-weight:600;letter-spacing:.13em;text-transform:uppercase;font-size:13px;color:var(--amber);margin:0 0 8px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media(max-width:820px){.grid2,.grid3{grid-template-columns:1fr}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
+.card h3{margin:0 0 8px;font-size:20px}
+blockquote.pull{margin:26px 0;padding:6px 0 6px 22px;border-left:5px solid var(--amber);font-size:clamp(21px,3vw,27px);line-height:1.4;font-weight:500}
+figure{margin:0}
+figure img{border-radius:var(--radius)}
+figcaption{font-size:13.5px;color:var(--muted);margin-top:8px}
+.factrow{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:26px}
+@media(max-width:700px){.factrow{grid-template-columns:1fr}}
+.fact{background:var(--dark-grad);color:var(--on-dark);border-radius:var(--radius);padding:18px}
+.fact b{display:block;font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:36px;line-height:1.05;color:var(--gold)}
+.fact span{font-size:14.5px}
+/* FORM */
+.formnote{font-size:14.5px;color:var(--muted)}
+.signup-cta{display:flex;flex-direction:column;justify-content:center;gap:14px}
+.signup-cta .gform-btn{background:var(--green);color:#fff;font-size:19px;text-align:center;padding:16px 22px}
+
+pre.template{white-space:pre-wrap;word-break:break-word;background:var(--surface2);border:1px solid var(--line);border-radius:10px;padding:16px;font-size:14.5px;font-family:ui-monospace,Menlo,monospace;line-height:1.5}
+.copybtn{background:var(--surface);border:1.5px solid var(--green);color:var(--green);font-weight:700;padding:9px 16px;border-radius:9px;cursor:pointer;font:inherit;font-size:15px}
+.copybtn:hover{background:var(--green-light)}
+.copied{color:var(--green);font-weight:700;font-size:14px;margin-left:8px}
+/* CHANNELS */
+.channel-list{display:grid;grid-template-columns:1fr;gap:14px;margin-top:12px}
+.channel{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.channel b{display:block;font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:18px}
+.channel .num{font-family:"Zilla Slab",Georgia,serif;font-size:20px;color:var(--green);text-decoration:none;font-weight:700}
+.channel p{margin:4px 0 0;font-size:14.5px;color:var(--muted)}
+.safety{background:color-mix(in srgb, var(--crimson) 6%, var(--surface));border:1.5px solid color-mix(in srgb, var(--crimson) 42%, var(--surface));border-radius:var(--radius);padding:18px 20px;margin-top:22px}
+
+.safety strong{color:var(--red)}
+
+.ladder{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:20px}
+@media(max-width:520px){.ladder{grid-template-columns:1fr}}
+.step{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:18px}
+.step .n{font-family:"Zilla Slab",Georgia,serif;font-size:30px;color:var(--amber);font-weight:700;line-height:1}
+.step h3{margin:6px 0 6px}
+.step p{font-size:14.5px;color:var(--muted);margin:0}
+/* LISTS */
+ul.tight{margin:8px 0;padding-left:22px}
+ul.tight li{margin-bottom:7px}
+.gear{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+@media(max-width:760px){.gear{grid-template-columns:1fr}}
+/* HERITAGE STRIP */
+.heritage{background:var(--surface2);border-top:3px solid var(--gold);border-bottom:1px solid var(--line);padding:26px 0}
+.heritage .wrap{display:flex;flex-wrap:wrap;gap:10px 34px;align-items:baseline}
+.heritage .item{font-size:15.5px;color:var(--ink)}
+.heritage .item b{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:17px;color:var(--green)}
+
+/* FOOTER */
+footer{background:var(--dark-grad);color:var(--on-dark);padding:64px 0 48px;margin-top:0}
+footer h2{color:#fff}
+footer .ded{font-size:19px;max-width:720px}
+footer .creed{margin:26px 0 6px}
+footer .creed p{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(19px,3.4vw,24px);color:#fff;margin:0 0 4px;letter-spacing:.02em}
+footer .hash{font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(32px,9vw,46px);color:var(--gold);letter-spacing:.03em;margin:18px 0 6px}
+footer .fine{font-size:13.5px;color:var(--on-dark-muted);max-width:760px}
+/* MOTION & POLISH */
+::selection{background:var(--gold);color:var(--on-gold)}
+#progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--crimson);z-index:100}
+nav.top{transition:box-shadow .3s ease}
+nav.top.scrolled{box-shadow:0 6px 24px rgba(8,38,54,.18)}
+.hero img.bg{animation:heroZoom 28s ease-in-out infinite alternate}
+@keyframes heroZoom{from{transform:scale(1.04)}to{transform:scale(1.15)}}
+.hero h1{text-shadow:0 4px 30px rgba(5,42,31,.5)}
+.hero .wrap>*{animation:heroIn .9s cubic-bezier(.2,.7,.2,1) both}
+.hero .wrap>*:nth-child(2){animation-delay:.08s}
+.hero .wrap>*:nth-child(3){animation-delay:.16s}
+.hero .wrap>*:nth-child(4){animation-delay:.24s}
+.hero .wrap>*:nth-child(5){animation-delay:.32s}
+@keyframes heroIn{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+.hero .wave{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:54px;display:block}
+.hero .wave path{fill:var(--bg)}
+.ticker{background:var(--crimson);color:var(--on-dark);overflow:hidden;padding:10px 0}
+.ticker-track{display:flex;width:max-content;animation:tick 32s linear infinite;font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:19px;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap}
+.ticker-track span{padding:0 10px}
+@keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.btn{transition:transform .2s ease,box-shadow .2s ease,background .2s ease}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 22px rgba(8,38,54,.25)}
+.card,.step,.channel{transition:transform .25s ease,box-shadow .25s ease}
+.card:hover,.step:hover,.channel:hover{transform:translateY(-3px);box-shadow:0 14px 34px rgba(8,38,54,.16)}
+section[id]{scroll-margin-top:84px}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+footer .hash{text-shadow:0 0 26px rgba(233,180,76,.35)}
+/* STAT BAND */
+.statband{background:var(--dark-grad);color:var(--on-dark);border-top:3px solid var(--gold)}
+.statband .wrap{display:grid;grid-template-columns:repeat(4,1fr);padding-top:0;padding-bottom:0}
+.stat{padding:28px 18px;text-align:center;border-left:1px solid rgba(233,180,76,.25)}
+.stat:first-child{border-left:none}
+.stat b{display:block;font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:clamp(34px,4.6vw,52px);color:var(--gold);line-height:1.02}
+.stat span{display:block;margin-top:7px;font-size:14px;line-height:1.45;color:var(--on-dark-muted)}
+@media(max-width:760px){.statband .wrap{grid-template-columns:1fr 1fr}.stat{border-left:none;border-top:1px solid rgba(233,180,76,.18)}.stat:nth-child(-n+2){border-top:none}}
+
+/* 001 ALPHA: participation, sponsorship and family learning */
+.hero h1{font-size:clamp(42px,7.5vw,94px);line-height:1.04;max-width:960px;margin:14px 0 22px;letter-spacing:-.025em}
+.hero h1 span{display:block;color:var(--gold)}
+.hero-brand{font-family:"Zilla Slab",Georgia,serif;font-size:26px;font-weight:700;letter-spacing:.08em;margin:24px 0 0}
+.hero .wrap{padding-bottom:70px}
+.participation{margin-top:28px}
+.participation .card{height:100%;display:flex;flex-direction:column;gap:12px}
+.participation .card p{margin:0}
+.participation .btn{margin-top:auto;text-align:center;background:var(--green);color:#fff}
+.route-note{max-width:760px;font-size:15px;color:var(--muted);margin-top:20px}
+.sponsor-name{font-family:"Zilla Slab",Georgia,serif;font-size:clamp(32px,6vw,54px);line-height:1.1;font-weight:700;margin:10px 0}
+.support-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.support-actions .btn{background:var(--green);color:#fff}
+.activity{border:2px solid var(--green);border-radius:var(--radius);padding:26px;background:var(--surface)}
+.activity-item{font-family:"Zilla Slab",Georgia,serif;font-size:clamp(26px,4vw,38px);font-weight:700;line-height:1.2;margin:14px 0 22px}
+.activity-actions{display:flex;flex-wrap:wrap;gap:12px}
+.activity button{min-height:48px;background:var(--green);color:#fff;border:2px solid transparent}
+.activity button.secondary{background:var(--surface2);color:var(--ink);border-color:var(--line)}
+.activity-feedback{min-height:4.5em;margin:18px 0;font-weight:600}
+.activity-next{margin-top:4px}
+.learning-note{font-size:14.5px;color:var(--muted)}
+.law-steps{margin-top:26px;padding:20px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.law-steps summary{cursor:pointer;font-family:"Zilla Slab",Georgia,serif;font-weight:700;font-size:23px;padding:8px 0}
+.law-steps li{margin:10px 0}
+.skip-link{position:absolute;top:-100px;left:15px;z-index:200;background:var(--surface);padding:12px}
+.skip-link:focus{top:8px}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--gold);outline-offset:4px}
+.menu-toggle{font:inherit;font-weight:700;border:1px solid var(--line);border-radius:8px;padding:8px 14px;background:var(--surface);color:var(--ink);margin-left:auto}
+
+@media(max-width:740px){
+ .brand{font-size:17px}.hero .wrap{padding-top:28px}.hero h1{font-size:clamp(40px,10vw,62px)}
+ nav.top .wrap{gap:8px}.menu-ready .menu-toggle{display:block}.menu-ready .navlinks{display:none;width:100%;margin:6px 0 0;gap:5px}
+ .menu-ready .navlinks.open{display:flex}.navlinks a{font-size:15px;padding:10px}.activity{padding:20px}
+ .activity-actions{display:grid;grid-template-columns:1fr}.support-actions .btn{width:100%;text-align:center}
+}
+@media(min-width:741px){.menu-toggle{display:none!important}}
+@media print{nav.top,.flagband,.ticker,.hero,.statband,footer,#report,#receipts,#watches,#water,#story,#signup,#sponsors,.heritage,.activity-actions,.activity-next{display:none!important}section{padding:14px 0}.activity{border:1px solid #333}.learning-note{color:#222}}
+
+
+/* Revision 2: responsive language navigation and iPhone layout */
+html{-webkit-text-size-adjust:100%;scroll-padding-top:150px}
+body{overflow-wrap:break-word}
+.wrap{width:100%;padding-left:max(20px,env(safe-area-inset-left));padding-right:max(20px,env(safe-area-inset-right))}
+.grid2>*,.grid3>*,.factrow>*,.statband .wrap>*,.gear>*,.ladder>*{min-width:0}
+.card,.channel,.step{overflow-wrap:anywhere}
+h1,h2,h3{overflow-wrap:break-word;text-wrap:balance}
+.language-switch{display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:6px;width:100%;border-top:1px solid var(--line);padding-top:6px}
+.language-switch a{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:8px 12px;border-radius:8px;font-size:14px;font-weight:600;text-decoration:none;color:var(--ink);border:1px solid transparent}
+.language-switch a[aria-current=page]{background:var(--green);color:#fff}
+.language-switch a:hover{border-color:var(--green)}
+.menu-toggle,.copybtn,.navlinks a{min-height:44px}
+.navlinks a{display:inline-flex;align-items:center}
+.channel .num{display:inline-flex;align-items:center;min-height:44px;max-width:100%;overflow-wrap:anywhere}
+.channel a,.route-note a,footer a{overflow-wrap:anywhere}
+.flagband figcaption{max-width:calc(100% - 28px);border-radius:10px}
+.quick-start{padding:28px 0 36px;border-bottom:1px solid var(--line);background:var(--surface)}
+.start-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.start-card{display:block;border:1px solid var(--line);border-radius:12px;padding:20px;text-decoration:none;color:var(--ink);background:var(--surface2)}
+.start-card .start-number{font-size:13px;font-weight:700;letter-spacing:.12em;color:var(--amber)}
+.start-card strong{display:block;font-family:'Zilla Slab',Georgia,serif;font-size:24px;line-height:1.2;margin:5px 0 8px}
+.start-card span:last-child{display:block;color:var(--muted);font-size:16px;line-height:1.5}
+.start-card:hover{border-color:var(--green);box-shadow:var(--shadow)}
+pre.template{max-width:100%;overflow-wrap:anywhere;word-break:normal;tab-size:2}
+.kicker{max-width:100%;line-height:1.6;letter-spacing:.08em;border-radius:14px}
+.hero-btns{margin-bottom:22px}
+html[lang=vi] body{font-family:'Noto Sans',Arial,sans-serif}
+html[lang=vi] h1,html[lang=vi] h2,html[lang=vi] h3,html[lang=vi] .brand,html[lang=vi] .sponsor-name,html[lang=vi] .start-card strong{font-family:'Noto Serif',Georgia,serif}
+
+@media(max-width:740px){
+ nav.top .wrap{gap:6px 12px;padding-top:max(8px,env(safe-area-inset-top));padding-bottom:6px}
+ .brand{flex:1;min-width:0;font-size:16px;line-height:1.35;letter-spacing:0}
+ .menu-toggle{flex-shrink:0;font-size:15px;max-width:45%;padding:8px 12px}
+ .language-switch{justify-content:flex-start;gap:2px;padding-top:2px}
+ .language-switch a{padding:7px 12px;font-size:14px}
+ .navlinks{order:4;margin-left:0;max-height:58vh;max-height:58svh;overflow-y:auto;overscroll-behavior:contain}
+ .navlinks a{flex:1 1 45%;padding:10px 12px;line-height:1.4}
+ .hero .wrap{padding-top:28px;padding-bottom:48px}
+ .hero-brand{margin:16px 0 0;font-size:20px}
+ .hero h1{font-size:clamp(35px,9.2vw,52px);line-height:1.13;letter-spacing:-.02em;margin:16px 0 20px}
+ html[lang=vi] .hero h1{font-size:clamp(32px,8.4vw,48px);text-wrap:wrap}
+ html[lang=es] .hero h1{text-wrap:wrap}
+ .hero .tag{font-size:21px;line-height:1.45}
+ .hero .sub{font-size:16px;line-height:1.65;margin:14px 0 24px}
+ .hero-btns{display:grid;grid-template-columns:minmax(0,1fr);gap:10px}
+ .hero-btns .btn{width:100%;text-align:center;white-space:normal;min-height:48px}
+ .start-grid{grid-template-columns:minmax(0,1fr);gap:10px}
+ .start-card{padding:16px 18px}.start-card strong{font-size:23px}
+ section{padding:42px 0}h2{font-size:clamp(30px,8vw,40px);line-height:1.18}
+ .card{padding:20px}.lede{font-size:18px;line-height:1.65}
+ .stat{padding:20px 12px}.stat b{font-size:clamp(27px,7vw,38px)}
+ .stat span{font-size:14px}.flagband img{height:250px}
+ .ticker-track{animation:none;display:block;width:auto;white-space:normal;font-size:14px;letter-spacing:.045em;line-height:1.6;padding:0 14px}
+ .ticker-track span{padding:0}.ticker-track span+span{display:none}
+ .activity-actions button{width:100%;white-space:normal;min-height:48px}
+ .hero img.bg,.hero .wrap>*{animation:none!important}
+ .reveal{opacity:1;transform:none}
+ footer{padding-bottom:max(36px,env(safe-area-inset-bottom))}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1!important;transform:none!important}}
+@media print{.language-switch,.quick-start{display:none!important}}
+
+/* Shared traction panel: calm motion, existing marsh palette. */
+.traction{padding:30px 0 36px;background:var(--surface2);border-bottom:1px solid var(--line)}
+.traction h2{font-size:clamp(28px,4vw,40px)}
+.traction .factrow{margin-top:18px}.traction .fact b{font-variant-numeric:tabular-nums;font-size:clamp(32px,5vw,44px)}
+.traction details{font-size:14px}.traction summary{cursor:pointer;font-weight:600;min-height:44px;display:flex;align-items:center}
+.traction[data-state=unavailable] .fact b{opacity:.65}
+.btn,.start-card,.language-switch a{transition:background-color .16s ease,border-color .16s ease,box-shadow .16s ease}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+@media(prefers-reduced-motion:reduce){.btn,.start-card,.language-switch a{transition:none}}
+
+/* Journal, useful answers and simple sharing in the existing marsh palette. */
+main{display:block}
+main:focus{outline:none}
+.journal-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:26px}
+.journal-card{display:flex;flex-direction:column;align-items:flex-start;border-top:3px solid var(--gold)}
+.journal-card h3{font-size:25px;line-height:1.25}
+.journal-card h3 a{color:var(--ink)}
+.journal-card p{color:var(--muted);margin:8px 0 16px}
+.journal-card .read-guide{margin-top:auto;display:inline-flex;align-items:center;min-height:44px;font-weight:700}
+.journal-actions{display:flex;align-items:center;flex-wrap:wrap;gap:8px 24px;margin-top:18px}
+.journal-actions a{display:inline-flex;align-items:center;min-height:44px;font-weight:600}
+.faq-grid{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:28px;align-items:start;margin-top:26px}
+.faq-list{display:grid;gap:12px}
+.faq-list details{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:0 18px}
+summary{min-height:44px}
+.faq-list summary{cursor:pointer;padding:13px 0;font-weight:700;line-height:1.5}
+.faq-list details[open]{border-color:var(--green)}
+.faq-list details p{margin:0 0 18px;color:var(--muted)}
+.share-panel{border-top:3px solid var(--gold)}
+.share-panel h3{font-size:27px}
+.share-panel .btn{background:var(--gold);color:var(--on-gold);min-height:48px;text-align:center;max-width:100%}
+.share-site[hidden]{display:none}
+.share-site:disabled{cursor:wait;opacity:.75;transform:none}
+.share-status{font-size:15px;font-weight:600;min-height:3em;margin:14px 0 4px}
+.site-link{display:inline-flex;align-items:center;min-height:44px;max-width:100%;font-weight:600;overflow-wrap:anywhere}
+.back-top{display:inline-flex;align-items:center;min-height:44px;color:var(--gold);font-weight:700}
+@media(max-width:740px){.journal-grid,.faq-grid{grid-template-columns:minmax(0,1fr)}.faq-grid{gap:20px}.share-panel .btn{width:100%}.journal-card h3{font-size:23px}}
+@media print{#journal,#faq,.back-top{display:none!important}}
+
+.footer-map{margin:26px 0;text-align:left;border-top:1px solid rgba(255,255,255,.25);padding-top:18px}.footer-map h3{color:var(--gold);font-size:20px}.footer-map>div{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px 16px}.footer-map a{display:flex;align-items:center;min-height:44px;color:var(--on-dark);font-size:15px;text-decoration:none;overflow-wrap:anywhere}.footer-map a:hover{text-decoration:underline;color:var(--gold)}@media(max-width:740px){.footer-map>div{grid-template-columns:repeat(2,minmax(0,1fr))}}@media print{.footer-map{display:none}}
+
+.footer-map .footer-column{display:flex;flex-direction:column;gap:2px}.footer-map h4{color:var(--gold);font-size:15px;margin:0 0 10px}.footer-support{font-size:13px;color:var(--on-dark-muted);text-align:left;border-top:1px solid rgba(255,255,255,.25);padding-top:18px}.footer-support a{color:var(--on-dark);font-weight:600}#sponsors{scroll-margin-top:190px}
+
+/* Retained Network and Worldwide layout */
+
+.filters{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 22px}
+.filters label{display:flex;align-items:center;gap:8px;background:var(--surface);border:1.5px solid var(--line);padding:9px 14px;border-radius:999px;font-weight:600;font-size:15px;cursor:pointer}
+.filters input{width:18px;height:18px;accent-color:var(--green)}
+details.org{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);margin-bottom:14px;overflow:hidden}
+details.org summary{cursor:pointer;padding:18px 20px;font-weight:700;font-size:18px;list-style:none;display:flex;justify-content:space-between;gap:12px;align-items:center}
+details.org summary::-webkit-details-marker{display:none}
+details.org summary .tagchip{font-size:12px;letter-spacing:.08em;text-transform:uppercase;background:var(--green-light);color:var(--green);padding:4px 10px;border-radius:999px;white-space:nowrap}
+details.org .body{padding:0 20px 20px}
+details.org .body p{margin:0 0 10px}
+.routebox{background:var(--surface2);border-radius:10px;padding:12px 14px;font-size:15px;margin:10px 0;overflow-wrap:anywhere;word-break:break-word}
+.routebox a{font-weight:600}
+.draft{display:inline-block;font-size:12.5px;font-weight:700;letter-spacing:.06em;background:var(--amber-bg);color:var(--amber);border:1px solid var(--amber);padding:3px 9px;border-radius:999px;text-transform:uppercase}
+.hidden-card{display:none!important}
+
+section.worldwide{background:var(--green-dark);color:#e9f4f8}
+section.worldwide h2{color:#fff}
+section.worldwide h2 .accent{color:#ef8f4c}
+section.worldwide .lede{color:#e2f0f5}
+.globe-wrap{display:flex;flex-direction:column;align-items:center;gap:16px}
+.globe{width:min(320px,78vw);height:auto;animation:globeFloat 7s ease-in-out infinite alternate}
+@keyframes globeFloat{from{transform:translateY(0)}to{transform:translateY(-10px)}}
+.globe-spin{transform-box:fill-box;transform-origin:center;animation:globeSpin 26s linear infinite}
+.globe-orbit{transform-box:fill-box;transform-origin:center;animation:globeSpin 16s linear infinite reverse}
+@keyframes globeSpin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+.globe-cap{font-size:15px;color:#a8c8d4;text-align:center;max-width:340px;margin:0}
+.worldpoints{display:grid;gap:14px;margin-top:22px}
+.worldpoint{border-left:3px solid #ef8f4c;padding:2px 0 2px 16px}
+.worldpoint b{display:block;font-size:17.5px;color:#fff}
+.worldpoint p{margin:2px 0 0;font-size:15.5px;color:#cfe3ec}
+.postcard{margin-top:28px;color:var(--ink)}
+.postcard h3{color:var(--ink)}
+
+details.org summary{min-height:44px;flex-wrap:wrap}details.org summary .tagchip{white-space:normal;background:var(--surface2)}
+</style>
+<link rel="canonical" href="https://228coaststrong.com/de/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Starke Küste">
+<meta property="og:locale" content="de_DE">
+<meta property="og:title" content="Starke Küste — Gemeinsam schützen wir unsere Küste">
+<meta property="og:description" content="Nachbarn engagieren sich für die Golfküste Mississippis. Hilf mit, lerne mit deiner Familie, melde illegale Müllablagerungen sicher oder informiere dich über eine Unterstützung von Starke Küste.">
+<meta property="og:url" content="https://228coaststrong.com/de/">
+<meta property="og:image" content="https://228coaststrong.com/assets/bayou-marsh.webp">
+<meta property="og:image:width" content="1920">
+<meta property="og:image:height" content="1280">
+<meta property="og:image:alt" content="Ein Bayou-Marschgebiet an Mississippis Golfküste im goldenen Licht — Schlickgras, gewundene ruhige Wasserläufe, mit Spanischem Moos behangene Zypressen und ein Kanadareiher im flachen Wasser">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Starke Küste — Gemeinsam schützen wir unsere Küste">
+<meta name="twitter:description" content="Nachbarn engagieren sich für die Golfküste Mississippis. Hilf mit, lerne mit deiner Familie, melde illegale Müllablagerungen sicher oder informiere dich über eine Unterstützung von Starke Küste.">
+<meta name="twitter:image" content="https://228coaststrong.com/assets/bayou-marsh.webp">
+<meta name="twitter:image:alt" content="Ein Bayou-Marschgebiet an Mississippis Golfküste im goldenen Licht — Schlickgras, gewundene ruhige Wasserläufe, mit Spanischem Moos behangene Zypressen und ein Kanadareiher im flachen Wasser">
+<link rel="alternate" type="application/rss+xml" title="Starke Küste — Journal" href="/de/journal/feed.xml">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Starke Küste","url":"https://228coaststrong.com/de/","inLanguage":"de"}</script>
+<link rel="alternate" hreflang="en" href="https://228coaststrong.com/">
+<link rel="alternate" hreflang="es" href="https://228coaststrong.com/es/">
+<link rel="alternate" hreflang="vi" href="https://228coaststrong.com/vi/">
+<link rel="alternate" hreflang="fr" href="https://228coaststrong.com/fr/">
+<link rel="alternate" hreflang="de" href="https://228coaststrong.com/de/">
+<link rel="alternate" hreflang="pl" href="https://228coaststrong.com/pl/">
+<link rel="alternate" hreflang="x-default" href="https://228coaststrong.com/">
+<meta name="coast-strong-build" content="001-ALPHA-R3-MERGED-DE-PL-20261025">
+<style data-coast-language-picker>
+/* Starke Küste: accessible, balanced seven-language chooser */
+.language-picker{position:relative;flex:0 1 256px;width:256px;max-width:100%;min-width:0;margin:0 0 0 auto;z-index:55;color:var(--ink)}
+.language-picker>summary{display:flex;align-items:center;gap:10px;list-style:none;min-height:48px;padding:10px 14px;border:1px solid var(--line);border-radius:12px;background:var(--surface);color:var(--ink);cursor:pointer;font-size:16px;line-height:1.35;box-shadow:0 2px 8px rgba(5,42,31,.04)}
+.language-picker>summary::-webkit-details-marker{display:none}
+.language-picker>summary::after{content:"";width:7px;height:7px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg);margin:0 2px 4px 4px;flex:none}
+.language-picker[open]>summary::after{transform:rotate(225deg);margin-top:6px}
+.language-picker>summary:hover,.language-picker[open]>summary{border-color:var(--green)}
+.language-picker>summary:focus-visible,.language-picker .language-options a:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.language-picker .language-globe{width:19px;height:19px;flex:none;color:var(--green)}
+.language-picker .language-label{font-size:13px;font-weight:600;color:var(--muted)}
+.language-picker .language-current{font-size:16px;font-weight:700;margin-left:auto}
+.language-picker .language-options{position:absolute;top:calc(100% + 8px);right:0;width:100%;min-width:0;max-height:min(62vh,380px);max-height:min(62svh,380px);overflow-y:auto;overscroll-behavior:contain;display:flex;flex-direction:column;align-items:stretch;gap:4px;padding:7px;border:1px solid var(--line);border-radius:14px;background:var(--surface);box-shadow:var(--shadow);margin:0}
+.language-picker .language-options a{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;min-height:44px;padding:10px 12px;margin:0;border:1px solid transparent;border-radius:8px;font-size:16px;line-height:1.35;font-weight:600;text-decoration:none!important;color:var(--ink);background:transparent}
+.language-picker .language-options a:hover{background:var(--surface2);border-color:var(--line)}
+.language-picker .language-options a[aria-current=page]{background:var(--green);color:#fff}
+.language-picker .language-options a[aria-current=page]::after{content:"✓";font-weight:700;flex:none}
+
+@media(max-width:740px){.language-picker{flex:1 0 100%;width:100%;order:3;margin:2px 0 0}.language-picker>summary{min-height:46px;padding:10px 13px}.language-picker .language-options{max-height:58vh;max-height:58svh}}
+@media print{.language-picker{display:none!important}}
+</style>
+<link rel="stylesheet" href="/coastal.css">
+<link rel="stylesheet" href="/flags.css">
+<style id="coast-approved-appearance-20261027">
+/* Approved screenshot appearance: fixed coastal-blue hero in every color mode. */
+:root{--gold:#fa6b12;--on-gold:#102b3a}
+nav.top{background:#fbfaf7}
+.hero{background:#082e40}
+.hero .veil{background:linear-gradient(180deg,rgba(5,39,55,.86) 0%,rgba(5,39,55,.90) 62%,rgba(5,39,55,.95) 100%)}
+.hero-brand{color:#fa6b12;letter-spacing:.02em}
+.hero h1 span{color:#fa6b12}
+.hero .btn-solid{background:#fa6b12;color:#102b3a}
+.hero .btn-ghost{background:transparent;border-color:rgba(255,255,255,.66);color:#fff}
+.hero .tag{color:#fff}
+.hero .sub{color:#cfe3ec}
+.language-switch a{gap:10px}
+@media(max-width:740px){
+ .language-switch{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px 8px;justify-content:stretch;padding:4px 0 8px}
+ .language-switch a{min-width:0;min-height:44px;padding:10px 4px;font-size:14px;gap:10px;white-space:nowrap}
+ .hero .wrap{padding-top:34px}
+ .hero-brand{font-size:25px;margin-top:20px}
+}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Zum Hauptinhalt springen</a>
+
+<nav class="top">
+  <div class="wrap">
+    <a class="brand" href="#top"><span class="brand-name">Starke Küste</span><span class="brand-watch">Bayou-Wacht</span></a>
+    <button class="menu-toggle" id="menuToggle" aria-controls="primaryLinks" aria-expanded="false" type="button" hidden>Menü</button>
+    <div class="navlinks" id="primaryLinks">
+      <a href="#story">Der Fund</a>
+      <a href="#report">Müllablagerung melden</a>
+      <a href="#receipts">Gemeinschaftsprotokoll</a>
+      <a href="#network">Netzwerk</a><a href="#worldwide">Weltweit</a><a href="#watches">Die Küstenwachen</a>
+      <a href="#kids">Küstenkinder</a>
+      <a href="#journal">Journal</a>
+      <a href="#faq">Häufige Fragen</a>
+      <a class="navcta" href="#signup">Bei Bayou-Wacht mitmachen</a>
+    </div>
+<nav class="language-switch" aria-label="Sprache wählen"><a href="/" lang="en" hreflang="en"><span class="language-flag" aria-hidden="true">🇺🇸</span><span class="language-label" lang="de">Englisch</span></a><a href="/es/" lang="es" hreflang="es"><span class="language-flag" aria-hidden="true">🇪🇸</span><span class="language-label" lang="de">Spanisch</span></a><a href="/vi/" lang="vi" hreflang="vi"><span class="language-flag" aria-hidden="true">🇻🇳</span><span class="language-label" lang="de">Vietnamesisch</span></a><a href="/fr/" lang="fr" hreflang="fr"><span class="language-flag" aria-hidden="true">🇫🇷</span><span class="language-label" lang="de">Französisch</span></a><a href="/de/" lang="de" hreflang="de" aria-current="page"><span class="language-flag" aria-hidden="true">🇩🇪</span><span class="language-label" lang="de">Deutsch</span></a><a href="/pl/" lang="pl" hreflang="pl"><span class="language-flag" aria-hidden="true">🇵🇱</span><span class="language-label" lang="de">Polnisch</span></a></nav>
+  </div>
+</nav>
+
+<main id="main-content" tabindex="-1">
+<header class="hero" id="top">
+  <img class="bg" src="../assets/bayou-marsh.webp" alt="Ein Bayou-Marschgebiet an Mississippis Golfküste im goldenen Licht — Schlickgras, gewundene ruhige Wasserläufe, mit Spanischem Moos behangene Zypressen und ein Kanadareiher im flachen Wasser" width="1920" height="1280" decoding="async" loading="eager" fetchpriority="high"/>
+  <div class="veil"></div>
+  <svg class="wave" viewbox="0 0 1440 60" preserveaspectratio="none" aria-hidden="true"><path d="M0,32 C240,60 480,0 720,24 C960,48 1200,8 1440,28 L1440,60 L0,60 Z"/></svg>
+  <div class="wrap">
+    <span class="kicker">Mission Mutter Erde · Gulfport · Biloxi · Ocean Springs · Pascagoula, Mississippi</span>
+    <p class="hero-brand">Starke Küste</p>
+    <h1>Mutter Erde hat keinen Lobbyisten. <span>Sie hat uns.</span></h1>
+    <div class="hero-btns">
+      <a class="btn btn-solid" href="#signup">Finde deinen Weg zum Mithelfen</a>
+      <a class="btn btn-ghost" href="#report">Müllablagerungen sicher melden</a>
+    </div>
+    <p class="tag">Das ist unsere Gemeinschaft. Das ist unser Stolz. Das ist unsere Küste.</p>
+    <p class="sub">Nachbarn schützen unser Wasser, unsere Meeresfrüchte und die Küste, die unsere Kinder erben werden. Alle Ehre gebührt Gott, aller Verdienst der Gemeinschaft.</p>
+    
+  </div>
+</header>
+<section class="traction" id="traction" aria-labelledby="tractionTitle" data-state="connecting"><div class="wrap"><p class="eyebrow">Starke Küste live</p><h2 id="tractionTitle">Sieh zu, wie unsere Gemeinschaft wächst.</h2><p class="formnote">Jeder Besuch ist eine neue Gelegenheit, sich um Mutter Erde zu kümmern.</p><div class="factrow"><div class="fact"><b data-activity="totalViews">—</b><span>Seitenaufrufe seit Beginn der Erfassung</span></div><div class="fact"><b data-activity="todayViews">—</b><span>Seitenaufrufe heute · US-Zentralzeit</span></div><div class="fact"><b data-activity="activeSessions">—</b><span>Aktive Sitzungen · letzte 2 Minuten</span></div></div><p class="formnote" data-activity-status role="status">Verbindung zur Live-Aktivität wird hergestellt …</p><p class="formnote" data-activity-since>Die Erfassung beginnt mit dem ersten aufgezeichneten Seitenaufruf.</p><details><summary>So zählen wir</summary><p class="formnote">Gezählt werden erfasste Seitenaufrufe, keine einzelnen Personen. Neuladen oder ein Sprachwechsel zählt als weiterer Seitenaufruf; separate Tabs können als eigene Sitzungen zählen. Automatisierte Zugriffe und blockierte Erfassung können die Summen beeinflussen. Die Anzeige wird alle 30 Sekunden aktualisiert, solange diese Seite sichtbar ist.</p></details></div></section>
+
+<section class="quick-start" id="start"><div class="wrap"><p class="eyebrow">Hier anfangen</p><p class="formnote">Viele Hände. Eine Küste. Gemeinsam stärker.</p><div class="start-grid"><a class="start-card" href="#signup"><span class="start-number">01</span><strong>Finde deinen Beitrag</strong><span>Schüler, Lehrkräfte, Familien und Nachbarn: Wählt, wie ihr helfen möchtet.</span></a><a class="start-card" href="#kids"><span class="start-number">02</span><strong>Gemeinsam lernen</strong><span>Probiere mit einem Elternteil oder einer Lehrkraft eine Übung zum Küstenschutz aus.</span></a><a class="start-card" href="#journal"><span class="start-number">03</span><strong>Verfolge unsere Arbeit</strong><span>Lies praktische Ratgeber, teile Ideen und erfahre, was als Nächstes kommt.</span></a></div></div></section>
+
+<section class="coast-flags" aria-labelledby="coast-flags-heading">
+  <div class="coast-flags__heading">
+    <p class="coast-flags__eyebrow">Starke Küste</p>
+    <h2 id="coast-flags-heading">Unsere Heimat. Unser Land.</h2>
+    <span class="coast-flags__rule" aria-hidden="true"></span>
+  </div>
+  <div class="coast-flags__pair">
+    <figure class="coast-flags__card">
+      <div class="coast-flags__display">
+        <img class="coast-flags__flag coast-flags__flag--us" src="/assets/flags-us.svg" width="1900" height="1000" loading="lazy" decoding="async" alt="Flagge der Vereinigten Staaten mit fünfzig Sternen und dreizehn Streifen">
+      </div>
+      <figcaption>Vereinigte Staaten</figcaption>
+    </figure>
+    <figure class="coast-flags__card">
+      <div class="coast-flags__display">
+        <img class="coast-flags__flag coast-flags__flag--ms" src="/assets/flags-ms.png" width="1050" height="630" loading="lazy" decoding="async" alt="Flagge Mississippis mit Magnolie und Sternen; der Wahlspruch bedeutet „Auf Gott vertrauen wir“">
+      </div>
+      <figcaption>Mississippi</figcaption>
+    </figure>
+  </div>
+</section>
+
+
+<div class="ticker" aria-hidden="true"><div class="ticker-track"><span>Hinschauen · Fotografieren · Melden · Protokollieren · Drei Küstenwachen · Eine Küste · Nachbarn helfen Nachbarn · #Starke Küste · </span><span>Hinschauen · Fotografieren · Melden · Protokollieren · Drei Küstenwachen · Eine Küste · Nachbarn helfen Nachbarn · #Starke Küste · </span></div></div>
+
+<!-- STAT BAND -->
+<div class="statband" role="region" aria-label="Starke Küste in Zahlen">
+  <div class="wrap">
+    <div class="stat"><b>9,75 Tonnen</b><span>Abfälle, die frühere Teams von Renew Our Rivers nachweislich aus diesem Bayou-System geborgen haben — dokumentierte regionale Aufräumgeschichte</span></div>
+    <div class="stat"><b>3 Küstenwachen</b><span>Bayou-Wacht · Biloxi-Wacht · Pascagoula-Wacht — eine Küste, gemeinsam wachsam</span></div>
+    <div class="stat"><b>1699</b><span>in diesem Jahr schlug Biloxi bei Fort Maurepas seine Wurzeln, genau an dieser Küste</span></div>
+    <div class="stat"><b>Beleg Nr. 001</b><span>der Fund vom 15. Oktober 2026 im Bayou Bernard Park, mit dem Starke Küste begann</span></div>
+  </div>
+</div>
+
+<!-- STORY -->
+<section id="story">
+  <div class="wrap">
+    <p class="eyebrow">Wie alles begann · 15. Oktober 2026</p>
+    <h2>Ein weggeworfener Fernseher im Marschland. <span class="accent">Die Nachbarn packten an.</span></h2>
+    <div class="grid2">
+      <div>
+        <p class="lede">Am 15. Oktober 2026 wurden ein weggeworfener Fernseher und schwere Kunststoffteile im Marschland bei <strong>Bayou Bernard Park (James Hill Park), 1890 Switzer Rd, Gulfport</strong> gefunden — in Wasser, das in den Mississippi Sound fließt und an dem unsere Kinder aufwachsen werden.</p>
+        <p>Niemand sah weg. Der Fund wurde fotografiert, gemeldet, geborgen und dokumentiert — was, wo, wann. Aus diesem Eintrag wurde <strong>Beleg Nr. 001</strong>, und Starke Küste entstand: eine Nachbarschaftswache für die Bayous, damit Müllablagerungen entdeckt, dokumentiert und beseitigt werden, statt monatelang im Marschland zu liegen.</p>
+        <blockquote class="pull">
+          „Das ist unser Zuhause. Der Planet wird nicht durch Zufall geschädigt, sondern durch Vernachlässigung — und Vernachlässigung ist eine Entscheidung. Wir entscheiden uns anders. Mutter Erde hat keinen Lobbyisten. Sie hat uns.“
+        </blockquote>
+      </div>
+      <figure>
+        <img src="../assets/volunteers.webp" alt="Freiwillige aus der Nachbarschaft reinigen mit Handschuhen, Greifzangen und Müllsäcken das Ufer eines Bayous" width="1920" height="1280" decoding="async" loading="lazy"/>
+        <figcaption>Die Antwort sind Menschen: Nachbarn mit Handschuhen und Müllsäcken, die alles dokumentieren, was sie herausholen.</figcaption>
+      </figure>
+    </div>
+    <div class="factrow">
+      <div class="fact"><b>9,75 Tonnen</b><span>Abfälle, die bei früheren Aktionen von Renew Our Rivers aus Gulfport Lake / Industrial Seaway und Bayou Bernard geborgen wurden (4,5 + 5,25 Tonnen) — dieses Gewässersystem ist ein bekannter, dokumentierter Abladeort.</span></div>
+      <div class="fact"><b>9 Standorte</b><span>Auf der offiziellen Liste des Coastal Cleanup 2026 — allesamt Strände, Häfen, Piers oder Uferabschnitte von Parks.</span></div>
+      <div class="fact"><b>0</b><span>Bayou-Standorte stehen bisher auf dieser Liste. Gerade in den Bayous können Nachbarschaftsteams am meisten bewirken — und genau dort setzt Starke Küste an.</span></div>
+    </div>
+  </div>
+</section>
+
+<figure class="sponsor-poster campaign-art"><img src="/assets/bayou-crew-art.jpg" alt="Illustration: Freiwillige tragen Müllsäcke bei Sonnenaufgang über einen Steg im Bayou. Ein Reiher fliegt vorbei, in der Ferne steht ein Leuchtturm." loading="lazy" decoding="async"><figcaption class="formnote">Das Bayou-Team — Nachbarn packen gemeinsam an.</figcaption></figure>
+
+<!-- REPORT -->
+<section class="alt" id="report">
+  <div class="wrap">
+    <p class="eyebrow">Bayou-Wacht · Müllablagerungen melden</p>
+    <h2>Müllablagerung entdeckt? <span class="accent">So meldest du sie.</span></h2>
+    <p class="lede">Zuerst ein Foto aus sicherer Entfernung. Dann eine Nachricht, damit die Nachbarn rasch davon erfahren. Danach der Anruf bei der zuständigen Stelle. Eine Beobachtung, zwei Empfänger: die Nachbarschaft und der offizielle Meldeweg.</p>
+    <div class="grid2" style="margin-top:24px">
+      <div>
+        <pre class="template" id="alertTemplate">🚨 MÜLLABLAGERUNG / ABFÄLLE — STARKE KÜSTE
+WAS: [Beobachtung — laufende Müllablagerung / frische Abfälle, welche Art]
+WO: [Standortmarkierung oder nächste Straße / Orientierungspunkt]
+WANN: [Datum + Uhrzeit der Beobachtung]
+FOTO: [beigefügt]
+STATUS: [gemeldet an BEHÖRDE über MELDEWEG um UHRZEIT — nach der Meldung ergänzen]</pre>
+        <p><button class="copybtn" data-copy="alertTemplate">Vorlage für die Warnmeldung kopieren</button><span class="copied" id="alertCopied"></span></p>
+        <p class="muted" style="font-size:15px">Teile die ausgefüllte Warnmeldung dort, wo deine Nachbarschaft mitliest — im Gruppenchat, in einer Facebook-Gruppe oder auf Nextdoor — und bewahre mit der Protokollvorlage unten eine Kopie auf. Diese Seite empfängt oder veröffentlicht keine Vorfallmeldungen. Übermittle Angaben zur Identifizierung über offizielle Meldewege.</p>
+        <div class="safety">
+          <p style="margin:0"><strong>Sicherheit — ohne Ausnahme:</strong> Nur beobachten und melden. <strong>Niemanden wegen einer Müllablagerung zur Rede stellen.</strong> Keine Fahrzeuge blockieren, nicht streiten, niemandem folgen. Fotografiere aus sicherer Entfernung und lass die Meldung wirken. Wenn jemand in Gefahr ist, ruf 911 an — statt die Nachrichtenkette zu nutzen.</p>
+        </div>
+      </div>
+      <div>
+        <h3 style="margin-top:0">Offizielle Stellen — auch hier anrufen</h3>
+        <div class="channel-list">
+          <div class="channel"><b>Stadt Gulfport — 311</b><a class="num" href="tel:311">311 wählen</a><p>Für Meldungen an die Stadt, die keine Notfälle sind, einschließlich Müllablagerungen. Alternativ: <a href="tel:+12288685700">228-868-5700</a> · <a href="/cdn-cgi/l/email-protection#87b4b6b6c7e0f2ebe1f7e8f5f3aaeaf4a9e0e8f1"><span class="__cf_email__" data-cfemail="5b686a6a1b3c2e373d2b34292f763628753c342d">[email&#160;protected]</span></a>. Beobachte von einem sicheren Ort aus und übermittle relevante Angaben direkt an die zuständige Behörde.</p></div>
+          <div class="channel"><b>Gulfport Code Enforcement</b><a class="num" href="tel:+12288685718">228-868-5718</a><p>Für die Beseitigung von Müllablagerungen innerhalb der Stadtgrenzen sind Code Enforcement und Public Works zuständig.</p></div>
+          <div class="channel"><b>Gulfport Stormwater — Mark Kraninger</b><a class="num" href="tel:+12288685740">228-868-5740, Durchwahl 6619</a><p>Unerlaubte Einleitungen in Regenwasserkanäle und Gewässer. <a href="/cdn-cgi/l/email-protection#5d30362f3c3334333a382f1d3a28313b2d322f2970302e733a322b"><span class="__cf_email__" data-cfemail="74191f06151a1d1a1311063413011812041b06005919075a131b02">[email&#160;protected]</span></a></p></div>
+          <div class="channel"><b>National Response Center (rund um die Uhr)</b><a class="num" href="tel:+18004248802">1-800-424-8802</a><p>Die zentrale Bundesmeldestelle für ausgetretene Schadstoffe und akute Gefahren — besetzt durch die U.S. Coast Guard; Meldungen gehen an die zuständige Einsatzleitung von EPA oder Coast Guard.</p></div>
+          <div class="channel"><b>MDEQ — MS Dept. of Environmental Quality</b><a class="num" href="tel:+18887860661">1-888-786-0661</a><p>Zuständige Landesbehörde für Wasserqualität und illegale Müllablagerungen. In Notfällen informiert MEMA rund um die Uhr unter <a href="tel:+18002226362">1-800-222-6362</a> das Einsatzteam von MDEQ.</p></div>
+          <div class="channel"><b>MS DMR — Dept. of Marine Resources</b><a class="num" href="tel:+12283745000">(228) 374-5000</a><p>Küsten- und Meeresressourcen, Biloxi. <a href="/cdn-cgi/l/email-protection#7f161119103f1b120d51120c51181009"><span class="__cf_email__" data-cfemail="f0999e969fb0949d82de9d83de979f86">[email&#160;protected]</span></a> · Mitorganisator des Mississippi Coastal Cleanup.</p></div>
+          <div class="channel"><b>EPA — Verstoß melden</b><a class="num" href="https://www.epa.gov/tips" target="_blank" rel="noopener">epa.gov/tips</a><p>Bundesformular für Umweltverstöße. Kundenservice der EPA Region 4: <a href="tel:+18002411754">800-241-1754</a>.</p></div>
+          <div class="channel"><b>U.S. Army Corps of Engineers — Mobile District</b><a class="num" href="tel:+12516902658">(251) 690-2658</a><p>Abfälle in schiffbaren Gewässern und unerlaubte Aufschüttungen in Feuchtgebieten — im Zuständigkeitsbereich von § 404 des Clean Water Act.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <details class="law-steps">
+      <summary>Melden und Recht: drei wichtige Punkte</summary>
+      <ol>
+        <li><strong>Was darunter fällt:</strong> MDEQ bezeichnet als illegale Müllablagerung die Entsorgung fester Abfälle auf öffentlichem oder privatem Grund ohne ordnungsgemäße Genehmigung oder berechtigten Zweck.</li>
+        <li><strong>Wo melden:</strong> bei der örtlichen Vollzugsbehörde oder MDEQ unter <a href="tel:+16019615171">601-961-5171</a>. MDEQ nimmt anonyme Beschwerden über Müllablagerungen entgegen.</li>
+        <li><strong>Was hilft:</strong> Standort, Datum, Beschreibung der Abfälle und sicher aufgenommene Fotos. Bewahre die Vorgangsnummer für Rückfragen auf. Die Behörden entscheiden, wie das Recht im Einzelfall anzuwenden ist.</li>
+      </ol>
+      <p class="learning-note">Quelle: <a href="https://www.mdeq.ms.gov/land/waste-division/solid-waste-management-programs/illegal-dumping/" target="_blank" rel="noopener">MDEQ-Hinweise zu illegalen Müllablagerungen</a>, geprüft am 25. Oktober 2026. Niemanden konfrontieren, verfolgen oder öffentlich identifizieren.</p>
+    </details>
+  </div>
+
+
+<p class="intake-link" style="margin-top:14px"><a class="btn btn-solid" href="/de/intake/?type=report">Melde einen Ort über das Formular</a></p>
+</section>
+
+<!-- RECEIPTS -->
+<section id="receipts">
+  <div class="wrap">
+    <p class="eyebrow">Gemeinschaftsprotokoll · Gemeinsam sorgfältig dokumentieren</p>
+    <h2>Gute Notizen helfen allen. <span class="accent">Jede Meldung festhalten.</span></h2>
+    <p class="lede">Eine schriftlich festgehaltene Meldung lässt sich leicht nachverfolgen, und die nächsten Nachbarn können daran anknüpfen. Kopiere die Vorlage, beginne deinen Eintrag am Tag der Meldung und bewahre ihn für das Team zugänglich auf. <strong>Diese Seite übermittelt oder speichert deine Meldung nicht</strong> — du selbst bewahrst das Protokoll auf und teilst es.</p>
+    <div class="grid2" style="margin-top:24px">
+      <div>
+        <pre class="template" id="receiptTemplate">STARKE KÜSTE — EINTRAG INS GEMEINSCHAFTSPROTOKOLL
+DATUM/UHRZEIT:    [wann die Meldung erfolgte]
+BEHÖRDE:          [an wen sie ging]
+MELDEWEG:         [Telefon / E-Mail / Onlineformular]
+GEMELDET:         [was gemeldet wurde — Ablagerung, Abfälle, Einleitungsstelle]
+ENTGEGENGENOMMEN: [Name, Vorgangsnummer oder „Bestätigung ausstehend“]
+REAKTION:         [Antwort oder Maßnahme der Behörde — bei Rückmeldungen aktualisieren]
+NACHFRAGE:        [Datum + Meldeweg oder „bisher keine“]</pre>
+        <p><button class="copybtn" data-copy="receiptTemplate">Protokollvorlage kopieren</button><span class="copied" id="receiptCopied"></span></p>
+        <p class="muted" style="font-size:15px">Der erste Eintrag steht bereits: der Fund im Bayou Bernard Park, fotografiert und gemeldet am 15. Oktober — Beleg Nr. 001. Alle weiteren Anrufe und E-Mails dazu gehören in denselben Eintrag.</p>
+      </div>
+      <div>
+        <h3 style="margin-top:0">Nachfassen — so bleibt eine Meldung in Bewegung</h3>
+        <p style="margin:0 0 6px">Die Menschen in diesen Behörden bearbeiten viele Anrufe. Wenn eine Woche ohne Nachricht vergeht, gehe den nächsten Schritt — mit einem Dank für die bisherige Hilfe — und vermerke ihn im selben Eintrag.</p>
+        <div class="ladder">
+          <div class="step"><div class="n">1</div><h3>Nachfragen</h3><p>Schreibe derselben Kontaktperson eine E-Mail, nenne das ursprüngliche Datum und die Vorgangsnummer und bitte um eine schriftliche Auskunft zum Stand.</p></div>
+          <div class="step"><div class="n">2</div><h3>Anfrage auf Akteneinsicht</h3><p>Bitte die Behörde um ihre Unterlagen zum gemeldeten Standort, damit das Team sieht, was geschehen ist und wo noch Unterstützung gebraucht wird.</p></div>
+          <div class="step"><div class="n">3</div><h3>Gewählte Vertreter</h3><p>Stadtrat, County Supervisor, Abgeordnete des Bundesstaats — teile die Protokolleinträge, damit sie den Bedarf erkennen und Unterstützung leisten können.</p></div>
+          <div class="step"><div class="n">4</div><h3>Hinweis an lokale Medien</h3><p>Das Protokoll, die Fotos und gemeinsam anpackende Nachbarn — eine gut dokumentierte Aufräumaktion ist eine Geschichte, die es zu erzählen lohnt.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<figure class="sponsor-poster campaign-art"><img src="/assets/community-art.jpg" alt="Illustration einer Küstengemeinschaft im goldenen Abendlicht: Ein Großvater zeigt einem Mädchen, wie man Marschgras pflanzt. Nachbarn tragen volle Müllsäcke; dahinter liegen Krabbenkutter und ein Leuchtturm." loading="lazy" decoding="async"><figcaption class="formnote">Generationen am Ufer — für sie tun wir das.</figcaption></figure>
+
+<!-- Retained public Network and Worldwide content -->
+<section class="alt" id="network">
+  <div class="wrap">
+    <p class="eyebrow">Das Netzwerk · Kontaktverzeichnis</p>
+    <h2>Jeder Kontakt führt <span class="accent">zum nächsten</span></h2>
+    <p class="lede">Starke Küste steht nicht allein — wir knüpfen an all die Teams, Programme und Partner an, die sich schon um dieses Wasser kümmern: von Gulfports 311-Stelle bis zum weltweiten Ocean Trash Index. Wir sind ihnen allen dankbar. Filtere nach Ebene, öffne eine Karte und wähle den empfohlenen ersten Schritt. Wo ein Brief empfohlen wird, liegt ein Entwurf für die Kontaktaufnahme vor — <strong>nichts wird versandt, bevor ein Mensch den genauen Wortlaut geprüft hat.</strong></p>
+    <div class="filters" role="group" aria-label="Organisationen nach Ebene filtern">
+      <label><input type="checkbox" class="orgfilter" value="federal"/> Bund</label>
+      <label><input type="checkbox" class="orgfilter" value="state"/> Bundesstaat</label>
+      <label><input type="checkbox" class="orgfilter" value="local"/> Lokal</label>
+      <label><input type="checkbox" class="orgfilter" value="global"/> Weltweit</label>
+      <label><input type="checkbox" class="orgfilter" value="regional"/> Golfregion</label>
+      <label><input type="checkbox" class="orgfilter" value="media"/> Medien</label>
+    </div>
+    <p class="muted" style="font-size:14.5px;margin-top:-8px">Kein Häkchen = alle anzeigen. Wähle eine Ebene, um die Auswahl einzugrenzen.</p>
+
+    <details class="org" data-cat="local" open>
+      <summary>Mississippi Coastal Cleanup — das offizielle Programm <span class="tagchip">Lokal</span></summary>
+      <div class="body">
+        <p>Ein dauerhaftes Programm von MSU Extension und Mississippi Marine Debris Task Force sowie Teil des International Coastal Cleanup von Ocean Conservancy — jedes erfasste Stück fließt in weltweite Daten ein. Alle 9 Standorte für 2026 liegen an Stränden oder Häfen. Das Programm organisiert eigene Veranstaltungen nach eigenem Zeitplan; Starke Küste ruft nicht zur Teilnahme an diesen Standorten auf.</p>
+        <div class="routebox">Anmeldung: <a href="http://coastalcleanup.extension.msstate.edu/events/annual-mississippi-coastal-cleanup-event" target="_blank" rel="noopener">Offizielle Veranstaltungsseite</a> · Koordination: <a href="/cdn-cgi/l/email-protection#107566757c697e3e7d73616575757e507d6363647164753e757465"><span class="__cf_email__" data-cfemail="bbdecdded7c2d595d6d8cacededed5fbd6c8c8cfdacfde95dedfce">[email&#160;protected]</span></a></div>
+        <p><strong>Empfohlener erster Schritt:</strong> Wenn du am offiziellen Programm teilnimmst, melde dich über dessen offizielle Veranstaltungsseite an und beziehe auch die Angaben zum Standort dort. Diese Seite meldet dich dafür nicht an und ruft dich nicht zu einem seiner Standorte.</p>
+      </div>
+    </details>
+
+    <details class="org" data-cat="federal">
+      <summary>National Response Center — zentrale Bundesmeldestelle <span class="tagchip">Bund</span></summary>
+      <div class="body">
+        <p>Rund um die Uhr durch die U.S. Coast Guard besetzt — die zentrale Bundesanlaufstelle für ausgetretene Schadstoffe und akute Gewässergefahren. Eine Meldung wird an die vorab bestimmte Einsatzleitung weitergeleitet: im Binnenland an die EPA, in der Küstenzone an die Coast Guard. So erhält ein größerer Vorfall möglichst schnelle, abgestimmte Hilfe.</p>
+        <div class="routebox">Anrufen: <a href="tel:+18004248802">1-800-424-8802</a> · Online: nrc.uscg.mil</div>
+        <p><strong>Empfohlener erster Schritt:</strong> Nutze diese Stelle bei einer laufenden Einleitung, einem Ölfilm, Chemikaliengeruch oder unmittelbarer Gefahr — und vermerke den Anruf im Gemeinschaftsprotokoll.</p>
+      </div>
+    </details>
+
+    <details class="org" data-cat="federal">
+      <summary>EPA Region 4 — Verstöße und Feuchtgebiete <span class="tagchip">Bund</span></summary>
+      <div class="body">
+        <p>Die Bundesumweltbehörde für Mississippi: Wasserverschmutzung, illegale Müllablagerungen und Schutz von Feuchtgebieten nach § 404 des Clean Water Act.</p>
+        <div class="routebox">Verstöße: <a href="https://www.epa.gov/tips" target="_blank" rel="noopener">epa.gov/tips</a> · Kundenservice: <a href="tel:+18002411754">800-241-1754</a> · Feuchtgebiete: Rosemary Calli, <a href="/cdn-cgi/l/email-protection#3c7f5d505055126e534f59515d4e457c594c5d125b534a"><span class="__cf_email__" data-cfemail="82c1e3eeeeebacd0edf1e7efe3f0fbc2e7f2e3ace5edf4">[email&#160;protected]</span></a>, <a href="tel:+14045629846">(404) 562-9846</a></div>
+        <p><strong>Empfohlener erster Schritt:</strong> Reiche zusätzlich zur Meldung an die Stadt das Formular für Umweltverstöße ein und vermerke es im Gemeinschaftsprotokoll, damit das Team auf dem Laufenden bleibt.</p>
+      </div>
+    </details>
+
+    <details class="org" data-cat="federal">
+      <summary>NOAA Marine Debris Program <span class="tagchip">Bund</span></summary>
+      <div class="body">
+        <p>Die Bundesinitiative zur Erfassung von Meeresmüll. Die App Marine Debris Tracker erfasst Abfälle mit GPS und Fotos direkt im nationalen NOAA-Datensatz — dem Pendant des Bundes zum weltweiten Ocean Trash Index.</p>
+        <div class="routebox">E-Mail: <a href="/cdn-cgi/l/email-protection#e68b87948f8883828384948f95c8918384a688898787c8818990"><span class="__cf_email__" data-cfemail="462b27342f2823222324342f3568312324062829272768212930">[email&#160;protected]</span></a> · App: Marine Debris Tracker (NOAA MDP + University of Georgia)</div>
+        <p><strong>Empfohlener erster Schritt:</strong> Erfasse den Fund am Bayou Bernard mit Fotos und GPS in der Tracker-App, damit er auch im Bundesdatensatz enthalten ist.</p>
+      </div>
+    </details>
+
+    <details class="org" data-cat="federal">
+      <summary>FEMA Region 4 — ihre Möglichkeiten und Grenzen kennen <span class="tagchip">Bund</span></summary>
+      <div class="body">
+        <p>Klar gesagt, denn Ehrlichkeit gehört zu unserem Selbstverständnis: <strong>FEMA reinigt keine Bayous.</strong> FEMA-Mittel fließen erst nach einer vom Gouverneur beantragten Katastrophenerklärung des Präsidenten; hinzu kommen Zuschüsse zur Gefahrenminderung, die öffentliche Stellen beantragen. Gewöhnliche Müllablagerungen gehören nicht zu ihrer Aufgabe — bei Verschmutzung führt der Meldeweg über NRC → EPA-/Coast-Guard-Einsatzleitung → MEMA. Sollte ein Sturm entlang der ganzen Küste Trümmer verteilen, kommt FEMA über MEMA hinzu.</p>
+        <div class="routebox">Region 4 (Atlanta, zuständig für Mississippi): <a href="tel:+17702205200">770-220-5200</a> · <a href="/cdn-cgi/l/email-protection#7c3a39313d512e485135121a133c1a19111d5218140f521b130a"><span class="__cf_email__" data-cfemail="7c3a39313d512e485135121a133c1a19111d5218140f521b130a">[email&#160;protected]</span></a> · Nachrichtenredaktion: <a href="tel:+17702205292">770-220-5292</a></div>
+        <p><strong>Empfohlener erster Schritt:</strong> Bei einer Müllablagerung keine Kontaktaufnahme mit FEMA — melde sie stattdessen NRC/EPA/MDEQ. Nutze diese Karte als Orientierung, damit jede Meldung direkt die zuständigen Stellen erreicht.</p>
+      </div>
+    </details>
+
+    <details class="org" data-cat="state">
+      <summary>MDEQ — Mississippi Dept. of Environmental Quality <span class="tagchip">Bundesstaat</span></summary>
+      <div class="body">
+        <p>Zuständige Landesbehörde für Wasserqualität, Verschmutzungskontrolle und illegale Ablagerungen in den Gewässern des Bundesstaats. Ihre öffentlich zugängliche Überwachung konzentriert sich auf Bakterien an Stränden — gerade deshalb helfen Nachbarn allen, wenn sie ihre Beobachtungen in den Bayous dokumentieren.</p>
+        <div class="routebox">Zentrale: <a href="tel:+18887860661">1-888-786-0661</a> · Office of Pollution Control: <a href="tel:+16019615171">(601) 961-5171</a> · Im Notfall: MEMA rund um die Uhr <a href="tel:+18002226362">1-800-222-6362</a></div>
+        <p><strong>Empfohlener erster Schritt:</strong> Melde den Fund telefonisch, lass dir einen Namen oder eine Vorgangsnummer geben und protokolliere ihn noch am selben Tag.</p>
+      </div>
+    </details>
+
+    <details class="org" data-cat="state">
+      <summary>MS DMR — Dept. of Marine Resources <span class="tagchip">Bundesstaat</span></summary>
+      <div class="body">
+        <p>Der Partner des Bundesstaats für den Sound und die Bayous mit Sitz in Biloxi; gemeinsam mit der Marine Debris Task Force Mitorganisator des Mississippi Coastal Cleanup. Sein Seafood Technology Bureau ist für Wasseruntersuchungen relevant — was in diesem Wasser lebt, landet als Meeresfrüchte aus Mississippi auf dem Tisch.</p>
+        <div class="routebox">Anrufen: <a href="tel:+12283745000">(228) 374-5000</a> · <a href="/cdn-cgi/l/email-protection#ed84838b82ad89809fc3809ec38a829b"><span class="__cf_email__" data-cfemail="e0898e868fa0848d92ce8d93ce878f96">[email&#160;protected]</span></a> · 1141 Bayview Ave, Biloxi, MS 39530</div>
+        <p><strong>Empfohlener erster Schritt:</strong> Melde die Abfälle und bitte DMR, den Bayou-Standort zu erfassen, damit er dokumentiert ist. <span class="draft">Anschreiben entworfen — nicht versandt</span></p>
+      </div>
+    </details>
+
+    <details class="org" data-cat="state">
+      <summary>MEMA — Mississippi Emergency Management Agency <span class="tagchip">Bundesstaat</span></summary>
+      <div class="body">
+        <p>Koordination auf Landesebene: betreibt das State Emergency Operations Center und verbindet die Katastrophenschutzstellen der Countys mit Hilfe von Land und Bund. MEMA koordiniert, übernimmt aber keinen Umweltvollzug — seine Rund-um-die-Uhr-Nummer ist jedoch der schnellste Weg zum Notfallteam von MDEQ.</p>
+        <div class="routebox">Rund um die Uhr: <a href="tel:+18002226362">1-800-222-6362</a> · Zentrale: <a href="tel:+16019336362">601-933-MEMA (6362)</a> · <a href="/cdn-cgi/l/email-protection#dab7bfb7bbb3b4bcb59ab7bfb7bbf4b7a9f4bdb5ac"><span class="__cf_email__" data-cfemail="701d151d11191e161f301d151d115e1d035e171f06">[email&#160;protected]</span></a></div>
+        <p><strong>Empfohlener erster Schritt:</strong> Nur bei einem Gefahrstoffvorfall entsprechenden Ausmaßes — ansonsten zuerst MDEQ und 311 anrufen.</p>
+      </div>
+    </details>
+
+    <details class="org" data-cat="local">
+      <summary>Stadt Gulfport — 311, Code Enforcement und Stormwater <span class="tagchip">Lokal</span></summary>
+      <div class="body">
+        <p>Die schnellste erste Anlaufstelle für eine konkrete Müllablagerung innerhalb der Stadtgrenzen. Die Stadt empfiehlt, Verursacher über 311 zu melden und Fahrzeug sowie Kennzeichen zu fotografieren.</p>
+        <div class="routebox">311: <a href="tel:311">311 wählen</a> · <a href="tel:+12288685700">228-868-5700</a> · <a href="/cdn-cgi/l/email-protection#be8d8f8ffed9cbd2d8ced1ccca93d3cd90d9d1c8"><span class="__cf_email__" data-cfemail="3e0d0f0f7e594b52584e514c4a13534d10595148">[email&#160;protected]</span></a> · Code Enforcement: <a href="tel:+12288685718">228-868-5718</a> · Stormwater (Mark Kraninger): <a href="tel:+12288685740">228-868-5740, Durchwahl 6619</a>, <a href="/cdn-cgi/l/email-protection#224f4950434c4b4c4547506245574e44524d50560f4f510c454d54"><span class="__cf_email__" data-cfemail="f69b9d8497989f98919384b691839a9086998482db9b85d8919980">[email&#160;protected]</span></a></div>
+        <p><strong>Empfohlener erster Schritt:</strong> Melde den Fund noch am selben Tag über 311 — Meldungen an Stadt, County, Bundesstaat und Bund erfolgen parallel und werden alle dokumentiert. <span class="draft">Unterstützungsbrief an die Stadt entworfen — nicht versandt</span></p>
+      </div>
+    </details>
+
+    <details class="org" data-cat="local">
+      <summary>Harrison County — Code Administration &amp; Zoning <span class="tagchip">Lokal</span></summary>
+      <div class="body">
+        <p>Für Beschwerden über Müll und Abfälle in gemeindefreien Teilen des Countys — der zuständige Weg, wenn eine Ablagerung außerhalb der Stadtgrenzen liegt.</p>
+        <div class="routebox">Code Administration: <a href="tel:+12288321622">(228) 832-1622</a>, 15309 Community Rd, Gulfport · Zoning: <a href="tel:+12288313367">(228) 831-3367</a> · Beschwerden zum Planungsrecht (einschließlich Kategorie Müll/Abfälle): Rose Keller, <a href="/cdn-cgi/l/email-protection#72001f19171e1e170032111d5c1a1300001b011d1c5c1f015c0701"><span class="__cf_email__" data-cfemail="11637c7a747d7d746351727e3f7970636378627e7f3f7c623f6462">[email&#160;protected]</span></a></div>
+        <p><strong>Empfohlener erster Schritt:</strong> Nutze für Flächen im Zuständigkeitsbereich des Countys dessen Beschwerdeweg; das Formular der Bau- und Planungsbehörde enthält eine eigene Kategorie für Müll und Abfälle.</p>
+      </div>
+    </details>
+
+    <details class="org" data-cat="global">
+      <summary>Ocean Conservancy — International Coastal Cleanup <span class="tagchip">Weltweit</span></summary>
+      <div class="body">
+        <p>Der Mississippi Coastal Cleanup gehört zum International Coastal Cleanup, den es seit 1986 gibt. In der App Clean Swell erfasste Daten werden sofort in den Ocean Trash Index übertragen, die weltweit größte Datenbank für Meeresmüll.</p>
+        <div class="routebox">Aufräumteam: <a href="/cdn-cgi/l/email-protection#9cfff0f9fdf2e9ecdcf3fff9fdf2fff3f2eff9eeeafdf2ffe5b2f3eefb"><span class="__cf_email__" data-cfemail="bbd8d7dedad5cecbfbd4d8dedad5d8d4d5c8dec9cddad5d8c295d4c9dc">[email&#160;protected]</span></a> · Medien: <a href="/cdn-cgi/l/email-protection#2f424a4b464e6f404c4a4e414c40415c4a5d594e414c5601405d48"><span class="__cf_email__" data-cfemail="4f222a2b262e0f202c2a2e212c20213c2a3d392e212c3661203d28">[email&#160;protected]</span></a></div>
+        <p><strong>Empfohlener erster Schritt:</strong> Teile den dokumentierten Fund am Bayou Bernard mit dem Aufräumteam, damit die Bayou-Abfälle in denselben Daten wie die Strandfunde gezählt werden. <span class="draft">Entworfen — nicht versandt</span></p>
+      </div>
+    </details>
+
+    <details class="org" data-cat="global">
+      <summary>The Ocean Cleanup <span class="tagchip">Weltweit</span></summary>
+      <div class="body">
+        <p>Die Organisation wurde dafür bekannt, Plastik in Flüssen aufzuhalten, bevor es ins Meer gelangt. Bayou Bernard entwässert in den Mississippi Sound — in Amerikas Bayous fließt der Plastikstrom weiter, und hier arbeitet eine Gemeinschaft von Hand daran, ihn zu stoppen.</p>
+        <div class="routebox">Presse: <a href="/cdn-cgi/l/email-protection#c7b7b5a2b4b487b3afa2a8a4a2a6a9a4aba2a6a9b2b7e9a4a8aa"><span class="__cf_email__" data-cfemail="29595b4c5a5a695d414c464a4c48474a454c48475c59074a4644">[email&#160;protected]</span></a></div>
+        <p><strong>Empfohlener erster Schritt:</strong> Das allgemeine Anschreiben in seiner internationalen Fassung, mit dem dokumentierten Fund am Bayou Bernard als Anlage. <span class="draft">Entworfen — nicht versandt</span></p>
+      </div>
+    </details>
+
+    <details class="org" data-cat="global">
+      <summary>Surfrider Foundation <span class="tagchip">Weltweit</span></summary>
+      <div class="body">
+        <p>Ein Netzwerk örtlicher Gruppen, das genau dafür geschaffen ist: lokale Gewässer, Menschen vor Ort, Wasseruntersuchungen und Einsatz für sauberes Wasser.</p>
+        <div class="routebox">Medien: <a href="/cdn-cgi/l/email-protection#cea3abaaa7af8ebdbbbca8bca7aaabbce0a1bca9"><span class="__cf_email__" data-cfemail="e78a82838e86a794929581958e838295c9889580">[email&#160;protected]</span></a></div>
+        <p><strong>Empfohlener erster Schritt:</strong> Frage, ob es eine Ortsgruppe an Mississippis Golfküste oder einen regionalen Kontakt gibt und wie ein Team aus Gulfport dem Netzwerk beitreten kann. <span class="draft">Entworfen — nicht versandt</span></p>
+      </div>
+    </details>
+
+    <details class="org" data-cat="global">
+      <summary>EARTHDAY.ORG — Great Global Cleanup <span class="tagchip">Weltweit</span></summary>
+      <div class="body">
+        <p>Organisiert den Great Global Cleanup. Eine dokumentierte lokale Aufräumaktion mit Fotos und Gewichtsangaben ist genau die Art von Beitrag, mit der dieses Netzwerk arbeitet.</p>
+        <div class="routebox">Allgemein: <a href="/cdn-cgi/l/email-protection#731a1d151c33161201071b17120a5d1c0114"><span class="__cf_email__" data-cfemail="7f161119103f1a1e0d0b171b1e0651100d18">[email&#160;protected]</span></a> · Medien: <a href="/cdn-cgi/l/email-protection#096d687f606c7a496c687b7d616d687027667b6e"><span class="__cf_email__" data-cfemail="bdd9dccbd4d8cefdd8dccfc9d5d9dcc493d2cfda">[email&#160;protected]</span></a> · Partnerschaften: <a href="/cdn-cgi/l/email-protection#aecdc6cfdcdcc1c0eecbcfdcdac6cacfd780c1dcc9"><span class="__cf_email__" data-cfemail="9efdf6ffececf1f0defbffeceaf6faffe7b0f1ecf9">[email&#160;protected]</span></a></div>
+        <p><strong>Empfohlener erster Schritt:</strong> Stelle die dauerhafte Beobachtung am Bayou Bernard dem Netzwerk Great Global Cleanup vor und teile den dokumentierten Fund sowie weitere Meldungen, sobald sie vorliegen. <span class="draft">Entworfen — nicht versandt</span></p>
+      </div>
+    </details>
+
+    <details class="org" data-cat="global">
+      <summary>4ocean <span class="tagchip">Weltweit</span></summary>
+      <div class="body">
+        <p>Ein Unternehmen für Aufräumarbeiten mit großer öffentlicher Reichweite; der Einstieg führt über Partnerschaften. Gefragt ist Unterstützung bei der Bekanntmachung, keine finanzielle Hilfe.</p>
+        <div class="routebox">Partnerschaften: <a href="/cdn-cgi/l/email-protection#0777667573696275746f6e7774473368646266692964686a"><span class="__cf_email__" data-cfemail="6d1d0c1f1903081f1e05041d1e2d59020e080c03430e0200">[email&#160;protected]</span></a> · Medien/PR: <a href="/cdn-cgi/l/email-protection#4a2025242b3e222b2464272b3839222b26260a7e25292f2b2464292527"><span class="__cf_email__" data-cfemail="fe9491909f8a969f90d0939f8c8d969f9292beca919d9b9f90d09d9193">[email&#160;protected]</span></a></div>
+        <p><strong>Empfohlener erster Schritt:</strong> E-Mail an das Partnerschaftsteam — ein aktives Team aus Gulfport mit belegten Zahlen bittet um mehr öffentliche Aufmerksamkeit. <span class="draft">Entworfen — nicht versandt</span></p>
+      </div>
+    </details>
+
+    <details class="org" data-cat="global">
+      <summary>Plastic Pollution Coalition <span class="tagchip">Weltweit</span></summary>
+      <div class="body">
+        <p>Ein weltweiter Zusammenschluss von über 1.300 Organisationen. Gruppen können die Mitgliedschaft beantragen — so erhält Gulfport einen Platz in einem internationalen Verzeichnis.</p>
+        <div class="routebox">Presse: <a href="/cdn-cgi/l/email-protection#49393b2c3a3a093925283a3d202a392625253c3d2026272a262825203d20262767263b2e"><span class="__cf_email__" data-cfemail="f8888a9d8b8bb88894998b8c919b889794948d8c9197969b979994918c919796d6978a9f">[email&#160;protected]</span></a> · Partnerschaften: <a href="/cdn-cgi/l/email-protection#d2a2b3a0a6bcb7a0a1babba2a192a2beb3a1a6bbb1a2bdbebea7a6bbbdbcb1bdb3bebba6bbbdbcfcbda0b5"><span class="__cf_email__" data-cfemail="b0c0d1c2c4ded5c2c3d8d9c0c3f0c0dcd1c3c4d9d3c0dfdcdcc5c4d9dfded3dfd1dcd9c4d9dfde9edfc2d7">[email&#160;protected]</span></a> · Allgemein: <a href="/cdn-cgi/l/email-protection#177e79717857677b7664637e7467787b7b62637e78797478767b7e637e787939786570"><span class="__cf_email__" data-cfemail="ff96919990bf8f939e8c8b969c8f9093938a8b9690919c909e93968b969091d1908d98">[email&#160;protected]</span></a></div>
+        <p><strong>Empfohlener erster Schritt:</strong> Mitgliedschaftsantrag plus eine kurze Nachricht an die Pressestelle mit der öffentlichen Stellungnahme als Anlage. <span class="draft">Entworfen — nicht versandt</span></p>
+      </div>
+    </details>
+
+    <details class="org" data-cat="global">
+      <summary>UNEP Clean Seas — #CleanSeas <span class="tagchip">Weltweit</span></summary>
+      <div class="body">
+        <p>Die weltweite UN-Kampagne gegen Plastikverschmutzung — auch das Einzugsgebiet des Mississippi ist Clean Seas bereits beigetreten, die Golfküste ist also Teil dieser Geschichte. Zur Klarstellung: Clean Seas nimmt Selbstverpflichtungen von Regierungen, Unternehmen und Organisationen entgegen. Es gibt kein Postfach für Hinweise von Bürgern.</p>
+        <div class="routebox">Kampagnenplattform: <a href="https://cleanseas.org" target="_blank" rel="noopener">cleanseas.org</a></div>
+        <p><strong>Empfohlener erster Schritt:</strong> Öffentlich Unterstützung zeigen — veröffentliche die Fakten aus Gulfport unter <strong>#CleanSeas</strong> und lass die oben genannten Organisationen sie weitertragen.</p>
+      </div>
+    </details>
+
+    <details class="org" data-cat="regional">
+      <summary>Healthy Gulf (Gulf Restoration Network) <span class="tagchip">Golfregion</span></summary>
+      <div class="body">
+        <p>Die in New Orleans ansässige Initiative für sauberes Wasser im Golf mit langjähriger Erfahrung in Mississippi. Sauberes Wasser und gesunde Marschgebiete sind ihr Kerngebiet — wir sind froh, dass sie sich um diese Gewässer kümmert.</p>
+        <div class="routebox">Website: <a href="https://healthygulf.org" target="_blank" rel="noopener">healthygulf.org</a> · Telefon: <a href="tel:+15045251528">(504) 525-1528</a> · (Keine allgemeine öffentliche E-Mail-Adresse bestätigt — nutze zunächst den Kontaktweg auf der Website oder das Telefon.)</div>
+        <p><strong>Empfohlener erster Schritt:</strong> Ruf an. Erzähle von Bayou Bernard, frage nach der aktuellen Kontaktperson für Mississippi, biete das fortlaufende Gemeinschaftsprotokoll an und frage, wie Starke Küste ihre Arbeit unterstützen kann. <span class="draft">Entworfen — nicht versandt</span></p>
+      </div>
+    </details>
+
+    <details class="org" data-cat="regional">
+      <summary>Lower Mississippi Riverkeeper <span class="tagchip">Golfregion</span></summary>
+      <div class="body">
+        <p>Bietet einen öffentlichen Meldeweg „Vorfall melden“ mit Foto-Upload für Menschen, die Verschmutzungen entdecken. Das betreute Gebiet ist der untere Mississippi in Louisiana — Bayou Bernard liegt außerhalb. Es ist jedoch der nächstgelegene Waterkeeper, und eine Bitte um Weitervermittlung kostet nichts.</p>
+        <div class="routebox">Vorfall melden: <a href="https://lmrk.org/contact-us" target="_blank" rel="noopener">lmrk.org/contact-us</a> · Telefon: <a href="tel:+12259281315">225-928-1315</a></div>
+        <p><strong>Empfohlener erster Schritt:</strong> Übermittle den Fund am Bayou Bernard mit Fotos über das Meldeformular und frage ausdrücklich, welcher Waterkeeper für den Mississippi Sound zuständig ist. <span class="draft">Entworfen — nicht versandt</span></p>
+      </div>
+    </details>
+
+    <details class="org" data-cat="regional">
+      <summary>The Nature Conservancy in Mississippi <span class="tagchip">Golfregion</span></summary>
+      <div class="body">
+        <p>Schützt Mississippis Küstenmarschgebiete einschließlich des Pascagoula-Systems und unterhält ein Küstenbüro in Ocean Springs — nur ein County vom Bayou entfernt.</p>
+        <div class="routebox">Regionalverband Mississippi: <a href="https://www.nature.org/en-us/about-us/where-we-work/united-states/mississippi/contact-us" target="_blank" rel="noopener">nature.org — Kontaktseite für Mississippi</a> · Küstenbüro (Ocean Springs): <a href="tel:+12282194580">228-219-4580</a></div>
+        <p><strong>Empfohlener erster Schritt:</strong> Ein kurzer Brief an den Regionalverband Mississippi — Nachbarn, die das Marschland reinigen, bitten um Kontakt zum Küstenteam. <span class="draft">Entworfen — nicht versandt</span></p>
+      </div>
+    </details>
+
+    <details class="org" data-cat="regional">
+      <summary>Audubon Mississippi (Audubon Delta) <span class="tagchip">Golfregion</span></summary>
+      <div class="body">
+        <p>Mississippis Küste ist eine Kinderstube für Vögel — Abfälle im Marschland schädigen ihren Lebensraum, und Mitarbeitende von Audubon Delta sind bereits an Standorten im Raum Gulfport tätig.</p>
+        <div class="routebox">Leitung Umweltpolitik: <a href="/cdn-cgi/l/email-protection#91dbf8fdfdbfdcf0e2e5e3fee5fee5f0e3fed1f0e4f5e4f3feffbffee3f6"><span class="__cf_email__" data-cfemail="743e1d18185a39150700061b001b0015061b3415011001161b1a5a1b0613">[email&#160;protected]</span></a> · Küstenvögel: <a href="/cdn-cgi/l/email-protection#b5d8c6d6dad4c6c1d4d9d7dcc7d1c6f5d4c0d1c0d7dadb9bdac7d2"><span class="__cf_email__" data-cfemail="076a746468667473666b656e756374476672637265686929687560">[email&#160;protected]</span></a></div>
+        <p><strong>Empfohlener erster Schritt:</strong> Eine Seite an die Leitung für Umweltpolitik: der Fund und die Frage, wer im Küstenteam die Neuigkeiten von Bayou-Wacht erhalten sollte. <span class="draft">Entworfen — nicht versandt</span></p>
+      </div>
+    </details>
+
+    <details class="org" data-cat="regional">
+      <summary>Turkey Creek Community Initiatives &amp; Land Trust for the MS Coastal Plain <span class="tagchip">Golfregion</span></summary>
+      <div class="body">
+        <p>Die bereits organisierte Gemeinschaft in unserem eigenen Einzugsgebiet: Die Bewohner von Turkey Creek schützen die natürlichen und kulturellen Ressourcen ihres Bachs, unterstützt vom Land Trust, dem auch der Turkey Creek Greenway gehört. Bernard Bayou hat bisher keinen eigenen Freundeskreis. In diese Rolle kann Starke Küste hineinwachsen, an der Seite der Nachbarn, die schon am längsten dabei sind.</p>
+        <div class="routebox">Land Trust for the Mississippi Coastal Plain: P.O. Box 245, Biloxi, MS 39533 · <a href="tel:+12284359191">228-435-9191</a> · <a href="https://www.ltmcp.org" target="_blank" rel="noopener">ltmcp.org</a></div>
+        <p><strong>Empfohlener erster Schritt:</strong> Stelle Starke Küste als Nachbarn vor und biete Hilfe beim Beobachten der Gewässer an. Frage die erfahrenen Engagierten im Einzugsgebiet, was sie selbst am Anfang gern gewusst hätten.</p>
+      </div>
+    </details>
+
+    <details class="org" data-cat="media">
+      <summary>WLOX — Lokalnachrichten für Biloxi / Gulfport <span class="tagchip">Medien</span></summary>
+      <div class="body">
+        <p>Die eigene Nachrichtenredaktion der Küste. Eine dokumentierte Aufräumaktion von Bürgern — gemeinsam anpackende Nachbarn, Fotos und sichtbare Ergebnisse — ist eine Geschichte, die es zu erzählen lohnt.</p>
+        <div class="routebox">Nachrichtenredaktion: <a href="tel:+12288962563">(228) 896-2563</a> · Hinweise: <a href="/cdn-cgi/l/email-protection#2656544942534543545566514a495e0845494b"><span class="__cf_email__" data-cfemail="1b6b69747f6e787e69685b6c77746335787476">[email&#160;protected]</span></a> · Zentrale: <a href="tel:+12288961313">(228) 896-1313</a></div>
+        <p><strong>Empfohlener erster Schritt:</strong> Ruf die Nachrichtenredaktion an und halte die Dokumentation des Fundes bereit.</p>
+      </div>
+    </details>
+
+    <details class="org" data-cat="media">
+      <summary>Associated Press — Jackson / nationaler Nachrichtendienst <span class="tagchip">Medien</span></summary>
+      <div class="body">
+        <p>Die Berichte der AP-Redaktion in Jackson erreichen Zeitungen in ganz Mississippi. Der Medienhinweis ist geschrieben und zum Einfügen bereit: wer, was, wann, warum es wichtig ist und der Hinweis auf verfügbare Fotos des dokumentierten Fundes.</p>
+        <div class="routebox">Redaktion: <a href="https://ap.org/contact-us/contact-the-newsroom" target="_blank" rel="noopener">ap.org/contact-us/contact-the-newsroom</a> · Vertrauliche Hinweise: <a href="https://ap.org/tips" target="_blank" rel="noopener">ap.org/tips</a> (AP veröffentlicht keine öffentliche E-Mail-Adresse für Hinweise — nutze die Redaktionsseite.)</div>
+        <p><strong>Empfohlener erster Schritt:</strong> Teile den dokumentierten Fund und die fortlaufenden Meldungen von Bayou-Wacht. <span class="draft">Entworfen — nicht versandt</span></p>
+      </div>
+    </details>
+
+  </div>
+</section>
+
+<section class="worldwide" id="worldwide">
+  <div class="wrap">
+    <div class="grid2">
+      <div class="globe-wrap">
+        <svg class="globe" viewBox="0 0 240 240" role="img" aria-label="Eine langsam rotierende Drahtgitter-Weltkugel mit einem goldenen Umlaufring">
+          <defs>
+            <radialGradient id="globeShade" cx="35%" cy="30%" r="85%">
+              <stop offset="0%" stop-color="#1d7a5c"/>
+              <stop offset="60%" stop-color="#0b5a7a"/>
+              <stop offset="100%" stop-color="#062e21"/>
+            </radialGradient>
+          </defs>
+          <circle cx="120" cy="120" r="92" fill="url(#globeShade)"/>
+          <ellipse cx="120" cy="120" rx="92" ry="28" fill="none" stroke="#a8c8d4" stroke-width="1.2" opacity=".65"/>
+          <ellipse cx="120" cy="120" rx="92" ry="58" fill="none" stroke="#a8c8d4" stroke-width="1.2" opacity=".45"/>
+          <line x1="28" y1="120" x2="212" y2="120" stroke="#a8c8d4" stroke-width="1.2" opacity=".65"/>
+          <g class="globe-spin">
+            <ellipse cx="120" cy="120" rx="28" ry="92" fill="none" stroke="#e2f0f5" stroke-width="1.2" opacity=".85"/>
+            <ellipse cx="120" cy="120" rx="58" ry="92" fill="none" stroke="#e2f0f5" stroke-width="1.2" opacity=".55"/>
+            <ellipse cx="120" cy="120" rx="82" ry="92" fill="none" stroke="#e2f0f5" stroke-width="1.2" opacity=".35"/>
+            <line x1="120" y1="28" x2="120" y2="212" stroke="#e2f0f5" stroke-width="1.2" opacity=".85"/>
+          </g>
+          <circle cx="120" cy="120" r="92" fill="none" stroke="#ef8f4c" stroke-width="2"/>
+          <g class="globe-orbit">
+            <circle cx="120" cy="120" r="106" fill="none" stroke="#ef8f4c" stroke-width="1" stroke-dasharray="3 7" opacity=".75"/>
+            <circle cx="226" cy="120" r="4.5" fill="#ef8f4c"/>
+          </g>
+        </svg>
+        <p class="globe-cap">Ein Bayou fließt in den Sound. Der Sound fließt in den Golf. Der Golf ist Teil des Weltmeers — was wir hier erfassen, zählt überall.</p>
+      </div>
+      <div>
+        <p class="eyebrow">Entlang der Küste · Weltweit</p>
+        <h2>Von einem Bayou <span class="accent">in die ganze Welt.</span></h2>
+        <p class="lede">Starke Küste beginnt an unseren Ufern — doch Wasser, Daten und Nachrichten reisen weiter. Jeder von Nachbarn erfasste Fund wird Teil der weltweiten Aufräumbewegung. Jeder Beitrag trägt die Geschichte dieser Küste zu Menschen, die sie verbreiten, unterstützen und an ihren eigenen Gewässern aufgreifen können.</p>
+        <div class="worldpoints">
+          <div class="worldpoint"><b>Erfassen — und weltweit mitzählen lassen</b><p>Abfälle, die über die App Clean Swell oder eine Erfassungskarte dokumentiert werden, gehen in den Ocean Trash Index von Ocean Conservancy ein, die weltweit größte Datenbank für Meeresmüll. Ein aus Bayou Bernard geborgener Fernseher erscheint in derselben Statistik wie Aufräumaktionen auf allen Kontinenten.</p></div>
+          <div class="worldpoint"><b>Eintragen — auch für den Bundesdatensatz</b><p>Der NOAA Marine Debris Tracker übernimmt denselben Fund mit GPS und Fotos in den nationalen Datensatz — das Pendant des Bundes zum weltweiten Index, betreut vom Marine Debris Program im Verzeichnis oben.</p></div>
+          <div class="worldpoint"><b>Veröffentlichen — und die Welt kann reagieren</b><p>Fotos reichen weiter als jeder Brief. Ein dokumentierter Fund mit den Hashtags <strong>#Starke Küste</strong> und <strong>#CleanSeas</strong> macht diesen Bayou in der weltweiten Aufräumgemeinschaft sichtbar — die Netzwerke von The Ocean Cleanup, Surfrider, 4ocean und EARTHDAY.ORG stehen bereits auf dieser Seite und können echte lokale Arbeit bekannt machen.</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="card postcard">
+      <h3>🌐 Weltweit teilen — kopieren, ausfüllen, überall veröffentlichen</h3>
+      <p style="margin:0 0 12px">Ein Beitrag für jede Plattform, die deine Nachbarschaft — und die Welt — wirklich liest: Facebook, Instagram, X, Nextdoor, Gruppenchats. Füge das Foto hinzu, bleibe bei den Fakten und lass die Hashtags die Nachricht über die County-Grenze tragen.</p>
+      <pre class="template" id="postTemplate">🌊 STARKE KÜSTE — BAYOU-WACHT · GOLFKÜSTE MISSISSIPPIS, USA 🇺🇸
+MEINE BEOBACHTUNG: [Müllablagerung / Abfälle — welche Art]
+WO: [Bayou, Park oder nächste Straße]
+WANN: [Datum + Uhrzeit]
+GEMELDET AN: [Behörde + Meldeweg — oder „Meldung erfolgt heute“]
+FOTO: [beigefügt]
+Ein Bayou, ein Planet. Wir erfassen lokal und teilen weltweit — jeder dokumentierte Fund fließt in den globalen Ocean Trash Index ein, damit eine Aufräumaktion an dieser Küste in der Weltstatistik zählt.
+#Starke Küste #CleanSeas #BayouWacht #InternationalCoastalCleanup</pre>
+      <p style="margin-bottom:0"><button class="copybtn" data-copy="postTemplate" data-msg="postCopied">Weltweiten Beitrag kopieren</button><span class="copied" id="postCopied"></span></p>
+    </div>
+  </div>
+</section>
+
+<!-- WATCHES -->
+<section class="alt" id="watches">
+  <div class="wrap">
+    <p class="eyebrow">Entlang der Küste · Drei Küstenwachen, eine Küste</p>
+    <h2>Nicht nur ein Bayou. <span class="accent">Die ganze Küste.</span></h2>
+    <p class="lede">An drei Orten von West nach Ost entlang Mississippis Golfküste wird aufgepasst. Überall gilt dieselbe Vorgehensweise: hinschauen, aus sicherer Entfernung fotografieren, melden, protokollieren. Ein Beobachtungsposten bedeutet keinen Vorfall — er bedeutet, dass jemand hinsieht.</p>
+    <div class="grid3" style="margin-top:24px">
+      <div class="card">
+        <h3>🌊 Bayou-Wacht — Gulfport</h3>
+        <p><strong>Bayou Bernard · Harrison County</strong></p>
+        <p>Hier begann Starke Küste. Bayou Bernard und seine Zuflüsse Turkey Creek und Flat Branch werden von den Nachbarn beobachtet, die an ihnen wohnen. Der Fund vom 15. Oktober im Bayou Bernard Park ist Beleg Nr. 001.</p>
+      </div>
+      <div class="card">
+        <h3>⚓ Biloxi-Wacht — Biloxi</h3>
+        <p><strong>Tchoutacabouffa River · Back Bay of Biloxi</strong></p>
+        <p>Biloxis eigener Fluss windet sich durch die Stadt in die Back Bay — das Arbeitsgewässer hinter Biloxis Fischereiflotte. Ein dauerhafter Beobachtungsposten: Hier wurde noch nichts gemeldet, und genau darum geht es beim Aufpassen.</p>
+      </div>
+      <div class="card">
+        <h3>🌲 Pascagoula-Wacht — Pascagoula</h3>
+        <p><strong>Pascagoula River · Jackson County</strong></p>
+        <p>Einer der letzten großen frei fließenden Flüsse Amerikas, der durch Jackson County zum Sound strömt. Dieselbe Wachsamkeit am östlichen Ende der Küste: zuerst ein Foto, dann melden und protokollieren.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WATER -->
+<section id="water">
+  <div class="wrap">
+    <p class="eyebrow">Wissen über unsere Gewässer</p>
+    <h2>Lerne dein Wasser kennen: <span class="accent">das Bernard-Bayou-System</span></h2>
+    <p class="lede">Ein verbundenes System aus Bayou, Bächen, See und Wasserstraße, das in den Mississippi Sound entwässert. Wenn du nahe Lemoyne Blvd, Dedeaux Rd, Canal Rd oder Orange Grove wohnst, ist das auch dein Wasser.</p>
+    <div class="grid3" style="margin-top:24px">
+      <div class="card"><h3>Bernard Bayou</h3><p>Der Hauptlauf — überwacht vom Highway 49 bis zum Industrial Seaway, mit MDEQ-Messstellen bei Orange Grove und nahe Canal Rd. Der Fernseher und die Kunststoffteile vom 15. Oktober wurden in seinem Marschland im Bayou Bernard Park gefunden.</p></div>
+      <div class="card"><h3>Turkey Creek</h3><p>Fließt etwa 12,9 Meilen und mündet nördlich des Flughafens in Bernard Bayou. Wurde 2021 zu den zehn am stärksten bedrohten Flüssen Amerikas gezählt. Seine traditionsreiche Gemeinschaft setzt sich seit Jahren für dieses Einzugsgebiet ein.</p></div>
+      <div class="card"><h3>Flat Branch</h3><p>Der kleine Zufluss mit einer MDEQ-Messstelle an der Querung der Dedeaux Road — der nächstgelegene namentlich bekannte überwachte Bach zum Viertel an der Lemoyne Blvd.</p></div>
+      <div class="card"><h3>Gulfport Lake &amp; Industrial Seaway</h3><p>Hier trifft das Gewässersystem auf den Sound. Frühere Teams von Renew Our Rivers bargen 4,5 Tonnen bei Gulfport Lake / Industrial Seaway und 5,25 Tonnen bei Seaway und Bayou Bernard.</p></div>
+      <div class="card"><h3>Little Biloxi River</h3><p>Das nächste Einzugsgebiet nordöstlich bei Lyman — Teil derselben Küstenebene, beobachtet von denselben Nachbarn.</p></div>
+      <div class="card"><h3>Die Wache in einem Satz</h3><p>Die staatliche Überwachung umfasst Bakterienwarnungen für Strände (SMS „MDEQbeach“ an 95577). Ergebnisse von Aufräumaktionen liegen erst im Nachhinein vor. <strong>Die zusätzliche Aufmerksamkeit für die Bayous kommt von den Nachbarn, die an ihnen leben.</strong></p></div>
+    </div>
+
+    <h2 style="margin-top:64px">Unsere Flüsse. Unsere Meeresfrüchte. <span class="accent">Unser Stolz.</span></h2>
+    <div class="grid2">
+      <div class="card">
+        <h3>🌊 Das Wasser, an dem wir leben</h3>
+        <p>Familien an dieser Küste leben mit diesem Wasser — wir ziehen hier unsere Kinder groß, nehmen sie mit an die Flüsse, angeln, schwimmen und wachsen hier auf. Deshalb trifft es uns so tief, wenn Reifen in diesen Flüssen landen. Dieses Wasser gehört uns allen.</p>
+      </div>
+      <div class="card">
+        <h3>🦐 Meeresfrüchte sind unser Stolz</h3>
+        <p>Die Krabben, Garnelen, Austern und die Menschen, die auf diesem Wasser ihren Lebensunterhalt verdienen. Was im Marschland abgeladen wird, gelangt in dasselbe Wasser, aus dem unsere Meeresfrüchte kommen. Den Bayou zu schützen heißt, unser Essen, den Erwerbszweig und den Ruf der Küste zu schützen.</p>
+      </div>
+    </div>
+
+    <h2 style="margin-top:64px">Sicherheit und Ausrüstung</h2>
+    <div class="gear" style="margin-top:20px">
+      <div class="card">
+        <h3>🎒 Mitbringen</h3>
+        <ul class="tight">
+          <li>Arbeitsstiefel (keine Sandalen) und Arbeitshandschuhe — zusätzlich Ersatz für alle, die etwas vergessen</li>
+          <li>Sonnencreme, Hut, Sonnenbrille</li>
+          <li>Nachfüllbare Trinkflasche und zusätzlich abgefülltes Wasser für das Team</li>
+          <li>Greifzangen, falls vorhanden — schonen den Rücken und halten die Hände von scharfen Gegenständen fern</li>
+          <li>Eimer für scharfe oder schwere Abfälle; stabile Säcke für Dinge, die gewöhnliche Müllsäcke nicht halten</li>
+          <li>Erste-Hilfe-Set im Fahrzeug</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>⚠️ Sicher arbeiten</h3>
+        <ul class="tight">
+          <li>Immer Handschuhe tragen. Niemals nach etwas greifen, das du nicht sehen kannst.</li>
+          <li>Spitze und scharfe Gegenstände — Nadeln, Glasscherben, Metall: nicht von Hand einsammeln. Fotografiere sie und melde sie zusammen mit dem übrigen Fund.</li>
+          <li>Bleibe auf trockenem, tragfähigem Boden. Betrete weder Wasser noch Marschland. Überlasse gefährliche, schwere oder scharfe Abfälle den zuständigen Fachkräften.</li>
+          <li>Achte an den Ufern auf Schlangen, Feuerameisen und Wespen.</li>
+          <li>Trinke, bevor du Durst bekommst. Alle 30 Minuten eine Pause im Schatten — im Oktober ist es in Mississippi noch heiß.</li>
+          <li>Kinder bleiben bei einem Elternteil am Ufer und mit Abstand zur Wasserlinie.</li>
+          <li>Bei Blitzschlag die Arbeit einstellen. Ohne Diskussion.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card" style="margin-top:18px">
+      <h3>📸 Dokumentieren</h3>
+      <p style="margin:0">VORHER-Fotos der Ablagerung aus sicherer Entfernung · NACHHER-Fotos aus denselben Blickwinkeln, sobald alles geräumt ist · Datum, Standort, Fund und Empfänger der Meldung festhalten · Protokoll und Fotos noch am selben Tag ablegen · dokumentierte Ergebnisse öffentlich teilen — Menschen vertrauen dem, was sie sehen können.</p>
+    </div>
+  </div>
+</section>
+
+<!-- HERITAGE STRIP -->
+<div class="heritage" role="region" aria-label="Mississippis Erbe">
+  <div class="wrap">
+    <span class="item"><b>“Virtute et Armis”</b> — Mississippis Motto: „Durch Tapferkeit und Waffen“</span>
+    <span class="item"><b>Die Spottdrossel</b> — seit 1944 der Staatsvogel, der über dem Marschland singt</span>
+    <span class="item"><b>Die Magnolie</b> — Staatsblume und Staatsbaum, blühend an diesen Ufern</span>
+    <span class="item"><b>Der Leuchtturm von Biloxi</b> — steht seit 1848, das letzte Licht an dieser Küste</span>
+  </div>
+</div>
+
+
+<!-- SIGNUP -->
+<section id="signup">
+  <div class="wrap">
+    <p class="eyebrow">Deine Küste. Dein Beitrag.</p>
+    <h2>Hier ist ein Platz <span class="accent">für dich.</span></h2>
+    <p class="lede">Liegt dir dieses Wasser am Herzen? Beginne mit einer Sache, die du tun kannst. Wähle deinen Weg und schicke dem Team eine kurze E-Mail darüber, wie du helfen möchtest.</p>
+    <p><a class="btn" href="/cdn-cgi/l/email-protection#e9dbdbd18a86889a9d9a9d9b86878ea98e84888085c78a8684">Ich möchte mitmachen</a></p><p class="formnote">Öffnet einen Entwurf in deiner E-Mail-App. Prüfe ihn und sende ihn an das Team; es wird nichts automatisch verschickt.</p>
+    <div class="grid3 participation">
+      <div class="card"><h3>Pack mit an</h3><p>Hilf bei einer betreuten Aufräumaktion, bei der Dokumentation, mit Material oder bei der Öffentlichkeitsarbeit. Nenne uns deine Stadt und die Hilfe, die du anbieten kannst.</p><a class="btn" href="/cdn-cgi/l/email-protection#1220202a717d7361666166607d7c7552757f737b7e3c717d7f" aria-label="Freiwillig helfen">Freiwillig helfen</a></div>
+      <div class="card"><h3>Bring deine Ideen mit</h3><p>Schüler können Daten zu Aufräumaktionen erfassen, freigegebene Flyer gestalten oder an betreuten Aktivitäten teilnehmen. Unter 18? Lass einen Elternteil, eine erziehungsberechtigte Person oder eine Lehrkraft die Teilnahme mit uns abstimmen.</p><a class="btn" href="/cdn-cgi/l/email-protection#b280808ad1ddd3c1c6c1c6c0dddcd5f2d5dfd3dbde9cd1dddf" aria-label="Schüler und Studierende">Schüler und Studierende</a></div>
+      <div class="card"><h3>Bring deine Klasse oder Gruppe mit</h3><p>Lehrkräfte, Familien und Gruppen: Fragt nach einer Aktivität, die zu eurem Alter, euren Interessen und der verfügbaren Aufsicht durch Erwachsene passt.</p><a class="btn" href="/cdn-cgi/l/email-protection#c5f7f7fda6aaa4b6b1b6b1b7aaaba285a2a8a4aca9eba6aaa8" aria-label="Lehrkraft oder Gruppe">Lehrkraft oder Gruppe</a></div>
+    </div>
+    <p class="route-note">Diese Links öffnen deine E-Mail-App. Prüfe und versende die Nachricht dort; diese Seite übermittelt oder speichert deine Angaben nicht. Du kannst auch direkt schreiben an <a href="/cdn-cgi/l/email-protection#92a0a0aaf1fdf3e1e6e1e6e0fdfcf5d2f5fff3fbfebcf1fdff"><span class="__cf_email__" data-cfemail="f9cbcbc19a96988a8d8a8d8b96979eb99e94989095d79a9694">[email&#160;protected]</span></a>. Bitte übermittle keine privaten Angaben von Kindern oder medizinischen Informationen.</p>
+    <details class="law-steps"><summary>Was kann ich zuerst tun?</summary><p>Sprich mit einem Elternteil, einer Lehrkraft oder einem Freund über eine Idee: lerne den Bayou kennen, gestalte einen Flyer und hole vor dem Aushängen die Erlaubnis ein oder bitte einen Erwachsenen, eine Aufräumaktion zu koordinieren. Erwachsene können die <a href="https://coastalcleanup.extension.msstate.edu/contact-us/request-bin" target="_blank" rel="noopener">Materialkisten-Anfrage des Mississippi Coastal Cleanup</a>nutzen; Verfügbarkeit und Genehmigung liegen bei diesem Programm.</p><p><strong>Derzeit ist keine Aufräumaktion von Starke Küste bestätigt.</strong> Wer Kontakt aufnimmt, bekundet Interesse und meldet sich noch nicht zu einer Veranstaltung an. Bevor jemand zur Teilnahme eingeladen wird, werden für bestätigte Aktivitäten Datum, Uhrzeit, Ort, erwachsene Kontaktperson und Wetterplan festgelegt.</p></details>
+  </div>
+
+<p class="intake-link" style="margin-top:14px"><a class="btn btn-solid" href="/de/intake/?type=volunteer">Melde dich über das Formular als Helfer</a></p>
+</section>
+
+<section class="alt" id="kids">
+  <div class="wrap">
+    <p class="eyebrow">Küstenkinder · Gemeinsam mit einem Erwachsenen lernen</p>
+    <h2>Kleine Entscheidungen. <span class="accent">Eine Küste, die unsere Fürsorge verdient.</span></h2>
+    <p class="lede">Probiert gemeinsam eine kleine Küstenschutz-Aufgabe aus. Für echte Aufräumaktionen braucht ihr einen Erwachsenen, sicheren Boden und die richtige Ausrüstung.</p>
+    <div class="grid2 participation">
+      <div class="activity" id="coastActivity">
+        <p class="eyebrow">Was würdest du tun?</p>
+        <p class="activity-item" id="activityItem">Ein Bonbonpapier auf einem trockenen Weg</p>
+        <div class="activity-actions"><button class="btn" data-choice="ordinary" type="button">Gewöhnlicher Müll — mit einem Erwachsenen aufheben</button><button class="btn secondary" data-choice="adult" type="button">Liegen lassen und einem Erwachsenen sagen</button></div>
+        <p class="activity-feedback" id="activityFeedback" role="status" aria-live="polite">Wähle eine Antwort und erfahre, warum sie hilft.</p>
+        <button class="btn secondary activity-next" id="activityNext" type="button">Nächster Gegenstand</button>
+        <noscript><p>Ein Bonbonpapier kann mit der Hilfe eines Erwachsenen in einen Müllsack. Nadeln, unbekannte Chemikalien oder scharfe Gegenstände niemals anfassen. Lass sie liegen und sage einem Erwachsenen Bescheid.</p></noscript>
+      </div>
+      <div class="card"><h3>Dein Auftrag für die Küste</h3><ol><li>Male einen Fisch, einen Vogel oder eine Sumpfpflanze, die in deiner Nähe lebt.</li><li>Frage einen Erwachsenen, wie Müll in ihr Wasser gelangen kann.</li><li>Wählt gemeinsam eine Gewohnheit: Müll so aufbewahren, dass er nicht wegweht, eine wiederverwendbare Flasche mitnehmen oder Angelschnur in einen geeigneten Sammelbehälter geben.</li></ol><p class="learning-note">Diese Übung läuft direkt auf dieser Seite. Sie erfasst kein Konto, keinen Namen, kein Foto und keinen Punktestand. Du kannst diesen Abschnitt über die Druckfunktion deines Browsers ausdrucken.</p><h3>Ein Gespräch beginnen</h3><p>Frage eine Lehrkraft oder einen Elternteil: „Was würde unserer Küste guttun, und was können wir gemeinsam sicher tun?“</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="journal" aria-labelledby="journalTitle">
+  <div class="wrap">
+    <p class="eyebrow">Aus Ideen wird Handeln</p>
+    <h2 id="journalTitle">Eine Küste. <span class="accent">Ein Anfang.</span></h2>
+    <p class="lede">Praktische Ratgeber für Nachbarn, Schüler, Lehrkräfte und Familien, die gemeinsam etwas Sinnvolles tun möchten.</p>
+    <div class="journal-grid">
+      <article class="card journal-card"><h3><a href="/de/journal/first-step/">Dein erster Schritt für die Küste</a></h3><p>Finde einen Einstieg ins freiwillige Engagement, Ideen für den Unterricht, nützliche Materialien oder Möglichkeiten, deine Fähigkeiten einzubringen.</p><a class="read-guide" href="/de/journal/first-step/">Ratgeber lesen →</a></article>
+      <article class="card journal-card"><h3><a href="/de/journal/clear-notes/">Eine hilfreiche Meldung beginnt mit klaren Notizen</a></h3><p>Halte fest, was du wo und wann gesehen hast, fotografiere sicher und nutze dann die offiziellen Meldewege.</p><a class="read-guide" href="/de/journal/clear-notes/">Ratgeber lesen →</a></article>
+    </div>
+    <div class="journal-actions"><a href="/de/journal/">Im Journal stöbern →</a><a href="/de/journal/feed.xml">RSS-Feed</a></div>
+  </div>
+</section>
+
+<section class="alt" id="faq" aria-labelledby="faqTitle">
+  <div class="wrap">
+    <p class="eyebrow">Häufige Fragen</p>
+    <h2 id="faqTitle">Ein paar Fragen. <span class="accent">Klare Antworten.</span></h2>
+    <div class="faq-grid">
+      <div class="faq-list">
+        <details><summary>Wann findet die nächste Aufräumaktion von Starke Küste statt?</summary><p>Derzeit steht kein Termin für eine Aufräumaktion von Starke Küste fest. Bevor jemand zur Teilnahme eingeladen wird, werden für bestätigte Aktivitäten Datum, Uhrzeit, Ort, erwachsene Kontaktperson und Wetterplan festgelegt.</p></details>
+        <details><summary>Können Schüler unter 18 mithelfen?</summary><p>Ja — bringt eure Ideen mit. Ein Elternteil, eine erziehungsberechtigte Person oder eine Lehrkraft muss die Teilnahme mit uns abstimmen und für eine angemessene Aufsicht durch Erwachsene sorgen.</p></details>
+        <details><summary>Bin ich über einen E-Mail-Link angemeldet?</summary><p>Nein. Die Links öffnen einen Entwurf in deiner eigenen E-Mail-App. Prüfe und versende ihn dort. Eine E-Mail bekundet Interesse; diese Website meldet dich nicht zu einer Veranstaltung an und speichert keine Anmeldung.</p></details>
+        <details><summary>Kann ich einen Vorfall über diese Website melden?</summary><p>Diese Website empfängt oder übermittelt keine Vorfallmeldungen. Nutze die <a href="#report">offiziellen Meldewege</a> und übermittle Angaben zur Identifizierung direkt an die zuständige Behörde. Beobachte von einem sicheren Ort aus und stelle niemals jemanden zur Rede.</p></details>
+      </div>
+      <aside class="card share-panel" aria-labelledby="shareTitle">
+        <h3 id="shareTitle">Hol noch einen Nachbarn dazu.</h3>
+        <p>Fürsorge für unsere Küste beginnt mit Menschen. Teile Starke Küste mit jemandem, der mit anpacken möchte.</p>
+        <button class="btn share-site" type="button" data-share-site aria-describedby="shareNote" hidden>Starke Küste teilen</button>
+        <p class="formnote" id="shareNote">Die Schaltfläche nutzt die Teilen-Funktion deines Geräts oder kopiert den Link zur Website.</p>
+        <p class="share-status" id="shareStatus" role="status" aria-live="polite" aria-atomic="true"></p>
+        <noscript><p>Du kannst den Link zur Website unten teilen.</p></noscript>
+        <a class="site-link" data-site-link href="https://228coaststrong.com/de/">228coaststrong.com/de/</a>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="feedback">
+  <div class="wrap">
+    <div class="card">
+      <h2>Mit Sorgfalt gemacht. Gemeinsam stärker.</h2>
+      <p>Wir gestalten diese Website mit Sorgfalt, und dein Blickwinkel hilft unserem Team, sie zu verbessern. Teile einen durchdachten Vorschlag, eine andere Sichtweise oder etwas, das wir besser machen könnten.</p>
+      <p><a href="/cdn-cgi/l/email-protection#1220202a717d7361666166607d7c7552757f737b7e3c717d7f">Rückmeldung geben</a></p>
+      <p class="formnote">Prüfe und versende deine Nachricht in deiner E-Mail-App.</p>
+    </div>
+  </div>
+</section>
+
+<section id="sponsors" aria-labelledby="sponsorsTitle">
+  <div class="wrap">
+    <p class="eyebrow">Unsere Sponsoren</p>
+    <h2 id="sponsorsTitle">Lokale Unternehmen. <span class="accent">An der Seite dieser Küste.</span></h2>
+    <p class="lede">Mit dem Sponsorenprogramm von Starke Küste setzen lokale Unternehmen ein Zeichen für sauberes Wasser und starke Gemeinschaften. Diese Unternehmen unterstützen uns — unterstützen wir auch sie.</p>
+    <figure class="localized-campaign localized-campaign--sponsor"><div class="campaign-canvas"><img class="campaign-image" src="/assets/campaign-sponsor-neutral.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="Illustration von Nachbarn beim Müllsammeln an der Küste, mit einer Brücke und der Sonne über dem Wasser."><div class="campaign-lettering"><p class="campaign-brand">Starke Küste</p><p class="campaign-motto">Nichts mitnehmen. Nichts zurücklassen.<span>Heute genießen. Morgen bewahren.</span></p></div></div><figcaption class="campaign-values"><span>Unsere Küste genießen</span><span>Abfälle wieder mitnehmen</span><span>Ihre Schönheit bewahren</span><span>Gemeinsam stärker</span></figcaption><p class="campaign-good">Gute Menschen. Schöne Orte. Gute Gewohnheiten.</p></figure>
+    <div class="sponsor-grid">
+      <article class="card sponsor-card" aria-labelledby="mooreSponsorName">
+        <p class="eyebrow sponsor-badge">Erster Sponsor</p>
+        <h3 class="sponsor-name" id="mooreSponsorName">Moore Electric</h3>
+        <p>Elektroarbeiten für Wohnhäuser und Unternehmen an der Golfküste von Mississippi.</p>
+        <div class="sponsor-contact" aria-label="Kontaktmöglichkeiten">
+          <a href="tel:+12282249150">(228) 224-9150</a>
+          <a href="/cdn-cgi/l/email-protection#615353590c0e0e1304040d04021513080221060c00080d4f020e0c"><span class="__cf_email__" data-cfemail="cbf9f9f3a6a4a4b9aeaea7aea8bfb9a2a88baca6aaa2a7e5a8a4a6">[email&#160;protected]</span></a>
+        </div>
+        <div class="support-actions"><a class="btn" href="https://228mooreelectric.com/" target="_blank" rel="noopener">Moore Electric besuchen</a></div>
+      </article>
+      <article class="card sponsor-card" aria-labelledby="kccSponsorName">
+        <p class="eyebrow sponsor-badge">Sponsor</p>
+        <img class="sponsor-photo sponsor-portrait" src="/assets/kcc-jonathen.jpg" alt="Vertreter von Kingdom Connections Consulting im Büro unter dem Unternehmenswappen" width="480" height="480" loading="lazy" decoding="async">
+        <h3 class="sponsor-name" id="kccSponsorName">Kingdom Connections Consulting, LLC</h3>
+        <p><em>„Klarheit für deinen nächsten geschäftlichen Schritt.“</em></p>
+        <p>Beratung zur Finanzierung kleiner Unternehmen — damit neue Unternehmen mit einem Plan starten, wachsen und Kredite aufnehmen können.</p>
+        <div class="sponsor-contact" aria-label="Kontaktmöglichkeiten">
+          <a href="tel:+12282571948">(228) 257-1948</a>
+          <a href="/cdn-cgi/l/email-protection#9cd6fff3eeeef9f5fddcf7f5f2fbf8f3f1fff3f2f2f9ffe8f5f3f2effff3f2efe9f0e8f5f2fbb2fff3f1"><span class="__cf_email__" data-cfemail="e7ad84889595828e86a78c8e898083888a848889898284938e88899484888994928b938e8980c984888a">[email&#160;protected]</span></a>
+        </div>
+        <div class="support-actions"><a class="btn" href="https://kingdomconnectionsconsulting.com/" target="_blank" rel="noopener">Kingdom Connections Consulting besuchen</a></div>
+      </article>
+    </div>
+    <p class="route-note">Soll dein Unternehmen hier stehen? <a href="/cdn-cgi/l/email-protection#caf8f8f2a9a5abb9beb9beb8a5a4ad8aada7aba3a6e4a9a5a7">Sponsor werden</a></p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <h2>Für jede Familie<br/>an dieser Küste.</h2>
+    <p class="ded">Dieser Einsatz gilt jeder Familie, die in diesem Wasser fischt, von diesem Wasser lebt und dieses Wasser einmal erben wird. Es geht um die Gemeinschaft — und darum, die Dinge gemeinsam zum Besseren zu wenden.</p>
+    <p class="ded" style="font-style:italic">„Solange Plastik in unserem Wasser liegt, wird es Nachbarn geben, die darin stehen und es herausholen — gemeinsam.“</p>
+    <div class="creed">
+      <p>Keine Aufgabe zu groß</p>
+      <p>Keine Grenze zu weit</p>
+      <p>Wir sind Amerikaner</p>
+      <p>Wir sind stolz.</p>
+    </div>
+    <div class="hash">#Starke Küste</div><nav id="footerMap" class="footer-map" aria-label="Starke Küste entdecken"><h3>Starke Küste entdecken</h3><div class="footer-columns"><div class="footer-column"><h4>Mitmachen</h4><a href="#signup">So kannst du helfen</a><a href="#kids">Küstenkinder</a><a href="#report">Müllablagerung melden</a><a href="#feedback">Ideen und Rückmeldungen</a></div><div class="footer-column"><h4>Die Küste entdecken</h4><a href="#receipts">Gemeinschaftsprotokoll</a><a href="#network">Netzwerk</a><a href="#worldwide">Weltweit</a><a href="#watches">Die Küstenwachen</a><a href="#water">Unser Wasser</a><a href="#journal">Journal und Ratgeber</a></div><div class="footer-column"><h4>Über Starke Küste</h4><a href="#top">Zurück nach oben</a><a href="#start">Hier anfangen</a><a href="#traction">Live-Aktivität</a><a href="#faq">Fragen und Antworten</a><a href="#sponsors">Unsere Sponsoren</a></div></div></nav><p class="footer-support">Website-Betreuung: <a href="https://228mooreelectric.com/">Moore Electric</a> · <a href="tel:+12282249150">(228) 224-9150</a><br>Moore Electric betreut diese Website und übernimmt die Domainregistrierung.</p>
+    <p style="margin:0 0 14px"><a href="#signup" style="color:#ef8f4c;font-weight:700">Bei Bayou-Wacht mitmachen →</a>  ·  <a href="#report" style="color:#ef8f4c;font-weight:700">Müllablagerung melden →</a>  ·  <a href="#receipts" style="color:#ef8f4c;font-weight:700">Gemeinschaftsprotokoll →</a></p>
+    <p style="margin:0 0 14px">E-Mail an das Team: <a href="/cdn-cgi/l/email-protection#85b7b7bde6eae4f6f1f6f1f7eaebe2c5e2e8e4ece9abe6eae8" style="color:#ef8f4c;font-weight:700"><span class="__cf_email__" data-cfemail="fdcfcfc59e929c8e898e898f92939abd9a909c9491d39e9290">[email&#160;protected]</span></a></p>
+    <p class="fine">Starke Küste — Zentrale der Bayou-Wacht ist eine Gemeinschaftsseite für Mississippis Golfküste. Die Kontaktdaten der Behörden und Organisationen stammen von offiziellen öffentlichen Seiten, recherchiert am 15. Oktober 2026. Diese Seite übermittelt oder speichert keine Meldungen und versendet nichts in deinem Namen. Für Fragen zur Teilnahme und zur Unterstützung nutze die E-Mail-Links oben. Prüfe und versende die Nachricht über deine eigene E-Mail-App; diese Seite hat keine Anmeldedatenbank. Prüfe bei Veranstaltungen offizieller Programme die Angaben auf deren eigenen offiziellen Seiten.</p>
+    <p class="fine" style="margin-top:18px;border-top:1px solid rgba(255,255,255,.25);padding-top:14px"><em>Eine kurze Anmerkung zum Anfang: Starke Küste begann mit einem Nachbarn aus Biloxi, Devin Moore. Er fand am 15. Oktober 2026 den weggeworfenen Fernseher im Marschland des Bayou Bernard Park und holte ihn heraus. Er begann damit für seine Familie — für Hazel Moore, für Albert Rhett Moore, für Jamie Jarvis Gilbert, für Michelle Gilbert, für Brett Moore und für Sharon Moore — und das ist alles, was diese Seite über ihn erzählt. Es ging nie um ihn. Es geht um die Gemeinschaft und darum, Dinge zum Besseren zu wenden.</em></p>
+    <p><a class="back-top" href="#top">Nach oben ↑</a></p>
+  </div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+(function(){
+
+  // Compact navigation; the links stay visible when JavaScript is disabled.
+  var menu=document.getElementById('menuToggle');
+  var links=document.getElementById('primaryLinks');
+  document.documentElement.classList.add('menu-ready');menu.hidden=false;
+  menu.addEventListener('click',function(){var open=menu.getAttribute('aria-expanded')!=='true';menu.setAttribute('aria-expanded',String(open));links.classList.toggle('open',open);});
+  links.addEventListener('click',function(e){if(e.target.closest('a')){menu.setAttribute('aria-expanded','false');links.classList.remove('open');}});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&menu.getAttribute('aria-expanded')==='true'){menu.setAttribute('aria-expanded','false');links.classList.remove('open');menu.focus();}});
+
+  // Family learning activity. No storage, analytics, network calls or identifiers.
+  var items=[{"label": "Ein Bonbonpapier auf einem trockenen Weg", "answer": "ordinary", "why": "Ein Bonbonpapier ist gewöhnlicher Müll. Mit einem Erwachsenen und geeigneten Handschuhen oder einer Greifzange kann es in einen Müllsack. Lass alles liegen, was du nicht sicher erkennen kannst."}, {"label": "Eine spitze Nadel am Ufer", "answer": "adult", "why": "Lass sie liegen und sage einem Erwachsenen Bescheid. Berühre sie nicht und stecke sie nicht in einen gewöhnlichen Müllsack. Ein Erwachsener kann sich an die zuständige Stelle wenden."}, {"label": "Ein Behälter mit einer unbekannten Chemikalie", "answer": "adult", "why": "Lass ihn liegen und sage einem Erwachsenen Bescheid. Nicht berühren, öffnen oder daran riechen. Unbekannte Behälter müssen von der zuständigen Stelle behandelt werden."}];
+  var itemIndex=0;var itemLabel=document.getElementById('activityItem');var feedback=document.getElementById('activityFeedback');
+  document.querySelectorAll('[data-choice]').forEach(function(button){button.addEventListener('click',function(){var item=items[itemIndex];var correct=button.dataset.choice===item.answer;feedback.textContent=(correct?"Richtig. ":"Versuche eine andere Antwort. ")+item.why;});});
+  document.getElementById('activityNext').addEventListener('click',function(){itemIndex=(itemIndex+1)%items.length;itemLabel.textContent=items[itemIndex].label;feedback.textContent="Wähle eine Antwort und erfahre, warum sie hilft.";});
+
+  // --- Copy buttons (clipboard with fallback) ---
+  function wireCopy(btn){
+    btn.addEventListener('click', function(){
+      var targetId = btn.getAttribute('data-copy');
+      var el = document.getElementById(targetId);
+      var msgId = btn.getAttribute('data-msg') || (targetId === 'alertTemplate' ? 'alertCopied' : 'receiptCopied');
+      var msg = document.getElementById(msgId);
+      function done(){ if(msg){ msg.textContent = "Kopiert ✓"; setTimeout(function(){ msg.textContent=''; }, 2500); } }
+      function failed(){ if(msg){ msg.textContent="Kopieren nicht verfügbar. Markiere die Vorlage und kopiere sie selbst."; } }
+      var text = el.textContent;
+      if (navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(text).then(done, function(){ fallback(); });
+      } else { fallback(); }
+      function fallback(){
+        var ta = document.createElement('textarea');
+        ta.value = text; ta.style.position='fixed'; ta.style.opacity='0';
+        document.body.appendChild(ta); ta.select();
+        try { if(document.execCommand('copy')){done();}else{failed();} } catch(err){failed();}
+        document.body.removeChild(ta);
+      }
+    });
+  }
+  var btns = document.querySelectorAll('.copybtn');
+  for (var j=0;j<btns.length;j++) wireCopy(btns[j]);
+
+  // Retained directory category filters.
+
+  var filters = document.querySelectorAll('.orgfilter');
+  var cards = document.querySelectorAll('details.org');
+  function applyFilter(){
+    var active = [];
+    for (var i=0;i<filters.length;i++){ if (filters[i].checked) active.push(filters[i].value); }
+    for (var k=0;k<cards.length;k++){
+      var cat = cards[k].getAttribute('data-cat');
+      if (active.length === 0 || active.indexOf(cat) !== -1){
+        cards[k].classList.remove('hidden-card');
+      } else {
+        cards[k].classList.add('hidden-card');
+      }
+    }
+  }
+  for (var f=0;f<filters.length;f++) filters[f].addEventListener('change', applyFilter);
+
+  
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce), (max-width: 740px)').matches;
+
+  // --- Hero parallax: the marsh drifts gently as you scroll ---
+  var heroEl = document.querySelector('.hero');
+  var heroBg = document.querySelector('.hero img.bg');
+
+  // --- Scroll progress bar + nav shadow ---
+  var progress = document.createElement('div');
+  progress.id = 'progress';
+  document.body.appendChild(progress);
+  var topnav = document.querySelector('nav.top');
+  function onScroll(){
+    var h = document.documentElement;
+    var max = h.scrollHeight - h.clientHeight;
+    progress.style.width = (max > 0 ? (h.scrollTop / max) * 100 : 0) + '%';
+    if (topnav) topnav.classList.toggle('scrolled', h.scrollTop > 10);
+    if (heroBg && heroEl && !reduceMotion){
+      var y = h.scrollTop;
+      if (y < heroEl.offsetHeight){ heroBg.style.translate = '0 ' + (y * 0.22).toFixed(1) + 'px'; }
+    }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  // --- Reveal on scroll ---
+  if (!reduceMotion && 'IntersectionObserver' in window){
+    var revealEls = document.querySelectorAll('.card, .step, .fact, blockquote.pull, figure, .channel, .stat');
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, {threshold:.12});
+    for (var r=0;r<revealEls.length;r++){ revealEls[r].classList.add('reveal'); io.observe(revealEls[r]); }
+  }
+
+  // --- Fact count-up ---
+  var factNums = document.querySelectorAll('.fact b');
+  function countUp(el){
+    var m = el.textContent.match(/^([\d.]+)(.*)$/);
+    if (!m) return;
+    var target = parseFloat(m[1]);
+    var suffix = m[2];
+    var dec = (m[1].split('.')[1] || '').length;
+    var start = null;
+    function frame(ts){
+      if (!start) start = ts;
+      var p = Math.min((ts - start) / 1300, 1);
+      var eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = (target * eased).toFixed(dec) + suffix;
+      if (p < 1) requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
+  }
+  if (!reduceMotion && 'IntersectionObserver' in window && factNums.length){
+    var fio = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting){ countUp(e.target); fio.unobserve(e.target); }
+      });
+    }, {threshold:.4});
+    for (var fi=0; fi<factNums.length; fi++) fio.observe(factNums[fi]);
+  }
+})();
+</script>
+<script src="../activity.js" defer></script>
+<script src="../share.js" defer></script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" data-cf-beacon='{"version":"2024.11.0","token":"42e259363e0948a784881d13c9f0abe3","r":1,"spa":2}' crossorigin="anonymous"></script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" data-cf-beacon='{"version":"2024.11.0","token":"42e259363e0948a784881d13c9f0abe3","r":1,"spa":2}' crossorigin="anonymous"></script>
+</body>
+</html>
