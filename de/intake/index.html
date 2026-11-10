@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="color-scheme" content="light">
-<title>Müllablagerung melden oder mithelfen — Coast Strong</title>
+<title>Datenkarte der Küstenreinigung — Coast Strong</title>
 <meta name="description" content="Melde dem Coast-Strong-Team eine Müllablagerung oder einen Ort, der Hilfe braucht — oder biete deine Hilfe an, in deiner Sprache. Das Formular bereitet eine E-Mail in deiner eigenen E-Mail-App vor.">
 <link rel="icon" href="/icon.webp" type="image/webp">
 <link rel="canonical" href="https://228coaststrong.com/de/intake/">
@@ -43,8 +43,8 @@
 
   <div class="wrap">
     <span class="kicker">Mission Mother Earth · Bayou Watch</span>
-    <h1>Etwas gesehen? Sag es uns. Lust zu helfen? Melde dich.</h1>
-    <p class="sub">Zwei kurze Formulare, in deiner Sprache. Keines davon sendet von selbst etwas ab: Am Ende schreibt diese Seite deine Nachricht und öffnet sie in deiner eigenen E-Mail-App, adressiert an das Team — du drückst dort auf „Senden“. Die festen Antworten werden ins Englische übersetzt, damit das Team schnell handeln kann; alles, was du selbst schreibst, bleibt Wort für Wort erhalten, genau wie du es geschrieben hast.</p>
+    <h1>Küste aufgeräumt? Zähle, was du gefunden hast.</h1>
+    <p class="sub">Ein Formular: die Datenkarte der Internationalen Küstenreinigung. Deine Zählungen fließen in den Ocean Trash Index. Nichts wird von selbst gesendet: Am Ende schreibt diese Seite deine Nachricht und öffnet sie in deiner eigenen E-Mail-App, adressiert an das Team — du drückst dort auf „Senden“. Die festen Antworten werden ins Englische übersetzt, damit das Team schnell handeln kann; alles, was du selbst schreibst, bleibt Wort für Wort erhalten, genau wie du es geschrieben hast.</p>
       <div class="cleanswell">Gehst du raus zum Aufräumen? Erfasse deinen Müll in Clean Swell — der kostenlosen App von Ocean Conservancy. Deine Zählungen landen direkt in der weltweiten Datenbank für Meeresmüll und fließen in den Ocean Trash Index ein. <a href="https://oceanconservancy.org/cleanswell">Clean Swell herunterladen</a></div>
     <p class="glory">Nachbarn schützen unser Wasser, unsere Meeresfrüchte und die Küste, die unsere Kinder erben werden. Alle Ehre gebührt Gott, aller Verdienst der Gemeinschaft.</p>
   </div>
@@ -52,55 +52,10 @@
 <main id="main-content">
   <div class="wrap">
     <div class="card">
-      <div class="tabs" role="tablist">
-        <button type="button" class="tab" id="tabReport" role="tab" aria-selected="true">Müllablagerung / einen Ort melden, der Hilfe braucht</button>
-        <button type="button" class="tab" id="tabVolunteer" role="tab" aria-selected="false">Mithelfen</button>
-      </div>
-      <div class="err" id="errBox" role="alert">Bitte fülle die mit * markierten Felder aus, damit das Team deine Nachricht nutzen kann.</div>
+      <div class="err" id="errBox" role="alert">Es gibt noch nichts zu senden — trage oben deine Zählungen ein, oder öffne unten „Nur eine illegale Ablagerung melden?“ und sag uns, was du gesehen hast und wo.</div>
 
       <form id="formReport" novalidate>
-        <div class="safety">Bleib sicher: Nähere dich niemals jemandem, der Müll ablädt, und fasse keine Ablagerungen an, die scharf, chemisch oder elektrisch sein könnten. Fotos aus sicherer Entfernung genügen. Wenn jemand in Gefahr ist, rufe zuerst die 911 an.</div>
-        <div class="f">
-          <label for="rWhat">Was hast du gesehen? <span class="req" aria-hidden="true">*</span></label>
-          <select id="rWhat" required>
-              <option value="" data-en="">Bitte wählen…</option>
-              <option value="Jemand lädt gerade Müll ab" data-en="Dumping happening right now">Jemand lädt gerade Müll ab</option>
-              <option value="Frisch abgeladener Müll" data-en="Fresh dumped debris">Frisch abgeladener Müll</option>
-              <option value="Müll im Wasser" data-en="Debris in the water">Müll im Wasser</option>
-              <option value="Reifen" data-en="Tires">Reifen</option>
-              <option value="Haushaltsgeräte oder Möbel" data-en="Appliances or furniture">Haushaltsgeräte oder Möbel</option>
-              <option value="Bauschutt" data-en="Construction debris">Bauschutt</option>
-              <option value="Etwas anderes" data-en="Something else">Etwas anderes</option>
-          </select>
-        </div>
-        <div class="f">
-          <label for="rWhere">Wo ist das? <span class="req" aria-hidden="true">*</span></label>
-          <input type="text" id="rWhere" required>
-          <p class="hint">Eine Straßenadresse, die nächste Kreuzung oder ein markanter Punkt — oder füge einen Standort aus deiner Karten-App ein.</p>
-        </div>
-        <div class="f">
-          <label for="rWhen">Wann hast du es gesehen?</label>
-          <select id="rWhen">
-              <option value="" data-en="">Bitte wählen…</option>
-              <option value="Gerade eben" data-en="Just now">Gerade eben</option>
-              <option value="Früher heute" data-en="Earlier today">Früher heute</option>
-              <option value="Gestern" data-en="Yesterday">Gestern</option>
-              <option value="Vor ein paar Tagen" data-en="A few days ago">Vor ein paar Tagen</option>
-          </select>
-        </div>
-        <div class="f">
-          <label for="rDetails">Noch etwas, das das Team wissen sollte?</label>
-          <textarea id="rDetails" placeholder="Schreib in deinen eigenen Worten — wir übernehmen sie genau so, wie du sie schreibst."></textarea>
-        </div>
-        <div class="f">
-          <label for="rName">Dein Name (freiwillig)</label>
-          <input type="text" id="rName" autocomplete="name">
-        </div>
-        <div class="f">
-          <label for="rContact">E-Mail oder Telefon (freiwillig — nur, wenn du eine Antwort möchtest)</label>
-          <input type="text" id="rContact" autocomplete="email">
-        </div>
-      <!-- ICC data-card strings below: DRAFT translation — needs a native-speaker check before this is called final. The email ticket always uses the English data-en values, so the data stays correct in every language. -->
+      <p class="priority-note">★ Das Formular, das zählt — deine Zahlen fließen in den Ocean Trash Index.</p>
       <section class="icc">
         <h2>Daten der Säuberung — Datenkarte der Internationalen Küstensäuberung</h2>
         <p class="icc-intro">Zählst du, was du aufgesammelt hast? Das sind die genauen Gegenstände auf Ocean Conservancy's Datenkarte für Freiwillige zu Meeresmüll (2021). Trage Zahlen nur dort ein, wo du gezählt hast — leer bedeutet null. Deine Zählungen stehen in deiner E-Mail auf Englisch, bereit zur Eingabe in Clean Swell oder zum Senden an Ocean Conservancy unter cleanup@oceanconservancy.org.</p>
@@ -311,50 +266,72 @@
             </div>
           </div>
         </fieldset>
+        <div class="f">
+          <label for="rName">Dein Name (freiwillig)</label>
+          <input type="text" id="rName" autocomplete="name">
+        </div>
+        <div class="f">
+          <label for="rContact">E-Mail oder Telefon (freiwillig — nur, wenn du eine Antwort möchtest)</label>
+          <input type="text" id="rContact" autocomplete="email">
+        </div>
       </section>
-        <button type="submit" class="btn btn-solid">Meine Nachricht erstellen</button>
-      </form>
-
-      <form id="formVolunteer" class="hidden" novalidate>
+      <details class="secondary" id="dumpDetails">
+        <summary>Nur eine illegale Ablagerung melden? Ein paar kurze Angaben</summary>
+        <div class="safety">Bleib sicher: Nähere dich niemals jemandem, der Müll ablädt, und fasse keine Ablagerungen an, die scharf, chemisch oder elektrisch sein könnten. Fotos aus sicherer Entfernung genügen. Wenn jemand in Gefahr ist, rufe zuerst die 911 an.</div>
         <div class="f">
-          <label for="vName">Dein Name <span class="req" aria-hidden="true">*</span></label>
-          <input type="text" id="vName" autocomplete="name" required>
-        </div>
-        <div class="f">
-          <label for="vContact">E-Mail oder Telefon <span class="req" aria-hidden="true">*</span></label>
-          <input type="text" id="vContact" autocomplete="email" required>
-        </div>
-        <div class="f">
-          <label for="vCity">Deine Stadt</label>
-          <input type="text" id="vCity" autocomplete="address-level2">
-        </div>
-        <fieldset class="f">
-          <legend>Wie möchtest du helfen? <span class="req" aria-hidden="true">*</span></legend>
-              <label class="check"><input type="checkbox" class="vHelp" value="Aufräumteam" data-en="Cleanup crew"> Aufräumteam</label>
-              <label class="check"><input type="checkbox" class="vHelp" value="Fotos und Dokumentation" data-en="Photos and documentation"> Fotos und Dokumentation</label>
-              <label class="check"><input type="checkbox" class="vHelp" value="Material und Transport" data-en="Supplies and hauling"> Material und Transport</label>
-              <label class="check"><input type="checkbox" class="vHelp" value="Öffentlichkeitsarbeit und Weitersagen" data-en="Outreach and spreading the word"> Öffentlichkeitsarbeit und Weitersagen</label>
-              <label class="check"><input type="checkbox" class="vHelp" value="Schülerprojekte" data-en="Student projects"> Schülerprojekte</label>
-              <label class="check"><input type="checkbox" class="vHelp" value="Mit einer Klasse oder Gruppe kommen" data-en="Bring a classroom or group"> Mit einer Klasse oder Gruppe kommen</label>
-              <label class="check"><input type="checkbox" class="vHelp" value="Etwas anderes" data-en="Something else"> Etwas anderes</label>
-        </fieldset>
-        <div class="f">
-          <label for="vAvail">Wann hast du normalerweise Zeit?</label>
-          <select id="vAvail">
+          <label for="rWhat">Was hast du gesehen? <span class="req" aria-hidden="true">*</span></label>
+          <select id="rWhat" required>
               <option value="" data-en="">Bitte wählen…</option>
-              <option value="Wochentags morgens" data-en="Weekday mornings">Wochentags morgens</option>
-              <option value="Wochentags nachmittags" data-en="Weekday afternoons">Wochentags nachmittags</option>
-              <option value="Wochentags abends" data-en="Weekday evenings">Wochentags abends</option>
-              <option value="Am Wochenende" data-en="Weekend days">Am Wochenende</option>
-              <option value="Unterschiedlich — frag mich einfach" data-en="It varies — ask me">Unterschiedlich — frag mich einfach</option>
+              <option value="Jemand lädt gerade Müll ab" data-en="Dumping happening right now">Jemand lädt gerade Müll ab</option>
+              <option value="Frisch abgeladener Müll" data-en="Fresh dumped debris">Frisch abgeladener Müll</option>
+              <option value="Müll im Wasser" data-en="Debris in the water">Müll im Wasser</option>
+              <option value="Reifen" data-en="Tires">Reifen</option>
+              <option value="Haushaltsgeräte oder Möbel" data-en="Appliances or furniture">Haushaltsgeräte oder Möbel</option>
+              <option value="Bauschutt" data-en="Construction debris">Bauschutt</option>
+              <option value="Etwas anderes" data-en="Something else">Etwas anderes</option>
           </select>
         </div>
         <div class="f">
-          <label for="vNotes">Noch etwas, das wir wissen sollten?</label>
-          <textarea id="vNotes" placeholder="Schreib in deinen eigenen Worten — wir übernehmen sie genau so, wie du sie schreibst."></textarea>
+          <label for="rWhere">Wo ist das? <span class="req" aria-hidden="true">*</span></label>
+          <input type="text" id="rWhere" required>
+          <p class="hint">Eine Straßenadresse, die nächste Kreuzung oder ein markanter Punkt — oder füge einen Standort aus deiner Karten-App ein.</p>
         </div>
+        <div class="f">
+          <label for="rWhen">Wann hast du es gesehen?</label>
+          <select id="rWhen">
+              <option value="" data-en="">Bitte wählen…</option>
+              <option value="Gerade eben" data-en="Just now">Gerade eben</option>
+              <option value="Früher heute" data-en="Earlier today">Früher heute</option>
+              <option value="Gestern" data-en="Yesterday">Gestern</option>
+              <option value="Vor ein paar Tagen" data-en="A few days ago">Vor ein paar Tagen</option>
+          </select>
+        </div>
+        <div class="f">
+          <label for="rDetails">Noch etwas, das das Team wissen sollte?</label>
+          <textarea id="rDetails" placeholder="Schreib in deinen eigenen Worten — wir übernehmen sie genau so, wie du sie schreibst."></textarea>
+        </div>
+      </details>
         <button type="submit" class="btn btn-solid">Meine Nachricht erstellen</button>
       </form>
+
+      <section class="vol-compact" id="volSection">
+        <h2>Lust, als Freiwilliger mitzuhelfen? Melde dich.</h2>
+        <p class="vol-intro">Dein Name und deine E-Mail — mehr braucht es nicht, um dabei zu sein.</p>
+        <form id="formVolunteer" novalidate>
+          <div class="frow">
+            <div class="f">
+              <label for="vName">Dein Name <span class="req" aria-hidden="true">*</span></label>
+              <input type="text" id="vName" autocomplete="name" required>
+            </div>
+            <div class="f">
+              <label for="vContact">E-Mail oder Telefon <span class="req" aria-hidden="true">*</span></label>
+              <input type="text" id="vContact" autocomplete="email" required>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-solid">Ich melde mich</button>
+        </form>
+      </section>
+
 
       <!-- ICC data-card strings below: DRAFT translation — needs a native-speaker check before this is called final. The email ticket always uses the English data-en values, so the data stays correct in every language. -->
       <section class="resources">

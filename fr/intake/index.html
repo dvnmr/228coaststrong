@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="color-scheme" content="light">
-<title>Signaler un dépôt sauvage ou devenir bénévole — Coast Strong</title>
+<title>Carte de données du nettoyage — Coast Strong</title>
 <meta name="description" content="Signalez à l’équipe Coast Strong un dépôt sauvage ou un site qui a besoin d’aide, ou proposez votre aide comme bénévole — dans votre langue. Le formulaire prépare un e-mail dans votre propre application de messagerie.">
 <link rel="icon" href="/icon.webp" type="image/webp">
 <link rel="canonical" href="https://228coaststrong.com/fr/intake/">
@@ -43,8 +43,8 @@
 
   <div class="wrap">
     <span class="kicker">Mission Mother Earth · Bayou Watch</span>
-    <h1>Vous voyez quelque chose ? Dites-le. Envie d’aider ? Levez la main.</h1>
-    <p class="sub">Deux formulaires courts, dans votre langue. Aucun n’envoie quoi que ce soit tout seul : à la fin, cette page rédige votre message et l’ouvre dans votre propre application de messagerie, adressé à l’équipe — c’est vous qui appuyez sur « envoyer ». Les réponses fixes sont traduites en anglais pour que l’équipe puisse agir vite ; tout ce que vous écrivez vous-même voyage mot pour mot, exactement comme vous l’avez écrit.</p>
+    <h1>Vous avez nettoyé la côte ? Comptez ce que vous avez trouvé.</h1>
+    <p class="sub">Un seul formulaire : la carte de données du Nettoyage International des Côtes. Vos comptages alimentent l’Indice des Déchets Océaniques. Rien ne s’envoie tout seul : à la fin, cette page rédige votre message et l’ouvre dans votre propre application de messagerie, adressé à l’équipe — c’est vous qui appuyez sur « envoyer ». Les réponses fixes sont traduites en anglais pour que l’équipe puisse agir vite ; tout ce que vous écrivez vous-même voyage mot pour mot, exactement comme vous l’avez écrit.</p>
       <div class="cleanswell">Vous sortez nettoyer ? Enregistrez vos déchets dans Clean Swell, l'application gratuite d'Ocean Conservancy. Vos comptages sont envoyés directement dans la base de données mondiale sur les déchets océaniques et alimentent l'Ocean Trash Index. <a href="https://oceanconservancy.org/cleanswell">Télécharger Clean Swell</a></div>
     <p class="glory">Des voisins protègent notre eau, nos produits de la mer et la côte dont nos enfants hériteront. Toute gloire à Dieu, et tout le mérite à la communauté.</p>
   </div>
@@ -52,55 +52,10 @@
 <main id="main-content">
   <div class="wrap">
     <div class="card">
-      <div class="tabs" role="tablist">
-        <button type="button" class="tab" id="tabReport" role="tab" aria-selected="true">Signaler un dépôt sauvage / un site qui a besoin d’aide</button>
-        <button type="button" class="tab" id="tabVolunteer" role="tab" aria-selected="false">Devenir bénévole</button>
-      </div>
-      <div class="err" id="errBox" role="alert">Merci de remplir les champs marqués d’un * pour que l’équipe puisse utiliser votre message.</div>
+      <div class="err" id="errBox" role="alert">Il n’y a encore rien à envoyer : ajoutez vos comptages ci-dessus, ou ouvrez « Vous signalez un dépôt sauvage ? » ci-dessous et indiquez ce que vous avez vu et où.</div>
 
       <form id="formReport" novalidate>
-        <div class="safety">Restez prudents : n’approchez jamais quelqu’un en train de déverser des déchets et ne touchez jamais de débris qui pourraient être coupants, chimiques ou électriques. Des photos prises à bonne distance suffisent. Si quelqu’un est en danger, appelez d’abord le 911.</div>
-        <div class="f">
-          <label for="rWhat">Qu’avez-vous vu ? <span class="req" aria-hidden="true">*</span></label>
-          <select id="rWhat" required>
-              <option value="" data-en="">Choisissez…</option>
-              <option value="Un déversement en cours, en ce moment" data-en="Dumping happening right now">Un déversement en cours, en ce moment</option>
-              <option value="Des débris fraîchement déposés" data-en="Fresh dumped debris">Des débris fraîchement déposés</option>
-              <option value="Des débris dans l’eau" data-en="Debris in the water">Des débris dans l’eau</option>
-              <option value="Des pneus" data-en="Tires">Des pneus</option>
-              <option value="Des appareils électroménagers ou des meubles" data-en="Appliances or furniture">Des appareils électroménagers ou des meubles</option>
-              <option value="Des gravats de construction" data-en="Construction debris">Des gravats de construction</option>
-              <option value="Autre chose" data-en="Something else">Autre chose</option>
-          </select>
-        </div>
-        <div class="f">
-          <label for="rWhere">Où est-ce ? <span class="req" aria-hidden="true">*</span></label>
-          <input type="text" id="rWhere" required>
-          <p class="hint">Une adresse, le croisement ou le repère le plus proche — ou collez un point de localisation depuis votre application de cartes.</p>
-        </div>
-        <div class="f">
-          <label for="rWhen">Quand l’avez-vous vu ?</label>
-          <select id="rWhen">
-              <option value="" data-en="">Choisissez…</option>
-              <option value="À l’instant" data-en="Just now">À l’instant</option>
-              <option value="Plus tôt aujourd’hui" data-en="Earlier today">Plus tôt aujourd’hui</option>
-              <option value="Hier" data-en="Yesterday">Hier</option>
-              <option value="Il y a quelques jours" data-en="A few days ago">Il y a quelques jours</option>
-          </select>
-        </div>
-        <div class="f">
-          <label for="rDetails">Autre chose que l’équipe devrait savoir ?</label>
-          <textarea id="rDetails" placeholder="Écrivez avec vos propres mots — nous les conservons exactement tels quels."></textarea>
-        </div>
-        <div class="f">
-          <label for="rName">Votre nom (facultatif)</label>
-          <input type="text" id="rName" autocomplete="name">
-        </div>
-        <div class="f">
-          <label for="rContact">E-mail ou téléphone (facultatif — seulement si vous souhaitez une réponse)</label>
-          <input type="text" id="rContact" autocomplete="email">
-        </div>
-      <!-- ICC data-card strings below: DRAFT translation — needs a native-speaker check before this is called final. The email ticket always uses the English data-en values, so the data stays correct in every language. -->
+      <p class="priority-note">★ Le formulaire qui compte : vos chiffres alimentent l’Indice des Déchets Océaniques.</p>
       <section class="icc">
         <h2>Données du nettoyage — Fiche de données du Nettoyage International des Côtes</h2>
         <p class="icc-intro">Vous comptez ce que vous avez ramassé ? Voici les articles exacts de la Fiche de données sur les déchets océaniques pour les bénévoles d'Ocean Conservancy (2021). Inscrivez des chiffres uniquement là où vous avez compté — vide signifie zéro. Vos comptages voyagent dans votre courriel en anglais, prêts à être saisis dans Clean Swell ou envoyés à Ocean Conservancy à cleanup@oceanconservancy.org.</p>
@@ -311,50 +266,72 @@
             </div>
           </div>
         </fieldset>
+        <div class="f">
+          <label for="rName">Votre nom (facultatif)</label>
+          <input type="text" id="rName" autocomplete="name">
+        </div>
+        <div class="f">
+          <label for="rContact">E-mail ou téléphone (facultatif — seulement si vous souhaitez une réponse)</label>
+          <input type="text" id="rContact" autocomplete="email">
+        </div>
       </section>
-        <button type="submit" class="btn btn-solid">Rédiger mon message</button>
-      </form>
-
-      <form id="formVolunteer" class="hidden" novalidate>
+      <details class="secondary" id="dumpDetails">
+        <summary>Vous signalez un dépôt sauvage ? Quelques détails rapides</summary>
+        <div class="safety">Restez prudents : n’approchez jamais quelqu’un en train de déverser des déchets et ne touchez jamais de débris qui pourraient être coupants, chimiques ou électriques. Des photos prises à bonne distance suffisent. Si quelqu’un est en danger, appelez d’abord le 911.</div>
         <div class="f">
-          <label for="vName">Votre nom <span class="req" aria-hidden="true">*</span></label>
-          <input type="text" id="vName" autocomplete="name" required>
-        </div>
-        <div class="f">
-          <label for="vContact">E-mail ou téléphone <span class="req" aria-hidden="true">*</span></label>
-          <input type="text" id="vContact" autocomplete="email" required>
-        </div>
-        <div class="f">
-          <label for="vCity">Votre ville</label>
-          <input type="text" id="vCity" autocomplete="address-level2">
-        </div>
-        <fieldset class="f">
-          <legend>Comment aimeriez-vous aider ? <span class="req" aria-hidden="true">*</span></legend>
-              <label class="check"><input type="checkbox" class="vHelp" value="Équipe de nettoyage" data-en="Cleanup crew"> Équipe de nettoyage</label>
-              <label class="check"><input type="checkbox" class="vHelp" value="Photos et documentation" data-en="Photos and documentation"> Photos et documentation</label>
-              <label class="check"><input type="checkbox" class="vHelp" value="Fournitures et transport" data-en="Supplies and hauling"> Fournitures et transport</label>
-              <label class="check"><input type="checkbox" class="vHelp" value="Communication et bouche-à-oreille" data-en="Outreach and spreading the word"> Communication et bouche-à-oreille</label>
-              <label class="check"><input type="checkbox" class="vHelp" value="Projets d’élèves" data-en="Student projects"> Projets d’élèves</label>
-              <label class="check"><input type="checkbox" class="vHelp" value="Venir avec une classe ou un groupe" data-en="Bring a classroom or group"> Venir avec une classe ou un groupe</label>
-              <label class="check"><input type="checkbox" class="vHelp" value="Autre chose" data-en="Something else"> Autre chose</label>
-        </fieldset>
-        <div class="f">
-          <label for="vAvail">Quand êtes-vous généralement disponible ?</label>
-          <select id="vAvail">
+          <label for="rWhat">Qu’avez-vous vu ? <span class="req" aria-hidden="true">*</span></label>
+          <select id="rWhat" required>
               <option value="" data-en="">Choisissez…</option>
-              <option value="Les matins en semaine" data-en="Weekday mornings">Les matins en semaine</option>
-              <option value="Les après-midis en semaine" data-en="Weekday afternoons">Les après-midis en semaine</option>
-              <option value="Les soirs en semaine" data-en="Weekday evenings">Les soirs en semaine</option>
-              <option value="Les jours de week-end" data-en="Weekend days">Les jours de week-end</option>
-              <option value="Ça varie — demandez-moi" data-en="It varies — ask me">Ça varie — demandez-moi</option>
+              <option value="Un déversement en cours, en ce moment" data-en="Dumping happening right now">Un déversement en cours, en ce moment</option>
+              <option value="Des débris fraîchement déposés" data-en="Fresh dumped debris">Des débris fraîchement déposés</option>
+              <option value="Des débris dans l’eau" data-en="Debris in the water">Des débris dans l’eau</option>
+              <option value="Des pneus" data-en="Tires">Des pneus</option>
+              <option value="Des appareils électroménagers ou des meubles" data-en="Appliances or furniture">Des appareils électroménagers ou des meubles</option>
+              <option value="Des gravats de construction" data-en="Construction debris">Des gravats de construction</option>
+              <option value="Autre chose" data-en="Something else">Autre chose</option>
           </select>
         </div>
         <div class="f">
-          <label for="vNotes">Autre chose que nous devrions savoir ?</label>
-          <textarea id="vNotes" placeholder="Écrivez avec vos propres mots — nous les conservons exactement tels quels."></textarea>
+          <label for="rWhere">Où est-ce ? <span class="req" aria-hidden="true">*</span></label>
+          <input type="text" id="rWhere" required>
+          <p class="hint">Une adresse, le croisement ou le repère le plus proche — ou collez un point de localisation depuis votre application de cartes.</p>
         </div>
+        <div class="f">
+          <label for="rWhen">Quand l’avez-vous vu ?</label>
+          <select id="rWhen">
+              <option value="" data-en="">Choisissez…</option>
+              <option value="À l’instant" data-en="Just now">À l’instant</option>
+              <option value="Plus tôt aujourd’hui" data-en="Earlier today">Plus tôt aujourd’hui</option>
+              <option value="Hier" data-en="Yesterday">Hier</option>
+              <option value="Il y a quelques jours" data-en="A few days ago">Il y a quelques jours</option>
+          </select>
+        </div>
+        <div class="f">
+          <label for="rDetails">Autre chose que l’équipe devrait savoir ?</label>
+          <textarea id="rDetails" placeholder="Écrivez avec vos propres mots — nous les conservons exactement tels quels."></textarea>
+        </div>
+      </details>
         <button type="submit" class="btn btn-solid">Rédiger mon message</button>
       </form>
+
+      <section class="vol-compact" id="volSection">
+        <h2>Envie d’être bénévole ? Levez la main.</h2>
+        <p class="vol-intro">Votre nom et votre e-mail : c’est tout ce qu’il faut pour rejoindre l’équipe.</p>
+        <form id="formVolunteer" novalidate>
+          <div class="frow">
+            <div class="f">
+              <label for="vName">Votre nom <span class="req" aria-hidden="true">*</span></label>
+              <input type="text" id="vName" autocomplete="name" required>
+            </div>
+            <div class="f">
+              <label for="vContact">E-mail ou téléphone <span class="req" aria-hidden="true">*</span></label>
+              <input type="text" id="vContact" autocomplete="email" required>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-solid">Je lève la main</button>
+        </form>
+      </section>
+
 
       <!-- ICC data-card strings below: DRAFT translation — needs a native-speaker check before this is called final. The email ticket always uses the English data-en values, so the data stays correct in every language. -->
       <section class="resources">
