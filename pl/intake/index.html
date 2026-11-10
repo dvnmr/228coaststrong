@@ -23,6 +23,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&amp;family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Barlow+Semi+Condensed:wght@600&amp;family=Zilla+Slab:wght@600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/coastal.css">
 <link rel="stylesheet" href="/intake.css">
 <script src="/intake.js" defer></script>
 </head>
@@ -35,11 +36,15 @@
     <nav class="language-switch" aria-label="Choose language"><a href="/intake/" lang="en" hreflang="en"><span class="language-flag" aria-hidden="true">🇺🇸</span><span class="language-label" lang="en">English</span></a><a href="/es/intake/" lang="es" hreflang="es"><span class="language-flag" aria-hidden="true">🇪🇸</span><span class="language-label" lang="en">Español</span></a><a href="/vi/intake/" lang="vi" hreflang="vi"><span class="language-flag" aria-hidden="true">🇻🇳</span><span class="language-label" lang="en">Tiếng Việt</span></a><a href="/fr/intake/" lang="fr" hreflang="fr"><span class="language-flag" aria-hidden="true">🇫🇷</span><span class="language-label" lang="en">Français</span></a><a href="/de/intake/" lang="de" hreflang="de"><span class="language-flag" aria-hidden="true">🇩🇪</span><span class="language-label" lang="en">Deutsch</span></a><a href="/pl/intake/" lang="pl" hreflang="pl" aria-current="page"><span class="language-flag" aria-hidden="true">🇵🇱</span><span class="language-label" lang="en">Polski</span></a></nav>
   </div>
 </nav>
-<header class="pagehead">
+<header class="hero">
+  <img class="bg" src="/assets/bayou-marsh.webp" alt="Mokradła bayou na wybrzeżu Mississippi w złotym świetle — trawy bagienne, kręte kanały spokojnej wody, cyprysy porośnięte oplątwą i czapla modra stojąca na płyciźnie" width="1920" height="1280" decoding="async" loading="eager" fetchpriority="high"/>
+  <div class="veil"></div>
+  <svg class="wave" viewbox="0 0 1440 60" preserveaspectratio="none" aria-hidden="true"><path d="M0,32 C240,60 480,0 720,24 C960,48 1200,8 1440,28 L1440,60 L0,60 Z"/></svg>
+
   <div class="wrap">
     <span class="kicker">Mission Mother Earth · Bayou Watch</span>
     <h1>Widzisz coś? Zgłoś to. Chcesz pomóc? Odezwij się.</h1>
-    <p>Dwa krótkie formularze, w Twoim języku. Żaden z nich niczego sam nie wysyła: na końcu ta strona pisze Twoją wiadomość i otwiera ją w Twojej własnej aplikacji pocztowej, zaadresowaną do zespołu — to Ty naciskasz „wyślij”. Gotowe odpowiedzi są tłumaczone na angielski, żeby zespół mógł działać szybko; wszystko, co napiszesz samodzielnie, trafia dalej dokładnie w Twoich słowach.</p>
+    <p class="sub">Dwa krótkie formularze, w Twoim języku. Żaden z nich niczego sam nie wysyła: na końcu ta strona pisze Twoją wiadomość i otwiera ją w Twojej własnej aplikacji pocztowej, zaadresowaną do zespołu — to Ty naciskasz „wyślij”. Gotowe odpowiedzi są tłumaczone na angielski, żeby zespół mógł działać szybko; wszystko, co napiszesz samodzielnie, trafia dalej dokładnie w Twoich słowach.</p>
       <div class="cleanswell">Wybierasz się na sprzątanie? Zapisuj śmieci w Clean Swell — bezpłatnej aplikacji Ocean Conservancy. Twoje liczby trafiają prosto do światowej bazy danych o śmieciach oceanicznych i zasilają Ocean Trash Index. <a href="https://oceanconservancy.org/cleanswell">Pobierz Clean Swell</a></div>
     <p class="glory">Sąsiedzi chronią naszą wodę, owoce morza i wybrzeże, które odziedziczą nasze dzieci. Cała chwała Bogu, a całe uznanie społeczności.</p>
   </div>
@@ -381,8 +386,21 @@
 </main>
 <footer>
   <div class="wrap">
-    <p>Sąsiedzi chronią naszą wodę, owoce morza i wybrzeże, które odziedziczą nasze dzieci. Cała chwała Bogu, a całe uznanie społeczności.</p>
-    <div class="hash">#COASTSTRONG</div>
+    <h2>Dla każdej rodziny<br/>na tym wybrzeżu.</h2>
+    <p class="ded">Ta misja jest dla każdej rodziny, która łowi w tych wodach, żywi się tym, co dają, i kiedyś je odziedziczy. Jest dla społeczności — i dla wspólnego naprawiania tego, co wymaga zmiany.</p>
+    <p class="ded" style="font-style:italic">„Dopóki w naszej wodzie będzie plastik, znajdą się sąsiedzi, którzy staną w niej i będą go wyciągać — razem.”</p>
+    <div class="creed">
+      <p>Żadne zadanie nie jest zbyt wielkie</p>
+      <p>Żaden horyzont nie jest zbyt daleki</p>
+      <p>Jesteśmy Amerykanami</p>
+      <p>Jesteśmy dumni.</p>
+    </div>
+    <div class="hash">#SilneWybrzeże</div><nav id="footerMap" class="footer-map" aria-label="Poznaj Silne Wybrzeże"><h3>Poznaj Silne Wybrzeże</h3><div class="footer-columns"><div class="footer-column"><h4>Weź udział</h4><a href="/#signup">Sposoby pomocy</a><a href="/#kids">Dzieci wybrzeża</a><a href="/#report">Zgłoś dzikie wysypisko</a><a href="/#feedback">Pomysły i opinie</a></div><div class="footer-column"><h4>Poznaj wybrzeże</h4><a href="/#receipts">Dziennik społeczności</a><a href="/#network">Sieć kontaktów</a><a href="/#watches">Nasze patrole</a><a href="/#water">Nasze wody</a><a href="/#journal">Dziennik i poradniki</a></div><div class="footer-column"><h4>O Silne Wybrzeże</h4><a href="/#top">Wróć na górę</a><a href="/#start">Zacznij tutaj</a><a href="/#traction">Aktywność na żywo</a><a href="/#faq">Pytania i odpowiedzi</a><a href="/#sponsors">Nasi sponsorzy</a></div></div></nav><p class="footer-support">Utrzymanie strony: <a href="https://228mooreelectric.com/">Moore Electric</a> · <a href="tel:+12282249150">(228) 224-9150</a><br>Moore Electric utrzymuje tę stronę i opłaca rejestrację domeny.</p>
+    <p style="margin:0 0 14px"><a href="/#signup" style="color:#ef8f4c;font-weight:700">Dołącz do Straż nad Zatoką →</a>  ·  <a href="/#report" style="color:#ef8f4c;font-weight:700">Zgłoś dzikie wysypisko →</a>  ·  <a href="/#receipts" style="color:#ef8f4c;font-weight:700">Dziennik społeczności →</a></p>
+    <p style="margin:0 0 14px">Napisz do ekipy: <a href="/cdn-cgi/l/email-protection#2d1f1f154e424c5e595e595f42434a6d4a404c4441034e4240" style="color:#ef8f4c;font-weight:700"><span class="__cf_email__" data-cfemail="caf8f8f2a9a5abb9beb9beb8a5a4ad8aada7aba3a6e4a9a5a7">[email&#160;protected]</span></a></p>
+    <p class="fine">Silne Wybrzeże — Centrum Straży nad Zatoką to strona społeczności wybrzeża Zatoki w Mississippi. Dane kontaktowe instytucji i organizacji pochodzą z oficjalnych publicznych stron sprawdzonych 15 października 2026 r. Ta strona nie wysyła ani nie przechowuje zgłoszeń i nic nie jest z niej wysyłane w Twoim imieniu. Pytania o udział i sponsoring można kierować przez powyższe linki e-mail. Sprawdź i wyślij wiadomość we własnym programie pocztowym; strona nie ma bazy zapisów. Szczegóły wydarzeń organizowanych przez oficjalne programy sprawdzaj na ich własnych stronach.</p>
+    <p class="fine" style="margin-top:18px;border-top:1px solid rgba(255,255,255,.25);padding-top:14px"><em>Kilka słów o początkach: Silne Wybrzeże rozpoczął jeden sąsiad z Biloxi, Devin Moore, który 15 października 2026 r. znalazł porzucony telewizor na mokradłach w Bayou Bernard Park i go wyniósł. Jego motywacją była rodzina: Hazel Moore, Albert Rhett Moore, Jamie Jarvis Gilbert, Michelle Gilbert, Brett Moore i Sharon Moore — i to cała jego historia na tej stronie. Nigdy nie chodziło o niego. Chodzi o społeczność i o naprawianie tego, co wymaga zmiany.</em></p>
+    <p><a class="back-top" href="/#top">Wróć na górę ↑</a></p>
   </div>
 </footer>
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" data-cf-beacon='{"version":"2024.11.0","token":"42e259363e0948a784881d13c9f0abe3","r":1,"spa":2}' crossorigin="anonymous"></script>
