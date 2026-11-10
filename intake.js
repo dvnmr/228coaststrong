@@ -1,18 +1,21 @@
 /* Coast Strong intake — builds an English ticket client-side.
    Fixed answers are translated via data-en attributes on the options;
    free text is carried verbatim, labeled as the visitor's original words.
-   The Report form also carries the ICC Ocean Trash Data Card section
-   (Ocean Conservancy Volunteer Ocean Trash Data Form, 2021): counts are
-   numbers only and item names come from data-en, so the ticket is always
-   in ICC English no matter which language the form is shown in. */
+   ONE FORM (Nov 10, 2026): the hero form is the ICC Ocean Trash Data
+   Card section (Ocean Conservancy Volunteer Ocean Trash Data Form, 2021):
+   counts are numbers only and item names come from data-en, so the ticket
+   is always in ICC English no matter which language the form is shown in.
+   A dumping report is a collapsed secondary block inside the same form
+   (it submits when the visitor fills what + where, or alongside ICC
+   counts), and volunteering is a compact name-and-email section on the
+   same page. Deep links still work: ?type=report opens the dumping
+   details, ?type=volunteer scrolls to the volunteer section. */
 (function () {
   "use strict";
   var LANG_NAMES = { en: "English", es: "Spanish", vi: "Vietnamese", fr: "French", de: "German", pl: "Polish" };
   var DEST = "228coaststrong@gmail.com";
   var lang = document.documentElement.lang || "en";
 
-  var tabReport = document.getElementById("tabReport");
-  var tabVol = document.getElementById("tabVolunteer");
   var formReport = document.getElementById("formReport");
   var formVol = document.getElementById("formVolunteer");
   var ticketSection = document.getElementById("ticketSection");
@@ -21,18 +24,17 @@
   var copyBtn = document.getElementById("copyBtn");
   var errBox = document.getElementById("errBox");
 
-  function showForm(which) {
-    var isReport = which === "report";
-    formReport.classList.toggle("hidden", !isReport);
-    formVol.classList.toggle("hidden", isReport);
-    tabReport.setAttribute("aria-selected", isReport ? "true" : "false");
-    tabVol.setAttribute("aria-selected", isReport ? "false" : "true");
-    errBox.classList.remove("show");
-  }
-  tabReport.addEventListener("click", function () { showForm("report"); });
-  tabVol.addEventListener("click", function () { showForm("volunteer"); });
+  /* Deep links from the homepage keep working: ?type=report opens the
+     dumping details, ?type=volunteer scrolls to the volunteer section. */
   var params = new URLSearchParams(window.location.search);
-  showForm(params.get("type") === "volunteer" ? "volunteer" : "report");
+  var linkType = params.get("type");
+  if (linkType === "volunteer") {
+    var volSection = document.getElementById("volSection");
+    if (volSection) volSection.scrollIntoView({ block: "start" });
+  } else if (linkType === "report") {
+    var dumpDetails = document.getElementById("dumpDetails");
+    if (dumpDetails) { dumpDetails.open = true; dumpDetails.scrollIntoView({ block: "start" }); }
+  }
 
   function val(id) {
     var el = document.getElementById(id);
@@ -42,6 +44,11 @@
     var el = document.getElementById(id);
     if (!el || el.selectedIndex < 0) return "";
     var opt = el.options[el.selectedIndex];
+    /* The "Choose…" placeholder options carry an empty value and an empty
+       data-en; without this guard they fall through to their visible text
+       and read as real answers — which used to make an empty ICC section
+       look filled in (TOTAL ITEMS COUNTED: 0 on a plain dumping report). */
+    if (!opt.value) return "";
     return (opt.getAttribute("data-en") || opt.textContent || "").trim();
   }
   function numVal(id) {
@@ -147,35 +154,58 @@
 
   formReport.addEventListener("submit", function (e) {
     e.preventDefault();
-    var what = enOf("rWhat"), where = val("rWhere");
-    if (!what || !where) { fail(); return; }
-    errBox.classList.remove("show");
-    var lines = [
-      "COAST STRONG INTAKE — DUMPING / SITE REPORT",
-      "Form language: " + (LANG_NAMES[lang] || lang),
-      "",
-      "WHAT: " + what,
-      "WHERE (visitor's words): " + where,
-      "WHEN: " + (enOf("rWhen") || "(not given)"),
-      "DETAILS (visitor's original words, untranslated): " + (val("rDetails") || "(none)"),
-      "NAME: " + given(val("rName")),
-      "CONTACT: " + given(val("rContact")),
-      "",
-      "Note: Fixed answers were translated into English from the form. Free text above is the visitor's original wording, kept exactly as written."
-    ];
     var icc = iccBlock();
+    var what = enOf("rWhat"), where = val("rWhere");
+    var hasDump = what && where;
+    /* The hero form is the ICC data card: it submits on counts alone.
+       A dumping report submits on what + where. Either one, or both. */
+    if (!icc && !hasDump) { fail(); return; }
+    errBox.classList.remove("show");
+    var lines = [];
+    if (hasDump) {
+      lines.push(
+        "COAST STRONG INTAKE — DUMPING / SITE REPORT",
+        "Form language: " + (LANG_NAMES[lang] || lang),
+        "",
+        "WHAT: " + what,
+        "WHERE (visitor's words): " + where,
+        "WHEN: " + (enOf("rWhen") || "(not given)"),
+        "DETAILS (visitor's original words, untranslated): " + (val("rDetails") || "(none)"),
+        "NAME: " + given(val("rName")),
+        "CONTACT: " + given(val("rContact")),
+        "",
+        "Note: Fixed answers were translated into English from the form. Free text above is the visitor's original wording, kept exactly as written."
+      );
+    } else {
+      lines.push(
+        "COAST STRONG INTAKE — ICC CLEANUP DATA",
+        "Form language: " + (LANG_NAMES[lang] || lang),
+        "",
+        "NAME: " + given(val("rName")),
+        "CONTACT: " + given(val("rContact")),
+        ""
+      );
+    }
     if (icc) lines.push("", icc);
-    present(icc ? "Coast Strong intake — Dumping / site report + ICC cleanup data"
-                : "Coast Strong intake — Dumping / site report", lines.join("\n"));
+    if (icc && !hasDump) {
+      lines.push("", "Note: Fixed answers were translated into English from the form. Free text above is the visitor's original wording, kept exactly as written.");
+    }
+    var subject = icc
+      ? (hasDump ? "Coast Strong intake — Dumping / site report + ICC cleanup data" : "Coast Strong intake — ICC cleanup data")
+      : "Coast Strong intake — Dumping / site report";
+    present(subject, lines.join("\n"));
   });
 
   formVol.addEventListener("submit", function (e) {
     e.preventDefault();
     var name = val("vName"), contact = val("vContact");
+    /* Compact volunteer section: name + contact is the whole ask. The
+       old help checkboxes no longer exist on the page; if a future
+       version brings them back, they are still read when present. */
     var helps = [];
     var boxes = formVol.querySelectorAll(".vHelp:checked");
     for (var i = 0; i < boxes.length; i++) helps.push(boxes[i].getAttribute("data-en"));
-    if (!name || !contact || helps.length === 0) { fail(); return; }
+    if (!name || !contact) { fail(); return; }
     errBox.classList.remove("show");
     var lines = [
       "COAST STRONG INTAKE — VOLUNTEER",
@@ -183,10 +213,7 @@
       "",
       "NAME: " + name,
       "CONTACT: " + contact,
-      "CITY: " + given(val("vCity")),
-      "WANTS TO HELP WITH: " + helps.join("; "),
-      "USUALLY AVAILABLE: " + (enOf("vAvail") || "(not given)"),
-      "NOTES (visitor's original words, untranslated): " + (val("vNotes") || "(none)"),
+      "WANTS TO HELP WITH: " + (helps.length ? helps.join("; ") : "(not specified)"),
       "",
       "Note: Fixed answers were translated into English from the form. Free text above is the visitor's original wording, kept exactly as written."
     ];

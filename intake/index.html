@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="color-scheme" content="light">
-<title>Report dumping or volunteer — Coast Strong</title>
+<title>Cleanup data card — Coast Strong</title>
 <meta name="description" content="Tell the Coast Strong crew about dumping or a site that needs help, or raise your hand to volunteer — in your language. The form prepares an email in your own email app.">
 <link rel="icon" href="/icon.webp" type="image/webp">
 <link rel="canonical" href="https://228coaststrong.com/intake/">
@@ -43,8 +43,8 @@
 
   <div class="wrap">
     <span class="kicker">Mission Mother Earth · Bayou Watch</span>
-    <h1>See something? Say something. Want to help? Raise your hand.</h1>
-    <p class="sub">Two short forms, in your language. Neither form sends anything by itself: when you finish, this page writes out your message and opens it in your own email app, addressed to the crew — you press send there. Fixed answers are translated into English so the crew can act fast; anything you write yourself travels word for word, exactly as you wrote it.</p>
+    <h1>Cleaned up the coast? Count what you found.</h1>
+    <p class="sub">One form — the International Coastal Cleanup data card. Your counts feed the Ocean Trash Index. Nothing sends by itself: when you finish, this page writes out your message and opens it in your own email app, addressed to the crew — you press send there. Fixed answers are translated into English so the crew can act fast; anything you write yourself travels word for word, exactly as you wrote it.</p>
       <div class="cleanswell">Going out to clean up? Record your trash in Clean Swell — Ocean Conservancy's free app. Your counts upload straight to the global ocean trash database and feed the Ocean Trash Index. <a href="https://oceanconservancy.org/cleanswell">Get Clean Swell</a></div>
     <p class="glory">Neighbors protecting our water, our seafood, and the coast our children will inherit. All glory to God, and all credit to the community.</p>
   </div>
@@ -52,54 +52,10 @@
 <main id="main-content">
   <div class="wrap">
     <div class="card">
-      <div class="tabs" role="tablist">
-        <button type="button" class="tab" id="tabReport" role="tab" aria-selected="true">Report dumping / a site that needs help</button>
-        <button type="button" class="tab" id="tabVolunteer" role="tab" aria-selected="false">Volunteer</button>
-      </div>
-      <div class="err" id="errBox" role="alert">Please fill in the fields marked * so the crew can use your message.</div>
+      <div class="err" id="errBox" role="alert">There's nothing to send yet — add your cleanup counts above, or open “Just reporting dumping?” below and fill in what you saw and where.</div>
 
       <form id="formReport" novalidate>
-        <div class="safety">Stay safe: never approach anyone who is dumping, and never touch debris that could be sharp, chemical, or electrical. Photos from a safe distance are enough. If anyone is in danger, call 911 first.</div>
-        <div class="f">
-          <label for="rWhat">What did you see? <span class="req" aria-hidden="true">*</span></label>
-          <select id="rWhat" required>
-              <option value="" data-en="">Choose…</option>
-              <option value="Dumping happening right now" data-en="Dumping happening right now">Dumping happening right now</option>
-              <option value="Fresh dumped debris" data-en="Fresh dumped debris">Fresh dumped debris</option>
-              <option value="Debris in the water" data-en="Debris in the water">Debris in the water</option>
-              <option value="Tires" data-en="Tires">Tires</option>
-              <option value="Appliances or furniture" data-en="Appliances or furniture">Appliances or furniture</option>
-              <option value="Construction debris" data-en="Construction debris">Construction debris</option>
-              <option value="Something else" data-en="Something else">Something else</option>
-          </select>
-        </div>
-        <div class="f">
-          <label for="rWhere">Where is it? <span class="req" aria-hidden="true">*</span></label>
-          <input type="text" id="rWhere" required>
-          <p class="hint">A street address, the nearest cross street or landmark — or paste a location pin from your maps app.</p>
-        </div>
-        <div class="f">
-          <label for="rWhen">When did you see it?</label>
-          <select id="rWhen">
-              <option value="" data-en="">Choose…</option>
-              <option value="Just now" data-en="Just now">Just now</option>
-              <option value="Earlier today" data-en="Earlier today">Earlier today</option>
-              <option value="Yesterday" data-en="Yesterday">Yesterday</option>
-              <option value="A few days ago" data-en="A few days ago">A few days ago</option>
-          </select>
-        </div>
-        <div class="f">
-          <label for="rDetails">Anything else the crew should know?</label>
-          <textarea id="rDetails" placeholder="Write in your own words — we keep them exactly as you write them."></textarea>
-        </div>
-        <div class="f">
-          <label for="rName">Your name (optional)</label>
-          <input type="text" id="rName" autocomplete="name">
-        </div>
-        <div class="f">
-          <label for="rContact">Email or phone (optional — only if you&#x27;d like a reply)</label>
-          <input type="text" id="rContact" autocomplete="email">
-        </div>
+      <p class="priority-note">★ The form that counts — your numbers feed the Ocean Trash Index.</p>
       <section class="icc">
         <h2>Cleanup data — International Coastal Cleanup data card</h2>
         <p class="icc-intro">Counting what you picked up? These are the exact items on Ocean Conservancy's Volunteer Ocean Trash Data Form (2021). Fill in numbers only where you counted — blank means zero. Your counts travel in your email ticket in English, ready to be entered in Clean Swell or sent to Ocean Conservancy at cleanup@oceanconservancy.org.</p>
@@ -310,50 +266,72 @@
             </div>
           </div>
         </fieldset>
+        <div class="f">
+          <label for="rName">Your name (optional)</label>
+          <input type="text" id="rName" autocomplete="name">
+        </div>
+        <div class="f">
+          <label for="rContact">Email or phone (optional — only if you&#x27;d like a reply)</label>
+          <input type="text" id="rContact" autocomplete="email">
+        </div>
       </section>
-        <button type="submit" class="btn btn-solid">Write out my message</button>
-      </form>
-
-      <form id="formVolunteer" class="hidden" novalidate>
+      <details class="secondary" id="dumpDetails">
+        <summary>Just reporting dumping? A few quick details</summary>
+        <div class="safety">Stay safe: never approach anyone who is dumping, and never touch debris that could be sharp, chemical, or electrical. Photos from a safe distance are enough. If anyone is in danger, call 911 first.</div>
         <div class="f">
-          <label for="vName">Your name <span class="req" aria-hidden="true">*</span></label>
-          <input type="text" id="vName" autocomplete="name" required>
-        </div>
-        <div class="f">
-          <label for="vContact">Email or phone <span class="req" aria-hidden="true">*</span></label>
-          <input type="text" id="vContact" autocomplete="email" required>
-        </div>
-        <div class="f">
-          <label for="vCity">Your city</label>
-          <input type="text" id="vCity" autocomplete="address-level2">
-        </div>
-        <fieldset class="f">
-          <legend>How would you like to help? <span class="req" aria-hidden="true">*</span></legend>
-              <label class="check"><input type="checkbox" class="vHelp" value="Cleanup crew" data-en="Cleanup crew"> Cleanup crew</label>
-              <label class="check"><input type="checkbox" class="vHelp" value="Photos and documentation" data-en="Photos and documentation"> Photos and documentation</label>
-              <label class="check"><input type="checkbox" class="vHelp" value="Supplies and hauling" data-en="Supplies and hauling"> Supplies and hauling</label>
-              <label class="check"><input type="checkbox" class="vHelp" value="Outreach and spreading the word" data-en="Outreach and spreading the word"> Outreach and spreading the word</label>
-              <label class="check"><input type="checkbox" class="vHelp" value="Student projects" data-en="Student projects"> Student projects</label>
-              <label class="check"><input type="checkbox" class="vHelp" value="Bring a classroom or group" data-en="Bring a classroom or group"> Bring a classroom or group</label>
-              <label class="check"><input type="checkbox" class="vHelp" value="Something else" data-en="Something else"> Something else</label>
-        </fieldset>
-        <div class="f">
-          <label for="vAvail">When are you usually free?</label>
-          <select id="vAvail">
+          <label for="rWhat">What did you see? <span class="req" aria-hidden="true">*</span></label>
+          <select id="rWhat" required>
               <option value="" data-en="">Choose…</option>
-              <option value="Weekday mornings" data-en="Weekday mornings">Weekday mornings</option>
-              <option value="Weekday afternoons" data-en="Weekday afternoons">Weekday afternoons</option>
-              <option value="Weekday evenings" data-en="Weekday evenings">Weekday evenings</option>
-              <option value="Weekend days" data-en="Weekend days">Weekend days</option>
-              <option value="It varies — ask me" data-en="It varies — ask me">It varies — ask me</option>
+              <option value="Dumping happening right now" data-en="Dumping happening right now">Dumping happening right now</option>
+              <option value="Fresh dumped debris" data-en="Fresh dumped debris">Fresh dumped debris</option>
+              <option value="Debris in the water" data-en="Debris in the water">Debris in the water</option>
+              <option value="Tires" data-en="Tires">Tires</option>
+              <option value="Appliances or furniture" data-en="Appliances or furniture">Appliances or furniture</option>
+              <option value="Construction debris" data-en="Construction debris">Construction debris</option>
+              <option value="Something else" data-en="Something else">Something else</option>
           </select>
         </div>
         <div class="f">
-          <label for="vNotes">Anything else you&#x27;d like us to know?</label>
-          <textarea id="vNotes" placeholder="Write in your own words — we keep them exactly as you write them."></textarea>
+          <label for="rWhere">Where is it? <span class="req" aria-hidden="true">*</span></label>
+          <input type="text" id="rWhere" required>
+          <p class="hint">A street address, the nearest cross street or landmark — or paste a location pin from your maps app.</p>
         </div>
+        <div class="f">
+          <label for="rWhen">When did you see it?</label>
+          <select id="rWhen">
+              <option value="" data-en="">Choose…</option>
+              <option value="Just now" data-en="Just now">Just now</option>
+              <option value="Earlier today" data-en="Earlier today">Earlier today</option>
+              <option value="Yesterday" data-en="Yesterday">Yesterday</option>
+              <option value="A few days ago" data-en="A few days ago">A few days ago</option>
+          </select>
+        </div>
+        <div class="f">
+          <label for="rDetails">Anything else the crew should know?</label>
+          <textarea id="rDetails" placeholder="Write in your own words — we keep them exactly as you write them."></textarea>
+        </div>
+      </details>
         <button type="submit" class="btn btn-solid">Write out my message</button>
       </form>
+
+      <section class="vol-compact" id="volSection">
+        <h2>Want to volunteer? Raise your hand.</h2>
+        <p class="vol-intro">Your name and email — that's all it takes to join the crew.</p>
+        <form id="formVolunteer" novalidate>
+          <div class="frow">
+            <div class="f">
+              <label for="vName">Your name <span class="req" aria-hidden="true">*</span></label>
+              <input type="text" id="vName" autocomplete="name" required>
+            </div>
+            <div class="f">
+              <label for="vContact">Email or phone <span class="req" aria-hidden="true">*</span></label>
+              <input type="text" id="vContact" autocomplete="email" required>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-solid">Raise my hand</button>
+        </form>
+      </section>
+
 
       <section class="resources">
         <h2>Cleanup resources — from Ocean Conservancy</h2>

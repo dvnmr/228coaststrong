@@ -9,12 +9,6 @@ main{padding:40px 0 64px}
 /* The form card stays put: the homepage's card hover-lift is for link
    cards, not for a form you are filling in. */
 .card:hover{transform:none;box-shadow:var(--shadow)}
-.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}
-.tab{flex:1 1 240px;font:inherit;font-weight:700;font-size:16px;padding:13px 16px;border-radius:10px;border:1.5px solid var(--green);background:var(--surface);color:var(--green-dark);cursor:pointer;transition:background-color .18s ease,border-color .18s ease,color .18s ease,transform .18s ease,box-shadow .18s ease}
-.tab:hover{border-color:var(--green-dark);transform:translateY(-1px);box-shadow:0 6px 16px rgba(8,38,54,.12)}
-.tab[aria-selected="true"]{background:var(--green);color:#fff;box-shadow:0 6px 16px rgba(8,38,54,.16)}
-.tab[aria-selected="true"]:hover{transform:none}
-.tab:focus-visible{outline:3px solid rgba(11,90,122,.4);outline-offset:2px}
 .safety{background:#fdeeda;border:1px solid #f0d3ac;border-radius:10px;padding:12px 14px;font-size:15.5px;margin-bottom:18px}
 form{display:block}
 .f{margin-bottom:16px}
@@ -86,3 +80,19 @@ fieldset.f{border:0;padding:0;margin:0 0 16px}
 .res-list li{margin-bottom:8px}
 .res-list a{font-weight:600;transition:color .18s ease}
 .res-list a:hover{color:var(--green-dark)}
+
+/* ONE form (Nov 10, 2026) — the ICC data card is the hero form; the
+   dumping report is a collapsed secondary block inside the same form,
+   and volunteering is a compact name-and-email section on the same page.
+   Light-locked: no dark-mode variant anywhere. */
+.priority-note{display:flex;gap:8px;align-items:flex-start;background:#fdf3df;border:1px solid #f0d3ac;border-radius:10px;padding:12px 14px;font-size:15.5px;font-weight:700;color:var(--green-dark);margin:0 0 14px}
+.icc{border:2px solid var(--green);box-shadow:var(--shadow)}
+.icc h2{font-size:26px}
+details.secondary{border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:26px 0 8px;background:var(--surface2)}
+details.secondary summary{cursor:pointer;font-weight:700;font-size:17px}
+details.secondary summary:focus-visible{outline:3px solid rgba(11,90,122,.4);outline-offset:2px}
+details.secondary .safety{margin:14px 0 18px}
+.vol-compact{border:1px solid var(--line);border-radius:12px;padding:18px;margin:26px 0 8px;background:#fff}
+.vol-compact h2{font-family:"Zilla Slab",serif;font-size:24px;line-height:1.2;letter-spacing:-.01em;margin:0 0 8px;color:var(--ink);position:relative;padding-bottom:14px}
+.vol-compact h2::after{content:"";position:absolute;left:2px;bottom:0;width:76px;height:4px;border-radius:2px;background:linear-gradient(90deg,var(--crimson),var(--gold))}
+.vol-intro{font-size:15.5px;color:var(--muted);margin:0 0 16px}

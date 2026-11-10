@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="color-scheme" content="light">
-<title>Báo tin đổ rác hoặc đăng ký tình nguyện — Coast Strong</title>
+<title>Thẻ dữ liệu dọn dẹp — Coast Strong</title>
 <meta name="description" content="Hãy cho đội ngũ Coast Strong biết về việc đổ rác hoặc một nơi cần giúp đỡ, hoặc đăng ký tình nguyện — bằng ngôn ngữ của bạn. Mẫu đơn sẽ soạn sẵn một email trong ứng dụng email của chính bạn.">
 <link rel="icon" href="/icon.webp" type="image/webp">
 <link rel="canonical" href="https://228coaststrong.com/vi/intake/">
@@ -43,8 +43,8 @@
 
   <div class="wrap">
     <span class="kicker">Mission Mother Earth · Bayou Watch</span>
-    <h1>Thấy điều gì? Hãy lên tiếng. Muốn giúp đỡ? Hãy giơ tay.</h1>
-    <p class="sub">Hai mẫu đơn ngắn, bằng ngôn ngữ của bạn. Cả hai mẫu đều không tự gửi đi điều gì: khi hoàn tất, trang này sẽ soạn sẵn tin nhắn của bạn và mở nó trong ứng dụng email của chính bạn, gửi tới đội ngũ — bạn là người nhấn nút gửi ở đó. Các câu trả lời có sẵn được dịch sang tiếng Anh để đội ngũ xử lý nhanh; mọi điều bạn tự viết sẽ đi nguyên từng chữ, đúng như bạn đã viết.</p>
+    <h1>Dọn sạch bờ biển rồi? Hãy ghi lại những gì bạn tìm thấy.</h1>
+    <p class="sub">Chỉ một mẫu đơn: thẻ dữ liệu của chiến dịch Dọn sạch Bờ biển Quốc tế. Số liệu của bạn sẽ được đưa vào Chỉ số Rác thải Đại dương. Không có gì tự gửi đi: khi hoàn tất, trang này sẽ soạn sẵn tin nhắn của bạn và mở nó trong ứng dụng email của chính bạn, gửi tới đội ngũ — bạn là người nhấn nút gửi ở đó. Các câu trả lời có sẵn được dịch sang tiếng Anh để đội ngũ xử lý nhanh; mọi điều bạn tự viết sẽ đi nguyên từng chữ, đúng như bạn đã viết.</p>
       <div class="cleanswell">Sắp ra ngoài dọn dẹp? Hãy ghi lại rác bạn thu gom trong Clean Swell — ứng dụng miễn phí của Ocean Conservancy. Số liệu của bạn sẽ được tải thẳng lên cơ sở dữ liệu rác đại dương toàn cầu và góp vào Ocean Trash Index. <a href="https://oceanconservancy.org/cleanswell">Tải Clean Swell</a></div>
     <p class="glory">Hàng xóm cùng bảo vệ nguồn nước, hải sản và bờ biển mà con cháu chúng ta sẽ thừa hưởng. Mọi vinh quang thuộc về Chúa, mọi công lao thuộc về cộng đồng.</p>
   </div>
@@ -52,55 +52,10 @@
 <main id="main-content">
   <div class="wrap">
     <div class="card">
-      <div class="tabs" role="tablist">
-        <button type="button" class="tab" id="tabReport" role="tab" aria-selected="true">Báo tin đổ rác / một nơi cần giúp đỡ</button>
-        <button type="button" class="tab" id="tabVolunteer" role="tab" aria-selected="false">Đăng ký tình nguyện</button>
-      </div>
-      <div class="err" id="errBox" role="alert">Vui lòng điền các mục có dấu * để đội ngũ có thể dùng tin nhắn của bạn.</div>
+      <div class="err" id="errBox" role="alert">Chưa có gì để gửi — hãy thêm số liệu dọn dẹp ở trên, hoặc mở mục “Chỉ muốn báo cáo đổ rác?” bên dưới và cho chúng tôi biết bạn đã thấy gì và ở đâu.</div>
 
       <form id="formReport" novalidate>
-        <div class="safety">Hãy giữ an toàn: đừng bao giờ tiếp cận người đang đổ rác, và đừng chạm vào rác thải có thể sắc nhọn, hóa chất hoặc điện. Chỉ cần chụp ảnh từ khoảng cách an toàn là đủ. Nếu có ai gặp nguy hiểm, hãy gọi 911 trước.</div>
-        <div class="f">
-          <label for="rWhat">Bạn đã thấy gì? <span class="req" aria-hidden="true">*</span></label>
-          <select id="rWhat" required>
-              <option value="" data-en="">Chọn…</option>
-              <option value="Đang đổ rác ngay lúc này" data-en="Dumping happening right now">Đang đổ rác ngay lúc này</option>
-              <option value="Rác mới bị đổ" data-en="Fresh dumped debris">Rác mới bị đổ</option>
-              <option value="Rác thải dưới nước" data-en="Debris in the water">Rác thải dưới nước</option>
-              <option value="Lốp xe" data-en="Tires">Lốp xe</option>
-              <option value="Thiết bị gia dụng hoặc đồ nội thất" data-en="Appliances or furniture">Thiết bị gia dụng hoặc đồ nội thất</option>
-              <option value="Rác thải xây dựng" data-en="Construction debris">Rác thải xây dựng</option>
-              <option value="Thứ khác" data-en="Something else">Thứ khác</option>
-          </select>
-        </div>
-        <div class="f">
-          <label for="rWhere">Ở đâu? <span class="req" aria-hidden="true">*</span></label>
-          <input type="text" id="rWhere" required>
-          <p class="hint">Địa chỉ đường, góc đường hoặc địa điểm dễ nhận biết gần nhất — hoặc dán vị trí từ ứng dụng bản đồ của bạn.</p>
-        </div>
-        <div class="f">
-          <label for="rWhen">Bạn thấy khi nào?</label>
-          <select id="rWhen">
-              <option value="" data-en="">Chọn…</option>
-              <option value="Vừa mới đây" data-en="Just now">Vừa mới đây</option>
-              <option value="Hôm nay, lúc sớm hơn" data-en="Earlier today">Hôm nay, lúc sớm hơn</option>
-              <option value="Hôm qua" data-en="Yesterday">Hôm qua</option>
-              <option value="Vài ngày trước" data-en="A few days ago">Vài ngày trước</option>
-          </select>
-        </div>
-        <div class="f">
-          <label for="rDetails">Còn điều gì đội ngũ cần biết nữa không?</label>
-          <textarea id="rDetails" placeholder="Hãy viết bằng lời của bạn — chúng tôi giữ nguyên đúng như bạn viết."></textarea>
-        </div>
-        <div class="f">
-          <label for="rName">Tên của bạn (không bắt buộc)</label>
-          <input type="text" id="rName" autocomplete="name">
-        </div>
-        <div class="f">
-          <label for="rContact">Email hoặc số điện thoại (không bắt buộc — chỉ khi bạn muốn được hồi âm)</label>
-          <input type="text" id="rContact" autocomplete="email">
-        </div>
-      <!-- ICC data-card strings below: DRAFT translation — needs a native-speaker check before this is called final. The email ticket always uses the English data-en values, so the data stays correct in every language. -->
+      <p class="priority-note">★ Mẫu đơn quan trọng nhất — số liệu của bạn nuôi Chỉ số Rác thải Đại dương.</p>
       <section class="icc">
         <h2>Dữ liệu dọn dẹp — Phiếu dữ liệu Dọn dẹp Bờ biển Quốc tế</h2>
         <p class="icc-intro">Đang đếm những gì bạn đã nhặt? Đây là những vật phẩm chính xác trong Phiếu Dữ liệu Rác Đại dương cho Tình nguyện viên của Ocean Conservancy (2021). Chỉ ghi số ở những mục bạn đã đếm — để trống nghĩa là số không. Số liệu của bạn sẽ đi kèm trong email bằng tiếng Anh, sẵn sàng nhập vào Clean Swell hoặc gửi cho Ocean Conservancy tại cleanup@oceanconservancy.org.</p>
@@ -311,50 +266,72 @@
             </div>
           </div>
         </fieldset>
+        <div class="f">
+          <label for="rName">Tên của bạn (không bắt buộc)</label>
+          <input type="text" id="rName" autocomplete="name">
+        </div>
+        <div class="f">
+          <label for="rContact">Email hoặc số điện thoại (không bắt buộc — chỉ khi bạn muốn được hồi âm)</label>
+          <input type="text" id="rContact" autocomplete="email">
+        </div>
       </section>
-        <button type="submit" class="btn btn-solid">Soạn tin nhắn của tôi</button>
-      </form>
-
-      <form id="formVolunteer" class="hidden" novalidate>
+      <details class="secondary" id="dumpDetails">
+        <summary>Chỉ muốn báo cáo đổ rác? Vài thông tin nhanh</summary>
+        <div class="safety">Hãy giữ an toàn: đừng bao giờ tiếp cận người đang đổ rác, và đừng chạm vào rác thải có thể sắc nhọn, hóa chất hoặc điện. Chỉ cần chụp ảnh từ khoảng cách an toàn là đủ. Nếu có ai gặp nguy hiểm, hãy gọi 911 trước.</div>
         <div class="f">
-          <label for="vName">Tên của bạn <span class="req" aria-hidden="true">*</span></label>
-          <input type="text" id="vName" autocomplete="name" required>
-        </div>
-        <div class="f">
-          <label for="vContact">Email hoặc số điện thoại <span class="req" aria-hidden="true">*</span></label>
-          <input type="text" id="vContact" autocomplete="email" required>
-        </div>
-        <div class="f">
-          <label for="vCity">Thành phố của bạn</label>
-          <input type="text" id="vCity" autocomplete="address-level2">
-        </div>
-        <fieldset class="f">
-          <legend>Bạn muốn giúp theo cách nào? <span class="req" aria-hidden="true">*</span></legend>
-              <label class="check"><input type="checkbox" class="vHelp" value="Đội dọn dẹp" data-en="Cleanup crew"> Đội dọn dẹp</label>
-              <label class="check"><input type="checkbox" class="vHelp" value="Chụp ảnh và ghi chép" data-en="Photos and documentation"> Chụp ảnh và ghi chép</label>
-              <label class="check"><input type="checkbox" class="vHelp" value="Vật tư và vận chuyển" data-en="Supplies and hauling"> Vật tư và vận chuyển</label>
-              <label class="check"><input type="checkbox" class="vHelp" value="Truyền thông và lan tỏa" data-en="Outreach and spreading the word"> Truyền thông và lan tỏa</label>
-              <label class="check"><input type="checkbox" class="vHelp" value="Dự án học sinh" data-en="Student projects"> Dự án học sinh</label>
-              <label class="check"><input type="checkbox" class="vHelp" value="Đưa một lớp học hoặc nhóm đến" data-en="Bring a classroom or group"> Đưa một lớp học hoặc nhóm đến</label>
-              <label class="check"><input type="checkbox" class="vHelp" value="Cách khác" data-en="Something else"> Cách khác</label>
-        </fieldset>
-        <div class="f">
-          <label for="vAvail">Bạn thường rảnh khi nào?</label>
-          <select id="vAvail">
+          <label for="rWhat">Bạn đã thấy gì? <span class="req" aria-hidden="true">*</span></label>
+          <select id="rWhat" required>
               <option value="" data-en="">Chọn…</option>
-              <option value="Buổi sáng ngày thường" data-en="Weekday mornings">Buổi sáng ngày thường</option>
-              <option value="Buổi chiều ngày thường" data-en="Weekday afternoons">Buổi chiều ngày thường</option>
-              <option value="Buổi tối ngày thường" data-en="Weekday evenings">Buổi tối ngày thường</option>
-              <option value="Ngày cuối tuần" data-en="Weekend days">Ngày cuối tuần</option>
-              <option value="Thay đổi thất thường — cứ hỏi tôi" data-en="It varies — ask me">Thay đổi thất thường — cứ hỏi tôi</option>
+              <option value="Đang đổ rác ngay lúc này" data-en="Dumping happening right now">Đang đổ rác ngay lúc này</option>
+              <option value="Rác mới bị đổ" data-en="Fresh dumped debris">Rác mới bị đổ</option>
+              <option value="Rác thải dưới nước" data-en="Debris in the water">Rác thải dưới nước</option>
+              <option value="Lốp xe" data-en="Tires">Lốp xe</option>
+              <option value="Thiết bị gia dụng hoặc đồ nội thất" data-en="Appliances or furniture">Thiết bị gia dụng hoặc đồ nội thất</option>
+              <option value="Rác thải xây dựng" data-en="Construction debris">Rác thải xây dựng</option>
+              <option value="Thứ khác" data-en="Something else">Thứ khác</option>
           </select>
         </div>
         <div class="f">
-          <label for="vNotes">Còn điều gì bạn muốn chúng tôi biết nữa không?</label>
-          <textarea id="vNotes" placeholder="Hãy viết bằng lời của bạn — chúng tôi giữ nguyên đúng như bạn viết."></textarea>
+          <label for="rWhere">Ở đâu? <span class="req" aria-hidden="true">*</span></label>
+          <input type="text" id="rWhere" required>
+          <p class="hint">Địa chỉ đường, góc đường hoặc địa điểm dễ nhận biết gần nhất — hoặc dán vị trí từ ứng dụng bản đồ của bạn.</p>
         </div>
+        <div class="f">
+          <label for="rWhen">Bạn thấy khi nào?</label>
+          <select id="rWhen">
+              <option value="" data-en="">Chọn…</option>
+              <option value="Vừa mới đây" data-en="Just now">Vừa mới đây</option>
+              <option value="Hôm nay, lúc sớm hơn" data-en="Earlier today">Hôm nay, lúc sớm hơn</option>
+              <option value="Hôm qua" data-en="Yesterday">Hôm qua</option>
+              <option value="Vài ngày trước" data-en="A few days ago">Vài ngày trước</option>
+          </select>
+        </div>
+        <div class="f">
+          <label for="rDetails">Còn điều gì đội ngũ cần biết nữa không?</label>
+          <textarea id="rDetails" placeholder="Hãy viết bằng lời của bạn — chúng tôi giữ nguyên đúng như bạn viết."></textarea>
+        </div>
+      </details>
         <button type="submit" class="btn btn-solid">Soạn tin nhắn của tôi</button>
       </form>
+
+      <section class="vol-compact" id="volSection">
+        <h2>Muốn làm tình nguyện viên? Hãy giơ tay.</h2>
+        <p class="vol-intro">Chỉ cần tên và email của bạn là đủ để tham gia đội ngũ.</p>
+        <form id="formVolunteer" novalidate>
+          <div class="frow">
+            <div class="f">
+              <label for="vName">Tên của bạn <span class="req" aria-hidden="true">*</span></label>
+              <input type="text" id="vName" autocomplete="name" required>
+            </div>
+            <div class="f">
+              <label for="vContact">Email hoặc số điện thoại <span class="req" aria-hidden="true">*</span></label>
+              <input type="text" id="vContact" autocomplete="email" required>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-solid">Tôi giơ tay</button>
+        </form>
+      </section>
+
 
       <!-- ICC data-card strings below: DRAFT translation — needs a native-speaker check before this is called final. The email ticket always uses the English data-en values, so the data stays correct in every language. -->
       <section class="resources">
