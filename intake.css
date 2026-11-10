@@ -45,7 +45,7 @@ form{display:block}
 .f{margin-bottom:16px}
 .f label,.f legend{display:block;font-weight:600;margin-bottom:6px;font-size:16px}
 .f .hint{font-size:14px;color:var(--muted);margin:4px 0 0}
-.f input[type="text"],.f input[type="email"],.f input[type="tel"],.f select,.f textarea{
+.f input[type="text"],.f input[type="email"],.f input[type="tel"],.f input[type="number"],.f input[type="date"],.f select,.f textarea{
   width:100%;font:inherit;font-size:16px;padding:12px;border:1px solid var(--line);border-radius:10px;background:#fff;color:var(--ink)}
 .f textarea{min-height:96px;resize:vertical}
 fieldset.f{border:0;padding:0;margin:0 0 16px}
@@ -66,3 +66,27 @@ fieldset.f{border:0;padding:0;margin:0 0 16px}
 footer{border-top:1px solid var(--line);padding:26px 0 34px;text-align:center;color:var(--muted)}
 footer .hash{font-family:"Barlow Semi Condensed",sans-serif;font-weight:700;letter-spacing:.18em;color:var(--green);font-size:18px}
 .hidden{display:none!important}
+
+/* ICC data card (Nov 10, 2026 — International Coastal Cleanup data card) */
+.cleanswell{background:#e9f1f4;border:1px solid #bcd3dc;border-radius:10px;padding:12px 14px;font-size:15.5px;margin-bottom:18px}
+.cleanswell a{font-weight:700}
+.icc{border:1px solid var(--line);border-radius:12px;padding:18px;margin:22px 0 6px;background:#fff}
+.icc h2{font-family:"Zilla Slab",serif;font-size:24px;line-height:1.2;margin:0 0 8px;color:var(--ink)}
+.icc-intro{font-size:15.5px;color:var(--muted);margin:0 0 16px}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:0 14px}
+@media(max-width:640px){.frow{grid-template-columns:1fr}}
+.icc-group{border:1px solid var(--line);border-radius:10px;padding:14px;margin:0 0 16px}
+.icc-group legend{font-weight:700;padding:0 6px;font-size:16px}
+.counts{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:6px 16px}
+.count{display:flex;align-items:center;justify-content:space-between;gap:10px;font-weight:500;font-size:15.5px}
+.count input[type="number"]{width:88px;flex:none;padding:8px 10px;border:1px solid var(--line);border-radius:8px;font:inherit;font-size:16px;background:#fff;color:var(--ink)}
+.other-row{display:grid;grid-template-columns:1fr 100px;gap:10px;margin-bottom:8px}
+.other-row input{width:100%;font:inherit;font-size:16px;padding:12px;border:1px solid var(--line);border-radius:10px;background:#fff;color:var(--ink)}
+
+/* Cleanup resources (Nov 10, 2026 — links Sarah Weller shared) */
+.resources{border:1px solid var(--line);border-radius:12px;padding:18px;margin:22px 0 6px;background:#fff}
+.resources h2{font-family:"Zilla Slab",serif;font-size:24px;line-height:1.2;margin:0 0 8px;color:var(--ink)}
+.resources p{font-size:15.5px;color:var(--muted);margin:0 0 12px}
+.res-list{list-style:none;margin:0;padding:0}
+.res-list li{margin-bottom:8px}
+.res-list a{font-weight:600}

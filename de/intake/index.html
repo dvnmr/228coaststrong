@@ -40,6 +40,7 @@
     <span class="kicker">Mission Mother Earth · Bayou Watch</span>
     <h1>Etwas gesehen? Sag es uns. Lust zu helfen? Melde dich.</h1>
     <p>Zwei kurze Formulare, in deiner Sprache. Keines davon sendet von selbst etwas ab: Am Ende schreibt diese Seite deine Nachricht und öffnet sie in deiner eigenen E-Mail-App, adressiert an das Team — du drückst dort auf „Senden“. Die festen Antworten werden ins Englische übersetzt, damit das Team schnell handeln kann; alles, was du selbst schreibst, bleibt Wort für Wort erhalten, genau wie du es geschrieben hast.</p>
+      <div class="cleanswell">Gehst du raus zum Aufräumen? Erfasse deinen Müll in Clean Swell — der kostenlosen App von Ocean Conservancy. Deine Zählungen landen direkt in der weltweiten Datenbank für Meeresmüll und fließen in den Ocean Trash Index ein. <a href="https://oceanconservancy.org/cleanswell">Clean Swell herunterladen</a></div>
     <p class="glory">Nachbarn schützen unser Wasser, unsere Meeresfrüchte und die Küste, die unsere Kinder erben werden. Alle Ehre gebührt Gott, aller Verdienst der Gemeinschaft.</p>
   </div>
 </header>
@@ -94,6 +95,218 @@
           <label for="rContact">E-Mail oder Telefon (freiwillig — nur, wenn du eine Antwort möchtest)</label>
           <input type="text" id="rContact" autocomplete="email">
         </div>
+      <!-- ICC data-card strings below: DRAFT translation — needs a native-speaker check before this is called final. The email ticket always uses the English data-en values, so the data stays correct in every language. -->
+      <section class="icc">
+        <h2>Daten der Säuberung — Datenkarte der Internationalen Küstensäuberung</h2>
+        <p class="icc-intro">Zählst du, was du aufgesammelt hast? Das sind die genauen Gegenstände auf Ocean Conservancy's Datenkarte für Freiwillige zu Meeresmüll (2021). Trage Zahlen nur dort ein, wo du gezählt hast — leer bedeutet null. Deine Zählungen stehen in deiner E-Mail auf Englisch, bereit zur Eingabe in Clean Swell oder zum Senden an Ocean Conservancy unter cleanup@oceanconservancy.org.</p>
+        <div class="f">
+          <label for="iDate">Datum der Säuberung</label>
+          <input type="date" id="iDate">
+        </div>
+        <div class="f">
+          <label for="iSite">Name des Säuberungsortes</label>
+          <input type="text" id="iSite">
+        </div>
+        <div class="frow">
+          <div class="f">
+            <label for="iEnv">Art des Umfelds</label>
+            <select id="iEnv">
+              <option value="" data-en="">Wählen…</option>
+              <option value="Salzwasser (Ozean/Bucht/Ästuar)" data-en="Saltwater (Ocean/Bay/Estuary)">Salzwasser (Ozean/Bucht/Ästuar)</option>
+              <option value="Süßwasser (Fluss/Bach/See)" data-en="Freshwater (River/Stream/Lake)">Süßwasser (Fluss/Bach/See)</option>
+              <option value="Binnenland (kein Gewässer vorhanden)" data-en="Inland (No Water Body Present)">Binnenland (kein Gewässer vorhanden)</option>
+            </select>
+          </div>
+          <div class="f">
+            <label for="iMode">Art der Datenerfassung</label>
+            <select id="iMode">
+              <option value="" data-en="">Wählen…</option>
+              <option value="Land (Strand, Küste oder Binnenland)" data-en="Land (beach, shoreline or inland)">Land (Strand, Küste oder Binnenland)</option>
+              <option value="Unter Wasser" data-en="Underwater">Unter Wasser</option>
+              <option value="Wasserfahrzeug (Motorboot, Segelboot, Kajak oder Kanu)" data-en="Watercraft (powerboat, sailboat, kayak or canoe)">Wasserfahrzeug (Motorboot, Segelboot, Kajak oder Kanu)</option>
+            </select>
+          </div>
+        </div>
+        <fieldset class="f">
+          <legend>Freiwillige auf dieser Karte</legend>
+          <div class="frow">
+            <div class="f">
+              <label for="iAdults">Erwachsene</label>
+              <input type="number" id="iAdults" min="0" step="1" inputmode="numeric">
+            </div>
+            <div class="f">
+              <label for="iChildren">Kinder (unter 12)</label>
+              <input type="number" id="iChildren" min="0" step="1" inputmode="numeric">
+            </div>
+          </div>
+        </fieldset>
+        <div class="f">
+          <label for="iUnusual">Ungewöhnlichster gefundener Gegenstand</label>
+          <input type="text" id="iUnusual">
+        </div>
+        <fieldset class="icc-group">
+          <legend>Am häufigsten zu findende Gegenstände</legend>
+          <div class="counts">
+            <label class="count"><span>Einkaufstüten (Plastik)</span><input type="number" class="iccCount" data-en="Grocery bags (plastic)" data-group="Most likely to find items" min="0" step="1" inputmode="numeric"></label>
+            <label class="count"><span>Andere Tüten (Plastik)</span><input type="number" class="iccCount" data-en="Other bags (plastic)" data-group="Most likely to find items" min="0" step="1" inputmode="numeric"></label>
+            <label class="count"><span>Getränkeflaschen (Glas)</span><input type="number" class="iccCount" data-en="Beverage bottles (glass)" data-group="Most likely to find items" min="0" step="1" inputmode="numeric"></label>
+            <label class="count"><span>Getränkeflaschen (Plastik)</span><input type="number" class="iccCount" data-en="Beverage bottles (plastic)" data-group="Most likely to find items" min="0" step="1" inputmode="numeric"></label>
+            <label class="count"><span>Getränkedosen</span><input type="number" class="iccCount" data-en="Beverage cans" data-group="Most likely to find items" min="0" step="1" inputmode="numeric"></label>
+            <label class="count"><span>Getränkebeutel</span><input type="number" class="iccCount" data-en="Beverage sachets/pouches" data-group="Most likely to find items" min="0" step="1" inputmode="numeric"></label>
+            <label class="count"><span>Flaschenverschlüsse (Metall)</span><input type="number" class="iccCount" data-en="Bottle caps (metal)" data-group="Most likely to find items" min="0" step="1" inputmode="numeric"></label>
+            <label class="count"><span>Flaschenverschlüsse (Plastik)</span><input type="number" class="iccCount" data-en="Bottle caps (plastic)" data-group="Most likely to find items" min="0" step="1" inputmode="numeric"></label>
+            <label class="count"><span>Zigarettenstummel</span><input type="number" class="iccCount" data-en="Cigarette butts" data-group="Most likely to find items" min="0" step="1" inputmode="numeric"></label>
+            <label class="count"><span>Becher, Teller (Schaumstoff)</span><input type="number" class="iccCount" data-en="Cups, plates (foam)" data-group="Most likely to find items" min="0" step="1" inputmode="numeric"></label>
+            <label class="count"><span>Becher, Teller (Papier)</span><input type="number" class="iccCount" data-en="Cups, plates (paper)" data-group="Most likely to find items" min="0" step="1" inputmode="numeric"></label>
+            <label class="count"><span>Becher, Teller (Plastik)</span><input type="number" class="iccCount" data-en="Cups, plates (plastic)" data-group="Most likely to find items" min="0" step="1" inputmode="numeric"></label>
+            <label class="count"><span>Lebensmittelbehälter (Schaumstoff)</span><input type="number" class="iccCount" data-en="Food containers (foam)" data-group="Most likely to find items" min="0" step="1" inputmode="numeric"></label>
+            <label class="count"><span>Lebensmittelbehälter (Plastik)</span><input type="number" class="iccCount" data-en="Food containers (plastic)" data-group="Most likely to find items" min="0" step="1" inputmode="numeric"></label>
+            <label class="count"><span>Lebensmittelverpackungen (Süßigkeiten, Chips usw.)</span><input type="number" class="iccCount" data-en="Food wrappers (candy, chips, etc.)" data-group="Most likely to find items" min="0" step="1" inputmode="numeric"></label>
+            <label class="count"><span>Deckel (Plastik)</span><input type="number" class="iccCount" data-en="Lids (plastic)" data-group="Most likely to find items" min="0" step="1" inputmode="numeric"></label>
+            <label class="count"><span>Strohhalme/Rührstäbchen (Plastik)</span><input type="number" class="iccCount" data-en="Straws/stirrers (plastic)" data-group="Most likely to find items" min="0" step="1" inputmode="numeric"></label>
+            <label class="count"><span>Besteck (Plastik)</span><input type="number" class="iccCount" data-en="Utensils (plastic)" data-group="Most likely to find items" min="0" step="1" inputmode="numeric"></label>
+          </div>
+        </fieldset>
+        <fieldset class="icc-group">
+          <legend>Angeln und Bootfahren</legend>
+          <div class="counts">
+            <label class="count"><span>Leinen, Netze, Fallen, Seile usw.</span><input type="number" class="iccCount" data-en="Line, nets, traps, rope, etc." data-group="Fishing &amp; boating" min="0" step="1" inputmode="numeric"></label>
+            <label class="count"><span>Schaumstoffteile von Stegen</span><input type="number" class="iccCount" data-en="Foam dock pieces" data-group="Fishing &amp; boating" min="0" step="1" inputmode="numeric"></label>
+          </div>
+        </fieldset>
+        <fieldset class="icc-group">
+          <legend>Verpackungsmaterial</legend>
+          <div class="counts">
+            <label class="count"><span>Sixpackhalter</span><input type="number" class="iccCount" data-en="6-pack holders" data-group="Packaging material" min="0" step="1" inputmode="numeric"></label>
+            <label class="count"><span>Schaumstoffverpackung</span><input type="number" class="iccCount" data-en="Foam packaging" data-group="Packaging material" min="0" step="1" inputmode="numeric"></label>
+            <label class="count"><span>Andere Plastikflaschen (Öl, Bleichmittel usw.)</span><input type="number" class="iccCount" data-en="Other plastic bottles (oil, bleach, etc.)" data-group="Packaging material" min="0" step="1" inputmode="numeric"></label>
+            <label class="count"><span>Umreifungsbänder</span><input type="number" class="iccCount" data-en="Strapping bands" data-group="Packaging material" min="0" step="1" inputmode="numeric"></label>
+          </div>
+        </fieldset>
+        <fieldset class="icc-group">
+          <legend>Körperhygiene</legend>
+          <div class="counts">
+            <label class="count"><span>Kondome</span><input type="number" class="iccCount" data-en="Condoms" data-group="Personal hygiene" min="0" step="1" inputmode="numeric"></label>
+            <label class="count"><span>Wattestäbchen</span><input type="number" class="iccCount" data-en="Cotton bud sticks (swabs)" data-group="Personal hygiene" min="0" step="1" inputmode="numeric"></label>
+            <label class="count"><span>Windeln</span><input type="number" class="iccCount" data-en="Diapers" data-group="Personal hygiene" min="0" step="1" inputmode="numeric"></label>
+            <label class="count"><span>Handschuhe und Masken (PSA)</span><input type="number" class="iccCount" data-en="Gloves &amp; masks (PPE)" data-group="Personal hygiene" min="0" step="1" inputmode="numeric"></label>
+            <label class="count"><span>Spritzen</span><input type="number" class="iccCount" data-en="Syringes" data-group="Personal hygiene" min="0" step="1" inputmode="numeric"></label>
+            <label class="count"><span>Tampons und Applikatoren</span><input type="number" class="iccCount" data-en="Tampons &amp; applicators" data-group="Personal hygiene" min="0" step="1" inputmode="numeric"></label>
+          </div>
+        </fieldset>
+        <fieldset class="icc-group">
+          <legend>Illegale Entsorgung</legend>
+          <div class="counts">
+            <label class="count"><span>Haushaltsgeräte</span><input type="number" class="iccCount" data-en="Appliances" data-group="Illegal dumping" min="0" step="1" inputmode="numeric"></label>
+            <label class="count"><span>Baumaterialien</span><input type="number" class="iccCount" data-en="Construction materials" data-group="Illegal dumping" min="0" step="1" inputmode="numeric"></label>
+            <label class="count"><span>Reifen</span><input type="number" class="iccCount" data-en="Tires" data-group="Illegal dumping" min="0" step="1" inputmode="numeric"></label>
+          </div>
+        </fieldset>
+        <fieldset class="icc-group">
+          <legend>Andere Gegenstände/Abfälle</legend>
+          <div class="counts">
+            <label class="count"><span>Luftballons</span><input type="number" class="iccCount" data-en="Balloons" data-group="Other items/debris" min="0" step="1" inputmode="numeric"></label>
+            <label class="count"><span>Kleidung</span><input type="number" class="iccCount" data-en="Clothing" data-group="Other items/debris" min="0" step="1" inputmode="numeric"></label>
+            <label class="count"><span>E-Zigaretten</span><input type="number" class="iccCount" data-en="E-cigarettes" data-group="Other items/debris" min="0" step="1" inputmode="numeric"></label>
+            <label class="count"><span>Elektroschrott (Telefone, Batterien)</span><input type="number" class="iccCount" data-en="Electronic waste (phones, batteries)" data-group="Other items/debris" min="0" step="1" inputmode="numeric"></label>
+            <label class="count"><span>Schuhwerk (Schuhe/Hausschuhe)</span><input type="number" class="iccCount" data-en="Footwear (shoes/slippers)" data-group="Other items/debris" min="0" step="1" inputmode="numeric"></label>
+            <label class="count"><span>Papiertüten</span><input type="number" class="iccCount" data-en="Paper bags" data-group="Other items/debris" min="0" step="1" inputmode="numeric"></label>
+            <label class="count"><span>Tabakprodukte (Feuerzeuge, Zigarrenstummel, Papier)</span><input type="number" class="iccCount" data-en="Tobacco products (lighters, cigar tips, wrap)" data-group="Other items/debris" min="0" step="1" inputmode="numeric"></label>
+            <label class="count"><span>Spielzeug</span><input type="number" class="iccCount" data-en="Toys" data-group="Other items/debris" min="0" step="1" inputmode="numeric"></label>
+            <label class="count"><span>Anderer Plastikabfall</span><input type="number" class="iccCount" data-en="Other plastic waste" data-group="Other items/debris" min="0" step="1" inputmode="numeric"></label>
+            <label class="count"><span>Anderer Abfall (Metall, Papier usw.)</span><input type="number" class="iccCount" data-en="Other waste (metal, paper, etc.)" data-group="Other items/debris" min="0" step="1" inputmode="numeric"></label>
+          </div>
+        </fieldset>
+        <fieldset class="icc-group">
+          <legend>Kleiner Müll unter 2,5 cm</legend>
+          <div class="counts">
+            <label class="count"><span>Plastik-/Schaumstoffstücke</span><input type="number" class="iccCount" data-en="Plastic/foam pieces" data-group="Tiny trash less than 2.5 cm" min="0" step="1" inputmode="numeric"></label>
+          </div>
+        </fieldset>
+        <fieldset class="icc-group">
+          <legend>Andere, nicht aufgeführte Gegenstände</legend>
+          <div class="other-row"><input type="text" class="iccOtherName" placeholder="Gegenstand"><input type="number" class="iccOtherCount" min="0" step="1" inputmode="numeric" aria-label="Anzahl"></div>
+          <div class="other-row"><input type="text" class="iccOtherName" placeholder="Gegenstand"><input type="number" class="iccOtherCount" min="0" step="1" inputmode="numeric" aria-label="Anzahl"></div>
+          <div class="other-row"><input type="text" class="iccOtherName" placeholder="Gegenstand"><input type="number" class="iccOtherCount" min="0" step="1" inputmode="numeric" aria-label="Anzahl"></div>
+          <div class="other-row"><input type="text" class="iccOtherName" placeholder="Gegenstand"><input type="number" class="iccOtherCount" min="0" step="1" inputmode="numeric" aria-label="Anzahl"></div>
+          <div class="other-row"><input type="text" class="iccOtherName" placeholder="Gegenstand"><input type="number" class="iccOtherCount" min="0" step="1" inputmode="numeric" aria-label="Anzahl"></div>
+        </fieldset>
+        <fieldset class="icc-group">
+          <legend>Totes/verletztes Tier</legend>
+          <div class="f">
+            <label for="iAnimalType">Tierart</label>
+            <input type="text" id="iAnimalType">
+          </div>
+          <div class="frow">
+            <div class="f">
+              <label for="iAnimalStatus">Zustand</label>
+              <select id="iAnimalStatus">
+                <option value="" data-en="">Wählen…</option>
+                <option value="Tot" data-en="Dead">Tot</option>
+                <option value="Verletzt" data-en="Injured">Verletzt</option>
+              </select>
+            </div>
+            <div class="f">
+              <label for="iAnimalEntangled">Verfangen</label>
+              <select id="iAnimalEntangled">
+                <option value="" data-en="">Wählen…</option>
+                <option value="Ja" data-en="Yes">Ja</option>
+                <option value="Nein" data-en="No">Nein</option>
+              </select>
+            </div>
+          </div>
+          <div class="f">
+            <label for="iAnimalItem">Art des Verfangungsgegenstands</label>
+            <input type="text" id="iAnimalItem">
+          </div>
+        </fieldset>
+        <fieldset class="icc-group">
+          <legend>Zusammenfassung der Säuberung</legend>
+          <div class="f">
+            <label for="iBags">Anzahl gefüllter Müllsäcke</label>
+            <input type="number" id="iBags" min="0" step="1" inputmode="numeric">
+          </div>
+          <div class="frow">
+            <div class="f">
+              <label for="iWeight">Gewicht des gesammelten Mülls</label>
+              <input type="number" id="iWeight" min="0" step="1" inputmode="numeric">
+            </div>
+            <div class="f">
+              <label for="iWeightUnit">Einheit</label>
+              <select id="iWeightUnit">
+                <option value="lbs" data-en="lbs">lbs</option>
+                <option value="kgs" data-en="kgs">kgs</option>
+              </select>
+            </div>
+          </div>
+          <div class="frow">
+            <div class="f">
+              <label for="iDistance">Gereinigte Strecke</label>
+              <input type="number" id="iDistance" min="0" step="1" inputmode="numeric">
+            </div>
+            <div class="f">
+              <label for="iDistanceUnit">Einheit</label>
+              <select id="iDistanceUnit">
+                <option value="miles" data-en="miles">miles</option>
+                <option value="km" data-en="km">km</option>
+              </select>
+            </div>
+          </div>
+          <div class="frow">
+            <div class="f">
+              <label for="iArea">Gereinigte Fläche</label>
+              <input type="number" id="iArea" min="0" step="1" inputmode="numeric">
+            </div>
+            <div class="f">
+              <label for="iAreaUnit">Einheit</label>
+              <select id="iAreaUnit">
+                <option value="miles²" data-en="miles²">miles²</option>
+                <option value="km²" data-en="km²">km²</option>
+              </select>
+            </div>
+          </div>
+        </fieldset>
+      </section>
         <button type="submit" class="btn btn-solid">Meine Nachricht erstellen</button>
       </form>
 
@@ -138,6 +351,20 @@
         <button type="submit" class="btn btn-solid">Meine Nachricht erstellen</button>
       </form>
 
+      <!-- ICC data-card strings below: DRAFT translation — needs a native-speaker check before this is called final. The email ticket always uses the English data-en values, so the data stays correct in every language. -->
+      <section class="resources">
+        <h2>Säuberungsmaterial — von Ocean Conservancy</h2>
+        <p>Sarah Weller, Associate Director der International Coastal Cleanup bei Ocean Conservancy, hat diese Materialien mit Coast Strong geteilt. Sie zeigen genau, wie man sammelt und benennt, was man findet.</p>
+        <ul class="res-list">
+          <li><a href="https://www.dropbox.com/scl/fo/kq7wrv5tbjw16xmgamxtu/ADQpBpc4N1XduarSoXx8dqU?rlkey=til00776ge3qwlioo4p9ifvyv&amp;st=e6021z3n&amp;dl=0" target="_blank" rel="noopener">Anleitungen zur Datenerfassung bei Säuberungen — wie man Daten sammelt und erfasst</a></li>
+          <li><a href="https://www.dropbox.com/scl/fi/ntuqitrnjqb95881rgs3g/2025_ItemGlossary_Guide.pdf?rlkey=jti9v4ibi1v0hkj1a0m4zezp7&amp;st=qdy5e2xi&amp;dl=0" target="_blank" rel="noopener">Glossar der Müllgegenstände (2025) — was jeder Eintrag auf der Datenkarte bedeutet</a></li>
+          <li><a href="https://www.youtube.com/watch?v=Xikg9piD5c4&amp;t=6s" target="_blank" rel="noopener">Clean-Swell-App — 7-minütiges Tutorial-Video</a></li>
+          <li><a href="https://oceanconservancy.org/cleanswell" target="_blank" rel="noopener">Clean Swell — die kostenlose App von Ocean Conservancy</a></li>
+          <li><a href="https://www.dropbox.com/scl/fo/btqgb1h5yr2tzlh72jdlm/AITStLzIkyfTQgutSVeW8xk?rlkey=01xp0h1mfwxliqlkd08wct1ke&amp;st=5zlapdgh&amp;dl=0" target="_blank" rel="noopener">Koordinator-Toolkit 2026 (ICC-Newsletter Oktober 2026)</a></li>
+          <li><a href="https://bit.ly/ICC_CoordinatorToolkits" target="_blank" rel="noopener">ICC-Koordinator-Toolkits — aktuelle und frühere Toolkits</a></li>
+          <li><a href="https://www.facebook.com/groups/coastalcleanup" target="_blank" rel="noopener">Facebook-Gruppe der ICC-Koordinatoren</a></li>
+        </ul>
+      </section>
       <section id="ticketSection" aria-live="polite">
         <h2>Deine Nachricht — bereit zum Senden</h2>
         <p>Das ist genau die Nachricht, die das Team erhält. Die festen Antworten erscheinen auf Englisch; deine eigenen Worte bleiben exakt so erhalten, wie du sie geschrieben hast.</p>
