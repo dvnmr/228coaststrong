@@ -372,6 +372,9 @@ details.org summary{min-height:44px;flex-wrap:wrap}details.org summary .tagchip{
 <style id="coast-approved-appearance-20261027">
 /* Approved screenshot appearance: fixed coastal-blue hero in every color mode. */
 :root{--gold:#fa6b12;--on-gold:#102b3a}
+/* fix-all: separator between brand name and Bayou Watch, matching the
+   English homepage's literal ' · ' (translated brands jammed them together). */
+.brand .brand-watch::before{content:" \00B7 ";color:var(--ink)}
 nav.top{background:#fbfaf7}
 .hero{background:#082e40}
 .hero .veil{background:linear-gradient(180deg,rgba(5,39,55,.86) 0%,rgba(5,39,55,.90) 62%,rgba(5,39,55,.95) 100%)}
@@ -385,6 +388,10 @@ nav.top{background:#fbfaf7}
 @media(max-width:740px){
  .language-switch{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px 8px;justify-content:stretch;padding:4px 0 8px}
  .language-switch a{min-width:0;min-height:44px;padding:10px 4px;font-size:14px;gap:10px;white-space:nowrap}
+ /* fix-all: on narrow screens the language row lives inside the menu, so the
+    sticky header is one slim row (brand + Menu) until the menu opens. */
+ .menu-ready .language-switch{display:none}
+ .menu-ready nav.top.nav-open .language-switch{display:grid;order:5}
  .hero .wrap{padding-top:34px}
  .hero-brand{font-size:25px;margin-top:20px}
 }
@@ -434,6 +441,7 @@ nav.top{background:#fbfaf7}
 <section class="quick-start" id="start"><div class="wrap"><p class="eyebrow">Start here</p><p class="formnote">Many hands. One coast. Stronger together.</p><div class="start-grid"><a class="start-card" href="#signup"><span class="start-number">01</span><strong>Find your part</strong><span>Students, teachers, families and neighbors: choose a way to help.</span></a><a class="start-card" href="#kids"><span class="start-number">02</span><strong>Learn together</strong><span>Try a coast-care activity with a parent or teacher.</span></a><a class="start-card" href="#journal"><span class="start-number">03</span><strong>Follow the work</strong><span>Read practical guides, share ideas and see what comes next.</span></a></div></div></section>
 
 <section class="coast-flags" aria-labelledby="coast-flags-heading">
+  <div class="wrap">
   <div class="coast-flags__heading">
     <p class="coast-flags__eyebrow">Coast Strong</p>
     <h2 id="coast-flags-heading">Our home. Our country.</h2>
@@ -452,6 +460,7 @@ nav.top{background:#fbfaf7}
       </div>
       <figcaption>Mississippi</figcaption>
     </figure>
+  </div>
   </div>
 </section>
 
@@ -541,10 +550,8 @@ STATUS: [reported to AGENCY via CHANNEL at TIME — add once filed]</pre>
       </ol>
       <p class="learning-note">Source: <a href="https://www.mdeq.ms.gov/land/waste-division/solid-waste-management-programs/illegal-dumping/" target="_blank" rel="noopener">MDEQ illegal-dumping guidance</a>, checked October 25, 2026. Do not confront, follow or publicly identify people.</p>
     </details>
+    <p class="intake-link" style="margin-top:14px"><a class="btn btn-solid" href="/intake/?type=report">Use the intake form to report a site</a></p>
   </div>
-
-
-<p class="intake-link" style="margin-top:14px"><a class="btn btn-solid" href="/intake/?type=report">Use the intake form to report a site</a></p>
 </section>
 
 <!-- RECEIPTS -->
@@ -929,9 +936,8 @@ FOLLOW-UP SENT:   [date + channel, or "none yet"]</pre>
     </div>
     <p class="route-note">These links open your email app. Review and send the message there; this page does not submit or store your details. You can also write directly to <a href="/cdn-cgi/l/email-protection#efddddd78c808e9c9b9c9b9d808188af88828e8683c18c8082"><span class="__cf_email__" data-cfemail="8ebcbcb6ede1effdfafdfafce1e0e9cee9e3efe7e2a0ede1e3">[email&#160;protected]</span></a>. Please do not send children's private details or medical information.</p>
     <details class="law-steps"><summary>What can I do first?</summary><p>Bring one idea to a parent, teacher or friend: learn about the bayou, design a flyer with permission before posting it, or ask an adult to coordinate a cleanup. Adults can use the <a href="https://coastalcleanup.extension.msstate.edu/contact-us/request-bin" target="_blank" rel="noopener">Mississippi Coastal Cleanup supply-bin request</a>; availability and approval come from that program.</p><p><strong>No Coast Strong cleanup is currently confirmed.</strong> Joining the conversation is an expression of interest, not event registration. Confirmed activities will include a date, time, location, adult contact and weather plan before anyone is asked to attend.</p></details>
+    <p class="intake-link" style="margin-top:14px"><a class="btn btn-solid" href="/intake/?type=volunteer">Use the intake form to volunteer</a></p>
   </div>
-
-<p class="intake-link" style="margin-top:14px"><a class="btn btn-solid" href="/intake/?type=volunteer">Use the intake form to volunteer</a></p>
 </section>
 <section class="alt" id="kids">
   <div class="wrap">
@@ -1041,10 +1047,12 @@ FOLLOW-UP SENT:   [date + channel, or "none yet"]</pre>
   // Compact navigation; the links stay visible when JavaScript is disabled.
   var menu=document.getElementById('menuToggle');
   var links=document.getElementById('primaryLinks');
+  var navEl=document.querySelector('nav.top');
   document.documentElement.classList.add('menu-ready');menu.hidden=false;
-  menu.addEventListener('click',function(){var open=menu.getAttribute('aria-expanded')!=='true';menu.setAttribute('aria-expanded',String(open));links.classList.toggle('open',open);});
-  links.addEventListener('click',function(e){if(e.target.closest('a')){menu.setAttribute('aria-expanded','false');links.classList.remove('open');}});
-  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&menu.getAttribute('aria-expanded')==='true'){menu.setAttribute('aria-expanded','false');links.classList.remove('open');menu.focus();}});
+  function setMenu(open){menu.setAttribute('aria-expanded',String(open));links.classList.toggle('open',open);if(navEl)navEl.classList.toggle('nav-open',open);}
+  menu.addEventListener('click',function(){setMenu(menu.getAttribute('aria-expanded')!=='true');});
+  links.addEventListener('click',function(e){if(e.target.closest('a')){setMenu(false);}});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&menu.getAttribute('aria-expanded')==='true'){setMenu(false);menu.focus();}});
 
   // Family learning activity. No storage, analytics, network calls or identifiers.
   var items=[{"label": "A candy wrapper on a dry path", "answer": "ordinary", "why": "A wrapper is ordinary litter. With an adult and appropriate gloves or a grabber, it can go in a litter bag. Leave anything you cannot safely identify."}, {"label": "A sharp needle near the bank", "answer": "adult", "why": "Leave it where it is and tell an adult. Do not touch it or put it in an ordinary trash bag. An adult can contact the appropriate service."}, {"label": "An unknown chemical container", "answer": "adult", "why": "Leave it and tell an adult. Do not touch, open or smell it. Unknown containers need help from the appropriate service."}];

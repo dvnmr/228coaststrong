@@ -395,6 +395,9 @@ details.org summary{min-height:44px;flex-wrap:wrap}details.org summary .tagchip{
 <style id="coast-approved-appearance-20261027">
 /* Approved screenshot appearance: fixed coastal-blue hero in every color mode. */
 :root{--gold:#fa6b12;--on-gold:#102b3a}
+/* fix-all: separator between brand name and Bayou Watch, matching the
+   English homepage's literal ' · ' (translated brands jammed them together). */
+.brand .brand-watch::before{content:" \00B7 ";color:var(--ink)}
 nav.top{background:#fbfaf7}
 .hero{background:#082e40}
 .hero .veil{background:linear-gradient(180deg,rgba(5,39,55,.86) 0%,rgba(5,39,55,.90) 62%,rgba(5,39,55,.95) 100%)}
@@ -408,6 +411,10 @@ nav.top{background:#fbfaf7}
 @media(max-width:740px){
  .language-switch{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px 8px;justify-content:stretch;padding:4px 0 8px}
  .language-switch a{min-width:0;min-height:44px;padding:10px 4px;font-size:14px;gap:10px;white-space:nowrap}
+ /* fix-all: on narrow screens the language row lives inside the menu, so the
+    sticky header is one slim row (brand + Menu) until the menu opens. */
+ .menu-ready .language-switch{display:none}
+ .menu-ready nav.top.nav-open .language-switch{display:grid;order:5}
  .hero .wrap{padding-top:34px}
  .hero-brand{font-size:25px;margin-top:20px}
 }
@@ -424,7 +431,7 @@ nav.top{background:#fbfaf7}
       <a href="#story">Od tego się zaczęło</a>
       <a href="#report">Zgłoś dzikie wysypisko</a>
       <a href="#receipts">Dziennik społeczności</a>
-      <a href="#network">Sieć kontaktów</a><a href="#worldwide">Na całym świecie</a><a href="#watches">Nasze patrole</a>
+      <a href="#network">Sieć kontaktów</a><a href="#watches">Nasze patrole</a>
       <a href="#kids">Dzieci wybrzeża</a>
       <a href="#journal">Dziennik</a>
       <a href="#faq">Częste pytania</a>
@@ -457,6 +464,7 @@ nav.top{background:#fbfaf7}
 <section class="quick-start" id="start"><div class="wrap"><p class="eyebrow">Zacznij tutaj</p><p class="formnote">Wiele rąk. Jedno wybrzeże. Razem silniejsi.</p><div class="start-grid"><a class="start-card" href="#signup"><span class="start-number">01</span><strong>Znajdź swoją rolę</strong><span>Uczniowie, nauczyciele, rodziny i sąsiedzi: wybierzcie sposób, by pomóc.</span></a><a class="start-card" href="#kids"><span class="start-number">02</span><strong>Uczmy się razem</strong><span>Wypróbuj zadanie związane z troską o wybrzeże z rodzicem lub nauczycielem.</span></a><a class="start-card" href="#journal"><span class="start-number">03</span><strong>Śledź nasze działania</strong><span>Czytaj praktyczne poradniki, dziel się pomysłami i zobacz, co dalej.</span></a></div></div></section>
 
 <section class="coast-flags" aria-labelledby="coast-flags-heading">
+  <div class="wrap">
   <div class="coast-flags__heading">
     <p class="coast-flags__eyebrow">Silne Wybrzeże</p>
     <h2 id="coast-flags-heading">Nasz dom. Nasz kraj.</h2>
@@ -475,6 +483,7 @@ nav.top{background:#fbfaf7}
       </div>
       <figcaption>Mississippi</figcaption>
     </figure>
+  </div>
   </div>
 </section>
 
@@ -565,10 +574,8 @@ STATUS: [zgłoszono do INSTYTUCJI przez KANAŁ o GODZINIE — uzupełnij po zgł
       </ol>
       <p class="learning-note">Źródło: <a href="https://www.mdeq.ms.gov/land/waste-division/solid-waste-management-programs/illegal-dumping/" target="_blank" rel="noopener">wskazówki MDEQ dotyczące nielegalnego wyrzucania odpadów</a>, sprawdzono 25 października 2026 r. Nie konfrontuj się z nikim, nie śledź nikogo i nie ujawniaj publicznie tożsamości osób.</p>
     </details>
+    <p class="intake-link" style="margin-top:14px"><a class="btn btn-solid" href="/pl/intake/?type=report">Zgłoś miejsce przez formularz</a></p>
   </div>
-
-
-<p class="intake-link" style="margin-top:14px"><a class="btn btn-solid" href="/pl/intake/?type=report">Zgłoś miejsce przez formularz</a></p>
 </section>
 
 <!-- RECEIPTS -->
@@ -841,62 +848,6 @@ PONOWNY KONTAKT:  [data i kanał lub „jeszcze nie”]</pre>
   </div>
 </section>
 
-<section class="worldwide" id="worldwide">
-  <div class="wrap">
-    <div class="grid2">
-      <div class="globe-wrap">
-        <svg class="globe" viewBox="0 0 240 240" role="img" aria-label="Powoli obracający się globus z siatką południków i równoleżników oraz złotym pierścieniem orbity">
-          <defs>
-            <radialGradient id="globeShade" cx="35%" cy="30%" r="85%">
-              <stop offset="0%" stop-color="#1d7a5c"/>
-              <stop offset="60%" stop-color="#0b5a7a"/>
-              <stop offset="100%" stop-color="#062e21"/>
-            </radialgradient>
-          </defs>
-          <circle cx="120" cy="120" r="92" fill="url(#globeShade)"/>
-          <ellipse cx="120" cy="120" rx="92" ry="28" fill="none" stroke="#a8c8d4" stroke-width="1.2" opacity=".65"/>
-          <ellipse cx="120" cy="120" rx="92" ry="58" fill="none" stroke="#a8c8d4" stroke-width="1.2" opacity=".45"/>
-          <line x1="28" y1="120" x2="212" y2="120" stroke="#a8c8d4" stroke-width="1.2" opacity=".65"/>
-          <g class="globe-spin">
-            <ellipse cx="120" cy="120" rx="28" ry="92" fill="none" stroke="#e2f0f5" stroke-width="1.2" opacity=".85"/>
-            <ellipse cx="120" cy="120" rx="58" ry="92" fill="none" stroke="#e2f0f5" stroke-width="1.2" opacity=".55"/>
-            <ellipse cx="120" cy="120" rx="82" ry="92" fill="none" stroke="#e2f0f5" stroke-width="1.2" opacity=".35"/>
-            <line x1="120" y1="28" x2="120" y2="212" stroke="#e2f0f5" stroke-width="1.2" opacity=".85"/>
-          </g>
-          <circle cx="120" cy="120" r="92" fill="none" stroke="#ef8f4c" stroke-width="2"/>
-          <g class="globe-orbit">
-            <circle cx="120" cy="120" r="106" fill="none" stroke="#ef8f4c" stroke-width="1" stroke-dasharray="3 7" opacity=".75"/>
-            <circle cx="226" cy="120" r="4.5" fill="#ef8f4c"/>
-          </g>
-        </svg>
-        <p class="globe-cap">Bayou uchodzi do Mississippi Sound. Sound łączy się z Zatoką. Zatoka jest częścią światowego oceanu — to, co zapisujemy tutaj, liczy się wszędzie.</p>
-      </div>
-      <div>
-        <p class="eyebrow">Całe wybrzeże · Cały świat</p>
-        <h2>Od jednego bayou <span class="accent">do całego świata.</span></h2>
-        <p class="lede">Silne Wybrzeże zaczyna się na naszych brzegach — ale woda, dane i wiadomości wędrują dalej. Każde zapisane przez sąsiada znalezisko łączy się ze światowym ruchem sprzątania, a każdy wpis niesie historię tego wybrzeża do ludzi, którzy mogą ją nagłośnić, wesprzeć finansowo i powtórzyć te działania nad własnymi wodami.</p>
-        <div class="worldpoints">
-          <div class="worldpoint"><b>Zapisz — a trafi do światowych statystyk</b><p>Odpady zarejestrowane w aplikacji Clean Swell lub na karcie danych sprzątania trafiają do Ocean Trash Index organizacji Ocean Conservancy, największej na świecie bazy danych o odpadach morskich. Telewizor wyciągnięty z Bayou Bernard liczy się w tych samych zestawieniach co akcje sprzątania na wszystkich kontynentach.</p></div>
-          <div class="worldpoint"><b>Zarejestruj — a zobaczy to także federalna baza danych</b><p>NOAA Marine Debris Tracker wprowadza to samo znalezisko, z GPS i zdjęciami, do krajowej bazy danych — federalnego odpowiednika światowego indeksu, prowadzonego przez Marine Debris Program z katalogu powyżej.</p></div>
-          <div class="worldpoint"><b>Opublikuj — a świat może odpowiedzieć</b><p>Zdjęcia docierają dalej niż listy. Udokumentowane znalezisko opublikowane z hasztagami <strong>#SilneWybrzeże</strong> i <strong>#CleanSeas</strong> pokazuje to bayou światowej społeczności sprzątającej — sieci The Ocean Cleanup, Surfrider, 4ocean i EARTHDAY.ORG są już na tej stronie, gotowe nagłaśniać konkretne lokalne działania.</p></div>
-        </div>
-      </div>
-    </div>
-    <div class="card postcard">
-      <h3>🌐 Pokaż to światu — skopiuj, uzupełnij i udostępnij</h3>
-      <p style="margin:0 0 12px">Jeden wpis na każdą platformę, którą czytają sąsiedzi i reszta świata: Facebook, Instagram, X, Nextdoor, czaty grupowe. Dołącz zdjęcie, trzymaj się faktów i pozwól hasztagom zanieść wiadomość poza granice hrabstwa.</p>
-      <pre class="template" id="postTemplate">🌊 SILNE WYBRZEŻE — STRAŻ NAD ZATOKĄ · WYBRZEŻE ZATOKI W MISSISSIPPI, USA 🇺🇸
-CO ZAUWAŻONO: [wyrzucanie odpadów / śmieci — jakiego rodzaju]
-GDZIE: [bayou, park lub najbliższa ulica]
-KIEDY: [data i godzina]
-ZGŁOSZONO DO: [instytucja i kanał — lub „zgłaszam dzisiaj”]
-ZDJĘCIE: [w załączeniu]
-Jedno bayou, jedna planeta. Zapisujemy lokalnie i publikujemy na cały świat — każde udokumentowane znalezisko zasila światowy Ocean Trash Index, dzięki czemu sprzątanie tego wybrzeża liczy się w światowych statystykach.
-#SilneWybrzeże #CleanSeas #StrażNadZatoką #InternationalCoastalCleanup</pre>
-      <p style="margin-bottom:0"><button class="copybtn" data-copy="postTemplate" data-msg="postCopied">Kopiuj wpis dla świata</button><span class="copied" id="postCopied"></span></p>
-    </div>
-  </div>
-</section>
 
 <!-- WATCHES -->
 <section class="alt" id="watches">
@@ -1009,9 +960,8 @@ Jedno bayou, jedna planeta. Zapisujemy lokalnie i publikujemy na cały świat �
     </div>
     <p class="route-note">Te linki otwierają program pocztowy. Sprawdź i wyślij wiadomość w nim; ta strona nie wysyła ani nie przechowuje Twoich danych. Możesz też napisać bezpośrednio na <a href="/cdn-cgi/l/email-protection#5e6c6c663d313f2d2a2d2a2c3130391e39333f3732703d3133"><span class="__cf_email__" data-cfemail="fbc9c9c398949a888f888f8994959cbb9c969a9297d5989496">[email&#160;protected]</span></a>. Nie przesyłaj prywatnych danych dzieci ani informacji medycznych.</p>
     <details class="law-steps"><summary>Od czego mogę zacząć?</summary><p>Przedstaw jeden pomysł rodzicowi, nauczycielowi lub znajomemu: poznaj bayou, zaprojektuj ulotkę i uzyskaj zgodę przed jej rozwieszeniem albo poproś dorosłego o zorganizowanie sprzątania. Dorośli mogą skorzystać z <a href="https://coastalcleanup.extension.msstate.edu/contact-us/request-bin" target="_blank" rel="noopener">wniosku o zestaw sprzętu Mississippi Coastal Cleanup</a>; o dostępności i przyznaniu wyposażenia decydują organizatorzy tego programu.</p><p><strong>Obecnie nie potwierdzono żadnej akcji sprzątania Silne Wybrzeże.</strong> Dołączenie do rozmowy oznacza zainteresowanie, a nie zapis na wydarzenie. Zanim zaprosimy uczestników, każde potwierdzone działanie będzie mieć datę, godzinę, miejsce, kontakt do osoby dorosłej i plan na wypadek złej pogody.</p></details>
+    <p class="intake-link" style="margin-top:14px"><a class="btn btn-solid" href="/pl/intake/?type=volunteer">Zgłoś się przez formularz jako wolontariusz</a></p>
   </div>
-
-<p class="intake-link" style="margin-top:14px"><a class="btn btn-solid" href="/pl/intake/?type=volunteer">Zgłoś się przez formularz jako wolontariusz</a></p>
 </section>
 
 <section class="alt" id="kids">
@@ -1127,7 +1077,7 @@ Jedno bayou, jedna planeta. Zapisujemy lokalnie i publikujemy na cały świat �
       <p>Jesteśmy Amerykanami</p>
       <p>Jesteśmy dumni.</p>
     </div>
-    <div class="hash">#SilneWybrzeże</div><nav id="footerMap" class="footer-map" aria-label="Poznaj Silne Wybrzeże"><h3>Poznaj Silne Wybrzeże</h3><div class="footer-columns"><div class="footer-column"><h4>Weź udział</h4><a href="#signup">Sposoby pomocy</a><a href="#kids">Dzieci wybrzeża</a><a href="#report">Zgłoś dzikie wysypisko</a><a href="#feedback">Pomysły i opinie</a></div><div class="footer-column"><h4>Poznaj wybrzeże</h4><a href="#receipts">Dziennik społeczności</a><a href="#network">Sieć kontaktów</a><a href="#worldwide">Na całym świecie</a><a href="#watches">Nasze patrole</a><a href="#water">Nasze wody</a><a href="#journal">Dziennik i poradniki</a></div><div class="footer-column"><h4>O Silne Wybrzeże</h4><a href="#top">Wróć na górę</a><a href="#start">Zacznij tutaj</a><a href="#traction">Aktywność na żywo</a><a href="#faq">Pytania i odpowiedzi</a><a href="#sponsors">Nasi sponsorzy</a></div></div></nav><p class="footer-support">Utrzymanie strony: <a href="https://228mooreelectric.com/">Moore Electric</a> · <a href="tel:+12282249150">(228) 224-9150</a><br>Moore Electric utrzymuje tę stronę i opłaca rejestrację domeny.</p>
+    <div class="hash">#SilneWybrzeże</div><nav id="footerMap" class="footer-map" aria-label="Poznaj Silne Wybrzeże"><h3>Poznaj Silne Wybrzeże</h3><div class="footer-columns"><div class="footer-column"><h4>Weź udział</h4><a href="#signup">Sposoby pomocy</a><a href="#kids">Dzieci wybrzeża</a><a href="#report">Zgłoś dzikie wysypisko</a><a href="#feedback">Pomysły i opinie</a></div><div class="footer-column"><h4>Poznaj wybrzeże</h4><a href="#receipts">Dziennik społeczności</a><a href="#network">Sieć kontaktów</a><a href="#watches">Nasze patrole</a><a href="#water">Nasze wody</a><a href="#journal">Dziennik i poradniki</a></div><div class="footer-column"><h4>O Silne Wybrzeże</h4><a href="#top">Wróć na górę</a><a href="#start">Zacznij tutaj</a><a href="#traction">Aktywność na żywo</a><a href="#faq">Pytania i odpowiedzi</a><a href="#sponsors">Nasi sponsorzy</a></div></div></nav><p class="footer-support">Utrzymanie strony: <a href="https://228mooreelectric.com/">Moore Electric</a> · <a href="tel:+12282249150">(228) 224-9150</a><br>Moore Electric utrzymuje tę stronę i opłaca rejestrację domeny.</p>
     <p style="margin:0 0 14px"><a href="#signup" style="color:#ef8f4c;font-weight:700">Dołącz do Straż nad Zatoką →</a>  ·  <a href="#report" style="color:#ef8f4c;font-weight:700">Zgłoś dzikie wysypisko →</a>  ·  <a href="#receipts" style="color:#ef8f4c;font-weight:700">Dziennik społeczności →</a></p>
     <p style="margin:0 0 14px">Napisz do ekipy: <a href="/cdn-cgi/l/email-protection#2d1f1f154e424c5e595e595f42434a6d4a404c4441034e4240" style="color:#ef8f4c;font-weight:700"><span class="__cf_email__" data-cfemail="caf8f8f2a9a5abb9beb9beb8a5a4ad8aada7aba3a6e4a9a5a7">[email&#160;protected]</span></a></p>
     <p class="fine">Silne Wybrzeże — Centrum Straży nad Zatoką to strona społeczności wybrzeża Zatoki w Mississippi. Dane kontaktowe instytucji i organizacji pochodzą z oficjalnych publicznych stron sprawdzonych 15 października 2026 r. Ta strona nie wysyła ani nie przechowuje zgłoszeń i nic nie jest z niej wysyłane w Twoim imieniu. Pytania o udział i sponsoring można kierować przez powyższe linki e-mail. Sprawdź i wyślij wiadomość we własnym programie pocztowym; strona nie ma bazy zapisów. Szczegóły wydarzeń organizowanych przez oficjalne programy sprawdzaj na ich własnych stronach.</p>
@@ -1142,10 +1092,12 @@ Jedno bayou, jedna planeta. Zapisujemy lokalnie i publikujemy na cały świat �
   // Compact navigation; the links stay visible when JavaScript is disabled.
   var menu=document.getElementById('menuToggle');
   var links=document.getElementById('primaryLinks');
+  var navEl=document.querySelector('nav.top');
   document.documentElement.classList.add('menu-ready');menu.hidden=false;
-  menu.addEventListener('click',function(){var open=menu.getAttribute('aria-expanded')!=='true';menu.setAttribute('aria-expanded',String(open));links.classList.toggle('open',open);});
-  links.addEventListener('click',function(e){if(e.target.closest('a')){menu.setAttribute('aria-expanded','false');links.classList.remove('open');}});
-  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&menu.getAttribute('aria-expanded')==='true'){menu.setAttribute('aria-expanded','false');links.classList.remove('open');menu.focus();}});
+  function setMenu(open){menu.setAttribute('aria-expanded',String(open));links.classList.toggle('open',open);if(navEl)navEl.classList.toggle('nav-open',open);}
+  menu.addEventListener('click',function(){setMenu(menu.getAttribute('aria-expanded')!=='true');});
+  links.addEventListener('click',function(e){if(e.target.closest('a')){setMenu(false);}});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&menu.getAttribute('aria-expanded')==='true'){setMenu(false);menu.focus();}});
 
   // Family learning activity. No storage, analytics, network calls or identifiers.
   var items=[{"label": "Papierek po cukierku na suchej ścieżce", "answer": "ordinary", "why": "Papierek to zwykły śmieć. Z dorosłym i w odpowiednich rękawicach lub przy użyciu chwytaka można włożyć go do worka. Zostaw wszystko, czego nie potrafisz bezpiecznie rozpoznać."}, {"label": "Ostra igła przy brzegu", "answer": "adult", "why": "Zostaw ją na miejscu i powiedz dorosłemu. Nie dotykaj jej ani nie wkładaj do zwykłego worka na śmieci. Dorosły może skontaktować się z odpowiednimi służbami."}, {"label": "Pojemnik z nieznaną substancją chemiczną", "answer": "adult", "why": "Zostaw go i powiedz dorosłemu. Nie dotykaj, nie otwieraj ani nie wąchaj. Nieznane pojemniki wymagają pomocy odpowiednich służb."}];

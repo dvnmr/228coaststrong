@@ -337,6 +337,9 @@ summary{min-height:44px}
 <style id="coast-approved-appearance-20261027">
 /* Approved screenshot appearance: fixed coastal-blue hero in every color mode. */
 :root{--gold:#fa6b12;--on-gold:#102b3a}
+/* fix-all: separator between brand name and Bayou Watch, matching the
+   English homepage's literal ' · ' (translated brands jammed them together). */
+.brand .brand-watch::before{content:" \00B7 ";color:var(--ink)}
 nav.top{background:#fbfaf7}
 .hero{background:#082e40}
 .hero .veil{background:linear-gradient(180deg,rgba(5,39,55,.86) 0%,rgba(5,39,55,.90) 62%,rgba(5,39,55,.95) 100%)}
@@ -350,6 +353,10 @@ nav.top{background:#fbfaf7}
 @media(max-width:740px){
  .language-switch{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px 8px;justify-content:stretch;padding:4px 0 8px}
  .language-switch a{min-width:0;min-height:44px;padding:10px 4px;font-size:14px;gap:10px;white-space:nowrap}
+ /* fix-all: on narrow screens the language row lives inside the menu, so the
+    sticky header is one slim row (brand + Menu) until the menu opens. */
+ .menu-ready .language-switch{display:none}
+ .menu-ready nav.top.nav-open .language-switch{display:grid;order:5}
  .hero .wrap{padding-top:34px}
  .hero-brand{font-size:25px;margin-top:20px}
 }
@@ -399,6 +406,7 @@ nav.top{background:#fbfaf7}
 <section class="quick-start" id="start"><div class="wrap"><p class="eyebrow">Bắt đầu tại đây</p><p class="formnote">Nhiều bàn tay. Một bờ biển. Cùng nhau vững mạnh hơn.</p><div class="start-grid"><a class="start-card" href="#signup"><span class="start-number">01</span><strong>Tìm cách góp sức</strong><span>Học sinh, giáo viên, gia đình và hàng xóm: chọn cách bạn muốn giúp.</span></a><a class="start-card" href="#kids"><span class="start-number">02</span><strong>Cùng nhau tìm hiểu</strong><span>Thử hoạt động bảo vệ bờ biển cùng cha mẹ hoặc giáo viên.</span></a><a class="start-card" href="#journal"><span class="start-number">03</span><strong>Theo dõi hoạt động</strong><span>Đọc hướng dẫn thực tế, chia sẻ ý tưởng và xem những bước tiếp theo.</span></a></div></div></section>
 
 <section class="coast-flags" aria-labelledby="coast-flags-heading">
+  <div class="wrap">
   <div class="coast-flags__heading">
     <p class="coast-flags__eyebrow">Bờ Biển Vững Mạnh</p>
     <h2 id="coast-flags-heading">Quê hương chúng ta. Đất nước chúng ta.</h2>
@@ -417,6 +425,7 @@ nav.top{background:#fbfaf7}
       </div>
       <figcaption>Mississippi</figcaption>
     </figure>
+  </div>
   </div>
 </section>
 
@@ -506,10 +515,8 @@ TÌNH TRẠNG: [đã báo cho CƠ QUAN qua KÊNH vào THỜI GIAN — bổ sung 
       </ol>
       <p class="learning-note">Nguồn: <a href="https://www.mdeq.ms.gov/land/waste-division/solid-waste-management-programs/illegal-dumping/" target="_blank" rel="noopener">hướng dẫn của MDEQ về đổ rác trái phép</a>, kiểm tra ngày 25 tháng 10 năm 2026. Không đối đầu, đi theo hoặc công khai danh tính người khác.</p>
     </details>
+    <p class="intake-link" style="margin-top:14px"><a class="btn btn-solid" href="/vi/intake/?type=report">Dùng mẫu đơn để báo tin một địa điểm</a></p>
   </div>
-
-
-<p class="intake-link" style="margin-top:14px"><a class="btn btn-solid" href="/vi/intake/?type=report">Dùng mẫu đơn để báo tin một địa điểm</a></p>
 </section>
 
 <!-- RECEIPTS -->
@@ -663,9 +670,8 @@ PHẢN HỒI:          [cơ quan đã trả lời hoặc làm gì — cập nh�
     </div>
     <p class="route-note">Các liên kết này mở ứng dụng thư điện tử của bạn. Hãy xem lại và gửi thư trong ứng dụng đó; trang này không gửi hay lưu thông tin của bạn. Bạn cũng có thể viết trực tiếp đến <a href="/cdn-cgi/l/email-protection#093b3b316a66687a7d7a7d7b66676e496e64686065276a6664"><span class="__cf_email__" data-cfemail="3200000a515d5341464146405d5c5572555f535b5e1c515d5f">[email&#160;protected]</span></a>. Vui lòng không gửi thông tin riêng tư hoặc thông tin y tế của trẻ em.</p>
     <details class="law-steps"><summary>Tôi có thể bắt đầu bằng việc gì?</summary><p>Chia sẻ một ý tưởng với cha mẹ, giáo viên hoặc bạn bè: tìm hiểu về lạch nước, thiết kế tờ rơi và xin phép trước khi đăng, hoặc nhờ người lớn điều phối một buổi dọn dẹp. Người lớn có thể dùng <a href="https://coastalcleanup.extension.msstate.edu/contact-us/request-bin" target="_blank" rel="noopener">mẫu đề nghị cấp thùng vật dụng của Mississippi Coastal Cleanup</a>; việc có sẵn vật dụng và phê duyệt do chương trình đó quyết định.</p><p><strong>Hiện chưa có buổi dọn dẹp nào của Bờ Biển Vững Mạnh được xác nhận.</strong> Tham gia trao đổi chỉ thể hiện sự quan tâm, không phải đăng ký sự kiện. Trước khi mời mọi người tham dự, các hoạt động được xác nhận sẽ có ngày, giờ, địa điểm, người lớn làm đầu mối liên hệ và phương án ứng phó thời tiết.</p></details>
+    <p class="intake-link" style="margin-top:14px"><a class="btn btn-solid" href="/vi/intake/?type=volunteer">Dùng mẫu đơn để đăng ký tình nguyện</a></p>
   </div>
-
-<p class="intake-link" style="margin-top:14px"><a class="btn btn-solid" href="/vi/intake/?type=volunteer">Dùng mẫu đơn để đăng ký tình nguyện</a></p>
 </section>
 <section class="alt" id="kids">
   <div class="wrap">
@@ -775,10 +781,12 @@ PHẢN HỒI:          [cơ quan đã trả lời hoặc làm gì — cập nh�
   // Compact navigation; the links stay visible when JavaScript is disabled.
   var menu=document.getElementById('menuToggle');
   var links=document.getElementById('primaryLinks');
+  var navEl=document.querySelector('nav.top');
   document.documentElement.classList.add('menu-ready');menu.hidden=false;
-  menu.addEventListener('click',function(){var open=menu.getAttribute('aria-expanded')!=='true';menu.setAttribute('aria-expanded',String(open));links.classList.toggle('open',open);});
-  links.addEventListener('click',function(e){if(e.target.closest('a')){menu.setAttribute('aria-expanded','false');links.classList.remove('open');}});
-  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&menu.getAttribute('aria-expanded')==='true'){menu.setAttribute('aria-expanded','false');links.classList.remove('open');menu.focus();}});
+  function setMenu(open){menu.setAttribute('aria-expanded',String(open));links.classList.toggle('open',open);if(navEl)navEl.classList.toggle('nav-open',open);}
+  menu.addEventListener('click',function(){setMenu(menu.getAttribute('aria-expanded')!=='true');});
+  links.addEventListener('click',function(e){if(e.target.closest('a')){setMenu(false);}});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&menu.getAttribute('aria-expanded')==='true'){setMenu(false);menu.focus();}});
 
   // Family learning activity. No storage, analytics, network calls or identifiers.
   var items=[{"label": "Một vỏ kẹo trên lối đi khô ráo", "answer": "ordinary", "why": "Vỏ kẹo là rác thông thường. Có người lớn hỗ trợ và dùng găng tay phù hợp hoặc kẹp gắp rác, bạn có thể bỏ nó vào túi rác. Để nguyên bất cứ thứ gì bạn không thể nhận biết một cách an toàn."}, {"label": "Một kim tiêm sắc nhọn gần bờ", "answer": "adult", "why": "Để nguyên tại chỗ và báo cho người lớn. Không chạm vào hoặc bỏ vào túi rác thông thường. Người lớn có thể liên hệ đơn vị có trách nhiệm."}, {"label": "Một bình chứa hóa chất không rõ loại", "answer": "adult", "why": "Để nguyên và báo cho người lớn. Không chạm vào, mở hoặc ngửi. Bình chứa không rõ loại cần đơn vị có trách nhiệm xử lý."}];

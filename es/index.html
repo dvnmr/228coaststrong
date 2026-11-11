@@ -336,6 +336,9 @@ summary{min-height:44px}
 <style id="coast-approved-appearance-20261027">
 /* Approved screenshot appearance: fixed coastal-blue hero in every color mode. */
 :root{--gold:#fa6b12;--on-gold:#102b3a}
+/* fix-all: separator between brand name and Bayou Watch, matching the
+   English homepage's literal ' · ' (translated brands jammed them together). */
+.brand .brand-watch::before{content:" \00B7 ";color:var(--ink)}
 nav.top{background:#fbfaf7}
 .hero{background:#082e40}
 .hero .veil{background:linear-gradient(180deg,rgba(5,39,55,.86) 0%,rgba(5,39,55,.90) 62%,rgba(5,39,55,.95) 100%)}
@@ -349,6 +352,10 @@ nav.top{background:#fbfaf7}
 @media(max-width:740px){
  .language-switch{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px 8px;justify-content:stretch;padding:4px 0 8px}
  .language-switch a{min-width:0;min-height:44px;padding:10px 4px;font-size:14px;gap:10px;white-space:nowrap}
+ /* fix-all: on narrow screens the language row lives inside the menu, so the
+    sticky header is one slim row (brand + Menu) until the menu opens. */
+ .menu-ready .language-switch{display:none}
+ .menu-ready nav.top.nav-open .language-switch{display:grid;order:5}
  .hero .wrap{padding-top:34px}
  .hero-brand{font-size:25px;margin-top:20px}
 }
@@ -398,6 +405,7 @@ nav.top{background:#fbfaf7}
 <section class="quick-start" id="start"><div class="wrap"><p class="eyebrow">Empieza aquí</p><p class="formnote">Muchas manos. Una sola costa. Más fuertes juntos.</p><div class="start-grid"><a class="start-card" href="#signup"><span class="start-number">01</span><strong>Encuentra tu lugar</strong><span>Estudiantes, docentes, familias y vecinos: elige cómo ayudar.</span></a><a class="start-card" href="#kids"><span class="start-number">02</span><strong>Aprendamos juntos</strong><span>Prueba una actividad para cuidar la costa con un familiar o docente.</span></a><a class="start-card" href="#journal"><span class="start-number">03</span><strong>Sigue el trabajo</strong><span>Lee guías prácticas, comparte ideas y descubre los próximos pasos.</span></a></div></div></section>
 
 <section class="coast-flags" aria-labelledby="coast-flags-heading">
+  <div class="wrap">
   <div class="coast-flags__heading">
     <p class="coast-flags__eyebrow">Costa Fuerte</p>
     <h2 id="coast-flags-heading">Nuestra tierra. Nuestro país.</h2>
@@ -416,6 +424,7 @@ nav.top{background:#fbfaf7}
       </div>
       <figcaption>Mississippi</figcaption>
     </figure>
+  </div>
   </div>
 </section>
 
@@ -505,10 +514,8 @@ ESTADO: [denunciado ante ORGANISMO por CANAL a las HORA: completar una vez prese
       </ol>
       <p class="learning-note">Fuente: <a href="https://www.mdeq.ms.gov/land/waste-division/solid-waste-management-programs/illegal-dumping/" target="_blank" rel="noopener">guía del MDEQ sobre vertidos ilegales</a>, consultada el 25 de octubre de 2026. No te enfrentes a las personas, no las sigas ni las identifiques públicamente.</p>
     </details>
+    <p class="intake-link" style="margin-top:14px"><a class="btn btn-solid" href="/es/intake/?type=report">Usa el formulario para denunciar un sitio</a></p>
   </div>
-
-
-<p class="intake-link" style="margin-top:14px"><a class="btn btn-solid" href="/es/intake/?type=report">Usa el formulario para denunciar un sitio</a></p>
 </section>
 
 <!-- RECEIPTS -->
@@ -808,9 +815,8 @@ SEGUIMIENTO ENVIADO: [fecha + canal, o "aún no se ha enviado"]</pre>
     </div>
     <p class="route-note">Estos enlaces abren tu aplicación de correo. Revisa y envía el mensaje desde allí; esta página no envía ni almacena tus datos. También puedes escribir directamente a <a href="/cdn-cgi/l/email-protection#0e3c3c366d616f7d7a7d7a7c6160694e69636f6762206d6163"><span class="__cf_email__" data-cfemail="5567676d363a3426212621273a3b32153238343c397b363a38">[email&#160;protected]</span></a>. No envíes datos privados de menores ni información médica.</p>
     <details class="law-steps"><summary>¿Por dónde puedo empezar?</summary><p>Propón una idea a tu madre, padre, docente o a un amigo: aprender sobre el bayou, diseñar un volante y pedir permiso antes de publicarlo, o pedir a un adulto que coordine una limpieza. Los adultos pueden usar la <a href="https://coastalcleanup.extension.msstate.edu/contact-us/request-bin" target="_blank" rel="noopener">solicitud de contenedores de suministros de Mississippi Coastal Cleanup</a>; la disponibilidad y la aprobación dependen de ese programa.</p><p><strong>Por el momento no hay ninguna limpieza de Costa Fuerte confirmada.</strong> Sumarte a la conversación expresa tu interés; no es una inscripción a un evento. Antes de invitar a alguien a asistir, las actividades confirmadas incluirán fecha, hora, lugar, contacto de un adulto y un plan ante las condiciones meteorológicas.</p></details>
+    <p class="intake-link" style="margin-top:14px"><a class="btn btn-solid" href="/es/intake/?type=volunteer">Usa el formulario para ser voluntario</a></p>
   </div>
-
-<p class="intake-link" style="margin-top:14px"><a class="btn btn-solid" href="/es/intake/?type=volunteer">Usa el formulario para ser voluntario</a></p>
 </section>
 <section class="alt" id="kids">
   <div class="wrap">
@@ -920,10 +926,12 @@ SEGUIMIENTO ENVIADO: [fecha + canal, o "aún no se ha enviado"]</pre>
   // Compact navigation; the links stay visible when JavaScript is disabled.
   var menu=document.getElementById('menuToggle');
   var links=document.getElementById('primaryLinks');
+  var navEl=document.querySelector('nav.top');
   document.documentElement.classList.add('menu-ready');menu.hidden=false;
-  menu.addEventListener('click',function(){var open=menu.getAttribute('aria-expanded')!=='true';menu.setAttribute('aria-expanded',String(open));links.classList.toggle('open',open);});
-  links.addEventListener('click',function(e){if(e.target.closest('a')){menu.setAttribute('aria-expanded','false');links.classList.remove('open');}});
-  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&menu.getAttribute('aria-expanded')==='true'){menu.setAttribute('aria-expanded','false');links.classList.remove('open');menu.focus();}});
+  function setMenu(open){menu.setAttribute('aria-expanded',String(open));links.classList.toggle('open',open);if(navEl)navEl.classList.toggle('nav-open',open);}
+  menu.addEventListener('click',function(){setMenu(menu.getAttribute('aria-expanded')!=='true');});
+  links.addEventListener('click',function(e){if(e.target.closest('a')){setMenu(false);}});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&menu.getAttribute('aria-expanded')==='true'){setMenu(false);menu.focus();}});
 
   // Filter the local directory without leaving the selected language.
   var orgFilters=document.querySelectorAll('.orgfilter');
