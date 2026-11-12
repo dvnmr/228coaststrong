@@ -393,6 +393,9 @@ details.org summary{min-height:44px;flex-wrap:wrap}details.org summary .tagchip{
 <style id="coast-approved-appearance-20261027">
 /* Approved screenshot appearance: fixed coastal-blue hero in every color mode. */
 :root{--gold:#fa6b12;--on-gold:#102b3a}
+/* fix-all: separator between brand name and Bayou Watch, matching the
+   English homepage's literal ' · ' (translated brands jammed them together). */
+.brand .brand-watch::before{content:" \00B7 ";color:var(--ink)}
 nav.top{background:#fbfaf7}
 .hero{background:#082e40}
 .hero .veil{background:linear-gradient(180deg,rgba(5,39,55,.86) 0%,rgba(5,39,55,.90) 62%,rgba(5,39,55,.95) 100%)}
@@ -406,6 +409,10 @@ nav.top{background:#fbfaf7}
 @media(max-width:740px){
  .language-switch{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px 8px;justify-content:stretch;padding:4px 0 8px}
  .language-switch a{min-width:0;min-height:44px;padding:10px 4px;font-size:14px;gap:10px;white-space:nowrap}
+ /* fix-all: on narrow screens the language row lives inside the menu, so the
+    sticky header is one slim row (brand + Menu) until the menu opens. */
+ .menu-ready .language-switch{display:none}
+ .menu-ready nav.top.nav-open .language-switch{display:grid;order:5}
  .hero .wrap{padding-top:34px}
  .hero-brand{font-size:25px;margin-top:20px}
 }
@@ -422,7 +429,7 @@ nav.top{background:#fbfaf7}
       <a href="#story">Der Fund</a>
       <a href="#report">Müllablagerung melden</a>
       <a href="#receipts">Gemeinschaftsprotokoll</a>
-      <a href="#network">Netzwerk</a><a href="#worldwide">Weltweit</a><a href="#watches">Die Küstenwachen</a>
+      <a href="#network">Netzwerk</a><a href="#watches">Die Küstenwachen</a>
       <a href="#kids">Küstenkinder</a>
       <a href="#journal">Journal</a>
       <a href="#faq">Häufige Fragen</a>
@@ -455,6 +462,7 @@ nav.top{background:#fbfaf7}
 <section class="quick-start" id="start"><div class="wrap"><p class="eyebrow">Hier anfangen</p><p class="formnote">Viele Hände. Eine Küste. Gemeinsam stärker.</p><div class="start-grid"><a class="start-card" href="#signup"><span class="start-number">01</span><strong>Finde deinen Beitrag</strong><span>Schüler, Lehrkräfte, Familien und Nachbarn: Wählt, wie ihr helfen möchtet.</span></a><a class="start-card" href="#kids"><span class="start-number">02</span><strong>Gemeinsam lernen</strong><span>Probiere mit einem Elternteil oder einer Lehrkraft eine Übung zum Küstenschutz aus.</span></a><a class="start-card" href="#journal"><span class="start-number">03</span><strong>Verfolge unsere Arbeit</strong><span>Lies praktische Ratgeber, teile Ideen und erfahre, was als Nächstes kommt.</span></a></div></div></section>
 
 <section class="coast-flags" aria-labelledby="coast-flags-heading">
+  <div class="wrap">
   <div class="coast-flags__heading">
     <p class="coast-flags__eyebrow">Starke Küste</p>
     <h2 id="coast-flags-heading">Unsere Heimat. Unser Land.</h2>
@@ -473,6 +481,7 @@ nav.top{background:#fbfaf7}
       </div>
       <figcaption>Mississippi</figcaption>
     </figure>
+  </div>
   </div>
 </section>
 
@@ -563,10 +572,8 @@ STATUS: [gemeldet an BEHÖRDE über MELDEWEG um UHRZEIT — nach der Meldung erg
       </ol>
       <p class="learning-note">Quelle: <a href="https://www.mdeq.ms.gov/land/waste-division/solid-waste-management-programs/illegal-dumping/" target="_blank" rel="noopener">MDEQ-Hinweise zu illegalen Müllablagerungen</a>, geprüft am 25. Oktober 2026. Niemanden konfrontieren, verfolgen oder öffentlich identifizieren.</p>
     </details>
+    <p class="intake-link" style="margin-top:14px"><a class="btn btn-solid" href="/de/intake/?type=report">Melde einen Ort über das Formular</a></p>
   </div>
-
-
-<p class="intake-link" style="margin-top:14px"><a class="btn btn-solid" href="/de/intake/?type=report">Melde einen Ort über das Formular</a></p>
 </section>
 
 <!-- RECEIPTS -->
@@ -839,62 +846,6 @@ NACHFRAGE:        [Datum + Meldeweg oder „bisher keine“]</pre>
   </div>
 </section>
 
-<section class="worldwide" id="worldwide">
-  <div class="wrap">
-    <div class="grid2">
-      <div class="globe-wrap">
-        <svg class="globe" viewBox="0 0 240 240" role="img" aria-label="Eine langsam rotierende Drahtgitter-Weltkugel mit einem goldenen Umlaufring">
-          <defs>
-            <radialGradient id="globeShade" cx="35%" cy="30%" r="85%">
-              <stop offset="0%" stop-color="#1d7a5c"/>
-              <stop offset="60%" stop-color="#0b5a7a"/>
-              <stop offset="100%" stop-color="#062e21"/>
-            </radialGradient>
-          </defs>
-          <circle cx="120" cy="120" r="92" fill="url(#globeShade)"/>
-          <ellipse cx="120" cy="120" rx="92" ry="28" fill="none" stroke="#a8c8d4" stroke-width="1.2" opacity=".65"/>
-          <ellipse cx="120" cy="120" rx="92" ry="58" fill="none" stroke="#a8c8d4" stroke-width="1.2" opacity=".45"/>
-          <line x1="28" y1="120" x2="212" y2="120" stroke="#a8c8d4" stroke-width="1.2" opacity=".65"/>
-          <g class="globe-spin">
-            <ellipse cx="120" cy="120" rx="28" ry="92" fill="none" stroke="#e2f0f5" stroke-width="1.2" opacity=".85"/>
-            <ellipse cx="120" cy="120" rx="58" ry="92" fill="none" stroke="#e2f0f5" stroke-width="1.2" opacity=".55"/>
-            <ellipse cx="120" cy="120" rx="82" ry="92" fill="none" stroke="#e2f0f5" stroke-width="1.2" opacity=".35"/>
-            <line x1="120" y1="28" x2="120" y2="212" stroke="#e2f0f5" stroke-width="1.2" opacity=".85"/>
-          </g>
-          <circle cx="120" cy="120" r="92" fill="none" stroke="#ef8f4c" stroke-width="2"/>
-          <g class="globe-orbit">
-            <circle cx="120" cy="120" r="106" fill="none" stroke="#ef8f4c" stroke-width="1" stroke-dasharray="3 7" opacity=".75"/>
-            <circle cx="226" cy="120" r="4.5" fill="#ef8f4c"/>
-          </g>
-        </svg>
-        <p class="globe-cap">Ein Bayou fließt in den Sound. Der Sound fließt in den Golf. Der Golf ist Teil des Weltmeers — was wir hier erfassen, zählt überall.</p>
-      </div>
-      <div>
-        <p class="eyebrow">Entlang der Küste · Weltweit</p>
-        <h2>Von einem Bayou <span class="accent">in die ganze Welt.</span></h2>
-        <p class="lede">Starke Küste beginnt an unseren Ufern — doch Wasser, Daten und Nachrichten reisen weiter. Jeder von Nachbarn erfasste Fund wird Teil der weltweiten Aufräumbewegung. Jeder Beitrag trägt die Geschichte dieser Küste zu Menschen, die sie verbreiten, unterstützen und an ihren eigenen Gewässern aufgreifen können.</p>
-        <div class="worldpoints">
-          <div class="worldpoint"><b>Erfassen — und weltweit mitzählen lassen</b><p>Abfälle, die über die App Clean Swell oder eine Erfassungskarte dokumentiert werden, gehen in den Ocean Trash Index von Ocean Conservancy ein, die weltweit größte Datenbank für Meeresmüll. Ein aus Bayou Bernard geborgener Fernseher erscheint in derselben Statistik wie Aufräumaktionen auf allen Kontinenten.</p></div>
-          <div class="worldpoint"><b>Eintragen — auch für den Bundesdatensatz</b><p>Der NOAA Marine Debris Tracker übernimmt denselben Fund mit GPS und Fotos in den nationalen Datensatz — das Pendant des Bundes zum weltweiten Index, betreut vom Marine Debris Program im Verzeichnis oben.</p></div>
-          <div class="worldpoint"><b>Veröffentlichen — und die Welt kann reagieren</b><p>Fotos reichen weiter als jeder Brief. Ein dokumentierter Fund mit den Hashtags <strong>#Starke Küste</strong> und <strong>#CleanSeas</strong> macht diesen Bayou in der weltweiten Aufräumgemeinschaft sichtbar — die Netzwerke von The Ocean Cleanup, Surfrider, 4ocean und EARTHDAY.ORG stehen bereits auf dieser Seite und können echte lokale Arbeit bekannt machen.</p></div>
-        </div>
-      </div>
-    </div>
-    <div class="card postcard">
-      <h3>🌐 Weltweit teilen — kopieren, ausfüllen, überall veröffentlichen</h3>
-      <p style="margin:0 0 12px">Ein Beitrag für jede Plattform, die deine Nachbarschaft — und die Welt — wirklich liest: Facebook, Instagram, X, Nextdoor, Gruppenchats. Füge das Foto hinzu, bleibe bei den Fakten und lass die Hashtags die Nachricht über die County-Grenze tragen.</p>
-      <pre class="template" id="postTemplate">🌊 STARKE KÜSTE — BAYOU-WACHT · GOLFKÜSTE MISSISSIPPIS, USA 🇺🇸
-MEINE BEOBACHTUNG: [Müllablagerung / Abfälle — welche Art]
-WO: [Bayou, Park oder nächste Straße]
-WANN: [Datum + Uhrzeit]
-GEMELDET AN: [Behörde + Meldeweg — oder „Meldung erfolgt heute“]
-FOTO: [beigefügt]
-Ein Bayou, ein Planet. Wir erfassen lokal und teilen weltweit — jeder dokumentierte Fund fließt in den globalen Ocean Trash Index ein, damit eine Aufräumaktion an dieser Küste in der Weltstatistik zählt.
-#Starke Küste #CleanSeas #BayouWacht #InternationalCoastalCleanup</pre>
-      <p style="margin-bottom:0"><button class="copybtn" data-copy="postTemplate" data-msg="postCopied">Weltweiten Beitrag kopieren</button><span class="copied" id="postCopied"></span></p>
-    </div>
-  </div>
-</section>
 
 <!-- WATCHES -->
 <section class="alt" id="watches">
@@ -1007,9 +958,8 @@ Ein Bayou, ein Planet. Wir erfassen lokal und teilen weltweit — jeder dokument
     </div>
     <p class="route-note">Diese Links öffnen deine E-Mail-App. Prüfe und versende die Nachricht dort; diese Seite übermittelt oder speichert deine Angaben nicht. Du kannst auch direkt schreiben an <a href="/cdn-cgi/l/email-protection#92a0a0aaf1fdf3e1e6e1e6e0fdfcf5d2f5fff3fbfebcf1fdff"><span class="__cf_email__" data-cfemail="f9cbcbc19a96988a8d8a8d8b96979eb99e94989095d79a9694">[email&#160;protected]</span></a>. Bitte übermittle keine privaten Angaben von Kindern oder medizinischen Informationen.</p>
     <details class="law-steps"><summary>Was kann ich zuerst tun?</summary><p>Sprich mit einem Elternteil, einer Lehrkraft oder einem Freund über eine Idee: lerne den Bayou kennen, gestalte einen Flyer und hole vor dem Aushängen die Erlaubnis ein oder bitte einen Erwachsenen, eine Aufräumaktion zu koordinieren. Erwachsene können die <a href="https://coastalcleanup.extension.msstate.edu/contact-us/request-bin" target="_blank" rel="noopener">Materialkisten-Anfrage des Mississippi Coastal Cleanup</a>nutzen; Verfügbarkeit und Genehmigung liegen bei diesem Programm.</p><p><strong>Derzeit ist keine Aufräumaktion von Starke Küste bestätigt.</strong> Wer Kontakt aufnimmt, bekundet Interesse und meldet sich noch nicht zu einer Veranstaltung an. Bevor jemand zur Teilnahme eingeladen wird, werden für bestätigte Aktivitäten Datum, Uhrzeit, Ort, erwachsene Kontaktperson und Wetterplan festgelegt.</p></details>
+    <p class="intake-link" style="margin-top:14px"><a class="btn btn-solid" href="/de/intake/?type=volunteer">Melde dich über das Formular als Helfer</a></p>
   </div>
-
-<p class="intake-link" style="margin-top:14px"><a class="btn btn-solid" href="/de/intake/?type=volunteer">Melde dich über das Formular als Helfer</a></p>
 </section>
 
 <section class="alt" id="kids">
@@ -1125,7 +1075,7 @@ Ein Bayou, ein Planet. Wir erfassen lokal und teilen weltweit — jeder dokument
       <p>Wir sind Amerikaner</p>
       <p>Wir sind stolz.</p>
     </div>
-    <div class="hash">#Starke Küste</div><nav id="footerMap" class="footer-map" aria-label="Starke Küste entdecken"><h3>Starke Küste entdecken</h3><div class="footer-columns"><div class="footer-column"><h4>Mitmachen</h4><a href="#signup">So kannst du helfen</a><a href="#kids">Küstenkinder</a><a href="#report">Müllablagerung melden</a><a href="#feedback">Ideen und Rückmeldungen</a></div><div class="footer-column"><h4>Die Küste entdecken</h4><a href="#receipts">Gemeinschaftsprotokoll</a><a href="#network">Netzwerk</a><a href="#worldwide">Weltweit</a><a href="#watches">Die Küstenwachen</a><a href="#water">Unser Wasser</a><a href="#journal">Journal und Ratgeber</a></div><div class="footer-column"><h4>Über Starke Küste</h4><a href="#top">Zurück nach oben</a><a href="#start">Hier anfangen</a><a href="#traction">Live-Aktivität</a><a href="#faq">Fragen und Antworten</a><a href="#sponsors">Unsere Sponsoren</a></div></div></nav><p class="footer-support">Website-Betreuung: <a href="https://228mooreelectric.com/">Moore Electric</a> · <a href="tel:+12282249150">(228) 224-9150</a><br>Moore Electric betreut diese Website und übernimmt die Domainregistrierung.</p>
+    <div class="hash">#Starke Küste</div><nav id="footerMap" class="footer-map" aria-label="Starke Küste entdecken"><h3>Starke Küste entdecken</h3><div class="footer-columns"><div class="footer-column"><h4>Mitmachen</h4><a href="#signup">So kannst du helfen</a><a href="#kids">Küstenkinder</a><a href="#report">Müllablagerung melden</a><a href="#feedback">Ideen und Rückmeldungen</a></div><div class="footer-column"><h4>Die Küste entdecken</h4><a href="#receipts">Gemeinschaftsprotokoll</a><a href="#network">Netzwerk</a><a href="#watches">Die Küstenwachen</a><a href="#water">Unser Wasser</a><a href="#journal">Journal und Ratgeber</a></div><div class="footer-column"><h4>Über Starke Küste</h4><a href="#top">Zurück nach oben</a><a href="#start">Hier anfangen</a><a href="#traction">Live-Aktivität</a><a href="#faq">Fragen und Antworten</a><a href="#sponsors">Unsere Sponsoren</a></div></div></nav><p class="footer-support">Website-Betreuung: <a href="https://228mooreelectric.com/">Moore Electric</a> · <a href="tel:+12282249150">(228) 224-9150</a><br>Moore Electric betreut diese Website und übernimmt die Domainregistrierung.</p>
     <p style="margin:0 0 14px"><a href="#signup" style="color:#ef8f4c;font-weight:700">Bei Bayou-Wacht mitmachen →</a>  ·  <a href="#report" style="color:#ef8f4c;font-weight:700">Müllablagerung melden →</a>  ·  <a href="#receipts" style="color:#ef8f4c;font-weight:700">Gemeinschaftsprotokoll →</a></p>
     <p style="margin:0 0 14px">E-Mail an das Team: <a href="/cdn-cgi/l/email-protection#85b7b7bde6eae4f6f1f6f1f7eaebe2c5e2e8e4ece9abe6eae8" style="color:#ef8f4c;font-weight:700"><span class="__cf_email__" data-cfemail="fdcfcfc59e929c8e898e898f92939abd9a909c9491d39e9290">[email&#160;protected]</span></a></p>
     <p class="fine">Starke Küste — Zentrale der Bayou-Wacht ist eine Gemeinschaftsseite für Mississippis Golfküste. Die Kontaktdaten der Behörden und Organisationen stammen von offiziellen öffentlichen Seiten, recherchiert am 15. Oktober 2026. Diese Seite übermittelt oder speichert keine Meldungen und versendet nichts in deinem Namen. Für Fragen zur Teilnahme und zur Unterstützung nutze die E-Mail-Links oben. Prüfe und versende die Nachricht über deine eigene E-Mail-App; diese Seite hat keine Anmeldedatenbank. Prüfe bei Veranstaltungen offizieller Programme die Angaben auf deren eigenen offiziellen Seiten.</p>
@@ -1140,10 +1090,12 @@ Ein Bayou, ein Planet. Wir erfassen lokal und teilen weltweit — jeder dokument
   // Compact navigation; the links stay visible when JavaScript is disabled.
   var menu=document.getElementById('menuToggle');
   var links=document.getElementById('primaryLinks');
+  var navEl=document.querySelector('nav.top');
   document.documentElement.classList.add('menu-ready');menu.hidden=false;
-  menu.addEventListener('click',function(){var open=menu.getAttribute('aria-expanded')!=='true';menu.setAttribute('aria-expanded',String(open));links.classList.toggle('open',open);});
-  links.addEventListener('click',function(e){if(e.target.closest('a')){menu.setAttribute('aria-expanded','false');links.classList.remove('open');}});
-  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&menu.getAttribute('aria-expanded')==='true'){menu.setAttribute('aria-expanded','false');links.classList.remove('open');menu.focus();}});
+  function setMenu(open){menu.setAttribute('aria-expanded',String(open));links.classList.toggle('open',open);if(navEl)navEl.classList.toggle('nav-open',open);}
+  menu.addEventListener('click',function(){setMenu(menu.getAttribute('aria-expanded')!=='true');});
+  links.addEventListener('click',function(e){if(e.target.closest('a')){setMenu(false);}});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&menu.getAttribute('aria-expanded')==='true'){setMenu(false);menu.focus();}});
 
   // Family learning activity. No storage, analytics, network calls or identifiers.
   var items=[{"label": "Ein Bonbonpapier auf einem trockenen Weg", "answer": "ordinary", "why": "Ein Bonbonpapier ist gewöhnlicher Müll. Mit einem Erwachsenen und geeigneten Handschuhen oder einer Greifzange kann es in einen Müllsack. Lass alles liegen, was du nicht sicher erkennen kannst."}, {"label": "Eine spitze Nadel am Ufer", "answer": "adult", "why": "Lass sie liegen und sage einem Erwachsenen Bescheid. Berühre sie nicht und stecke sie nicht in einen gewöhnlichen Müllsack. Ein Erwachsener kann sich an die zuständige Stelle wenden."}, {"label": "Ein Behälter mit einer unbekannten Chemikalie", "answer": "adult", "why": "Lass ihn liegen und sage einem Erwachsenen Bescheid. Nicht berühren, öffnen oder daran riechen. Unbekannte Behälter müssen von der zuständigen Stelle behandelt werden."}];

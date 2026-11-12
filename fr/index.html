@@ -351,6 +351,9 @@ details.org summary{min-height:44px;flex-wrap:wrap}details.org summary .tagchip{
 <style id="coast-approved-appearance-20261027">
 /* Approved screenshot appearance: fixed coastal-blue hero in every color mode. */
 :root{--gold:#fa6b12;--on-gold:#102b3a}
+/* fix-all: separator between brand name and Bayou Watch, matching the
+   English homepage's literal ' · ' (translated brands jammed them together). */
+.brand .brand-watch::before{content:" \00B7 ";color:var(--ink)}
 nav.top{background:#fbfaf7}
 .hero{background:#082e40}
 .hero .veil{background:linear-gradient(180deg,rgba(5,39,55,.86) 0%,rgba(5,39,55,.90) 62%,rgba(5,39,55,.95) 100%)}
@@ -364,6 +367,10 @@ nav.top{background:#fbfaf7}
 @media(max-width:740px){
  .language-switch{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px 8px;justify-content:stretch;padding:4px 0 8px}
  .language-switch a{min-width:0;min-height:44px;padding:10px 4px;font-size:14px;gap:10px;white-space:nowrap}
+ /* fix-all: on narrow screens the language row lives inside the menu, so the
+    sticky header is one slim row (brand + Menu) until the menu opens. */
+ .menu-ready .language-switch{display:none}
+ .menu-ready nav.top.nav-open .language-switch{display:grid;order:5}
  .hero .wrap{padding-top:34px}
  .hero-brand{font-size:25px;margin-top:20px}
 }
@@ -413,6 +420,7 @@ nav.top{background:#fbfaf7}
 <section class="quick-start" id="start"><div class="wrap"><p class="eyebrow">Commencez ici</p><p class="formnote">Des mains unies. Une seule côte. Plus forts ensemble.</p><div class="start-grid"><a class="start-card" href="#signup"><span class="start-number">01</span><strong>Trouvez votre rôle</strong><span>Élèves, enseignants, familles et voisins : choisissez une façon d’aider.</span></a><a class="start-card" href="#kids"><span class="start-number">02</span><strong>Apprenons ensemble</strong><span>Essayez une activité pour prendre soin de la côte avec un parent ou un enseignant.</span></a><a class="start-card" href="#journal"><span class="start-number">03</span><strong>Suivre le travail</strong><span>Lisez des guides pratiques, partagez vos idées et découvrez les prochaines étapes.</span></a></div></div></section>
 
 <section class="coast-flags" aria-labelledby="coast-flags-heading">
+  <div class="wrap">
   <div class="coast-flags__heading">
     <p class="coast-flags__eyebrow">Côte Forte</p>
     <h2 id="coast-flags-heading">Notre région. Notre pays.</h2>
@@ -431,6 +439,7 @@ nav.top{background:#fbfaf7}
       </div>
       <figcaption>Mississippi</figcaption>
     </figure>
+  </div>
   </div>
 </section>
 
@@ -520,10 +529,8 @@ SUIVI : [signalé à ORGANISME par MOYEN à HEURE — à ajouter après le signa
       </ol>
       <p class="learning-note">Source : <a href="https://www.mdeq.ms.gov/land/waste-division/solid-waste-management-programs/illegal-dumping/" target="_blank" rel="noopener">consignes du MDEQ sur les dépôts sauvages</a>, vérifiées le 25 octobre 2026. Ne confrontez personne, ne suivez personne et n’identifiez personne publiquement.</p>
     </details>
+    <p class="intake-link" style="margin-top:14px"><a class="btn btn-solid" href="/fr/intake/?type=report">Utilisez le formulaire pour signaler un site</a></p>
   </div>
-
-
-<p class="intake-link" style="margin-top:14px"><a class="btn btn-solid" href="/fr/intake/?type=report">Utilisez le formulaire pour signaler un site</a></p>
 </section>
 
 <!-- RECEIPTS -->
@@ -673,9 +680,8 @@ RELANCE ENVOYÉE :    [date + moyen, ou « aucune pour l’instant »]</pre>
     </div>
     <p class="route-note">Ces liens ouvrent votre application de messagerie. Vérifiez-y le message avant de l’envoyer ; cette page ne transmet ni ne conserve vos coordonnées. Vous pouvez aussi écrire directement à <a href="/cdn-cgi/l/email-protection#01333339626e6072757275736e6f6641666c60686d2f626e6c"><span class="__cf_email__" data-cfemail="e7d5d5df8488869493949395888980a7808a868e8bc984888a">[email&#160;protected]</span></a>. Merci de ne pas envoyer de renseignements privés sur les enfants ni de données médicales.</p>
     <details class="law-steps"><summary>Par quoi commencer ?</summary><p>Proposez une idée à un parent, un enseignant ou un ami : découvrir le bayou, créer une affiche à diffuser avec autorisation ou demander à un adulte de coordonner un nettoyage. Les adultes peuvent utiliser le <a href="https://coastalcleanup.extension.msstate.edu/contact-us/request-bin" target="_blank" rel="noopener">formulaire de demande de matériel du Mississippi Coastal Cleanup</a>; la disponibilité et l’approbation dépendent de ce programme.</p><p><strong>Aucun nettoyage Côte Forte n’est actuellement confirmé.</strong> Prendre contact exprime votre intérêt et ne constitue pas une inscription à un événement. Avant toute invitation à participer, les activités confirmées préciseront une date, un horaire, un lieu, un contact adulte et les dispositions prévues en cas de mauvais temps.</p></details>
+    <p class="intake-link" style="margin-top:14px"><a class="btn btn-solid" href="/fr/intake/?type=volunteer">Utilisez le formulaire pour devenir bénévole</a></p>
   </div>
-
-<p class="intake-link" style="margin-top:14px"><a class="btn btn-solid" href="/fr/intake/?type=volunteer">Utilisez le formulaire pour devenir bénévole</a></p>
 </section>
 <section class="alt" id="kids">
   <div class="wrap">
@@ -785,10 +791,12 @@ RELANCE ENVOYÉE :    [date + moyen, ou « aucune pour l’instant »]</pre>
   // Compact navigation; the links stay visible when JavaScript is disabled.
   var menu=document.getElementById('menuToggle');
   var links=document.getElementById('primaryLinks');
+  var navEl=document.querySelector('nav.top');
   document.documentElement.classList.add('menu-ready');menu.hidden=false;
-  menu.addEventListener('click',function(){var open=menu.getAttribute('aria-expanded')!=='true';menu.setAttribute('aria-expanded',String(open));links.classList.toggle('open',open);});
-  links.addEventListener('click',function(e){if(e.target.closest('a')){menu.setAttribute('aria-expanded','false');links.classList.remove('open');}});
-  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&menu.getAttribute('aria-expanded')==='true'){menu.setAttribute('aria-expanded','false');links.classList.remove('open');menu.focus();}});
+  function setMenu(open){menu.setAttribute('aria-expanded',String(open));links.classList.toggle('open',open);if(navEl)navEl.classList.toggle('nav-open',open);}
+  menu.addEventListener('click',function(){setMenu(menu.getAttribute('aria-expanded')!=='true');});
+  links.addEventListener('click',function(e){if(e.target.closest('a')){setMenu(false);}});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&menu.getAttribute('aria-expanded')==='true'){setMenu(false);menu.focus();}});
 
   // Family learning activity. No storage, analytics, network calls or identifiers.
   var items=[{"label": "Un emballage de bonbon sur un chemin sec", "answer": "ordinary", "why": "Un emballage est un déchet ordinaire. Avec un adulte et des gants adaptés ou une pince de ramassage, tu peux le mettre dans un sac à déchets. Laisse tout objet que tu ne peux pas identifier sans risque."}, {"label": "Une aiguille pointue près de la berge", "answer": "adult", "why": "Laisse-la où elle est et préviens un adulte. Ne la touche pas et ne la mets pas dans un sac à déchets ordinaire. Un adulte pourra contacter le service compétent."}, {"label": "Un récipient contenant un produit chimique inconnu", "answer": "adult", "why": "Laisse-le et préviens un adulte. N’y touche pas, ne l’ouvre pas et ne le sens pas. Les récipients inconnus nécessitent l’intervention du service compétent."}];
