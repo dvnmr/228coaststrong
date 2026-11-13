@@ -1,0 +1,18 @@
+# Cloudflare Pages config — Coast Strong (228coaststrong.com)
+# KV binding for the live-activity counter backend (functions/api/activity.js).
+# Namespace: coast-strong-activity — created in the dvnmr7 account.
+# Namespace ID supplied by Dev on the call, Nov 13, 2026, ~11:48 AM CT.
+
+[[kv_namespaces]]
+binding = "ACTIVITY_KV"
+id = "536dc880600c490bbc3852d3e2264e99"
+
+# Seed — the panel never counted before, so the first deploy starts from
+# Cloudflare's own verified number, NOT zero. 11,723 = pageviews last month
+# per the Nov 4 Cloudflare email; 2026-10-20 = site creation date in that
+# email. Fires once only, on the first counted view. True all-time total is
+# a little higher (Nov 1-5 views aren't in the email number) — the counter
+# adds every new view from deploy on.
+[vars]
+SEED_TOTAL_VIEWS = "11723"
+SEED_STARTED_AT = "2026-10-20T00:00:00.000Z"
