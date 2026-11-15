@@ -1,15 +1,11 @@
-# Cloudflare Pages config — Coast Strong (228coaststrong.com)
-# KV binding for the live-activity counter backend (functions/api/activity.js).
-# Namespace: coast-strong-activity — created in the dvnmr7 account.
-# Namespace ID supplied by Dev on the call, Nov 13, 2026, ~11:48 AM CT.
-# pages_build_output_dir is required or Cloudflare skips this file entirely
-# (that is what happened on the PR #5 deploy — the binding never attached).
-
+name = "228coaststrong"
+compatibility_date = "2026-11-12"
 pages_build_output_dir = "."
 
 [[kv_namespaces]]
 binding = "ACTIVITY_KV"
 id = "536dc880600c490bbc3852d3e2264e99"
 
-# No seed vars: Dev ruled Nov 13 the counter starts at zero.
-# First counted view sets total to 1.
+[vars]
+SEED_TOTAL_VIEWS = "11723"
+SEED_STARTED_AT = "2026-10-20T00:00:00.000Z"

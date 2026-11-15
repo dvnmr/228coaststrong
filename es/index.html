@@ -4,7 +4,7 @@
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
 <meta name="color-scheme" content="light"/>
-<link rel="icon" href="data:,"/>
+<link rel="icon" href="/icon.webp" type="image/webp"/>
 <title>Costa Fuerte — Vecinos que protegen nuestra costa</title>
 <meta name="description" content="Vecinos que cuidan la costa de Mississippi. Encuentra cómo ayudar, aprende en familia, denuncia vertidos de forma segura o pregunta cómo patrocinar a Costa Fuerte.">
 <meta name="coast-strong-build" content="001-ALPHA-R3-APPROVED-APPEARANCE-20261027">
@@ -536,6 +536,11 @@ RESPUESTA:           [qué dijo o hizo el organismo: actualizar al recibir respu
 SEGUIMIENTO ENVIADO: [fecha + canal, o "aún no se ha enviado"]</pre>
         <p><button class="copybtn" data-copy="receiptTemplate">Copiar la plantilla de registro</button><span class="copied" id="receiptCopied"></span></p>
         <p class="muted" style="font-size:15px">La primera entrada ya está escrita: el hallazgo de Bayou Bernard Park, fotografiado y denunciado el 15 de octubre, la Constancia #001. Cada llamada y correo posterior se anota en esa misma entrada.</p>
+        <details class="org" style="margin-top:14px"><summary>Constancia #001 — 15 oct 2026 · Bayou Bernard Park <span class="tagchip">Registrada</span></summary><div class="body"><pre class="template" style="margin:0">COSTA FUERTE — CONSTANCIA #001
+FECHA/HORA:          15 de octubre de 2026
+UBICACIÓN:           Bayou Bernard Park (James Hill Park), 1890 Switzer Rd, Gulfport
+HECHOS DENUNCIADOS:  Televisor abandonado y plástico grueso en la marisma (desemboca en Mississippi Sound)
+ESTADO:              Fotografiado, denunciado, retirado y registrado — entrada fundacional de Costa Fuerte</pre></div></details>
       </div>
       <div>
         <h3 style="margin-top:0">Seguimiento: cómo lograr que una denuncia avance</h3>
@@ -920,7 +925,7 @@ SEGUIMIENTO ENVIADO: [fecha + canal, o "aún no se ha enviado"]</pre>
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 (function(){
 
   // Compact navigation; the links stay visible when JavaScript is disabled.
@@ -935,7 +940,7 @@ SEGUIMIENTO ENVIADO: [fecha + canal, o "aún no se ha enviado"]</pre>
 
   // Filter the local directory without leaving the selected language.
   var orgFilters=document.querySelectorAll('.orgfilter');
-  function applyOrgFilters(){var active=Array.from(orgFilters).filter(function(input){return input.checked;}).map(function(input){return input.value;});document.querySelectorAll('details.org').forEach(function(card){card.hidden=active.length>0&&active.indexOf(card.dataset.cat)===-1;});}
+  function applyOrgFilters(){var active=Array.from(orgFilters).filter(function(input){return input.checked;}).map(function(input){return input.value;});document.querySelectorAll('#network details.org').forEach(function(card){card.hidden=active.length>0&&active.indexOf(card.dataset.cat)===-1;});}
   orgFilters.forEach(function(input){input.addEventListener('change',applyOrgFilters);});
 
   // Family learning activity. No storage, analytics, network calls or identifiers.
@@ -1005,7 +1010,7 @@ SEGUIMIENTO ENVIADO: [fecha + canal, o "aún no se ha enviado"]</pre>
   }
 
   // --- Fact count-up ---
-  var factNums = document.querySelectorAll('.fact b');
+  var factNums = document.querySelectorAll('.fact b:not([data-activity])');
   function countUp(el){
     var m = el.textContent.match(/^([\d.]+)(.*)$/);
     if (!m) return;

@@ -4,7 +4,7 @@
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
 <meta name="color-scheme" content="light"/>
-<link rel="icon" href="data:,"/>
+<link rel="icon" href="/icon.webp" type="image/webp"/>
 <title>Coast Strong — Neighbors protecting our coast</title>
 <meta name="description" content="Neighbors caring for the Mississippi Gulf Coast. Find a way to help, learn with your family, report dumping safely, or ask about sponsoring Coast Strong.">
 <meta name="coast-strong-build" content="001-ALPHA-R3-APPROVED-APPEARANCE-20261027">
@@ -572,6 +572,11 @@ RESPONSE:         [what the agency said or did — update as replies come in]
 FOLLOW-UP SENT:   [date + channel, or "none yet"]</pre>
         <p><button class="copybtn" data-copy="receiptTemplate">Copy the log template</button><span class="copied" id="receiptCopied"></span></p>
         <p class="muted" style="font-size:15px">The first entry is already written: the Bayou Bernard Park find, photographed and reported on Oct 15 — Receipt #001. Every call and email that follows it goes on the same entry.</p>
+        <details class="org" style="margin-top:14px"><summary>Receipt #001 — Oct 15, 2026 · Bayou Bernard Park <span class="tagchip">Logged</span></summary><div class="body"><pre class="template" style="margin:0">COAST STRONG — RECEIPT #001
+DATE/TIME:        Oct 15, 2026
+LOCATION:         Bayou Bernard Park (James Hill Park), 1890 Switzer Rd, Gulfport
+REPORTED:         Dumped television and heavy plastic in the marsh (drains to Mississippi Sound)
+STATUS:           Photographed, reported, hauled out, and logged — founding entry of Coast Strong</pre></div></details>
       </div>
       <div>
         <h3 style="margin-top:0">Following up — how to keep a report moving</h3>
@@ -1041,7 +1046,7 @@ FOLLOW-UP SENT:   [date + channel, or "none yet"]</pre>
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 (function(){
 
   // Compact navigation; the links stay visible when JavaScript is disabled.
@@ -1088,7 +1093,7 @@ FOLLOW-UP SENT:   [date + channel, or "none yet"]</pre>
   // Retained directory category filters.
 
   var filters = document.querySelectorAll('.orgfilter');
-  var cards = document.querySelectorAll('details.org');
+  var cards = document.querySelectorAll('#network details.org');
   function applyFilter(){
     var active = [];
     for (var i=0;i<filters.length;i++){ if (filters[i].checked) active.push(filters[i].value); }
@@ -1140,7 +1145,7 @@ FOLLOW-UP SENT:   [date + channel, or "none yet"]</pre>
   }
 
   // --- Fact count-up ---
-  var factNums = document.querySelectorAll('.fact b');
+  var factNums = document.querySelectorAll('.fact b:not([data-activity])');
   function countUp(el){
     var m = el.textContent.match(/^([\d.]+)(.*)$/);
     if (!m) return;

@@ -4,7 +4,7 @@
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
 <meta name="color-scheme" content="light"/>
-<link rel="icon" href="data:,"/>
+<link rel="icon" href="/icon.webp" type="image/webp"/>
 <title>Starke Küste — Gemeinsam schützen wir unsere Küste</title>
 <meta name="description" content="Nachbarn engagieren sich für die Golfküste Mississippis. Hilf mit, lerne mit deiner Familie, melde illegale Müllablagerungen sicher oder informiere dich über eine Unterstützung von Starke Küste.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -594,6 +594,11 @@ REAKTION:         [Antwort oder Maßnahme der Behörde — bei Rückmeldungen ak
 NACHFRAGE:        [Datum + Meldeweg oder „bisher keine“]</pre>
         <p><button class="copybtn" data-copy="receiptTemplate">Protokollvorlage kopieren</button><span class="copied" id="receiptCopied"></span></p>
         <p class="muted" style="font-size:15px">Der erste Eintrag steht bereits: der Fund im Bayou Bernard Park, fotografiert und gemeldet am 15. Oktober — Beleg Nr. 001. Alle weiteren Anrufe und E-Mails dazu gehören in denselben Eintrag.</p>
+        <details class="org" style="margin-top:14px"><summary>Beleg Nr. 001 — 15. Okt. 2026 · Bayou Bernard Park <span class="tagchip">Protokolliert</span></summary><div class="body"><pre class="template" style="margin:0">STARKE KÜSTE — BELEG NR. 001
+DATUM/UHRZEIT:    15. Oktober 2026
+ORT:              Bayou Bernard Park (James Hill Park), 1890 Switzer Rd, Gulfport
+GEMELDET:         Weggeworfener Fernseher und schwere Kunststoffteile im Marschland (Abfluss in den Mississippi Sound)
+STATUS:           Fotografiert, gemeldet, geborgen und protokolliert — Gründungseintrag von Starke Küste</pre></div></details>
       </div>
       <div>
         <h3 style="margin-top:0">Nachfassen — so bleibt eine Meldung in Bewegung</h3>
@@ -1084,7 +1089,7 @@ NACHFRAGE:        [Datum + Meldeweg oder „bisher keine“]</pre>
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 (function(){
 
   // Compact navigation; the links stay visible when JavaScript is disabled.
@@ -1131,7 +1136,7 @@ NACHFRAGE:        [Datum + Meldeweg oder „bisher keine“]</pre>
   // Retained directory category filters.
 
   var filters = document.querySelectorAll('.orgfilter');
-  var cards = document.querySelectorAll('details.org');
+  var cards = document.querySelectorAll('#network details.org');
   function applyFilter(){
     var active = [];
     for (var i=0;i<filters.length;i++){ if (filters[i].checked) active.push(filters[i].value); }
@@ -1183,7 +1188,7 @@ NACHFRAGE:        [Datum + Meldeweg oder „bisher keine“]</pre>
   }
 
   // --- Fact count-up ---
-  var factNums = document.querySelectorAll('.fact b');
+  var factNums = document.querySelectorAll('.fact b:not([data-activity])');
   function countUp(el){
     var m = el.textContent.match(/^([\d.]+)(.*)$/);
     if (!m) return;
@@ -1212,7 +1217,6 @@ NACHFRAGE:        [Datum + Meldeweg oder „bisher keine“]</pre>
 </script>
 <script src="../activity.js" defer></script>
 <script src="../share.js" defer></script>
-<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" data-cf-beacon='{"version":"2024.11.0","token":"42e259363e0948a784881d13c9f0abe3","r":1,"spa":2}' crossorigin="anonymous"></script>
 <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" data-cf-beacon='{"version":"2024.11.0","token":"42e259363e0948a784881d13c9f0abe3","r":1,"spa":2}' crossorigin="anonymous"></script>
 </body>
 </html>

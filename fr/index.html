@@ -4,7 +4,7 @@
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
 <meta name="color-scheme" content="light"/>
-<link rel="icon" href="data:,"/>
+<link rel="icon" href="/icon.webp" type="image/webp"/>
 <title>Côte Forte — Des voisins protègent notre côte</title>
 <meta name="description" content="Des voisins prennent soin de la côte du Mississippi. Participez, apprenez en famille, signalez les dépôts sauvages sans risque ou soutenez Côte Forte.">
 <meta name="coast-strong-build" content="001-ALPHA-R3-APPROVED-APPEARANCE-20261027">
@@ -551,6 +551,11 @@ RÉPONSE :            [réponse ou action de l’organisme — à actualiser au 
 RELANCE ENVOYÉE :    [date + moyen, ou « aucune pour l’instant »]</pre>
         <p><button class="copybtn" data-copy="receiptTemplate">Copier le modèle de registre</button><span class="copied" id="receiptCopied"></span></p>
         <p class="muted" style="font-size:15px">La première fiche est déjà rédigée : la découverte à Bayou Bernard Park, photographiée et signalée le 15 octobre, constitue la Fiche n° 001. Chaque appel et courriel de suivi est ajouté à cette même fiche.</p>
+        <details class="org" style="margin-top:14px"><summary>Fiche n° 001 — 15 oct. 2026 · Bayou Bernard Park <span class="tagchip">Consignée</span></summary><div class="body"><pre class="template" style="margin:0">CÔTE FORTE — FICHE N° 001
+DATE / HEURE :       15 octobre 2026
+LIEU :               Bayou Bernard Park (James Hill Park), 1890 Switzer Rd, Gulfport
+OBJET :              Téléviseur abandonné et plastique épais dans le marais (rejoint le Mississippi Sound)
+STATUT :             Photographié, signalé, retiré et consigné — fiche fondatrice de Côte Forte</pre></div></details>
       </div>
       <div>
         <h3 style="margin-top:0">Le suivi : faire avancer un signalement</h3>
@@ -785,7 +790,7 @@ RELANCE ENVOYÉE :    [date + moyen, ou « aucune pour l’instant »]</pre>
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 (function(){
 
   // Compact navigation; the links stay visible when JavaScript is disabled.
@@ -832,7 +837,7 @@ RELANCE ENVOYÉE :    [date + moyen, ou « aucune pour l’instant »]</pre>
   // Retained directory category filters.
 
   var filters = document.querySelectorAll('.orgfilter');
-  var cards = document.querySelectorAll('details.org');
+  var cards = document.querySelectorAll('#network details.org');
   function applyFilter(){
     var active = [];
     for (var i=0;i<filters.length;i++){ if (filters[i].checked) active.push(filters[i].value); }
@@ -885,7 +890,7 @@ RELANCE ENVOYÉE :    [date + moyen, ou « aucune pour l’instant »]</pre>
   }
 
   // --- Fact count-up ---
-  var factNums = document.querySelectorAll('.fact b');
+  var factNums = document.querySelectorAll('.fact b:not([data-activity])');
   function countUp(el){
     var m = el.textContent.match(/^([\d.,]+)(.*)$/);
     if (!m) return;

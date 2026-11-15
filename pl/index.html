@@ -4,7 +4,7 @@
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
 <meta name="color-scheme" content="light"/>
-<link rel="icon" href="data:,"/>
+<link rel="icon" href="/icon.webp" type="image/webp"/>
 <title>Silne Wybrzeże — Sąsiedzi chronią nasze wybrzeże</title>
 <meta name="description" content="Sąsiedzi dbają o wybrzeże Zatoki w Mississippi. Znajdź sposób, by pomóc, ucz się z rodziną, bezpiecznie zgłaszaj dzikie wysypiska lub zapytaj o wsparcie Silne Wybrzeże.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -596,6 +596,11 @@ ODPOWIEDŹ:        [co instytucja przekazała lub zrobiła — aktualizuj po otr
 PONOWNY KONTAKT:  [data i kanał lub „jeszcze nie”]</pre>
         <p><button class="copybtn" data-copy="receiptTemplate">Kopiuj wzór dziennika</button><span class="copied" id="receiptCopied"></span></p>
         <p class="muted" style="font-size:15px">Pierwszy wpis już powstał: znalezisko w Bayou Bernard Park, sfotografowane i zgłoszone 15 października — Wpis #001. Każdy kolejny telefon i e-mail w tej sprawie dopisujemy do tego samego wpisu.</p>
+        <details class="org" style="margin-top:14px"><summary>Wpis #001 — 15 paź 2026 · Bayou Bernard Park <span class="tagchip">Zapisany</span></summary><div class="body"><pre class="template" style="margin:0">SILNE WYBRZEŻE — WPIS #001
+DATA/GODZINA:     15 października 2026 r.
+MIEJSCE:          Bayou Bernard Park (James Hill Park), 1890 Switzer Rd, Gulfport
+ZGŁOSZONO:        Porzucony telewizor i ciężki plastik na mokradłach (wody spływają do Mississippi Sound)
+STATUS:           Sfotografowano, zgłoszono, usunięto i zapisano — wpis założycielski Silne Wybrzeże</pre></div></details>
       </div>
       <div>
         <h3 style="margin-top:0">Dalszy kontakt — jak zadbać o postęp sprawy</h3>
@@ -1086,7 +1091,7 @@ PONOWNY KONTAKT:  [data i kanał lub „jeszcze nie”]</pre>
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 (function(){
 
   // Compact navigation; the links stay visible when JavaScript is disabled.
@@ -1133,7 +1138,7 @@ PONOWNY KONTAKT:  [data i kanał lub „jeszcze nie”]</pre>
   // Retained directory category filters.
 
   var filters = document.querySelectorAll('.orgfilter');
-  var cards = document.querySelectorAll('details.org');
+  var cards = document.querySelectorAll('#network details.org');
   function applyFilter(){
     var active = [];
     for (var i=0;i<filters.length;i++){ if (filters[i].checked) active.push(filters[i].value); }
@@ -1185,7 +1190,7 @@ PONOWNY KONTAKT:  [data i kanał lub „jeszcze nie”]</pre>
   }
 
   // --- Fact count-up ---
-  var factNums = document.querySelectorAll('.fact b');
+  var factNums = document.querySelectorAll('.fact b:not([data-activity])');
   function countUp(el){
     var m = el.textContent.match(/^([\d.]+)(.*)$/);
     if (!m) return;
@@ -1214,7 +1219,6 @@ PONOWNY KONTAKT:  [data i kanał lub „jeszcze nie”]</pre>
 </script>
 <script src="../activity.js" defer></script>
 <script src="../share.js" defer></script>
-<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" data-cf-beacon='{"version":"2024.11.0","token":"42e259363e0948a784881d13c9f0abe3","r":1,"spa":2}' crossorigin="anonymous"></script>
 <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" data-cf-beacon='{"version":"2024.11.0","token":"42e259363e0948a784881d13c9f0abe3","r":1,"spa":2}' crossorigin="anonymous"></script>
 </body>
 </html>

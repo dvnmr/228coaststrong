@@ -4,7 +4,7 @@
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
 <meta name="color-scheme" content="light"/>
-<link rel="icon" href="data:,"/>
+<link rel="icon" href="/icon.webp" type="image/webp"/>
 <title>Bờ Biển Vững Mạnh — Hàng xóm cùng bảo vệ bờ biển quê mình</title>
 <meta name="description" content="Người dân cùng chăm sóc vùng duyên hải Mississippi. Tìm cách góp sức, học cùng gia đình, báo cáo đổ rác an toàn hoặc hỏi về tài trợ cho Bờ Biển Vững Mạnh.">
 <meta name="coast-strong-build" content="001-ALPHA-R3-APPROVED-APPEARANCE-20261027">
@@ -537,6 +537,11 @@ PHẢN HỒI:          [cơ quan đã trả lời hoặc làm gì — cập nh�
 ĐÃ GỬI HỎI TIẾN ĐỘ: [ngày + kênh, hoặc "chưa gửi"]</pre>
         <p><button class="copybtn" data-copy="receiptTemplate">Sao chép mẫu nhật ký</button><span class="copied" id="receiptCopied"></span></p>
         <p class="muted" style="font-size:15px">Mục đầu tiên đã được ghi: vụ phát hiện tại Bayou Bernard Park, được chụp ảnh và báo tin ngày 15 tháng 10 — Hồ sơ #001. Mọi cuộc gọi và thư điện tử tiếp theo về vụ này đều được ghi vào cùng mục đó.</p>
+        <details class="org" style="margin-top:14px"><summary>Hồ sơ #001 — 15/10/2026 · Bayou Bernard Park <span class="tagchip">Đã ghi nhận</span></summary><div class="body"><pre class="template" style="margin:0">BỜ BIỂN VỮNG MẠNH — HỒ SƠ #001
+NGÀY/GIỜ:          15 tháng 10 năm 2026
+ĐỊA ĐIỂM:          Bayou Bernard Park (James Hill Park), 1890 Switzer Rd, Gulfport
+NỘI DUNG BÁO TIN:  Tivi bị vứt bỏ và nhựa dày trong đầm lầy (nước chảy ra Mississippi Sound)
+TRẠNG THÁI:        Đã chụp ảnh, báo tin, đưa rác ra ngoài và ghi hồ sơ — mục khởi đầu của Bờ Biển Vững Mạnh</pre></div></details>
       </div>
       <div>
         <h3 style="margin-top:0">Theo dõi tiến độ — cách thúc đẩy việc xử lý báo tin</h3>
@@ -775,7 +780,7 @@ PHẢN HỒI:          [cơ quan đã trả lời hoặc làm gì — cập nh�
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 (function(){
 
   // Compact navigation; the links stay visible when JavaScript is disabled.
@@ -855,7 +860,7 @@ PHẢN HỒI:          [cơ quan đã trả lời hoặc làm gì — cập nh�
   }
 
   // --- Fact count-up ---
-  var factNums = document.querySelectorAll('.fact b');
+  var factNums = document.querySelectorAll('.fact b:not([data-activity])');
   function countUp(el){
     var m = el.textContent.match(/^([\d.]+)(.*)$/);
     if (!m) return;
@@ -887,7 +892,7 @@ PHẢN HỒI:          [cơ quan đã trả lời hoặc làm gì — cập nh�
 <script data-local-network>
 (() => {
  const filters = document.querySelectorAll('.orgfilter');
- const cards = document.querySelectorAll('details.org');
+ const cards = document.querySelectorAll('#network details.org');
  function applyFilter() {
   const active = Array.from(filters).filter(input => input.checked).map(input => input.value);
   cards.forEach(card => card.classList.toggle('hidden-card', active.length > 0 && !active.includes(card.dataset.cat)));
