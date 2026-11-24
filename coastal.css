@@ -1,10 +1,12 @@
 /* Coast Strong — shared design system.
-   Extracted verbatim Nov 10, 2026 from the two inline <style> blocks in
-   index.html (base block + "coast-approved-appearance-20261027" override).
-   The homepage keeps its inline copy, so its render is unchanged; the
-   intake pages link this file to share the same tokens, hero, nav, buttons,
-   cards and footer. Light-locked: no dark-mode variant in this file.
-   If index.html's inline styles change, mirror them here. */
+   SINGLE SOURCE OF TRUTH for site CSS (Nov 24, 2026): merged from the two
+   inline <style> blocks formerly in index.html (base block +
+   "coast-approved-appearance-20261027" override). index.html now links this
+   file and carries no inline CSS, so a fix here shows up everywhere.
+   The intake and journal pages link this file to share the same tokens,
+   hero, nav, buttons, cards and footer.
+   Light-locked: no dark-mode variant in this file. */
+
 :root{
   --bg:#fbf8f1; --surface:#ffffff; --surface2:#e9f1f4; --ink:#12242e; --muted:#5a6a70; --line:#d3dee2;
   --green:#0b5a7a; --green-dark:#07425c; --green-deep:#052e40; --amber:#a85f14; --amber-bg:#fdeeda; --red:#a6192e;
@@ -211,7 +213,7 @@ h1,h2,h3{overflow-wrap:break-word;text-wrap:balance}
 .channel a,.route-note a,footer a{overflow-wrap:anywhere}
 .flagband figcaption{max-width:calc(100% - 28px);border-radius:10px}
 .quick-start{padding:28px 0 36px;border-bottom:1px solid var(--line);background:var(--surface)}
-.start-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.start-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
 .start-card{display:block;border:1px solid var(--line);border-radius:12px;padding:20px;text-decoration:none;color:var(--ink);background:var(--surface2)}
 .start-card .start-number{font-size:13px;font-weight:700;letter-spacing:.12em;color:var(--amber)}
 .start-card strong{display:block;font-family:'Zilla Slab',Georgia,serif;font-size:24px;line-height:1.2;margin:5px 0 8px}
@@ -299,7 +301,7 @@ summary{min-height:44px}
 
 .footer-map .footer-column{display:flex;flex-direction:column;gap:2px}.footer-map h4{color:var(--gold);font-size:15px;margin:0 0 10px}.footer-support{font-size:13px;color:var(--on-dark-muted);text-align:left;border-top:1px solid rgba(255,255,255,.25);padding-top:18px}.footer-support a{color:var(--on-dark);font-weight:600}#sponsors{scroll-margin-top:190px}
 
-/* Retained Network layout */
+/* Retained Network and Worldwide layout */
 
 .filters{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 22px}
 .filters label{display:flex;align-items:center;gap:8px;background:var(--surface);border:1.5px solid var(--line);padding:9px 14px;border-radius:999px;font-weight:600;font-size:15px;cursor:pointer}
@@ -315,6 +317,10 @@ details.org .body p{margin:0 0 10px}
 .draft{display:inline-block;font-size:12.5px;font-weight:700;letter-spacing:.06em;background:var(--amber-bg);color:var(--amber);border:1px solid var(--amber);padding:3px 9px;border-radius:999px;text-transform:uppercase}
 .hidden-card{display:none!important}
 
+section.worldwide{background:var(--green-dark);color:#e9f4f8}
+section.worldwide h2{color:#fff}
+section.worldwide h2 .accent{color:#ef8f4c}
+section.worldwide .lede{color:#e2f0f5}
 .globe-wrap{display:flex;flex-direction:column;align-items:center;gap:16px}
 .globe{width:min(320px,78vw);height:auto;animation:globeFloat 7s ease-in-out infinite alternate}
 @keyframes globeFloat{from{transform:translateY(0)}to{transform:translateY(-10px)}}
@@ -331,9 +337,12 @@ details.org .body p{margin:0 0 10px}
 
 details.org summary{min-height:44px;flex-wrap:wrap}details.org summary .tagchip{white-space:normal;background:var(--surface2)}
 
-/* Approved screenshot appearance (override block, verbatim) */
+
 /* Approved screenshot appearance: fixed coastal-blue hero in every color mode. */
 :root{--gold:#fa6b12;--on-gold:#102b3a}
+/* fix-all: separator between brand name and Bayou Watch, matching the
+   English homepage's literal ' · ' (translated brands jammed them together). */
+.brand .brand-watch::before{content:" \00B7 ";color:var(--ink)}
 nav.top{background:#fbfaf7}
 .hero{background:#082e40}
 .hero .veil{background:linear-gradient(180deg,rgba(5,39,55,.86) 0%,rgba(5,39,55,.90) 62%,rgba(5,39,55,.95) 100%)}
@@ -347,6 +356,10 @@ nav.top{background:#fbfaf7}
 @media(max-width:740px){
  .language-switch{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px 8px;justify-content:stretch;padding:4px 0 8px}
  .language-switch a{min-width:0;min-height:44px;padding:10px 4px;font-size:14px;gap:10px;white-space:nowrap}
+ /* fix-all: on narrow screens the language row lives inside the menu, so the
+    sticky header is one slim row (brand + Menu) until the menu opens. */
+ .menu-ready .language-switch{display:none}
+ .menu-ready nav.top.nav-open .language-switch{display:grid;order:5}
  .hero .wrap{padding-top:34px}
  .hero-brand{font-size:25px;margin-top:20px}
 }
