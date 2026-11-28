@@ -262,12 +262,6 @@ html[lang=vi] h1,html[lang=vi] h2,html[lang=vi] h3,html[lang=vi] .brand,html[lan
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1!important;transform:none!important}}
 @media print{.language-switch,.quick-start{display:none!important}}
 
-/* Shared traction panel: calm motion, existing marsh palette. */
-.traction{padding:30px 0 36px;background:var(--surface2);border-bottom:1px solid var(--line)}
-.traction h2{font-size:clamp(28px,4vw,40px)}
-.traction .factrow{margin-top:18px}.traction .fact b{font-variant-numeric:tabular-nums;font-size:clamp(32px,5vw,44px)}
-.traction details{font-size:14px}.traction summary{cursor:pointer;font-weight:600;min-height:44px;display:flex;align-items:center}
-.traction[data-state=unavailable] .fact b{opacity:.65}
 .btn,.start-card,.language-switch a{transition:background-color .16s ease,border-color .16s ease,box-shadow .16s ease}
 a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
 @media(prefers-reduced-motion:reduce){.btn,.start-card,.language-switch a{transition:none}}
@@ -457,7 +451,7 @@ nav.top{background:#fbfaf7}
     
   </div>
 </header>
-<section class="traction" id="traction" aria-labelledby="tractionTitle" data-state="connecting"><div class="wrap"><p class="eyebrow">Starke Küste live</p><h2 id="tractionTitle">Sieh zu, wie unsere Gemeinschaft wächst.</h2><p class="formnote">Jeder Besuch ist eine neue Gelegenheit, sich um Mutter Erde zu kümmern.</p><div class="factrow"><div class="fact"><b data-activity="totalViews">—</b><span>Seitenaufrufe seit Beginn der Erfassung</span></div><div class="fact"><b data-activity="todayViews">—</b><span>Seitenaufrufe heute · US-Zentralzeit</span></div><div class="fact"><b data-activity="activeSessions">—</b><span>Aktive Sitzungen · letzte 2 Minuten</span></div></div><p class="formnote" data-activity-status role="status">Verbindung zur Live-Aktivität wird hergestellt …</p><p class="formnote" data-activity-since>Die Erfassung beginnt mit dem ersten aufgezeichneten Seitenaufruf.</p><details><summary>So zählen wir</summary><p class="formnote">Gezählt werden erfasste Seitenaufrufe, keine einzelnen Personen. Neuladen oder ein Sprachwechsel zählt als weiterer Seitenaufruf; separate Tabs können als eigene Sitzungen zählen. Automatisierte Zugriffe und blockierte Erfassung können die Summen beeinflussen. Die Anzeige wird alle 30 Sekunden aktualisiert, solange diese Seite sichtbar ist.</p></details></div></section>
+
 
 <section class="quick-start" id="start"><div class="wrap"><p class="eyebrow">Hier anfangen</p><p class="formnote">Viele Hände. Eine Küste. Gemeinsam stärker.</p><div class="start-grid"><a class="start-card" href="#signup"><span class="start-number">01</span><strong>Finde deinen Beitrag</strong><span>Schüler, Lehrkräfte, Familien und Nachbarn: Wählt, wie ihr helfen möchtet.</span></a><a class="start-card" href="#kids"><span class="start-number">02</span><strong>Gemeinsam lernen</strong><span>Probiere mit einem Elternteil oder einer Lehrkraft eine Übung zum Küstenschutz aus.</span></a><a class="start-card" href="#journal"><span class="start-number">03</span><strong>Verfolge unsere Arbeit</strong><span>Lies praktische Ratgeber, teile Ideen und erfahre, was als Nächstes kommt.</span></a></div></div></section>
 
@@ -519,7 +513,7 @@ nav.top{background:#fbfaf7}
     <div class="factrow">
       <div class="fact"><b>9,75 Tonnen</b><span>Abfälle, die bei früheren Aktionen von Renew Our Rivers aus Gulfport Lake / Industrial Seaway und Bayou Bernard geborgen wurden (4,5 + 5,25 Tonnen) — dieses Gewässersystem ist ein bekannter, dokumentierter Abladeort.</span></div>
       <div class="fact"><b>9 Standorte</b><span>Auf der offiziellen Liste des Coastal Cleanup 2026 — allesamt Strände, Häfen, Piers oder Uferabschnitte von Parks.</span></div>
-      <div class="fact"><b>0</b><span>Bayou-Standorte stehen bisher auf dieser Liste. Gerade in den Bayous können Nachbarschaftsteams am meisten bewirken — und genau dort setzt Starke Küste an.</span></div>
+      <div class="fact"><b>Als Nächstes</b><span>Bayou-Standorte stehen bisher noch nicht auf dieser Liste. Gerade in den Bayous können Nachbarschaftsteams am meisten bewirken — und genau dort setzt Starke Küste an.</span></div>
     </div>
   </div>
 </section>
@@ -1080,7 +1074,7 @@ STATUS:           Fotografiert, gemeldet, geborgen und protokolliert — Gründu
       <p>Wir sind Amerikaner</p>
       <p>Wir sind stolz.</p>
     </div>
-    <div class="hash">#Starke Küste</div><nav id="footerMap" class="footer-map" aria-label="Starke Küste entdecken"><h3>Starke Küste entdecken</h3><div class="footer-columns"><div class="footer-column"><h4>Mitmachen</h4><a href="#signup">So kannst du helfen</a><a href="#kids">Küstenkinder</a><a href="#report">Müllablagerung melden</a><a href="#feedback">Ideen und Rückmeldungen</a></div><div class="footer-column"><h4>Die Küste entdecken</h4><a href="#receipts">Gemeinschaftsprotokoll</a><a href="#network">Netzwerk</a><a href="#watches">Die Küstenwachen</a><a href="#water">Unser Wasser</a><a href="#journal">Journal und Ratgeber</a></div><div class="footer-column"><h4>Über Starke Küste</h4><a href="#top">Zurück nach oben</a><a href="#start">Hier anfangen</a><a href="#traction">Live-Aktivität</a><a href="#faq">Fragen und Antworten</a><a href="#sponsors">Unsere Sponsoren</a></div></div></nav><p class="footer-support">Website-Betreuung: <a href="https://228mooreelectric.com/">Moore Electric</a> · <a href="tel:+12282249150">(228) 224-9150</a><br>Moore Electric betreut diese Website und übernimmt die Domainregistrierung.</p>
+    <div class="hash">#Starke Küste</div><nav id="footerMap" class="footer-map" aria-label="Starke Küste entdecken"><h3>Starke Küste entdecken</h3><div class="footer-columns"><div class="footer-column"><h4>Mitmachen</h4><a href="#signup">So kannst du helfen</a><a href="#kids">Küstenkinder</a><a href="#report">Müllablagerung melden</a><a href="#feedback">Ideen und Rückmeldungen</a></div><div class="footer-column"><h4>Die Küste entdecken</h4><a href="#receipts">Gemeinschaftsprotokoll</a><a href="#network">Netzwerk</a><a href="#watches">Die Küstenwachen</a><a href="#water">Unser Wasser</a><a href="#journal">Journal und Ratgeber</a></div><div class="footer-column"><h4>Über Starke Küste</h4><a href="#top">Zurück nach oben</a><a href="#start">Hier anfangen</a><a href="#faq">Fragen und Antworten</a><a href="#sponsors">Unsere Sponsoren</a></div></div></nav><p class="footer-support">Website-Betreuung: <a href="https://228mooreelectric.com/">Moore Electric</a> · <a href="tel:+12282249150">(228) 224-9150</a><br>Moore Electric betreut diese Website und übernimmt die Domainregistrierung.</p>
     <p style="margin:0 0 14px"><a href="#signup" style="color:#ef8f4c;font-weight:700">Bei Bayou-Wacht mitmachen →</a>  ·  <a href="#report" style="color:#ef8f4c;font-weight:700">Müllablagerung melden →</a>  ·  <a href="#receipts" style="color:#ef8f4c;font-weight:700">Gemeinschaftsprotokoll →</a></p>
     <p style="margin:0 0 14px">E-Mail an das Team: <a href="/cdn-cgi/l/email-protection#85b7b7bde6eae4f6f1f6f1f7eaebe2c5e2e8e4ece9abe6eae8" style="color:#ef8f4c;font-weight:700"><span class="__cf_email__" data-cfemail="fdcfcfc59e929c8e898e898f92939abd9a909c9491d39e9290">[email&#160;protected]</span></a></p>
     <p class="fine">Starke Küste — Zentrale der Bayou-Wacht ist eine Gemeinschaftsseite für Mississippis Golfküste. Die Kontaktdaten der Behörden und Organisationen stammen von offiziellen öffentlichen Seiten, recherchiert am 15. Oktober 2026. Diese Seite übermittelt oder speichert keine Meldungen und versendet nichts in deinem Namen. Für Fragen zur Teilnahme und zur Unterstützung nutze die E-Mail-Links oben. Prüfe und versende die Nachricht über deine eigene E-Mail-App; diese Seite hat keine Anmeldedatenbank. Prüfe bei Veranstaltungen offizieller Programme die Angaben auf deren eigenen offiziellen Seiten.</p>
@@ -1188,7 +1182,7 @@ STATUS:           Fotografiert, gemeldet, geborgen und protokolliert — Gründu
   }
 
   // --- Fact count-up ---
-  var factNums = document.querySelectorAll('.fact b:not([data-activity])');
+  var factNums = document.querySelectorAll('.fact b');
   function countUp(el){
     var m = el.textContent.match(/^([\d.]+)(.*)$/);
     if (!m) return;
@@ -1215,7 +1209,6 @@ STATUS:           Fotografiert, gemeldet, geborgen und protokolliert — Gründu
   }
 })();
 </script>
-<script src="../activity.js" defer></script>
 <script src="../share.js" defer></script>
 <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" data-cf-beacon='{"version":"2024.11.0","token":"42e259363e0948a784881d13c9f0abe3","r":1,"spa":2}' crossorigin="anonymous"></script>
 </body>

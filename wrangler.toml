@@ -1,11 +1,3 @@
 name = "228coaststrong"
 compatibility_date = "2026-11-12"
 pages_build_output_dir = "."
-
-[[kv_namespaces]]
-binding = "ACTIVITY_KV"
-id = "536dc880600c490bbc3852d3e2264e99"
-
-[vars]
-SEED_TOTAL_VIEWS = "11723"
-SEED_STARTED_AT = "2026-10-20T00:00:00.000Z"

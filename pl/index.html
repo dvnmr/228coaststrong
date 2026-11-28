@@ -262,12 +262,6 @@ html[lang=vi] h1,html[lang=vi] h2,html[lang=vi] h3,html[lang=vi] .brand,html[lan
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1!important;transform:none!important}}
 @media print{.language-switch,.quick-start{display:none!important}}
 
-/* Shared traction panel: calm motion, existing marsh palette. */
-.traction{padding:30px 0 36px;background:var(--surface2);border-bottom:1px solid var(--line)}
-.traction h2{font-size:clamp(28px,4vw,40px)}
-.traction .factrow{margin-top:18px}.traction .fact b{font-variant-numeric:tabular-nums;font-size:clamp(32px,5vw,44px)}
-.traction details{font-size:14px}.traction summary{cursor:pointer;font-weight:600;min-height:44px;display:flex;align-items:center}
-.traction[data-state=unavailable] .fact b{opacity:.65}
 .btn,.start-card,.language-switch a{transition:background-color .16s ease,border-color .16s ease,box-shadow .16s ease}
 a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
 @media(prefers-reduced-motion:reduce){.btn,.start-card,.language-switch a{transition:none}}
@@ -459,7 +453,7 @@ nav.top{background:#fbfaf7}
     
   </div>
 </header>
-<section class="traction" id="traction" aria-labelledby="tractionTitle" data-state="connecting"><div class="wrap"><p class="eyebrow">Silne Wybrzeże na żywo</p><h2 id="tractionTitle">Zobacz, jak rośnie nasza społeczność.</h2><p class="formnote">Każda wizyta to kolejna okazja, by zadbać o Matkę Ziemię.</p><div class="factrow"><div class="fact"><b data-activity="totalViews">—</b><span>Odsłony od początku zliczania</span></div><div class="fact"><b data-activity="todayViews">—</b><span>Dzisiejsze odsłony · czas centralny USA</span></div><div class="fact"><b data-activity="activeSessions">—</b><span>Aktywne sesje · ostatnie 2 minuty</span></div></div><p class="formnote" data-activity-status role="status">Łączenie z danymi aktywności na żywo…</p><p class="formnote" data-activity-since>Zliczanie zaczyna się od pierwszej zarejestrowanej odsłony.</p><details><summary>Jak liczymy</summary><p class="formnote">Liczby oznaczają zarejestrowane wczytania stron, a nie poszczególne osoby. Odświeżenie strony lub zmiana języka dodaje odsłonę; osobne karty mogą być liczone jako osobne sesje. Ruch automatyczny i blokowanie zliczania mogą wpływać na wyniki. Dane odświeżają się co 30 sekund, gdy ta strona jest widoczna.</p></details></div></section>
+
 
 <section class="quick-start" id="start"><div class="wrap"><p class="eyebrow">Zacznij tutaj</p><p class="formnote">Wiele rąk. Jedno wybrzeże. Razem silniejsi.</p><div class="start-grid"><a class="start-card" href="#signup"><span class="start-number">01</span><strong>Znajdź swoją rolę</strong><span>Uczniowie, nauczyciele, rodziny i sąsiedzi: wybierzcie sposób, by pomóc.</span></a><a class="start-card" href="#kids"><span class="start-number">02</span><strong>Uczmy się razem</strong><span>Wypróbuj zadanie związane z troską o wybrzeże z rodzicem lub nauczycielem.</span></a><a class="start-card" href="#journal"><span class="start-number">03</span><strong>Śledź nasze działania</strong><span>Czytaj praktyczne poradniki, dziel się pomysłami i zobacz, co dalej.</span></a></div></div></section>
 
@@ -521,7 +515,7 @@ nav.top{background:#fbfaf7}
     <div class="factrow">
       <div class="fact"><b>9.75 ton</b><span>Odpady usunięte z Gulfport Lake / Industrial Seaway i Bayou Bernard podczas wcześniejszych akcji Renew Our Rivers (4,5 + 5,25 ton) — to znane i udokumentowane miejsce nielegalnego wyrzucania odpadów.</span></div>
       <div class="fact"><b>9 miejsc</b><span>Na oficjalnej liście Coastal Cleanup na 2026 r. — każde przy plaży, porcie, molo lub parku.</span></div>
-      <div class="fact"><b>0</b><span>Miejsc nad bayou na tej liście. Właśnie tam sąsiedzka ekipa może pomóc najbardziej — i właśnie tam działa Silne Wybrzeże.</span></div>
+      <div class="fact"><b>Następny krok</b><span>Jeszcze żadnych miejsc nad bayou na tej liście. Właśnie tam sąsiedzka ekipa może pomóc najbardziej — i właśnie tam działa Silne Wybrzeże.</span></div>
     </div>
   </div>
 </section>
@@ -1082,7 +1076,7 @@ STATUS:           Sfotografowano, zgłoszono, usunięto i zapisano — wpis zał
       <p>Jesteśmy Amerykanami</p>
       <p>Jesteśmy dumni.</p>
     </div>
-    <div class="hash">#SilneWybrzeże</div><nav id="footerMap" class="footer-map" aria-label="Poznaj Silne Wybrzeże"><h3>Poznaj Silne Wybrzeże</h3><div class="footer-columns"><div class="footer-column"><h4>Weź udział</h4><a href="#signup">Sposoby pomocy</a><a href="#kids">Dzieci wybrzeża</a><a href="#report">Zgłoś dzikie wysypisko</a><a href="#feedback">Pomysły i opinie</a></div><div class="footer-column"><h4>Poznaj wybrzeże</h4><a href="#receipts">Dziennik społeczności</a><a href="#network">Sieć kontaktów</a><a href="#watches">Nasze patrole</a><a href="#water">Nasze wody</a><a href="#journal">Dziennik i poradniki</a></div><div class="footer-column"><h4>O Silne Wybrzeże</h4><a href="#top">Wróć na górę</a><a href="#start">Zacznij tutaj</a><a href="#traction">Aktywność na żywo</a><a href="#faq">Pytania i odpowiedzi</a><a href="#sponsors">Nasi sponsorzy</a></div></div></nav><p class="footer-support">Utrzymanie strony: <a href="https://228mooreelectric.com/">Moore Electric</a> · <a href="tel:+12282249150">(228) 224-9150</a><br>Moore Electric utrzymuje tę stronę i opłaca rejestrację domeny.</p>
+    <div class="hash">#SilneWybrzeże</div><nav id="footerMap" class="footer-map" aria-label="Poznaj Silne Wybrzeże"><h3>Poznaj Silne Wybrzeże</h3><div class="footer-columns"><div class="footer-column"><h4>Weź udział</h4><a href="#signup">Sposoby pomocy</a><a href="#kids">Dzieci wybrzeża</a><a href="#report">Zgłoś dzikie wysypisko</a><a href="#feedback">Pomysły i opinie</a></div><div class="footer-column"><h4>Poznaj wybrzeże</h4><a href="#receipts">Dziennik społeczności</a><a href="#network">Sieć kontaktów</a><a href="#watches">Nasze patrole</a><a href="#water">Nasze wody</a><a href="#journal">Dziennik i poradniki</a></div><div class="footer-column"><h4>O Silne Wybrzeże</h4><a href="#top">Wróć na górę</a><a href="#start">Zacznij tutaj</a><a href="#faq">Pytania i odpowiedzi</a><a href="#sponsors">Nasi sponsorzy</a></div></div></nav><p class="footer-support">Utrzymanie strony: <a href="https://228mooreelectric.com/">Moore Electric</a> · <a href="tel:+12282249150">(228) 224-9150</a><br>Moore Electric utrzymuje tę stronę i opłaca rejestrację domeny.</p>
     <p style="margin:0 0 14px"><a href="#signup" style="color:#ef8f4c;font-weight:700">Dołącz do Straż nad Zatoką →</a>  ·  <a href="#report" style="color:#ef8f4c;font-weight:700">Zgłoś dzikie wysypisko →</a>  ·  <a href="#receipts" style="color:#ef8f4c;font-weight:700">Dziennik społeczności →</a></p>
     <p style="margin:0 0 14px">Napisz do ekipy: <a href="/cdn-cgi/l/email-protection#2d1f1f154e424c5e595e595f42434a6d4a404c4441034e4240" style="color:#ef8f4c;font-weight:700"><span class="__cf_email__" data-cfemail="caf8f8f2a9a5abb9beb9beb8a5a4ad8aada7aba3a6e4a9a5a7">[email&#160;protected]</span></a></p>
     <p class="fine">Silne Wybrzeże — Centrum Straży nad Zatoką to strona społeczności wybrzeża Zatoki w Mississippi. Dane kontaktowe instytucji i organizacji pochodzą z oficjalnych publicznych stron sprawdzonych 15 października 2026 r. Ta strona nie wysyła ani nie przechowuje zgłoszeń i nic nie jest z niej wysyłane w Twoim imieniu. Pytania o udział i sponsoring można kierować przez powyższe linki e-mail. Sprawdź i wyślij wiadomość we własnym programie pocztowym; strona nie ma bazy zapisów. Szczegóły wydarzeń organizowanych przez oficjalne programy sprawdzaj na ich własnych stronach.</p>
@@ -1190,7 +1184,7 @@ STATUS:           Sfotografowano, zgłoszono, usunięto i zapisano — wpis zał
   }
 
   // --- Fact count-up ---
-  var factNums = document.querySelectorAll('.fact b:not([data-activity])');
+  var factNums = document.querySelectorAll('.fact b');
   function countUp(el){
     var m = el.textContent.match(/^([\d.]+)(.*)$/);
     if (!m) return;
@@ -1217,7 +1211,6 @@ STATUS:           Sfotografowano, zgłoszono, usunięto i zapisano — wpis zał
   }
 })();
 </script>
-<script src="../activity.js" defer></script>
 <script src="../share.js" defer></script>
 <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" data-cf-beacon='{"version":"2024.11.0","token":"42e259363e0948a784881d13c9f0abe3","r":1,"spa":2}' crossorigin="anonymous"></script>
 </body>

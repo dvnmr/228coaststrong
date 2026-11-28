@@ -263,12 +263,6 @@ html[lang=vi] h1,html[lang=vi] h2,html[lang=vi] h3,html[lang=vi] .brand,html[lan
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1!important;transform:none!important}}
 @media print{.language-switch,.quick-start{display:none!important}}
 
-/* Shared traction panel: calm motion, existing marsh palette. */
-.traction{padding:30px 0 36px;background:var(--surface2);border-bottom:1px solid var(--line)}
-.traction h2{font-size:clamp(28px,4vw,40px)}
-.traction .factrow{margin-top:18px}.traction .fact b{font-variant-numeric:tabular-nums;font-size:clamp(32px,5vw,44px)}
-.traction details{font-size:14px}.traction summary{cursor:pointer;font-weight:600;min-height:44px;display:flex;align-items:center}
-.traction[data-state=unavailable] .fact b{opacity:.65}
 .btn,.start-card,.language-switch a{transition:background-color .16s ease,border-color .16s ease,box-shadow .16s ease}
 a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
 @media(prefers-reduced-motion:reduce){.btn,.start-card,.language-switch a{transition:none}}
@@ -415,7 +409,7 @@ nav.top{background:#fbfaf7}
     
   </div>
 </header>
-<section class="traction" id="traction" aria-labelledby="tractionTitle" data-state="connecting"><div class="wrap"><p class="eyebrow">Côte Forte en direct</p><h2 id="tractionTitle">Regardons notre communauté grandir.</h2><p class="formnote">Chaque visite est une nouvelle occasion de prendre soin de la Terre nourricière.</p><div class="factrow"><div class="fact"><b data-activity="totalViews">—</b><span>Vues depuis le début du comptage</span></div><div class="fact"><b data-activity="todayViews">—</b><span>Vues du jour · heure du centre des États-Unis</span></div><div class="fact"><b data-activity="activeSessions">—</b><span>Sessions actives · 2 dernières minutes</span></div></div><p class="formnote" data-activity-status role="status">Connexion à l’activité en direct…</p><p class="formnote" data-activity-since>Le comptage commence à la première vue enregistrée.</p><details><summary>Comment nous comptons</summary><p class="formnote">Les chiffres correspondent aux chargements de page enregistrés, pas à des personnes distinctes. Actualiser la page ou changer de langue ajoute une vue ; des onglets séparés peuvent compter comme des sessions distinctes. Le trafic automatisé et le blocage du suivi peuvent modifier les totaux. Mise à jour toutes les 30 secondes tant que cette page est visible.</p></details></div></section>
+
 
 <section class="quick-start" id="start"><div class="wrap"><p class="eyebrow">Commencez ici</p><p class="formnote">Des mains unies. Une seule côte. Plus forts ensemble.</p><div class="start-grid"><a class="start-card" href="#signup"><span class="start-number">01</span><strong>Trouvez votre rôle</strong><span>Élèves, enseignants, familles et voisins : choisissez une façon d’aider.</span></a><a class="start-card" href="#kids"><span class="start-number">02</span><strong>Apprenons ensemble</strong><span>Essayez une activité pour prendre soin de la côte avec un parent ou un enseignant.</span></a><a class="start-card" href="#journal"><span class="start-number">03</span><strong>Suivre le travail</strong><span>Lisez des guides pratiques, partagez vos idées et découvrez les prochaines étapes.</span></a></div></div></section>
 
@@ -477,7 +471,7 @@ nav.top{background:#fbfaf7}
     <div class="factrow">
       <div class="fact"><b>9,75 tonnes</b><span>de déchets retirés de Gulfport Lake / Industrial Seaway et de Bayou Bernard lors de précédents nettoyages de Renew Our Rivers (4,5 + 5,25 tonnes) — les dépôts sauvages dans ce réseau sont connus et documentés.</span></div>
       <div class="fact"><b>9 sites</b><span>Sur la liste officielle du Coastal Cleanup 2026 : uniquement des plages, ports, quais ou berges de parcs.</span></div>
-      <div class="fact"><b>0</b><span>Aucun site de bayou sur cette liste pour l’instant. C’est dans les bayous qu’une équipe de voisins peut être la plus utile, et c’est précisément là que Côte Forte intervient.</span></div>
+      <div class="fact"><b>Prochaine étape</b><span>Aucun site de bayou sur cette liste pour l’instant. C’est dans les bayous qu’une équipe de voisins peut être la plus utile, et c’est précisément là que Côte Forte intervient.</span></div>
     </div>
   </div>
 </section>
@@ -781,7 +775,7 @@ STATUT :             Photographié, signalé, retiré et consigné — fiche fon
       <p>Nous sommes américains</p>
       <p>Nous en sommes fiers.</p>
     </div>
-    <div class="hash">#CôteSolidaire</div><nav id="footerMap" class="footer-map" aria-label="Explorer Côte Forte"><h3>Explorer Côte Forte</h3><div class="footer-columns"><div class="footer-column"><h4>Participer</h4><a href="#signup">Comment aider</a><a href="#kids">Les enfants du littoral</a><a href="#report">Signaler un dépôt</a><a href="#feedback">Idées et retours</a></div><div class="footer-column"><h4>Explorer le littoral</h4><a href="#receipts">Registre communautaire</a><a href="#network">Réseau de contacts</a><a href="#watches">Les réseaux de veille</a><a href="#water">Nos cours d’eau</a><a href="#journal">Journal et guides</a></div><div class="footer-column"><h4>À propos de Côte Forte</h4><a href="#top">Retour en haut</a><a href="#start">Commencer ici</a><a href="#traction">Activité en direct</a><a href="#faq">Questions et réponses</a><a href="#sponsors">Nos partenaires</a></div></div></nav><p class="footer-support">Maintenance du site: <a href="https://228mooreelectric.com/">Moore Electric</a> · <a href="tel:+12282249150">(228) 224-9150</a><br>Moore Electric assure la maintenance de ce site et finance son nom de domaine.</p>
+    <div class="hash">#CôteSolidaire</div><nav id="footerMap" class="footer-map" aria-label="Explorer Côte Forte"><h3>Explorer Côte Forte</h3><div class="footer-columns"><div class="footer-column"><h4>Participer</h4><a href="#signup">Comment aider</a><a href="#kids">Les enfants du littoral</a><a href="#report">Signaler un dépôt</a><a href="#feedback">Idées et retours</a></div><div class="footer-column"><h4>Explorer le littoral</h4><a href="#receipts">Registre communautaire</a><a href="#network">Réseau de contacts</a><a href="#watches">Les réseaux de veille</a><a href="#water">Nos cours d’eau</a><a href="#journal">Journal et guides</a></div><div class="footer-column"><h4>À propos de Côte Forte</h4><a href="#top">Retour en haut</a><a href="#start">Commencer ici</a><a href="#faq">Questions et réponses</a><a href="#sponsors">Nos partenaires</a></div></div></nav><p class="footer-support">Maintenance du site: <a href="https://228mooreelectric.com/">Moore Electric</a> · <a href="tel:+12282249150">(228) 224-9150</a><br>Moore Electric assure la maintenance de ce site et finance son nom de domaine.</p>
     <p style="margin:0 0 14px"><a href="#signup" style="color:#ef8f4c;font-weight:700">Rejoindre Veille du Bayou →</a>  ·  <a href="#report" style="color:#ef8f4c;font-weight:700">Signaler un dépôt sauvage →</a>  ·  <a href="#receipts" style="color:#ef8f4c;font-weight:700">Registre communautaire →</a></p>
     <p style="margin:0 0 14px">Écrivez à l’équipe : <a href="/cdn-cgi/l/email-protection#0436363c676b6577707770766b6a63446369656d682a676b69" style="color:#ef8f4c;font-weight:700"><span class="__cf_email__" data-cfemail="11232329727e7062656265637e7f7651767c70787d3f727e7c">[email&#160;protected]</span></a></p>
     <p class="fine">Côte Forte — Carrefour de la Veille du Bayou est une page communautaire pour la côte du Mississippi. Les coordonnées des organismes et organisations proviennent de pages publiques officielles consultées le 15 octobre 2026. Cette page ne transmet ni ne conserve de signalements, et rien n’est envoyé en votre nom depuis cette page. Pour participer ou vous renseigner sur un partenariat, utilisez les liens de courriel ci-dessus. Vérifiez et envoyez le message dans votre propre application de messagerie ; cette page n’a aucune base de données d’inscription. Pour les événements organisés par des programmes officiels, vérifiez les renseignements sur leurs propres pages officielles.</p>
@@ -890,7 +884,7 @@ STATUT :             Photographié, signalé, retiré et consigné — fiche fon
   }
 
   // --- Fact count-up ---
-  var factNums = document.querySelectorAll('.fact b:not([data-activity])');
+  var factNums = document.querySelectorAll('.fact b');
   function countUp(el){
     var m = el.textContent.match(/^([\d.,]+)(.*)$/);
     if (!m) return;
@@ -917,7 +911,6 @@ STATUT :             Photographié, signalé, retiré et consigné — fiche fon
   }
 })();
 </script>
-<script src="../activity.js" defer></script>
 <script src="../share.js" defer></script>
 <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" data-cf-beacon='{"version":"2024.11.0","token":"42e259363e0948a784881d13c9f0abe3","r":1,"spa":2}' crossorigin="anonymous"></script>
 </body>

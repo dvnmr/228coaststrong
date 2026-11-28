@@ -263,12 +263,6 @@ html[lang=vi] h1,html[lang=vi] h2,html[lang=vi] h3,html[lang=vi] .brand,html[lan
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1!important;transform:none!important}}
 @media print{.language-switch,.quick-start{display:none!important}}
 
-/* Shared traction panel: calm motion, existing marsh palette. */
-.traction{padding:30px 0 36px;background:var(--surface2);border-bottom:1px solid var(--line)}
-.traction h2{font-size:clamp(28px,4vw,40px)}
-.traction .factrow{margin-top:18px}.traction .fact b{font-variant-numeric:tabular-nums;font-size:clamp(32px,5vw,44px)}
-.traction details{font-size:14px}.traction summary{cursor:pointer;font-weight:600;min-height:44px;display:flex;align-items:center}
-.traction[data-state=unavailable] .fact b{opacity:.65}
 .btn,.start-card,.language-switch a{transition:background-color .16s ease,border-color .16s ease,box-shadow .16s ease}
 a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
 @media(prefers-reduced-motion:reduce){.btn,.start-card,.language-switch a{transition:none}}
@@ -401,7 +395,7 @@ nav.top{background:#fbfaf7}
     
   </div>
 </header>
-<section class="traction" id="traction" aria-labelledby="tractionTitle" data-state="connecting"><div class="wrap"><p class="eyebrow">Bờ Biển Vững Mạnh trực tiếp</p><h2 id="tractionTitle">Cùng xem cộng đồng lớn mạnh.</h2><p class="formnote">Mỗi lượt ghé thăm là một cơ hội để chăm sóc Mẹ Trái Đất.</p><div class="factrow"><div class="fact"><b data-activity="totalViews">—</b><span>Lượt xem kể từ khi bắt đầu đếm</span></div><div class="fact"><b data-activity="todayViews">—</b><span>Lượt xem hôm nay · giờ miền Trung Hoa Kỳ</span></div><div class="fact"><b data-activity="activeSessions">—</b><span>Phiên hoạt động · 2 phút qua</span></div></div><p class="formnote" data-activity-status role="status">Đang kết nối dữ liệu hoạt động…</p><p class="formnote" data-activity-since>Bắt đầu đếm từ lượt xem trang đầu tiên được ghi nhận.</p><details><summary>Cách chúng tôi đếm</summary><p class="formnote">Số liệu phản ánh lượt tải trang được ghi nhận, không phải từng người. Tải lại hoặc đổi ngôn ngữ sẽ thêm một lượt xem; các thẻ riêng có thể được tính là các phiên riêng. Truy cập tự động và việc chặn theo dõi có thể ảnh hưởng đến tổng số. Cập nhật mỗi 30 giây khi trang này đang hiển thị.</p></details></div></section>
+
 
 <section class="quick-start" id="start"><div class="wrap"><p class="eyebrow">Bắt đầu tại đây</p><p class="formnote">Nhiều bàn tay. Một bờ biển. Cùng nhau vững mạnh hơn.</p><div class="start-grid"><a class="start-card" href="#signup"><span class="start-number">01</span><strong>Tìm cách góp sức</strong><span>Học sinh, giáo viên, gia đình và hàng xóm: chọn cách bạn muốn giúp.</span></a><a class="start-card" href="#kids"><span class="start-number">02</span><strong>Cùng nhau tìm hiểu</strong><span>Thử hoạt động bảo vệ bờ biển cùng cha mẹ hoặc giáo viên.</span></a><a class="start-card" href="#journal"><span class="start-number">03</span><strong>Theo dõi hoạt động</strong><span>Đọc hướng dẫn thực tế, chia sẻ ý tưởng và xem những bước tiếp theo.</span></a></div></div></section>
 
@@ -463,7 +457,7 @@ nav.top{background:#fbfaf7}
     <div class="factrow">
       <div class="fact"><b>9.75 tấn</b><span>Rác thải được vớt khỏi Gulfport Lake / Industrial Seaway và Bayou Bernard trong các đợt dọn dẹp Renew Our Rivers trước đây (4.5 + 5.25 tấn) — hệ thống này là nơi từng bị đổ rác, có hồ sơ ghi nhận rõ ràng.</span></div>
       <div class="fact"><b>9 địa điểm</b><span>Trong danh sách chính thức của chương trình Coastal Cleanup năm 2026 — tất cả đều là bãi biển, bến cảng, cầu tàu hoặc mặt tiền công viên.</span></div>
-      <div class="fact"><b>0</b><span>Địa điểm lạch nước có trong danh sách ấy tính đến nay. Các lạch nước là nơi đội tình nguyện trong khu phố có thể giúp được nhiều nhất — và đó chính là nơi Bờ Biển Vững Mạnh góp sức.</span></div>
+      <div class="fact"><b>Tiếp theo</b><span>Chưa có địa điểm lạch nước nào trong danh sách ấy tính đến nay. Các lạch nước là nơi đội tình nguyện trong khu phố có thể giúp được nhiều nhất — và đó chính là nơi Bờ Biển Vững Mạnh góp sức.</span></div>
     </div>
   </div>
 </section>
@@ -771,7 +765,7 @@ TRẠNG THÁI:        Đã chụp ảnh, báo tin, đưa rác ra ngoài và ghi 
       <p>Chúng ta là người Mỹ</p>
       <p>Chúng ta tự hào.</p>
     </div>
-    <div class="hash">#BờBiểnVữngMạnh</div><nav id="footerMap" class="footer-map" aria-label="Khám phá Bờ Biển Vững Mạnh"><h3>Khám phá Bờ Biển Vững Mạnh</h3><div class="footer-columns"><div class="footer-column"><h4>Cùng tham gia</h4><a href="#signup">Cách góp sức</a><a href="#kids">Thiếu nhi ven biển</a><a href="#report">Báo cáo đổ rác</a><a href="#feedback">Ý tưởng và góp ý</a></div><div class="footer-column"><h4>Khám phá bờ biển</h4><a href="#receipts">Nhật ký cộng đồng</a><a href="#network">Mạng lưới liên hệ</a><a href="#watches">Các nhóm quan sát</a><a href="#water">Nguồn nước quê mình</a><a href="#journal">Nhật ký và hướng dẫn</a></div><div class="footer-column"><h4>Về Bờ Biển Vững Mạnh</h4><a href="#top">Về đầu trang</a><a href="#start">Bắt đầu tại đây</a><a href="#traction">Hoạt động trực tiếp</a><a href="#faq">Câu hỏi và trả lời</a><a href="#sponsors">Các nhà tài trợ</a></div></div></nav><p class="footer-support">Bảo trì trang web: <a href="https://228mooreelectric.com/">Moore Electric</a> · <a href="tel:+12282249150">(228) 224-9150</a><br>Moore Electric bảo trì trang web này và chi trả việc đăng ký tên miền.</p>
+    <div class="hash">#BờBiểnVữngMạnh</div><nav id="footerMap" class="footer-map" aria-label="Khám phá Bờ Biển Vững Mạnh"><h3>Khám phá Bờ Biển Vững Mạnh</h3><div class="footer-columns"><div class="footer-column"><h4>Cùng tham gia</h4><a href="#signup">Cách góp sức</a><a href="#kids">Thiếu nhi ven biển</a><a href="#report">Báo cáo đổ rác</a><a href="#feedback">Ý tưởng và góp ý</a></div><div class="footer-column"><h4>Khám phá bờ biển</h4><a href="#receipts">Nhật ký cộng đồng</a><a href="#network">Mạng lưới liên hệ</a><a href="#watches">Các nhóm quan sát</a><a href="#water">Nguồn nước quê mình</a><a href="#journal">Nhật ký và hướng dẫn</a></div><div class="footer-column"><h4>Về Bờ Biển Vững Mạnh</h4><a href="#top">Về đầu trang</a><a href="#start">Bắt đầu tại đây</a><a href="#faq">Câu hỏi và trả lời</a><a href="#sponsors">Các nhà tài trợ</a></div></div></nav><p class="footer-support">Bảo trì trang web: <a href="https://228mooreelectric.com/">Moore Electric</a> · <a href="tel:+12282249150">(228) 224-9150</a><br>Moore Electric bảo trì trang web này và chi trả việc đăng ký tên miền.</p>
     <p style="margin:0 0 14px"><a href="#signup" style="color:#ef8f4c;font-weight:700">Tham gia Nhóm Giám Sát Vịnh →</a>  ·  <a href="#report" style="color:#ef8f4c;font-weight:700">Báo tin đổ rác trái phép →</a>  ·  <a href="#receipts" style="color:#ef8f4c;font-weight:700">Nhật ký cộng đồng →</a></p>
     <p style="margin:0 0 14px">Gửi thư cho nhóm: <a href="/cdn-cgi/l/email-protection#291b1b114a46485a5d5a5d5b46474e694e44484045074a4644" style="color:#ef8f4c;font-weight:700"><span class="__cf_email__" data-cfemail="596b6b613a36382a2d2a2d2b36373e193e34383035773a3634">[email&#160;protected]</span></a></p>
     <p class="fine">Bờ Biển Vững Mạnh — Trung tâm Nhóm Giám Sát Vịnh là trang cộng đồng dành cho vùng duyên hải Vịnh Mexico của Mississippi. Thông tin liên hệ của các cơ quan và tổ chức được chép từ các trang công khai chính thức, tra cứu ngày 15 tháng 10 năm 2026. Trang này không gửi hay lưu báo cáo, và không có nội dung nào được gửi nhân danh bạn từ trang này. Để hỏi về việc tham gia và tài trợ, hãy dùng các liên kết thư điện tử ở trên. Xem lại rồi gửi bằng ứng dụng thư điện tử của chính bạn; trang này không có cơ sở dữ liệu đăng ký. Với sự kiện do các chương trình chính thức tổ chức, hãy xác minh thông tin trên trang chính thức của chính chương trình đó.</p>
@@ -860,7 +854,7 @@ TRẠNG THÁI:        Đã chụp ảnh, báo tin, đưa rác ra ngoài và ghi 
   }
 
   // --- Fact count-up ---
-  var factNums = document.querySelectorAll('.fact b:not([data-activity])');
+  var factNums = document.querySelectorAll('.fact b');
   function countUp(el){
     var m = el.textContent.match(/^([\d.]+)(.*)$/);
     if (!m) return;
@@ -887,7 +881,6 @@ TRẠNG THÁI:        Đã chụp ảnh, báo tin, đưa rác ra ngoài và ghi 
   }
 })();
 </script>
-<script src="../activity.js" defer></script>
 <script src="../share.js" defer></script>
 <script data-local-network>
 (() => {

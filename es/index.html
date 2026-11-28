@@ -263,12 +263,6 @@ html[lang=vi] h1,html[lang=vi] h2,html[lang=vi] h3,html[lang=vi] .brand,html[lan
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1!important;transform:none!important}}
 @media print{.language-switch,.quick-start{display:none!important}}
 
-/* Shared traction panel: calm motion, existing marsh palette. */
-.traction{padding:30px 0 36px;background:var(--surface2);border-bottom:1px solid var(--line)}
-.traction h2{font-size:clamp(28px,4vw,40px)}
-.traction .factrow{margin-top:18px}.traction .fact b{font-variant-numeric:tabular-nums;font-size:clamp(32px,5vw,44px)}
-.traction details{font-size:14px}.traction summary{cursor:pointer;font-weight:600;min-height:44px;display:flex;align-items:center}
-.traction[data-state=unavailable] .fact b{opacity:.65}
 .btn,.start-card,.language-switch a{transition:background-color .16s ease,border-color .16s ease,box-shadow .16s ease}
 a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
 @media(prefers-reduced-motion:reduce){.btn,.start-card,.language-switch a{transition:none}}
@@ -400,7 +394,7 @@ nav.top{background:#fbfaf7}
     
   </div>
 </header>
-<section class="traction" id="traction" aria-labelledby="tractionTitle" data-state="connecting"><div class="wrap"><p class="eyebrow">Costa Fuerte en directo</p><h2 id="tractionTitle">Mira crecer a nuestra comunidad.</h2><p class="formnote">Cada visita es otra oportunidad de cuidar a la Madre Tierra.</p><div class="factrow"><div class="fact"><b data-activity="totalViews">—</b><span>Vistas desde el inicio del recuento</span></div><div class="fact"><b data-activity="todayViews">—</b><span>Vistas de hoy · hora Central</span></div><div class="fact"><b data-activity="activeSessions">—</b><span>Sesiones activas · últimos 2 minutos</span></div></div><p class="formnote" data-activity-status role="status">Conectando con la actividad en directo…</p><p class="formnote" data-activity-since>El recuento comienza con la primera vista registrada.</p><details><summary>Cómo contamos</summary><p class="formnote">Los números reflejan cargas de página registradas, no personas individuales. Recargar o cambiar de idioma añade una vista; las pestañas separadas pueden contar como sesiones distintas. El tráfico automatizado y el bloqueo del seguimiento pueden afectar al recuento. Se actualiza cada 30 segundos mientras esta página está visible.</p></details></div></section>
+
 
 <section class="quick-start" id="start"><div class="wrap"><p class="eyebrow">Empieza aquí</p><p class="formnote">Muchas manos. Una sola costa. Más fuertes juntos.</p><div class="start-grid"><a class="start-card" href="#signup"><span class="start-number">01</span><strong>Encuentra tu lugar</strong><span>Estudiantes, docentes, familias y vecinos: elige cómo ayudar.</span></a><a class="start-card" href="#kids"><span class="start-number">02</span><strong>Aprendamos juntos</strong><span>Prueba una actividad para cuidar la costa con un familiar o docente.</span></a><a class="start-card" href="#journal"><span class="start-number">03</span><strong>Sigue el trabajo</strong><span>Lee guías prácticas, comparte ideas y descubre los próximos pasos.</span></a></div></div></section>
 
@@ -462,7 +456,7 @@ nav.top{background:#fbfaf7}
     <div class="factrow">
       <div class="fact"><b>9.75 toneladas</b><span>Desechos retirados de Gulfport Lake / Industrial Seaway y Bayou Bernard en jornadas anteriores de Renew Our Rivers (4.5 + 5.25 toneladas): este sistema es un lugar de vertidos conocido y documentado.</span></div>
       <div class="fact"><b>9 lugares</b><span>En la lista oficial de Coastal Cleanup de 2026: todos son playas, puertos, muelles o zonas de parques junto al agua.</span></div>
-      <div class="fact"><b>0</b><span>Lugares de los bayous incluidos hasta ahora en esa lista. Los bayous son donde más puede ayudar un equipo vecinal, y ahí es precisamente donde Costa Fuerte colabora.</span></div>
+      <div class="fact"><b>Lo siguiente</b><span>Los lugares de los bayous aún no están en esa lista. Los bayous son donde más puede ayudar un equipo vecinal, y ahí es precisamente donde Costa Fuerte colabora.</span></div>
     </div>
   </div>
 </section>
@@ -916,7 +910,7 @@ ESTADO:              Fotografiado, denunciado, retirado y registrado — entrada
       <p>Somos estadounidenses</p>
       <p>Y estamos orgullosos.</p>
     </div>
-    <div class="hash">#COSTAFUERTE</div><nav id="footerMap" class="footer-map" aria-label="Explora Costa Fuerte"><h3>Explora Costa Fuerte</h3><div class="footer-columns"><div class="footer-column"><h4>Participa</h4><a href="#signup">Formas de ayudar</a><a href="#kids">Pequeños de la Costa</a><a href="#report">Denunciar vertidos</a><a href="#feedback">Ideas y comentarios</a></div><div class="footer-column"><h4>Explora la costa</h4><a href="#receipts">Registro comunitario</a><a href="#network">Red de contactos</a><a href="#watches">Las redes de vigilancia</a><a href="#water">Nuestras aguas</a><a href="#journal">Diario y guías</a></div><div class="footer-column"><h4>Acerca de Costa Fuerte</h4><a href="#top">Volver arriba</a><a href="#start">Empieza aquí</a><a href="#traction">Actividad en directo</a><a href="#faq">Preguntas y respuestas</a><a href="#sponsors">Nuestros patrocinadores</a></div></div></nav><p class="footer-support">Mantenimiento del sitio: <a href="https://228mooreelectric.com/">Moore Electric</a> · <a href="tel:+12282249150">(228) 224-9150</a><br>Moore Electric mantiene este sitio y cubre el registro de su dominio.</p>
+    <div class="hash">#COSTAFUERTE</div><nav id="footerMap" class="footer-map" aria-label="Explora Costa Fuerte"><h3>Explora Costa Fuerte</h3><div class="footer-columns"><div class="footer-column"><h4>Participa</h4><a href="#signup">Formas de ayudar</a><a href="#kids">Pequeños de la Costa</a><a href="#report">Denunciar vertidos</a><a href="#feedback">Ideas y comentarios</a></div><div class="footer-column"><h4>Explora la costa</h4><a href="#receipts">Registro comunitario</a><a href="#network">Red de contactos</a><a href="#watches">Las redes de vigilancia</a><a href="#water">Nuestras aguas</a><a href="#journal">Diario y guías</a></div><div class="footer-column"><h4>Acerca de Costa Fuerte</h4><a href="#top">Volver arriba</a><a href="#start">Empieza aquí</a><a href="#faq">Preguntas y respuestas</a><a href="#sponsors">Nuestros patrocinadores</a></div></div></nav><p class="footer-support">Mantenimiento del sitio: <a href="https://228mooreelectric.com/">Moore Electric</a> · <a href="tel:+12282249150">(228) 224-9150</a><br>Moore Electric mantiene este sitio y cubre el registro de su dominio.</p>
     <p style="margin:0 0 14px"><a href="#signup" style="color:#ef8f4c;font-weight:700">Únete a Vigilancia del Bayou →</a>  ·  <a href="#report" style="color:#ef8f4c;font-weight:700">Denunciar vertidos de basura →</a>  ·  <a href="#receipts" style="color:#ef8f4c;font-weight:700">Registro comunitario →</a></p>
     <p style="margin:0 0 14px">Escribe al equipo: <a href="/cdn-cgi/l/email-protection#4371717b202c2230373037312c2d2403242e222a2f6d202c2e" style="color:#ef8f4c;font-weight:700"><span class="__cf_email__" data-cfemail="695b5b510a06081a1d1a1d1b06070e290e04080005470a0604">[email&#160;protected]</span></a></p>
     <p class="fine">Costa Fuerte — Centro de Vigilancia del Bayou es una página comunitaria para la costa del golfo de Mississippi. Los datos de contacto de los organismos y organizaciones se copiaron de páginas públicas oficiales consultadas el 15 de octubre de 2026. Esta página no presenta ni almacena denuncias, y no envía nada en tu nombre. Las consultas sobre participación y patrocinio se hacen mediante los enlaces de correo anteriores. Revisa y envía los mensajes desde tu propia aplicación de correo; esta página no tiene una base de datos de inscripciones. Para eventos organizados por programas oficiales, verifica los detalles en sus propias páginas oficiales.</p>
@@ -1010,7 +1004,7 @@ ESTADO:              Fotografiado, denunciado, retirado y registrado — entrada
   }
 
   // --- Fact count-up ---
-  var factNums = document.querySelectorAll('.fact b:not([data-activity])');
+  var factNums = document.querySelectorAll('.fact b');
   function countUp(el){
     var m = el.textContent.match(/^([\d.]+)(.*)$/);
     if (!m) return;
@@ -1037,7 +1031,6 @@ ESTADO:              Fotografiado, denunciado, retirado y registrado — entrada
   }
 })();
 </script>
-<script src="../activity.js" defer></script>
 <script src="../share.js" defer></script>
 <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" data-cf-beacon='{"version":"2024.11.0","token":"42e259363e0948a784881d13c9f0abe3","r":1,"spa":2}' crossorigin="anonymous"></script>
 </body>
